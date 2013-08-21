@@ -1,16 +1,16 @@
 ﻿$(function() {
-	setFooter();
-});
-
-
-function setFooter() {
-	var footer = $('footer.footer');
-
-	if (footer.length) {
-		var footerHeight = footer.outerHeight(true);
-		footer.outerHeight(footerHeight);
-		$('.container')
-			.append('<div class="footer-helper" style="height: ' + footerHeight +'px"></div>')
-			.css('marginBottom', -footerHeight);
+	if ($('#slider').length) {
+		$('#slider').nivoSlider({
+			effect: 'boxRain',
+			slices: 8,
+			animSpeed: 500,
+			pauseTime: 4500,
+			startSlide: 0,
+			directionNav: false,
+			controlNav: true,
+			pauseOnHover: true,
+			manualAdvance: false,
+			randomStart: false
+		});
 	}
-}
+});

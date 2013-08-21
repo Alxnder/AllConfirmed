@@ -160,8 +160,7 @@ label {
 }
 
 .container {
-	min-height: 100%;
-	overflow-y: hidden;
+
 }
 
 .footer-helper {
@@ -181,26 +180,6 @@ label {
 	*margin-top: expression((parentNode.offsetHeight-offsetHeight)<0?'0':(parentNode.offsetHeight-offsetHeight)/2+'px');
 }
 
-.btn {
-	position: relative;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	vertical-align: middle;
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-			box-sizing: border-box;
-}
-
-[class^="icon-"] {
-	overflow: hidden;
-	position: relative;
-	text-indent: -999em;
-	display: inline-block;
-	vertical-align: middle;
-	background: url("../i/sprites.png") 0 0 no-repeat;
-}
-
 /*
  * Clearfix: contain floats
  *
@@ -213,8 +192,7 @@ label {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, .clearfix:after {
 	content: " "; /* 1 */
 	display: table; /* 2 */
 }
@@ -223,20 +201,50 @@ label {
 	clear: both;
 }
 
-/*
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-
-.clearfix {
-	*zoom: 1;
-}
-
 @import "forms.css";
 
 @import "buttons.css";
 
 @import "icons.css";
+
+.nivoSlider {
+	border: solid 8px #e6e6d2;
+	width: 637px !important;
+	height: 256px !important;
+	margin-bottom: 38px;
+}
+
+.nivoSlider img {
+	width: 637px !important;
+	height: 256px !important;
+}
+
+.nivoSlider a {
+	border: 0;
+	display: block;
+}
+
+.nivo-controlNav {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	z-index: 10;
+	padding: 0 !important;
+}
+
+.nivo-controlNav a {
+	width: 12px;
+	height: 12px;
+	overflow: hidden;
+	margin-left: 12px;
+	text-indent: -999px;
+	background: #929287;
+	display: inline-block;
+}
+
+.nivo-controlNav .active {
+	background: #ad762a;
+}
 
 /* Большие мониторы */
 @media (min-width: 1200px) {

@@ -1,7 +1,18 @@
-.btn_default {
+.btn {
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.btn.-yellow {
 
 }
 
-.btn_default:hover {
+.btn.-yellow:hover {
 
 }
