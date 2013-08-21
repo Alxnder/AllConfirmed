@@ -1,0 +1,82 @@
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="password"] {
+	position: relative;
+	vertical-align: middle;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+}
+
+input[type="text"], input[type="password"] {
+	padding: 0 10px;
+}
+
+select:focus,
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus {
+	outline: none;
+}
+
+select {
+	padding-left: 10px;
+}
+
+textarea {
+	resize: vertical;
+	padding: 7px 0 7px 10px;
+}
+
+.form {
+
+}
+
+.form dl {
+	margin: 0;
+	padding: 0;
+}
+
+.form dt {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.form dd {
+	margin: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.form select,
+.form textarea,
+.form .input-wrapper,
+.form input[type="text"],
+.form input[type="password"] {
+	width: 100%;
+}
+
+.input-placeholder {
+	top: 0;
+	left: 0;
+	color: #969696;
+	border: 0 !important;
+	background: none !important;
+	position: absolute !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+.input-wrapper {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
