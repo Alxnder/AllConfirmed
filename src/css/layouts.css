@@ -1,0 +1,36 @@
+.header {
+	width: 100%;
+	display: table-caption;
+}
+
+.top-bar .wrapper, .logo-bar, [class^="layout"], .footer .wrapper {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.container {
+	display: table;
+	width: 100%;
+}
+
+.layout-twocols .content {
+	width: 732px;
+	float: left;
+}
+
+.layout-twocols .aside {
+	width: 232px;
+	float: right;
+}
+
+.main-page .aside {
+	margin-top: -7px;
+}
+
+.footer-helper {
+	clear: both;
+}
+
+.footer {
+	display: table-footer-group;
+}

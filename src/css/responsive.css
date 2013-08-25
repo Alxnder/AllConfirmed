@@ -1,0 +1,23 @@
+/* Большие мониторы */
+@media (min-width: 1200px) {
+
+}
+
+/* Планшеты и десктопы */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* От панорамного телефона до портретного планшета */
+@media (max-width: 767px) {
+
+}
+
+/* Панорамный телефон и меньше */
+@media (max-width: 480px) {
+
+}
+
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+	/* Устройства с высоким разрешением */
+}

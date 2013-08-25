@@ -1,0 +1,540 @@
+@import "fonts.css";
+
+@import "normalize.css";
+
+html, body, body > form {
+	height: 100%;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+	color: #373737;
+}
+
+body {
+	font-size: 15px;
+	line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+	color: #fff;
+	text-shadow: none;
+	background: #86b9ed;
+}
+
+::selection {
+	color: #fff;
+	text-shadow: none;
+	background: #86b9ed;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+img {
+	vertical-align: middle;
+}
+
+a {
+	color: #6d8607;
+}
+
+a:visited {
+	color: #551a8b;
+}
+
+a:hover {
+	color: #8cae00;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+	visibility: hidden;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.ib {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.col {
+	vertical-align: top;
+	display: inline-block;
+}
+
+.cols-wrapper {
+	line-height: 0;
+	text-align: justify;
+	*text-align-last: justify;
+	*text-justify: newspaper;
+	*zoom: 1;
+}
+
+.cols-wrapper:after {
+	height: 0;
+	width: 100%;
+	content: '\00a0';
+	visibility: hidden;
+	display: inline-block;
+}
+
+.cols-wrapper > * {
+	text-align: left;
+	position: relative;
+	line-height: normal;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.col_fill  {
+	display: table;
+	position: relative;
+}
+
+.col_fill:after {
+	content: '. .';
+	display: block;
+	word-spacing: 99in;
+	height: 0;
+	overflow: hidden;
+	/*Opera bugfix*/
+	font-size: 0.05em;
+	line-height: 0.05em;
+}
+
+label {
+	cursor: default;
+}
+
+.valign-middle {
+	text-align: left;
+	display: table-cell;
+	vertical-align: middle;
+	*height: auto;
+	*margin-top: expression((parentNode.offsetHeight-offsetHeight)<0?'0':(parentNode.offsetHeight-offsetHeight)/2+'px');
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before, .clearfix:after,
+[class^="layout"]:before, [class^="layout"]:after,
+.top-bar:before, .top-bar:after, .logo-bar:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+
+.clearfix:after, [class^="layout"]:after, .top-bar:after, .logo-bar:after {
+	clear: both;
+}
+
+@import 'layouts.css';
+
+@import "forms.css";
+
+@import "buttons.css";
+
+@import "icons.css";
+
+.carousel {
+	width: 732px;
+	height: 192px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 19px;
+}
+
+.carousel .items {
+	width: 732px;
+	height: 192px;
+	overflow: hidden;
+}
+
+.carousel ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.carousel li {
+	float: left;
+	width: 732px;
+	height: 192px;
+}
+
+.carousel-nav {
+	position: absolute;
+	z-index: 100;
+	bottom: 11px;
+	right: 15px;
+	text-align: right;
+}
+
+.carousel-nav div {
+	width: 5px;
+	height: 5px;
+	background: #918181;
+	margin-left: 6px;
+	display: inline-block;
+	cursor: default;
+	overflow: hidden;
+}
+
+.carousel-nav .active {
+	background: #fff;
+}
+
+.top-bar {
+	color: #fff;
+	height: 56px;
+	margin-bottom: 33px;
+	background: #c84e42 url("../i/sprite1.png") 50% 0 no-repeat;
+}
+
+.top-bar .wrapper {
+	padding: 16px 0 20px 0;
+}
+
+.logo-bar {
+	height: 79px;
+	position: relative;
+	padding-bottom: 19px;
+	background: url("../i/sprite2.png") 487px 100% no-repeat;
+}
+
+.logo-bar:before {
+	left: 0;
+	bottom: 0;
+	height: 7px;
+	content: '';
+	z-index: 100;
+	width: 980px;
+	position: absolute;
+	background: url("../i/border3.png");
+}
+
+.main-page .logo-bar:before {
+	width: 732px;
+}
+
+.logo-bar .col {
+	text-align: right;
+	float: right;
+}
+
+a.set-location, a.sign-in {
+	color: #9f342c;
+	font: 16px Font1;
+	text-decoration: none;
+	margin-left: 5px;
+	background: url("../i/border1.png") 0 100% repeat-x;
+}
+
+a.sign-in {
+	color: #79901b;
+	background-image: url("../i/border2.png");
+}
+
+.logo {
+	float: left;
+	margin-right: 55px;
+}
+
+.motto {
+	float: left;
+	color: #898078;
+	margin-top: 14px;
+	font: 24px 'Font1 Extralight';
+}
+
+nav.primary {
+	float: left;
+	font: 16px 'Font1 Bold';
+}
+
+nav.primary > ul {
+	margin: 0;
+	padding: 0;
+}
+
+nav.primary > ul > li {
+	float: left;
+	margin-right: 34px;
+}
+
+nav.primary > ul > li > a {
+	color: #fff;
+	padding: 0 0 3px 0;
+	display: block;
+	text-decoration: none;
+}
+
+nav.primary > ul > li > a:hover {
+	color: #ffadab;
+}
+
+nav.primary > ul ul {
+	position: absolute;
+	background: #791817;
+	color: #fff;
+	z-index: 1000;
+	margin: 0;
+	display: none;
+	padding: 15px 15px;
+	font: 16px/1.25em 'Font1';
+}
+
+nav.primary > ul ul li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px 0 0;
+	min-width: 135px;
+}
+
+nav.primary > ul ul a {
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	border: solid 1px #791817;
+	border-radius: .3em;
+	padding: 2px 6px;
+}
+
+nav.primary > ul ul a:hover {
+	color: #ffadab;
+}
+
+nav.secondary {
+	float: right;
+	font: 16px Font1;
+}
+
+nav.secondary a {
+	color: #e9d4bf;
+	margin-left: 20px;
+	text-decoration: none;
+}
+
+nav.secondary [class^="icon"] {
+	margin-right: 1px;
+}
+
+nav.secondary a:hover {
+	color: #ffadab;
+}
+
+.banners a {
+	display: block;
+	margin-bottom: 19px;
+}
+
+.search-box {
+	position: relative;
+	margin-bottom: 28px;
+	min-height: 65px;
+	background: url("../i/sprite3.png") 0 0 repeat-x;
+	padding: 14px 13px 12px 13px;
+}
+
+.search-box .normal input[type="text"] {
+	float: left;
+	width: 552px;
+	height: 37px;
+	font-size: 17px;
+	border-right-color: #fff;
+	border-bottom-color: #fff;
+	padding: 0 10px;
+	margin-right: 17px;
+}
+
+.search-box .advanced {
+	display: none;
+	margin-bottom: 33px;
+}
+
+.search-box .advanced .col:first-child + .col {
+	width: 135px;
+}
+
+.search-box .advanced .col:first-child {
+	width: 565px;
+}
+
+.table {
+	display: table;
+}
+
+.table > div {
+	display: table-cell;
+}
+
+.search-box .advanced .checkboxes {
+	width: 534px;
+}
+
+.search-box .advanced .checkboxes > div {
+	border-left: solid 12px transparent;
+}
+
+.search-box .advanced .checkboxes > div:first-child {
+	border: 0;
+}
+
+.search-box .advanced .checkboxes .cb {
+	display: block;
+	min-width: 90px;
+}
+
+.search-box input[type="text"] {
+	width: 350px;
+	padding-right: 21px;
+}
+
+.search-box .field-w-icon {
+	margin: 0 17px 12px 0;
+}
+
+.search-box .select {
+	width: 165px;
+	margin: 0 17px 12px 0;
+}
+
+.search-box .toggle {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	color: #433f3e;
+	padding: 2px 0 5px 0;
+	text-align: center;
+	font: 15px 'Font1 Light';
+	text-transform: uppercase;
+	background: url("../i/sprite4.png");
+}
+
+.search-box .toggle div {
+	display: inline-block;
+	padding-bottom: 1px;
+	cursor: pointer;
+	background: url("../i/border4.png") 0 100% repeat-x;
+}
+
+.search-box .toggle div:before,
+.search-box .toggle div:after {
+	width: 12px;
+	content: '';
+	height: 6px;
+	position: absolute;
+	margin: .5em 0 0 -22px;
+	background: url("../i/sprites.png") 0 -183px;
+}
+
+.search-box .toggle div:after {
+	margin: .5em 0 0 12px;
+}
+
+.search-box .toggle div.alt:before,
+.search-box .toggle div.alt:after {
+	background-position: 0 -192px;
+}
+
+.search-box .select,
+.search-box input[type="text"] {
+	height: 29px;
+}
+
+.field-w-icon {
+	vertical-align: middle;
+	position: relative;
+	display: inline-block;
+}
+
+.field-w-icon [class^="icon"] {
+	right: 7px;
+	z-index: 100;
+	position: absolute;
+	margin: 0.45em 0 0 0;
+}
+
+@import 'responsive.css';
+
+/*
+ * IE 6/7/8
+ * Должно быть в самом конце для применения к окончательно рассчитанным стилям
+ */
+
+input[type="text"], input[type="password"], select, textarea, .btn {
+	*behavior: url('/js/libs/boxsizing-polyfill.htc')
+}
+
+@import 'print.css';

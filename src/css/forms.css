@@ -4,43 +4,58 @@ fieldset {
 	padding: 0;
 }
 
+.cb,
 select,
+.select,
 textarea,
 input[type="text"],
 input[type="password"] {
+	font: 14px arial, helvetica cy, helvetica, sans-serif;
 	position: relative;
 	vertical-align: middle;
+	background: #fff url("../i/sprite5.png");
+	-webkit-transition: all 0.2s ease;
+	   -moz-transition: all 0.2s ease;
+		    transition: all 0.2s ease;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 		    box-sizing: border-box;
 }
 
-input[type="text"], input[type="password"] {
-	padding: 0 10px;
+input[type="text"], input[type="password"], .select {
+	height: 28px;
+	line-height: 26px;
+	padding: 0 9px;
+	border: solid 1px;
+	border-color: #a7a7a7 #d8d8d8 #d8d8d8 #a7a7a7;
 }
 
 select:focus,
+.select.-active,
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus {
 	outline: none;
+	border-color: #52a8ec;
+	box-shadow: 0 0 8px rgba(82,168,236,0.6)
 }
 
 select {
-	padding-left: 10px;
+	padding-left: 9px;
 }
 
 textarea {
 	resize: vertical;
-	padding: 7px 0 7px 10px;
+	padding: 7px 0 7px 9px;
 }
 
 .form {
-
+	background: #f2f2f2;
+	margin-bottom: 30px;
 }
 
 .form dl {
-	margin: 0;
+	margin: 0 0 10px 0;
 	padding: 0;
 }
 
@@ -56,27 +71,148 @@ textarea {
 }
 
 .form select,
+.form .select,
 .form textarea,
-.form .input-wrapper,
 .form input[type="text"],
 .form input[type="password"] {
 	width: 100%;
 }
 
-.input-placeholder {
-	top: 0;
-	left: 0;
-	color: #969696;
-	border: 0 !important;
-	background: none !important;
-	position: absolute !important;
-	-webkit-box-shadow: none !important;
-	-moz-box-shadow: none !important;
-	box-shadow: none !important;
+::-webkit-input-placeholder {
+	color: #7e7e7e;
 }
 
-.input-wrapper {
-	position: relative;
-	display: inline-block;
+:-moz-placeholder {
+	color: #7e7e7e;
+}
+
+:-ms-input-placeholder {
+	color: red !important;
+}
+
+.placeholdr {
+	color: #7e7e7e;
+}
+
+.select {
 	vertical-align: middle;
+	display: inline-block;
+	color: #7e7e7e;
+	cursor: default;
+	position: relative;
+	padding-right: 24px;
+}
+
+.select > div {
+	height: inherit;
+	line-height: 28px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.select > div.selected {
+	color: #000;
+}
+
+.select > div:after {
+	top: .77em;
+	right: 7px;
+	width: 8px;
+	height: 6px;
+	content: '';
+	z-index: 10;
+	position: absolute;
+	background: url("../i/sprites.png") 0 -201px no-repeat;
+}
+
+.select.-active > div:after {
+	top: .5em;
+	height: 14px;
+	background-position: -12px -201px;
+}
+
+.select ul {
+	color: #fff;
+	display: none;
+	z-index: 1000;
+	list-style: none;
+	font: 16px Font1;
+	padding: 16px 20px 16px 9px;
+	position: absolute;
+	background: #96ae29;
+	white-space: nowrap;
+	margin: 0 0 0 -10px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+}
+
+.select ul .icon-close {
+	top: 10px;
+	right: 10px;
+	position: absolute;
+}
+
+.select ul .icon-close:hover {
+	background-position: 0 -261px;
+}
+
+.select ul li {
+	padding: 0 0 0 4px;
+	margin: 0 21px 0 0;
+	vertical-align: top;
+	display: inline-block;
+	border-left: solid 1px #b6c66a;
+}
+
+.select ul a {
+	color: #fff;
+	display: block;
+	cursor: pointer;
+	padding: 2px 6px;
+	margin-bottom: 9px;
+	position: relative;
+	border-radius: .3em;
+	border: solid 1px #96ae29;
+}
+
+.select ul li a:last-child {
+	margin-bottom: 0;
+}
+
+.select ul a:hover {
+	color: #d3dcaa;
+}
+
+.select ul a.selected {
+	background: #a8bf42;
+	border-color: #d3dcaa;
+}
+
+.select ul a.selected:hover {
+	color: #fff;
+}
+
+.cb {
+	color: #6d6d6d;
+	padding: 5px 8px 7px 8px;
+	background: rgba(255,255,255,.4);
+}
+
+.cb input[type="checkbox"] {
+	float: left;
+	margin-right: 12px;
+}
+
+.cb input[type="checkbox"] {
+	position: absolute;
+	margin-left: -999px;
+}
+
+.cb .icon-cb {
+	margin-right: 7px;
+}
+
+.cb.-active {
+	color: #000;
 }

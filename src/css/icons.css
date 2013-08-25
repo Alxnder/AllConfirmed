@@ -1,8 +1,110 @@
-[class^="icon-"] {
+[class^="icon-"], [class^="ibtn-"] {
 	overflow: hidden;
 	position: relative;
 	text-indent: -999em;
 	display: inline-block;
 	vertical-align: middle;
 	background: url("../i/sprites.png") 0 0 no-repeat;
+}
+
+[class^="ibtn-"] {
+	background: url("../i/buttons.png") 0 0 no-repeat;
+}
+
+.icon-logo {
+	width: 194px;
+	height: 69px;
+	background-position: 0 -76px;
+}
+
+.icon-pointer {
+	width: 13px;
+	height: 18px;
+	background-position: 0 -35px;
+}
+
+.icon-key {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -56px;
+}
+
+.icon-pointer_small-red {
+	width: 10px;
+	height: 15px;
+	background-position: 0 -148px;
+}
+
+.icon-pointer_small-grey {
+	width: 10px;
+	height: 15px;
+	background-position: -13px -148px;
+}
+
+.ibtn-addplace, .ibtn-forbusiness, .ibtn-howworks {
+	width: 232px;
+	height: 90px;
+	background-position: 0 0;
+}
+
+.ibtn-addplace:hover {
+	background-position: -235px 0;
+}
+
+.ibtn-forbusiness {
+	background-position: 0 -93px;
+}
+
+.ibtn-forbusiness:hover {
+	background-position: -235px -93px;
+}
+
+.ibtn-howworks {
+	background-position: 0 -186px;
+}
+
+.ibtn-howworks:hover {
+	background-position: -235px -186px;
+}
+
+.icon-badge_small {
+	width: 16px;
+	height: 20px;
+	background-position: 0 0;
+}
+
+a:hover .icon-badge_small {
+	background-position: -20px 0;
+}
+
+.icon-plus_small {
+	width: 11px;
+	height: 12px;
+	background-position: 0 -21px;
+}
+
+a:hover .icon-plus_small {
+	background-position: -15px -21px;
+}
+
+.icon-close {
+	width: 21px;
+	height: 18px;
+	background-position: 0 -239px;
+}
+
+.icon-cb {
+	 width: 15px;
+	 height: 14px;
+	 background-position: -1000px -283px;
+	 background-color: #fff;
+	 box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+ }
+
+.cb.-active .icon-cb {
+	background-position: 0 -283px;
+}
+
+.cb:active .icon-cb {
+	background-color: #ccc;
 }

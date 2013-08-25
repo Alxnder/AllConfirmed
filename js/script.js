@@ -21,11 +21,6 @@ function primaryNav() {
 			links.filter(':eq('+ i +'), :lt(' +  (i + elements_per_wrap) + '):gt(' + i + ')').wrapAll('<li />');
 		}
 	});
-
-	items.find('> a').click(function() {
-
-		return false;
-	})
 }
 
 

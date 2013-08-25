@@ -1,18 +1,40 @@
 .btn {
+	height: 38px;
+	padding: 0 33px;
+	font: 24px/36px Lobster;
 	position: relative;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	vertical-align: middle;
 	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+		    box-sizing: border-box;
 }
 
 .btn.-yellow {
-
+	color: #fff;
+	text-shadow: 0 1px 0 #777;
+	box-shadow: 4px 4px 0 rgba(0,0,0,.13);
+	background: -moz-linear-gradient(top, #f3dd69, #dda818);
+	background: -webkit-linear-gradient(top, #f3dd69, #dda818);
+	background: -o-linear-gradient(top, #f3dd69, #dda818);
+	background: -ms-linear-gradient(top, #f3dd69, #dda818);
+	background: linear-gradient(top, #f3dd69, #dda818);
+	-pie-background: linear-gradient(top, #f3dd69, #dda818 100%);
 }
 
-.btn.-yellow:hover {
+.btn.-yellow:hover, .btn.-yellow:active {
+	position: relative;
+	background: -moz-linear-gradient(top, #f3dd69, #b88600);
+	background: -webkit-linear-gradient(top, #f3dd69, #b88600);
+	background: -o-linear-gradient(top, #f3dd69, #b88600);
+	background: -ms-linear-gradient(top, #f3dd69, #b88600);
+	background: linear-gradient(top, #f3dd69, #b88600);
+	-pie-background: linear-gradient(top, #f3dd69, #b88600 100%);
+}
 
+.btn.-yellow:active {
+	top: 1px;
+	box-shadow: none;
 }

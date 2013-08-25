@@ -56,7 +56,7 @@ html {
  */
 
 html, button, input, select, textarea {
-    font-family: sans-serif;
+    font-family: 'Font1 Light', arial, helvetica cy, helvetica, sans-serif;
 }
 
 /**
@@ -99,23 +99,25 @@ a:hover {
  */
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    font: normal 30px 'Font1 Extralight';
+    margin: 0 0 30px 0;
 }
 
 h2 {
-    font-size: 1.5em;
-    margin: 0.83em 0;
+	font: normal 24px 'Font1 Light';
+    margin: 0 0 8px 0;
+	color: #be0002;
 }
 
 h3 {
-    font-size: 1.17em;
-    margin: 1em 0;
+	font: normal 21px 'Font1 Bold';
+    margin: 0 0 8px 0;
+	color: #be0002;
 }
 
 h4 {
-    font-size: 1em;
-    margin: 1.33em 0;
+	font: normal 18px 'Font1 Bold';
+	margin: 0 0 8px 0;
 }
 
 h5 {
@@ -181,7 +183,7 @@ mark {
  */
 
 p, pre {
-    margin: 1em 0;
+    margin: 0 0 1em 0;
 }
 
 /**
