@@ -371,6 +371,11 @@ nav.primary > ul ul {
 	font: 16px/1.25em 'Font1';
 }
 
+nav.primary .title {
+	margin-top: -6px;
+	font: 18px 'Font1 Bold';
+}
+
 nav.primary > ul ul li {
 	display: inline-block;
 	vertical-align: top;
@@ -546,6 +551,115 @@ nav.secondary a:hover {
 	position: absolute;
 	margin: 0.45em 0 0 0;
 }
+
+.dashed-border_red {
+	text-decoration: none;
+	background: url("../i/border1.png") 0 100% repeat-x;
+}
+
+.-red, .-red:visited {
+	color: #a92f28;
+}
+
+.filter {
+	margin-bottom: 17px;
+	overflow: hidden;
+	font: 16px 'Font1 Light';
+}
+
+.filter * {
+	float: left;
+	text-align: center;
+	min-width: 132px;
+	padding: 7px 15px 6px 15px;
+	margin: 0 18px 18px 0;
+	-webkit-transition: all 0.2s ease;
+	   -moz-transition: all 0.2s ease;
+		    transition: all 0.2s ease;
+}
+
+.filter a {
+	color: #958776;
+	text-decoration: none;
+	background: #f9f1cd;
+}
+
+.filter div, .filter a:hover {
+	color: #6a5a51;
+	background: #efdc83;
+}
+
+h1 + .filter {
+	margin-top: -17px;
+}
+
+.object {
+	margin: 0;
+	padding: 0;
+	width: 350px;
+	display: inline-block;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.object dt {
+	border-top: solid 7px #840000;
+	float: left;
+	margin-right: 14px;
+}
+
+.object dt img {
+
+}
+
+.object dd {
+
+}
+
+.object p {
+	font-size: 13px;
+}
+
+.object .location {
+	font: italic 12px/1.4em arial, helvetica cy, helvetica, sans-serif;
+	color: #262220;
+	margin-bottom: 5px;
+}
+
+.object .location a {
+	color: #262220 !important;
+	text-decoration: none;
+}
+
+.object .location a [class^="icon"] {
+	margin-left: 5px;
+	vertical-align: text-bottom;
+}
+
+.object .location a:hover {
+	text-decoration: underline;
+}
+
+.object .title {
+	margin: 0 0 12px 0;
+	font: 18px/1.1em Font1;
+	color: #9c0103;
+}
+
+.object .title a {
+	color: #9c0103;
+	text-decoration: none;
+}
+
+[class^="rating"] {
+	height: 13px;
+}
+
+[class^="rating"] a {
+	
+}
+
+
 
 @import 'responsive.css';
 

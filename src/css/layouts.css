@@ -1,6 +1,5 @@
 .header {
-	width: 100%;
-	display: table-caption;
+
 }
 
 .top-bar .wrapper, .logo-bar, [class^="layout"], .footer .wrapper {
@@ -9,8 +8,7 @@
 }
 
 .container {
-	display: table;
-	width: 100%;
+
 }
 
 .layout-twocols .content {
@@ -32,5 +30,5 @@
 }
 
 .footer {
-	display: table-footer-group;
+
 }

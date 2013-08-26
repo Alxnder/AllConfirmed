@@ -193,6 +193,27 @@ textarea {
 	color: #fff;
 }
 
+.select .tip {
+	left: -1px;
+	top: -1px;
+	position: absolute;
+	height: 27px;
+	min-width: inherit;
+	line-height: 28px;
+	white-space: nowrap;
+	border: solid 1px #b3ce4e;
+	background: #fff;
+	padding: 0 9px 0 9px;
+	display: none;
+	z-index: 100;
+	color: #000;
+	box-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+}
+
+.select .tip:after {
+	display: none;
+}
+
 .cb {
 	color: #6d6d6d;
 	padding: 5px 8px 7px 8px;

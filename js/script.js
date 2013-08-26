@@ -42,7 +42,7 @@ function primaryNav() {
 			var submenu = $(this).find('> ul');
 
 			if (submenu.length) {
-				$(this).find('> a, > div').clone().prependTo(submenu).wrap('<li>');
+				$(this).find('> a, > div').clone().prependTo(submenu).wrap('<div class="title">');
 			}
 		});
 
@@ -171,7 +171,8 @@ function searchBox() {
 function select() {
 	var selects = $('.select'),
 		lists = selects.find('ul'),
-		elements_per_wrap = 13;
+		elements_per_wrap = 13, //Количество элементов в колонке
+		tip_timer;
 
 	selects.each(function() {
 		var $this = $(this),
@@ -179,6 +180,7 @@ function select() {
 			list = $this.find('ul'),
 			items = list.find('a');
 
+		text.after('<div class="tip" />');
 		list.prepend('<i class="icon-close"></i>');
 		list.css({
 			minWidth: $this.outerWidth()
@@ -216,11 +218,13 @@ function select() {
 		//Элементы в выпадающем меню, выделение активного элемента
 		items.click(function(e) {
 			var $this = $(this);
+
 			items.removeClass('selected');
 			setTimeout(function() {
 				$this.addClass('selected')
 			}, 100);
-			text.text($(this).text()).addClass('selected');
+			text.text($this.text()).addClass('selected');
+			tip.text($this.text());
 			listClose(list);
 			e.stopPropagation();
 		});
@@ -228,6 +232,23 @@ function select() {
 		list.click(function(e) {
 			e.stopPropagation();
 		});
+
+		//Показываем подсказку, если текст не влезает в селект
+		var tip = $this.find('.tip');
+		$this.hover(
+			function() {
+				if (tip.width() > text.width()) {
+					tip_timer = setTimeout(function() {
+						tip.stop().fadeIn(100)
+					}, 300)
+				}
+			},
+			function() {
+				if (tip.is(':visible')) {
+					tip.stop().fadeOut(200);
+				}
+			}
+		)
 	});
 
 	function listClose(list) {

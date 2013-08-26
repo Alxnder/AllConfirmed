@@ -42,7 +42,7 @@ function primaryNav() {
 			var submenu = $(this).find('> ul');
 
 			if (submenu.length) {
-				$(this).find('> a, > div').clone().prependTo(submenu).wrap('<li>');
+				$(this).find('> a, > div').clone().prependTo(submenu).wrap('<div class="title">');
 			}
 		});
 
@@ -171,7 +171,8 @@ function searchBox() {
 function select() {
 	var selects = $('.select'),
 		lists = selects.find('ul'),
-		elements_per_wrap = 13;
+		elements_per_wrap = 13, //Количество элементов в колонке
+		tip_timer;
 
 	selects.each(function() {
 		var $this = $(this),
@@ -179,19 +180,21 @@ function select() {
 			list = $this.find('ul'),
 			items = list.find('a');
 
+		text.after('<div class="tip" />');
 		list.prepend('<i class="icon-close"></i>');
 		list.css({
 			minWidth: $this.outerWidth()
 		});
 
-		var close = list.find('.icon-close');
+		var close = list.find('.icon-close'),
+			tip = $this.find('.tip');
 
 		//Разделяем список по колонкам
 		for (var i = 0; i < items.length; i += elements_per_wrap) {
 			items.filter(':eq('+ i +'), :lt(' +  (i + elements_per_wrap) + '):gt(' + i + ')').wrapAll('<li />');
 		}
 
-		$(this).click(function(e) {
+		$this.click(function(e) {
 			//Прячем все меню и возвращаем исходный вид
 			selects.removeClass('-active');
 			lists.fadeOut(100);
@@ -216,17 +219,39 @@ function select() {
 		//Элементы в выпадающем меню, выделение активного элемента
 		items.click(function(e) {
 			var $this = $(this);
+
 			items.removeClass('selected');
 			setTimeout(function() {
 				$this.addClass('selected')
 			}, 100);
-			text.text($(this).text()).addClass('selected');
+			text.text($this.text()).addClass('selected');
+			tip.text($this.text());
 			listClose(list);
 			e.stopPropagation();
 		});
 
 		list.click(function(e) {
 			e.stopPropagation();
+		});
+
+		//Показываем подсказку, если текст не влезает в селект
+		$this.hover(
+			function() {
+				if (tip.width() > text.width()) {
+					if (!list.is(':visible')) {
+						tip_timer = setTimeout(function() {
+							tip.stop().fadeIn(100)
+						}, 300)
+					}
+				}
+			},
+			function() {
+				tip.stop().fadeOut(100);
+			}
+		);
+
+		tip.click(function() {
+			tip.stop().fadeOut(100);
 		});
 	});
 

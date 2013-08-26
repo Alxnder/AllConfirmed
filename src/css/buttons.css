@@ -3,10 +3,12 @@
 	padding: 0 33px;
 	font: 24px/36px Lobster;
 	position: relative;
+	z-index: 0;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
 	vertical-align: middle;
+	background: url("../i/sprites-x.png") 0 0 repeat-x;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 		    box-sizing: border-box;
@@ -16,25 +18,16 @@
 	color: #fff;
 	text-shadow: 0 1px 0 #777;
 	box-shadow: 4px 4px 0 rgba(0,0,0,.13);
-	background: -moz-linear-gradient(top, #f3dd69, #dda818);
-	background: -webkit-linear-gradient(top, #f3dd69, #dda818);
-	background: -o-linear-gradient(top, #f3dd69, #dda818);
-	background: -ms-linear-gradient(top, #f3dd69, #dda818);
-	background: linear-gradient(top, #f3dd69, #dda818);
-	-pie-background: linear-gradient(top, #f3dd69, #dda818 100%);
+	background-position: 0 0;
+	background-color: #d0aa22;
 }
 
 .btn.-yellow:hover, .btn.-yellow:active {
-	position: relative;
-	background: -moz-linear-gradient(top, #f3dd69, #b88600);
-	background: -webkit-linear-gradient(top, #f3dd69, #b88600);
-	background: -o-linear-gradient(top, #f3dd69, #b88600);
-	background: -ms-linear-gradient(top, #f3dd69, #b88600);
-	background: linear-gradient(top, #f3dd69, #b88600);
-	-pie-background: linear-gradient(top, #f3dd69, #b88600 100%);
+	background-position: 0 -100px;
+	background-color: #d09e20;
 }
 
 .btn.-yellow:active {
 	top: 1px;
-	box-shadow: none;
+	box-shadow: 0 0 0 rgba(0,0,0,0);
 }
