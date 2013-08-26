@@ -124,6 +124,7 @@ a:hover {
 }
 
 .cols-wrapper {
+	position: relative;
 	line-height: 0;
 	text-align: justify;
 	*text-align-last: justify;
@@ -196,6 +197,49 @@ label {
 
 .clearfix:after, [class^="layout"]:after, .top-bar:after, .logo-bar:after {
 	clear: both;
+}
+
+h1 {
+	font: normal 30px 'Font1 Extralight';
+	margin: 0 0 30px 0;
+}
+
+h2 {
+	font: normal 24px 'Font1 Light';
+	margin: 0 0 8px 0;
+	color: #be0002;
+}
+
+.aside h2 {
+	color: #968b85;
+	margin: 0 0 30px 0;
+	font: normal 30px 'Font1 Extralight';
+}
+
+.fancybox-skin h2 {
+	color: #000;
+	font-size: 30px;
+}
+
+h3 {
+	font: normal 21px 'Font1 Bold';
+	margin: 0 0 8px 0;
+	color: #be0002;
+}
+
+h4 {
+	font: normal 18px 'Font1 Bold';
+	margin: 0 0 8px 0;
+}
+
+h5 {
+	font-size: 0.83em;
+	margin: 1.67em 0;
+}
+
+h6 {
+	font-size: 0.67em;
+	margin: 2.33em 0;
 }
 
 @import 'layouts.css';
@@ -419,6 +463,10 @@ nav.secondary a:hover {
 	color: #ffadab;
 }
 
+.banners {
+	margin-bottom: 63px;
+}
+
 .banners a {
 	display: block;
 	margin-bottom: 19px;
@@ -426,7 +474,7 @@ nav.secondary a:hover {
 
 .search-box {
 	position: relative;
-	margin-bottom: 28px;
+	margin-bottom: 24px;
 	min-height: 65px;
 	background: url("../i/sprite3.png") 0 0 repeat-x;
 	padding: 14px 13px 12px 13px;
@@ -456,6 +504,10 @@ nav.secondary a:hover {
 	width: 565px;
 }
 
+.search-box [class^="btn"] {
+	font-size: 24px;
+}
+
 .table {
 	display: table;
 }
@@ -476,9 +528,17 @@ nav.secondary a:hover {
 	border: 0;
 }
 
-.search-box .advanced .checkboxes .cb {
+.search-box .cb {
+	color: #6d6d6d;
+	padding: 5px 8px 7px 30px;
+	background: rgba(255,255,255,.4);
 	display: block;
 	min-width: 90px;
+	font: 14px arial, helvetica cy, helvetica, sans-serif;
+}
+
+.search-box .cb.-active {
+	color: #000;
 }
 
 .search-box input[type="text"] {
@@ -561,6 +621,10 @@ nav.secondary a:hover {
 	color: #a92f28;
 }
 
+.-black, .-black:visited {
+	color: #000;
+}
+
 .filter {
 	margin-bottom: 17px;
 	overflow: hidden;
@@ -597,6 +661,7 @@ h1 + .filter {
 	margin: 0;
 	padding: 0;
 	width: 350px;
+	height: 170px;
 	display: inline-block;
 	vertical-align: top;
 	overflow: hidden;
@@ -608,12 +673,12 @@ h1 + .filter {
 	margin-right: 14px;
 }
 
-.object dt img {
-
+.object dt img:hover {
+	opacity: 0.8;
 }
 
 .object dd {
-
+	overflow: hidden;
 }
 
 .object p {
@@ -623,7 +688,7 @@ h1 + .filter {
 .object .location {
 	font: italic 12px/1.4em arial, helvetica cy, helvetica, sans-serif;
 	color: #262220;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
 .object .location a {
@@ -651,15 +716,107 @@ h1 + .filter {
 	text-decoration: none;
 }
 
-[class^="rating"] {
-	height: 13px;
+.object .title a:hover {
+	color: #f24638;
 }
 
-[class^="rating"] a {
-	
+.objects .object:nth-child(2n) {
+	margin: 0 0 11px 22px;
 }
 
+.rating {
+	font: 12px arial, helvetica cy, helvetica, sans-serif;
+}
 
+.rating a {
+	color: #e5ba38;
+	margin-left: 6px;
+	text-decoration: none;
+}
+
+.blogposts-short {
+	color: #585858;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font: 12px arial, helvetica cy, helvetica, sans-serif;
+}
+
+.blogposts-short li {
+	margin-bottom: 46px;
+}
+
+.blogposts-short a,
+.blogposts-short a:visited {
+	color: #c43e35;
+}
+
+.blogposts-short a:hover {
+	color: #f24638;
+	text-decoration: none;
+}
+
+.blogposts-short img {
+	vertical-align: top;
+	margin-bottom: 9px;
+}
+
+.blogposts-short p {
+	margin-bottom: 0;
+	line-height: 1.5em;
+}
+
+.blogposts-short .title {
+	margin-bottom: 18px;
+	font: 16px Font1;
+}
+
+.footer-nav {
+	font-size: 15px;
+	margin: 8px 0 47px 0;
+}
+
+.footer-nav a {
+	color: #fff;
+	margin-right: 27px;
+}
+
+.sitecredits {
+	color: #cb8883;
+}
+
+.sitecredits a, .sitecredits a:visited {
+	color: #cb8883;
+	text-decoration: none;
+}
+
+.sitecredits a:hover {
+	text-decoration: underline;
+}
+
+.addthis_toolbox {
+	min-width: 250px !important;
+}
+
+.footer .share {
+	width: 232px;
+}
+
+.footer .share .title {
+	color: #fff;
+	font: 30px/1em 'Font1 Extralight';
+	margin: 0 0 12px 0;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+@import 'jquery.fancybox.css';
 
 @import 'responsive.css';
 

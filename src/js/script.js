@@ -4,6 +4,9 @@
 	searchBox();
 	select();
 	stylizeCheckbox();
+	$('.icon-top').click(function() {
+		$('html, body').animate({'scrollTop': 0}, 100)
+	});
 });
 
 
@@ -288,3 +291,16 @@ function stylizeCheckbox() {
 		}
 	})
 }
+
+/*!
+ *Всплывающие окна
+ */
+
+//Регистрация
+$('#signin').fancybox({
+	fitToView	: false,
+	autoSize	: true,
+	padding		: 50,
+	openEffect	: 'none',
+	closeEffect	: 'none'
+});

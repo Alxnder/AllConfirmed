@@ -50,8 +50,12 @@ textarea {
 }
 
 .form {
+	display: inline-block;
+	vertical-align: top;
 	background: #f2f2f2;
 	margin-bottom: 30px;
+	font: 15px Font1;
+	padding: 25px 50px 25px 25px;
 }
 
 .form dl {
@@ -60,14 +64,28 @@ textarea {
 }
 
 .form dt {
+	width: 100px;
+	margin: .2em 20px 0 0;
+	text-align: right;
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 }
 
 .form dd {
 	margin: 0;
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
+	position: relative;
+	width: 300px;
+}
+
+.form .checkboxes {
+	font-size: 12px;
+}
+
+.form .checkboxes .cb {
+	display: block;
+	margin-bottom: 11px;
 }
 
 .form select,
@@ -215,14 +233,10 @@ textarea {
 }
 
 .cb {
-	color: #6d6d6d;
-	padding: 5px 8px 7px 8px;
-	background: rgba(255,255,255,.4);
-}
-
-.cb input[type="checkbox"] {
-	float: left;
-	margin-right: 12px;
+	color: #000;
+	font: 12px Font1;
+	background: none;
+	padding-left: 22px;
 }
 
 .cb input[type="checkbox"] {
@@ -231,9 +245,66 @@ textarea {
 }
 
 .cb .icon-cb {
-	margin-right: 7px;
+	margin: 0 7px 0 -22px;
 }
 
 .cb.-active {
 	color: #000;
+}
+
+input.error, textarea.error {
+	border: solid 2px #b22d27;
+	border-radius: 3px;
+}
+
+input.filled, textarea.filled {
+	border: solid 2px #79901b;
+	border-radius: 3px;
+}
+
+p.error, dd.error {
+	color: #dc0000;
+}
+
+p.error {
+	margin-bottom: 2px;
+}
+
+.error + .icon-error,
+.filled + .icon-check {
+	position: absolute;
+	margin: .4em 0 0 7px;
+}
+
+.form-reg dd {
+	width: 305px;
+}
+
+.form-reg input[type="text"],
+.form-reg input[type="password"],
+.form-reg textarea {
+	width: 275px;
+}
+
+.note {
+	font-size: 11px;
+	color: #a8a8a8;
+	display: block;
+	margin: 0 0 0 43px;
+}
+
+.form-reg [class^="btn"] {
+	width: 140px;
+}
+
+.regn-types {
+	margin-left: 22px;
+}
+
+.regn-types a {
+	margin-left: 5px;
+}
+
+.fancybox-skin .form {
+	margin-bottom: 0;
 }

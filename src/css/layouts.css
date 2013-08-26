@@ -2,13 +2,9 @@
 
 }
 
-.top-bar .wrapper, .logo-bar, [class^="layout"], .footer .wrapper {
+.top-bar .wrapper, .logo-bar, [class^="layout"], .footer .cols-wrapper {
 	width: 980px;
 	margin: 0 auto;
-}
-
-.container {
-
 }
 
 .layout-twocols .content {
@@ -30,5 +26,19 @@
 }
 
 .footer {
+	height: 146px;
+	background: url("../i/sprite6.png") 50% 0;
+}
 
+.footer .cols-wrapper {
+	padding-top: 32px;
+}
+
+.footer .col {
+	vertical-align: top;
+}
+
+.container {
+	width: 100%;
+	overflow: hidden;
 }

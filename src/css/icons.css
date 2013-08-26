@@ -108,3 +108,99 @@ a:hover .icon-plus_small {
 .cb:active .icon-cb {
 	background-color: #ccc;
 }
+
+[class^="icon-rating"] {
+	height: 13px;
+	background-position: 0 -168px;
+}
+
+.icon-rating-0_5 {
+	width: 13px;
+	background-position: -80px -168px;
+}
+
+.icon-rating-1 {
+	width: 13px;
+}
+
+.icon-rating-1_5 {
+	width: 29px;
+	background-position: -64px -168px;
+}
+
+.icon-rating-2 {
+	width: 29px;
+}
+
+.icon-rating-2_5 {
+	width: 45px;
+	background-position: -48px -168px;
+}
+
+.icon-rating-3 {
+	width: 45px;
+}
+
+.icon-rating-3_5 {
+	width: 61px;
+	background-position: -32px -168px;
+}
+
+.icon-rating-4 {
+	width: 61px;
+}
+
+.icon-rating-4_5 {
+	width: 77px;
+	background-position: -16px -168px;
+}
+
+.icon-rating-5 {
+	width: 77px;
+}
+
+.icon-top {
+	width: 87px;
+	height: 34px;
+	position: absolute;
+	top: -200px;
+	left: 50%;
+	margin: 0 0 0 500px;
+	z-index: 500;
+	cursor: pointer;
+	background-position: 0 -304px;
+}
+
+.icon-error {
+	width: 16px;
+	height: 14px;
+	background-position: 0 -344px;
+}
+
+.icon-check {
+	width: 14px;
+	height: 11px;
+	background-position: 0 -363px;
+}
+
+.icon-fb_small,
+.icon-gplus_small,
+.icon-myspace_small,
+.icon-threedots_small {
+	width: 18px;
+	height: 19px;
+	background-position: 0 -378px;
+	box-shadow: 1px 1px 0 rgba(0,0,0,0.2);
+}
+
+.icon-gplus_small {
+	background-position: -21px -378px;
+}
+
+.icon-myspace_small {
+	background-position: -42px -378px;
+}
+
+.icon-threedots_small {
+	background-position: -63px -378px;
+}

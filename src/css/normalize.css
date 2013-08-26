@@ -86,44 +86,6 @@ a:hover {
    ========================================================================== */
 
 /**
- * Address font sizes and margins set differently in IE 6/7.
- * Address font sizes within 'section' and 'article' in Firefox 4+, Safari 5,
- * and Chrome.
- */
-
-h1 {
-    font: normal 30px 'Font1 Extralight';
-    margin: 0 0 30px 0;
-}
-
-h2 {
-	font: normal 24px 'Font1 Light';
-    margin: 0 0 8px 0;
-	color: #be0002;
-}
-
-h3 {
-	font: normal 21px 'Font1 Bold';
-    margin: 0 0 8px 0;
-	color: #be0002;
-}
-
-h4 {
-	font: normal 18px 'Font1 Bold';
-	margin: 0 0 8px 0;
-}
-
-h5 {
-    font-size: 0.83em;
-    margin: 1.67em 0;
-}
-
-h6 {
-    font-size: 0.67em;
-    margin: 2.33em 0;
-}
-
-/**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
 

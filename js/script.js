@@ -4,6 +4,9 @@
 	searchBox();
 	select();
 	stylizeCheckbox();
+	$('.icon-top').click(function() {
+		$('html, body').animate({'scrollTop': 0}, 100)
+	});
 });
 
 
@@ -186,14 +189,15 @@ function select() {
 			minWidth: $this.outerWidth()
 		});
 
-		var close = list.find('.icon-close');
+		var close = list.find('.icon-close'),
+			tip = $this.find('.tip');
 
 		//Разделяем список по колонкам
 		for (var i = 0; i < items.length; i += elements_per_wrap) {
 			items.filter(':eq('+ i +'), :lt(' +  (i + elements_per_wrap) + '):gt(' + i + ')').wrapAll('<li />');
 		}
 
-		$(this).click(function(e) {
+		$this.click(function(e) {
 			//Прячем все меню и возвращаем исходный вид
 			selects.removeClass('-active');
 			lists.fadeOut(100);
@@ -234,21 +238,24 @@ function select() {
 		});
 
 		//Показываем подсказку, если текст не влезает в селект
-		var tip = $this.find('.tip');
 		$this.hover(
 			function() {
 				if (tip.width() > text.width()) {
-					tip_timer = setTimeout(function() {
-						tip.stop().fadeIn(100)
-					}, 300)
+					if (!list.is(':visible')) {
+						tip_timer = setTimeout(function() {
+							tip.stop().fadeIn(100)
+						}, 300)
+					}
 				}
 			},
 			function() {
-				if (tip.is(':visible')) {
-					tip.stop().fadeOut(200);
-				}
+				tip.stop().fadeOut(100);
 			}
-		)
+		);
+
+		tip.click(function() {
+			tip.stop().fadeOut(100);
+		});
 	});
 
 	function listClose(list) {
