@@ -329,28 +329,45 @@ nav.primary > ul {
 
 nav.primary > ul > li {
 	float: left;
-	margin-right: 34px;
+	margin-right: 37px;
 }
 
 nav.primary > ul > li > a {
 	color: #fff;
 	padding: 0 0 3px 0;
-	display: block;
+	display: inline-block;
 	text-decoration: none;
 }
 
-nav.primary > ul > li > a:hover {
+nav.primary > ul > li > a .icon- {
+	width: 8px;
+	height: 6px;
+	background-position: 0 -220px;
+	margin-left: 7px;
+}
+
+nav.primary > ul > li > a:hover,
+nav.primary > ul > li > .active {
 	color: #ffadab;
 }
 
+nav.primary > ul > li > a:hover .icon-,
+nav.primary > ul > li > .active .icon- {
+	width: 8px;
+	height: 14px;
+	background-position: -24px -220px;
+}
+
 nav.primary > ul ul {
-	position: absolute;
-	background: #791817;
+	margin: 0;
 	color: #fff;
 	z-index: 1000;
-	margin: 0;
-	display: none;
+	position: absolute;
 	padding: 15px 15px;
+	visibility: hidden;
+	display: none;
+	white-space: nowrap;
+	background: #791817;
 	font: 16px/1.25em 'Font1';
 }
 
@@ -372,6 +389,10 @@ nav.primary > ul ul a {
 
 nav.primary > ul ul a:hover {
 	color: #ffadab;
+}
+
+.nav-visible {
+	visibility: visible !important;
 }
 
 nav.secondary {
