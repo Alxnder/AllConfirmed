@@ -208,6 +208,7 @@ function select() {
 			selects.removeClass('-active');
 			lists.fadeOut(100);
 			if (!list.is(':visible')) {
+				clearTimeout(tip_timer);
 				list.fadeIn(50);
 				$this.addClass('-active')
 			} else {
@@ -249,8 +250,8 @@ function select() {
 				if (tip.width() > text.width()) {
 					if (!list.is(':visible')) {
 						tip_timer = setTimeout(function() {
-							tip.stop().fadeIn(100)
-						}, 300)
+							tip.stop().fadeIn(50)
+						}, 200)
 					}
 				}
 			},
