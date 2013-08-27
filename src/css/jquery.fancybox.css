@@ -30,6 +30,7 @@
 	color: #000;
 	border: solid 1px #bcbcbc;
 	text-shadow: none;
+	padding-top: 30px !important;
 }
 
 .fancybox-opened {
@@ -187,7 +188,7 @@
 	overflow: hidden;
 	display: none;
 	z-index: 8010;
-	background: rgba(255,255,255,0.7);
+	background: url("../i/white_alpha40.png");
 }
 
 .fancybox-overlay-fixed {

@@ -218,7 +218,7 @@ h2 {
 
 .fancybox-skin h2 {
 	color: #000;
-	font-size: 30px;
+	font: 30px 'Font1 Extralight';
 }
 
 h3 {
@@ -832,6 +832,10 @@ h1 + .filter {
 
 .fr {
 	float: right;
+}
+
+.ar {
+	text-align: right;
 }
 
 .popup-location {

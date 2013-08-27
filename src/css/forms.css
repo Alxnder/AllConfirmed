@@ -309,3 +309,23 @@ p.error {
 .fancybox-skin .form {
 	margin-bottom: 0;
 }
+
+.form-auth .buttons {
+	color: #969696;
+	margin-top: 10px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+}
+
+.form-auth .buttons p {
+	margin-bottom: 20px;
+}
+
+.form-auth .buttons a {
+	color: #79901b;
+}
+
+.form-auth .buttons a:hover {
+	text-decoration: none;
+}

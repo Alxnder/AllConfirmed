@@ -5,6 +5,7 @@
 	select();
 	stylizeCheckbox();
 	setLocation();
+	auth();
 	$('.icon-top').click(function() {
 		$('html, body').animate({'scrollTop': 0}, 100)
 	});
@@ -28,7 +29,8 @@ function primaryNav() {
 	});
 
 	items_l1.each(function() {
-		var links = $(this).find('> ul > a');
+		var $this = $(this),
+			links = $this.find('> ul > a');
 
 		//Разделяем список по колонкам
 		for (var i = 0; i < links.length; i += elements_per_wrap) {
@@ -36,11 +38,13 @@ function primaryNav() {
 		}
 
 		//Добавляем маркер выпадающего меню
-		if ($(this).find('> ul').length) {
-			$(this).find('> a').append('<i class="icon-" />');
+		if ($this.find('> ul').length) {
+			$this.addClass('has-submenu');
+			$this.find('> a').append('<i class="icon-" />');
 		}
 	});
 
+	//Для сенсорных дисплеев
 	if (isMobile) {
 		items_l1.each(function() {
 			var submenu = $(this).find('> ul');
@@ -68,6 +72,7 @@ function primaryNav() {
 		$(document).click(function() {
 			hideSubmenu(l1_item.parent());
 		});
+	//Для обычных дисплеев
 	} else {
 		items_l1.hover(
 			function() {
@@ -355,11 +360,31 @@ function setLocation() {
 }
 
 
-//Регистрация
-$('#signin').fancybox({
-	fitToView	: false,
-	autoSize	: true,
-	padding		: 50,
-	openEffect	: 'none',
-	closeEffect	: 'none'
-});
+/*!
+ * Всплывающие формы авторизации, регмстрации и т. п.
+ * Открываем по атрибуту data-fancybox.
+ * Пример: <a data-fancybox="regWindow">Register</a>,
+ * где regWindow - скрытый блок с контентом.
+ */
+
+function auth() {
+	$('[data-fancybox]').not('[data-fancybox="close"]').click(function() {
+		$.fancybox.open(
+			$('#' + $(this).data('fancybox')),
+			{
+				fitToView	: false,
+				autoSize	: true,
+				padding		: 50,
+				openEffect	: 'none',
+				closeEffect	: 'none'
+			}
+		);
+
+		return false;
+	});
+
+	$('[data-fancybox="close"]').click(function() {
+		$.fancybox.close();
+	});
+}
+
