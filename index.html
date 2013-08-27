@@ -45,8 +45,11 @@
 				<div class="logo"><i class="icon-logo">All confirmed</i></div>
 				<div class="motto">Reservations of restaurants and clubs</div>
 				<div class="col">
-					<p><i class="icon-pointer"></i><a href="" class="set-location">I’m in Southwest Michigan</a></p>
-					<p><i class="icon-key"></i><a href="#authWindow" class="sign-in" id="signin">Sign in</a></p>
+					<p class="set-location" data-pop="popup-location" data-pop-target="loc1">
+						<i class="icon-pointer"></i>
+						<span>I’m in </span><span data-loc1>Southwest Michigan</span>
+					</p>
+					<p><i class="icon-key"></i><a href="#authWindow" class="signin" id="signin">Sign in</a></p>
 				</div>
 			</div>
 		</header>
@@ -129,7 +132,7 @@
 				</div>
 				<!--Конец поиска-->
 
-				<h1>Restaurants in <a href="" class="-red dashed-border_red">Southwest Michigan</a></h1>
+				<h1>Restaurants in <span class="-red dashed-border_red" data-pop="popup-location">Southwest Michigan</span></h1>
 
 				<div class="filter">
 					<div>We recommend</div>
@@ -288,7 +291,7 @@
 			</dl>
 			<dl><dt>First name*<dd><input type="text"></dl>
 			<dl><dt>Last name*<dd><input type="text"></dl>
-			<dl><dt>Phone number*<dd><input type="text" data-placeholder="+1___-___-____"></dl>
+			<dl><dt>Phone number*<dd><input type="text" placeholder="+1___-___-____"></dl>
 			<dl><dt>E-mail*<dd><input type="text" class="error"><i class="icon-error"></i></dl>
 			<dl>
 				<dt>Password*
@@ -320,6 +323,15 @@
 						<a href="" title="Other"><i class="icon-threedots_small"></i></a>
 					</p>
 			</dl>
+		</div>
+	</div>
+
+	<!--Функция setLocation()-->
+	<div class="popup-location">
+		<p class="-red">My city or town</p>
+		<input type="text" value="Southwest Michigan" />
+		<div class="buttons">
+			<a class="btn -yellow -small _save" href="">Save</a>
 		</div>
 	</div>
 	

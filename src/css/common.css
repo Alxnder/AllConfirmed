@@ -336,15 +336,27 @@ h6 {
 	float: right;
 }
 
-a.set-location, a.sign-in {
+.set-location, a.signin {
 	color: #9f342c;
+	cursor: default;
 	font: 16px Font1;
 	text-decoration: none;
 	margin-left: 5px;
+	position: relative;
 	background: url("../i/border1.png") 0 100% repeat-x;
 }
 
-a.sign-in {
+.set-location {
+	margin-left: 0;
+}
+
+.set-location [class^="icon"] {
+	position: absolute;
+	left: -19px;
+	margin-top: 2px;
+}
+
+a.signin {
 	color: #79901b;
 	background-image: url("../i/border2.png");
 }
@@ -613,6 +625,7 @@ nav.secondary a:hover {
 }
 
 .dashed-border_red {
+	cursor: default;
 	text-decoration: none;
 	background: url("../i/border1.png") 0 100% repeat-x;
 }
@@ -814,6 +827,28 @@ h1 + .filter {
 
 .fr {
 	float: right;
+}
+
+.popup-location {
+	left: -9999px;
+	top: 0;
+	position: absolute;
+	background: #ebebeb;
+	border: solid 1px #cacaca;
+	padding: 14px 11px 10px 11px;
+	box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+}
+
+.popup-location input {
+	color: #7e7e7e;
+	height: 27px;
+	width: 207px;
+	line-height: 26px;
+}
+
+.popup-location .buttons {
+	margin: 5px 0 0 0;
+	text-align: right;
 }
 
 @import 'jquery.fancybox.css';

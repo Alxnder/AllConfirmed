@@ -56,3 +56,9 @@
 	background-position: 0 -500px;
 	background-color: #d09e20;
 }
+
+.btn.-small {
+	height: 26px;
+	line-height: 25px;
+	padding: 0 5px;
+}

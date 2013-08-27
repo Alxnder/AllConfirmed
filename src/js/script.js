@@ -4,6 +4,7 @@
 	searchBox();
 	select();
 	stylizeCheckbox();
+	setLocation();
 	$('.icon-top').click(function() {
 		$('html, body').animate({'scrollTop': 0}, 100)
 	});
@@ -292,9 +293,67 @@ function stylizeCheckbox() {
 	})
 }
 
-/*!
- *Всплывающие окна
- */
+
+//Установа местоположения
+function setLocation() {
+	var source = $('[data-pop]'),
+		popup = $('.popup-location'),
+		layout = $('[class^="layout"]'),
+		field = popup.find('input'),
+		save = popup.find('._save'),
+		layout_width = layout.outerWidth(),
+		layout_offset = layout.offset().left;
+
+	source.each(function() {
+		var $this = $(this);
+
+		$this.click(function(e) {
+			var pop_target = $('[' + 'data-' + $this.data('pop-target') + ']');
+
+			if (!pop_target.length) {
+				pop_target = $this;
+			}
+
+			popup
+				.css('left', pop_target.offset().left)
+				.css({
+					left: function() {
+						if ((popup.offset().left + popup.width()) > (layout_width + layout_offset)) {
+							var w = (popup.offset().left + popup.outerWidth()) - (layout_width + layout_offset);
+							popup.css({'marginLeft': -w})
+						}
+					},
+					top: $(this).offset().top + $(this).height()
+				});
+
+			save.unbind('click').click(function() {
+				if (field.val() != '') {
+					pop_target.text(field.val());
+				} else {
+					return false;
+				}
+				popup.fadeOut(200, function() {
+					$(this).attr('style', '')
+				});
+
+				return false;
+			});
+
+			e.stopPropagation();
+		});
+	});
+
+	$(document).click(function() {
+		popup.fadeOut(200, function() {
+			$(this).attr('style', '')
+		});
+	});
+
+	popup.click(function(e) {
+		e.stopPropagation()
+	});
+}
+
 
 //Регистрация
 $('#signin').fancybox({

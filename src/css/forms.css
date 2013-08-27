@@ -295,6 +295,7 @@ p.error {
 
 .form-reg [class^="btn"] {
 	width: 140px;
+	padding: 0;
 }
 
 .regn-types {
