@@ -296,7 +296,7 @@ function stylizeCheckbox() {
 
 //Установа местоположения
 function setLocation() {
-	var source = $('[data-rel="popup-location"]'),
+	var source = $('[data-pop]'),
 		popup = $('.popup-location'),
 		layout = $('[class^="layout"]'),
 		field = popup.find('input'),
@@ -308,13 +308,14 @@ function setLocation() {
 		var $this = $(this);
 
 		$this.click(function(e) {
-			popup
-				.css('left', $this.offset().left)
+			var pop_target = $('[' + 'data-' + $this.data('pop-target') + ']');
 
-			console.log(popup.offset().left + popup.width());
-			console.log(layout_width + layout_offset);
+			if (!pop_target.length) {
+				pop_target = $this;
+			}
 
 			popup
+				.css('left', pop_target.offset().left)
 				.css({
 					left: function() {
 						if ((popup.offset().left + popup.width()) > (layout_width + layout_offset)) {
@@ -323,8 +324,22 @@ function setLocation() {
 						}
 					},
 					top: $(this).offset().top + $(this).height()
-				})
-			e.stopPropagation()
+				});
+
+			save.unbind('click').click(function() {
+				if (field.val() != '') {
+					pop_target.text(field.val());
+				} else {
+					return false;
+				}
+				popup.fadeOut(200, function() {
+					$(this).attr('style', '')
+				});
+
+				return false;
+			});
+
+			e.stopPropagation();
 		});
 	});
 
@@ -336,15 +351,6 @@ function setLocation() {
 
 	popup.click(function(e) {
 		e.stopPropagation()
-	});
-
-	save.click(function() {
-		source.text(field.val());
-		popup.fadeOut(200, function() {
-			$(this).attr('style', '')
-		});
-
-		return false;
 	});
 }
 

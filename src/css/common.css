@@ -190,7 +190,7 @@ label {
 
 .clearfix:before, .clearfix:after,
 [class^="layout"]:before, [class^="layout"]:after,
-.top-bar:before, .top-bar:after, .logo-bar:after {
+.top-bar:after, .logo-bar:after {
 	content: " "; /* 1 */
 	display: table; /* 2 */
 }
@@ -497,6 +497,7 @@ nav.secondary a:hover {
 	width: 552px;
 	height: 37px;
 	font-size: 17px;
+	line-height: 36px;
 	border-right-color: #fff;
 	border-bottom-color: #fff;
 	padding: 0 10px;
@@ -543,7 +544,7 @@ nav.secondary a:hover {
 .search-box .cb {
 	color: #6d6d6d;
 	padding: 5px 8px 7px 30px;
-	background: rgba(255,255,255,.4);
+	background: url("../i/white_alpha40.png");
 	display: block;
 	min-width: 90px;
 	font: 14px arial, helvetica cy, helvetica, sans-serif;
@@ -621,7 +622,7 @@ nav.secondary a:hover {
 	right: 7px;
 	z-index: 100;
 	position: absolute;
-	margin: 0.45em 0 0 0;
+	top: 0.45em;
 }
 
 .dashed-border_red {
@@ -792,6 +793,10 @@ h1 + .filter {
 .footer-nav a {
 	color: #fff;
 	margin-right: 27px;
+}
+
+.footer-nav a:hover {
+	text-decoration: none;
 }
 
 .sitecredits {

@@ -1,7 +1,3 @@
-.header {
-
-}
-
 .top-bar .wrapper, .logo-bar, [class^="layout"], .footer .cols-wrapper {
 	width: 980px;
 	margin: 0 auto;
@@ -27,6 +23,7 @@
 
 .footer {
 	height: 146px;
+	clear: both;
 	background: url("../i/sprite6.png") 50% 0;
 }
 
