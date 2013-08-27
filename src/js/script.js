@@ -255,6 +255,7 @@ function select() {
 				}
 			},
 			function() {
+				clearTimeout(tip_timer);
 				tip.stop().fadeOut(100);
 			}
 		);
