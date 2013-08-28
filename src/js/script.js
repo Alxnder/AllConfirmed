@@ -5,7 +5,7 @@
 	select();
 	stylizeCheckbox();
 	setLocation();
-	auth();
+	openWindow();
 	$('.icon-top').click(function() {
 		$('html, body').animate({'scrollTop': 0}, 100)
 	});
@@ -219,7 +219,7 @@ function select() {
 
 		$(document).click(function() {
 			listClose(list);
-		});
+		});Flask
 
 		close.click(function(e) {
 			listClose(list);
@@ -363,13 +363,13 @@ function setLocation() {
 
 
 /*!
- * Всплывающие формы авторизации, регмстрации и т. п.
+ * Всплывающие окна авторизации, регмстрации и т. п.
  * Открываем по атрибуту data-fancybox.
  * Пример: <a data-fancybox="regWindow">Register</a>,
  * где regWindow - скрытый блок с контентом.
  */
 
-function auth() {
+function openWindow() {
 	$('[data-fancybox]').not('[data-fancybox="close"]').click(function() {
 		$.fancybox.open(
 			$('#' + $(this).data('fancybox')),
