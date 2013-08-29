@@ -8,11 +8,16 @@
 	display: inline-block;
 	vertical-align: middle;
 	cursor: default;
+	border: 0;
 	background: url("../i/sprites-x.png") 0 0 repeat-x;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 		    box-sizing: border-box;
 	-pie-box-shadow: none;
+}
+
+.btn:focus, .btn:active {
+	outline: 0;
 }
 
 .btn.-yellow, .btn.-red, .btn.-grey {
@@ -30,7 +35,7 @@
 
 .btn.-yellow:active,
 .btn.-red:active,
-.btn.-grey:active{
+.btn.-grey:active {
 	top: 1px;
 	box-shadow: 0 0 0 rgba(0,0,0,0);
 }
@@ -67,4 +72,12 @@
 .btn.-wide {
 	padding-left: 20px;
 	padding-right: 20px;
+}
+
+.btn[disabled] {
+	top: 0 !important;
+	color: #ccc !important;
+	text-shadow: none !important;
+	background: #999 !important;
+	box-shadow: none !important;
 }

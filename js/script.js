@@ -5,10 +5,9 @@
 	select();
 	stylizeCheckbox();
 	setLocation();
-	auth();
-	$('.icon-top').click(function() {
-		$('html, body').animate({'scrollTop': 0}, 100)
-	});
+	openWindow();
+	scrollTop();
+	checkAgreement();
 });
 
 
@@ -20,7 +19,7 @@ function primaryNav() {
 		items_l1 = nav.find('> li'),
 		nav_l2 = items_l1.find('> ul'),
 		l1_item,
-		elements_per_wrap = 13; //Количество элементов в каждой колонке
+		elements_per_wrap = 13; //Elements quantity in every column
 
 	nav_l2.each(function() {
 		var $this = $(this);
@@ -32,19 +31,19 @@ function primaryNav() {
 		var $this = $(this),
 			links = $this.find('> ul > a');
 
-		//Разделяем список по колонкам
+		//Divide list by columns
 		for (var i = 0; i < links.length; i += elements_per_wrap) {
 			links.filter(':eq('+ i +'), :lt(' +  (i + elements_per_wrap) + '):gt(' + i + ')').wrapAll('<li />');
 		}
 
-		//Добавляем маркер выпадающего меню
+		//Adding bullet, if popup exists
 		if ($this.find('> ul').length) {
 			$this.addClass('has-submenu');
 			$this.find('> a').append('<i class="icon-" />');
 		}
 	});
 
-	//Для сенсорных дисплеев
+	//Touch devices
 	if (isMobile) {
 		items_l1.each(function() {
 			var submenu = $(this).find('> ul');
@@ -72,7 +71,7 @@ function primaryNav() {
 		$(document).click(function() {
 			hideSubmenu(l1_item.parent());
 		});
-	//Для обычных дисплеев
+	//Not touch devices
 	} else {
 		items_l1.hover(
 			function() {
@@ -176,11 +175,11 @@ function searchBox() {
 	});
 }
 
-//Выпадающее меню с колонками и кнопкой закрытия
+//Pop-up menu with columns and close button
 function select() {
 	var selects = $('.select'),
 		lists = selects.find('ul'),
-		elements_per_wrap = 13, //Количество элементов в колонке
+		elements_per_wrap = 13, //Elements quantity in every column
 		tip_timer;
 
 	selects.each(function() {
@@ -198,13 +197,13 @@ function select() {
 		var close = list.find('.icon-close'),
 			tip = $this.find('.tip');
 
-		//Разделяем список по колонкам
+		//Divide list by columns
 		for (var i = 0; i < items.length; i += elements_per_wrap) {
 			items.filter(':eq('+ i +'), :lt(' +  (i + elements_per_wrap) + '):gt(' + i + ')').wrapAll('<li />');
 		}
 
 		$this.click(function(e) {
-			//Прячем все меню и возвращаем исходный вид
+			//Hide all menus and restore initial state
 			selects.removeClass('-active');
 			lists.fadeOut(100);
 			if (!list.is(':visible')) {
@@ -226,7 +225,7 @@ function select() {
 			e.stopPropagation();
 		});
 
-		//Элементы в выпадающем меню, выделение активного элемента
+		//Elements in pop-up, selecting of active
 		items.click(function(e) {
 			var $this = $(this);
 
@@ -244,7 +243,7 @@ function select() {
 			e.stopPropagation();
 		});
 
-		//Показываем подсказку, если текст не влезает в селект
+		//Showing tooltip if text don't fit
 		$this.hover(
 			function() {
 				if (tip.width() > text.width()) {
@@ -301,7 +300,7 @@ function stylizeCheckbox() {
 }
 
 
-//Установа местоположения
+//Set location popup
 function setLocation() {
 	var source = $('[data-pop]'),
 		popup = $('.popup-location'),
@@ -363,13 +362,12 @@ function setLocation() {
 
 
 /*!
- * Всплывающие формы авторизации, регмстрации и т. п.
- * Открываем по атрибуту data-fancybox.
- * Пример: <a data-fancybox="regWindow">Register</a>,
- * где regWindow - скрытый блок с контентом.
+ * Popup windows with authentication, registration etc.
+ * Opening by data-fancybox attribute.
+ * E.g.: <a data-fancybox="block_with_content">Register</a>,
+ * where "block_with_content" is hidden block.
  */
-
-function auth() {
+function openWindow() {
 	$('[data-fancybox]').not('[data-fancybox="close"]').click(function() {
 		$.fancybox.open(
 			$('#' + $(this).data('fancybox')),
@@ -390,3 +388,41 @@ function auth() {
 	});
 }
 
+
+function checkAgreement() {
+	var check = $('#checkAgreement'),
+		btn = $('#btnRegister');
+
+	check.click(function() {
+		if (!check.prop('checked')) {
+			btn.attr('disabled', 'disabled')
+		} else {
+			btn.removeAttr('disabled')
+		}
+	});
+}
+
+
+//Button "To top"
+function scrollTop() {
+	var btn = $('.move-top'),
+		w = $(window);
+
+	w.load(function() {
+		check();
+	}).scroll(function() {
+		check();
+	});
+
+	function check() {
+		if (w.scrollTop() > w.height()) {
+			btn.fadeIn(100);
+		} else {
+			btn.fadeOut(100);
+		}
+	}
+
+	btn.click(function() {
+		$('html, body').animate({'scrollTop': 0}, 100)
+	});
+}

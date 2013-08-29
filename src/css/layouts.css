@@ -37,5 +37,6 @@
 
 .container {
 	width: 100%;
+	min-width: 980px;
 	overflow: hidden;
 }

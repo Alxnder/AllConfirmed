@@ -36,8 +36,8 @@ textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus {
 	outline: none;
-	border-color: #52a8ec;
-	box-shadow: 0 0 8px rgba(82,168,236,0.6)
+	border-color: #7fa214;
+	box-shadow: 0 0 8px rgba(127,162,20,0.6)
 }
 
 select {
@@ -105,7 +105,7 @@ textarea {
 }
 
 :-ms-input-placeholder {
-	color: red !important;
+	color: #7e7e7e;
 }
 
 .placeholdr {
@@ -254,7 +254,7 @@ textarea {
 }
 
 input.error, textarea.error {
-	border: solid 2px #b22d27;
+	border: solid 2px #b22d27 !important;
 	border-radius: 3px;
 }
 

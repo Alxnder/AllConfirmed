@@ -546,7 +546,7 @@ nav.secondary a:hover {
 	padding: 5px 8px 7px 30px;
 	background: url("../i/white_alpha40.png");
 	display: block;
-	min-width: 90px;
+	min-width: 70px;
 	font: 14px arial, helvetica cy, helvetica, sans-serif;
 }
 
@@ -746,6 +746,8 @@ h1 + .filter {
 	color: #e5ba38;
 	margin-left: 6px;
 	text-decoration: none;
+	position: relative;
+	top: .2em;
 }
 
 .blogposts-short {
@@ -844,7 +846,7 @@ h1 + .filter {
 	position: absolute;
 	background: #ebebeb;
 	border: solid 1px #cacaca;
-	padding: 14px 11px 10px 11px;
+	padding: 14px 11px 15px 11px;
 	box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
 }
 
@@ -858,6 +860,16 @@ h1 + .filter {
 .popup-location .buttons {
 	margin: 5px 0 0 0;
 	text-align: right;
+}
+
+.move-top {
+	display: none;
+	position: fixed;
+	bottom: 160px;
+	left: 50%;
+	margin: 0 0 0 520px;
+	z-index: 500;
+	cursor: pointer;
 }
 
 @import 'jquery.fancybox.css';
