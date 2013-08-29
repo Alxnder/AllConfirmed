@@ -42,3 +42,11 @@
 	min-width: 980px;
 	overflow: hidden;
 }
+
+.header {
+	margin-bottom: 30px;
+}
+
+.main-page .header {
+	margin-bottom: 0;
+}
