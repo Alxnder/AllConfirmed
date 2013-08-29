@@ -138,7 +138,11 @@ mark {
  */
 
 p, pre {
-    margin: 0 0 1em 0;
+    margin: 0 0 1.3em 0;
+}
+
+p{
+	line-height: 1.6em;
 }
 
 /**
@@ -213,12 +217,42 @@ sub {
  * Address margins set differently in IE 6/7.
  */
 
-dl, menu, ol, ul {
+dl, menu {
     margin: 1em 0;
 }
 
 dd {
     margin: 0 0 0 40px;
+}
+
+.content ol {
+	padding: 0;
+	margin: 2em 0 2em 2.5em;
+}
+
+.content ol li {
+	margin-bottom: .6em;
+}
+
+.content ul {
+	padding: 0;
+	list-style: none;
+	margin: 2em 0 2em 18px;
+}
+
+.content ul li {
+	position: relative;
+	margin-bottom: .6em;
+}
+
+.content ul li:before {
+	content: '';
+	position: absolute;
+	top: .46em;
+	left: -18px;
+	width: 8px;
+	height: 8px;
+	background: url("../i/sprites.png") 0 -401px no-repeat;
 }
 
 /**

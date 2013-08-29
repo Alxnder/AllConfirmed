@@ -6,11 +6,13 @@
 .layout-twocols .content {
 	width: 732px;
 	float: left;
+	padding-bottom: 50px;
 }
 
 .layout-twocols .aside {
 	width: 232px;
 	float: right;
+	padding-bottom: 50px;
 }
 
 .main-page .aside {
