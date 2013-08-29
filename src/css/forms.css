@@ -180,6 +180,7 @@ textarea {
 	margin: 0 21px 0 0;
 	vertical-align: top;
 	display: inline-block;
+	background: none;
 	border-left: solid 1px #b6c66a;
 }
 
@@ -325,6 +326,7 @@ p.error {
 
 .form-auth .buttons a {
 	color: #79901b;
+	background: none;
 }
 
 .form-auth .buttons a:hover {

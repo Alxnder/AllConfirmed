@@ -346,6 +346,7 @@ function setLocation() {
 			});
 
 			e.stopPropagation();
+			return false;
 		});
 	});
 

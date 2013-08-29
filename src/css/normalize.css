@@ -78,7 +78,7 @@ body {
 a:active,
 a:focus,
 a:hover {
-    outline: 0;
+    outline: none;
 }
 
 /* ==========================================================================
@@ -243,16 +243,7 @@ dd {
 .content ul li {
 	position: relative;
 	margin-bottom: .6em;
-}
-
-.content ul li:before {
-	content: '';
-	position: absolute;
-	top: .46em;
-	left: -18px;
-	width: 8px;
-	height: 8px;
-	background: url("../i/sprites.png") 0 -401px no-repeat;
+	list-style-image: url("../i/bullet1.png");
 }
 
 /**

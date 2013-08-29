@@ -342,7 +342,7 @@ h6 {
 
 .set-location, a.signin {
 	color: #9f342c;
-	cursor: default;
+	cursor: pointer;
 	font: 16px Font1;
 	text-decoration: none;
 	margin-left: 5px;
@@ -634,7 +634,6 @@ nav.secondary a:hover {
 }
 
 .dashed-border_red {
-	cursor: default;
 	text-decoration: none;
 	background: url("../i/border1.png") 0 100% repeat-x;
 }
