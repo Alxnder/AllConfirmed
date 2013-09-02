@@ -96,7 +96,25 @@ textarea {
 	width: 100%;
 }
 
-::-webkit-input-placeholder {
+.input-wrapper {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.placeholder {
+	color: #7e7e7e;
+	position: absolute !important;
+	left: 0;
+	top: 0;
+	background: none !important;
+	border: 0 !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+/*::-webkit-input-placeholder {
 	color: #7e7e7e;
 }
 
@@ -110,7 +128,7 @@ textarea {
 
 .placeholdr {
 	color: #7e7e7e;
-}
+}*/
 
 .select {
 	vertical-align: middle;

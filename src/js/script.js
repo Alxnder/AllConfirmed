@@ -8,6 +8,7 @@
 	openWindow();
 	scrollTop();
 	checkAgreement();
+	setInputPlaceholder();
 });
 
 
@@ -377,7 +378,8 @@ function openWindow() {
 				autoSize	: true,
 				padding		: 50,
 				openEffect	: 'none',
-				closeEffect	: 'none'
+				closeEffect	: 'none',
+				scrolling	: 'no'
 			}
 		);
 
@@ -413,10 +415,16 @@ function scrollTop() {
 		check();
 	}).scroll(function() {
 		check();
+	}).resize(function() {
+		if (w.width() < 1265) {
+			btn.addClass('-min')
+		} else {
+			btn.removeClass('-min')
+		}
 	});
 
 	function check() {
-		if (w.scrollTop() > w.height()) {
+		if (w.scrollTop() > (w.height() / 2)) {
 			btn.fadeIn(100);
 		} else {
 			btn.fadeOut(100);
@@ -426,4 +434,61 @@ function scrollTop() {
 	btn.click(function() {
 		$('html, body').animate({'scrollTop': 0}, 100)
 	});
+}
+
+
+function setInputPlaceholder() {
+	var inputs = $('[data-placeholder]');
+
+	inputs.each(function() {
+		var $this = $(this),
+			wrapper = $this.wrap('<div class="input-wrapper">').closest('.input-wrapper'),
+			placeholder = ($this.is('input[type="text"]') || $this.is('input[type="password"]')) ? $('<input type="text">') : $('<textarea>');
+
+		placeholder
+			.val($this.attr('data-placeholder'))
+			.addClass('placeholder')
+			.removeAttr('data-placeholder')
+			.appendTo(wrapper)
+			.css({
+				width: $this.outerWidth(),
+				height: $this.outerHeight()
+			});
+
+		wrapper.css({
+			float: $this.css('float'),
+			width: $this.outerWidth(),
+			marginTop: $this.css('marginTop'),
+			marginRight: $this.css('marginRight'),
+			marginBottom: $this.css('marginBottom'),
+			marginLeft: $this.css('marginLeft')
+		});
+
+		if ($this.val() != '') {
+			placeholder.fadeOut(200, function() {
+				placeholder.addClass('hidden')
+			});
+		}
+
+		placeholder.focus(function() {
+			$this.focus();
+			placeholder.fadeOut(100, function() {
+				placeholder.addClass('hidden')
+			});
+		});
+
+		$this
+			.focus(function() {
+				placeholder.fadeOut(100, function() {
+					placeholder.addClass('hidden')
+				});
+			})
+			.blur(function() {
+				if ($this.val() == '') {
+					placeholder.removeClass('hidden');
+					placeholder.fadeIn(100);
+				}
+			}
+		)
+	})
 }

@@ -71,14 +71,14 @@
 				<!--Поиск-->
 				<div class="search-box">
 					<div class="normal">
-						<input type="text" placeholder="Enter restaurant / club name or your location" />
+						<input type="text" data-placeholder="Enter restaurant / club name or your location" />
 						<button class="btn -yellow">Search</button>
 					</div>
 
 					<div class="advanced">
 						<div class="col">
 							<div class="field-w-icon">
-								<input type="text" placeholder="choose location" />
+								<input type="text" data-placeholder="choose location" />
 								<i class="icon-pointer_small-grey"></i>
 							</div>
 
@@ -281,15 +281,13 @@
 					<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515ab7f80f44c716"></script>
 					<!-- AddThis Button END -->
 				</div>
-
-				<div class="move-top">
-					<i class="icon-top"></i>
-				</div>
 			</div>
 		</footer>
 		<!--//Подвал-->
 	</div>
 	<!--//Контейнер-->
+
+	<div class="move-top"><i class="icon-top"></i></div>
 
 	<!-- Привязанная функция: script.js > auth() -->
 	<div id="authWindow" style="display: none">
@@ -337,7 +335,7 @@
 	<div id="recoverpassWindow_sent" style="display: none">
 		<h2>Forgot your password?</h2>
 
-		<div class="form form-recoverpass" style="width: 460px">
+		<div class="form form-recoverpass-sent" style="width: 460px">
 			<p>Hello, we sent you a letter to the email you gave us during your registration here.</p>
 
 			<p>Please check your email inbox or spam folder for our letter that will
