@@ -9,6 +9,7 @@
 	scrollTop();
 	checkAgreement();
 	setInputPlaceholder();
+	faq();
 });
 
 
@@ -501,4 +502,23 @@ function setInputPlaceholder() {
 			}
 		)
 	})
+}
+
+
+function faq() {
+	var faq_items = $('.faq > li'),
+		faq_questions = faq_items.find('.q');
+
+	faq_questions.click(function() {
+		var $this = $(this),
+			par = $this.closest('li');
+
+		if (!par.find('.a').is(':visible')) {
+			faq_items.removeClass('active');
+			faq_items.find('.a').slideUp(100);
+			par.addClass('active');
+			par.find('.a').slideDown(100);
+		}
+	})
+
 }

@@ -949,7 +949,6 @@ ul.blogposts {
 	padding: 0;
 	margin: 30px 0 17px 0;
 	list-style: none;
-	border-bottom: solid 6px #a6251f;
 }
 
 .blogposts li {
@@ -985,14 +984,37 @@ ul.blogposts {
 }
 
 .link-viewmore {
+	padding-top: 13px;
 	text-align: center;
 	font: 24px/.75em 'Font1 Bold';
-	color: #9a1e1a;
+	border-top: solid 6px #a6251f;
 }
 
 .link-viewmore a {
+	padding: 5px 10px 8px 10px;
 	color: #9a1e1a;
+	position: relative;
+	display: inline-block;
 	text-decoration: none;
+	-webkit-transition: all 0.1s ease;
+	   -moz-transition: all 0.1s ease;
+		    transition: all 0.1s ease;
+}
+
+.link-viewmore a:before {
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 6px;
+	bottom: -6px;
+	left: 50%;
+	margin-left: -6px;
+	background: url("../i/sprites.png") 0 -401px no-repeat;
+}
+
+.link-viewmore a:hover {
+	color: #fff;
+	background: #9a1e1a;
 }
 
 .link-gotoblog {
@@ -1033,6 +1055,70 @@ ul.blogposts {
 
 .block1 img {
 	float: right;
+}
+
+ul.faq {
+	margin: 0;
+	padding: 0;
+}
+
+ul.faq li {
+	margin: 0 0 37px 0;
+	padding: 27px 0 0 0;
+	list-style: none;
+	border-top: solid 1px #e5e5e5;
+}
+
+ul.faq li:first-child {
+	border: 0;
+	padding-top: 0;
+}
+
+.faq .q {
+	margin: 0;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	font: 18px 'Font1 Bold';
+}
+
+.faq .active .q {
+	color: #840000;
+}
+
+.faq .active .q span {
+	background: none;
+}
+
+.faq .q div {
+	overflow: hidden;
+}
+
+.faq span {
+	background: url("../i/border4.png") 0 100% repeat-x;
+}
+
+.faq .num {
+	float: left;
+	margin-right: 6px;
+}
+
+.faq .a {
+	margin: 7px 0 0 0;
+	display: none;
+	padding: 0 0 0 22px;
+	position: relative;
+	line-height: 1.7em;
+}
+
+.faq .a:before {
+	content: '';
+	width: 5px;
+	height: 12px;
+	left: 6px;
+	top: 3px;
+	position: absolute;
+	background: url("../i/sprites.png") 0 -411px no-repeat;
 }
 
 @import 'jquery.fancybox.css';
