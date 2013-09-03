@@ -342,14 +342,46 @@ p.error {
 	margin-right: 10px;
 }
 
-.form-addnewplace {
+.form.-wide {
 	padding: 35px 32px 25px 25px;
 }
 
-.form-addnewplace dd {
+.form.-wide dd {
 	width: 360px;
 }
 
-.form-addnewplace textarea {
+.form.-wide textarea {
 	height: 260px;
+}
+
+.form h6 {
+	margin: 24px 0 4px 0;
+	text-align: center;
+	top: -.5em;
+	color: #a1a1a1;
+	position: relative;
+	font: 24px 'Font1 Light';
+}
+
+.form h6 div {
+	background: #f2f2f2;
+	padding: 0 15px;
+	z-index: 10;
+	display: inline-block;
+	position: relative;
+}
+
+.form h6:before {
+	content: '';
+	background: #c2c2c2;
+	height: 1px;
+	position: absolute;
+	top: .65em;
+	z-index: 9;
+	left: 0;
+	right: 0;
+}
+
+.field-phone {
+	width: 140px !important;
 }

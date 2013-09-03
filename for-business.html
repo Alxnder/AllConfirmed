@@ -5,10 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css" />
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
 	<!--[if lt IE 9]><script src="js/libs/libs.ltie9.js"></script><![endif]-->
-	<!--[if IE 9]><script src="js/libs/PIE_IE9.js"></script><![endif]-->
 	<title></title>
 </head>
 <body>
@@ -34,7 +33,7 @@
 					</nav>
 
 					<nav class="secondary">
-						<a href=""><i class="icon-badge_small"></i> For business</a>
+						<div><i class="icon-badge_small"></i> For business</div>
 						<a href=""><i class="icon-plus_small"></i> Add a new place</a>
 					</nav>
 				</div>
@@ -52,29 +51,49 @@
 				</div>
 			</div>
 		</header>
-		<!--//Шапка. Сетка в одну колонку-->
-		<div class="layout-onecol">
+		<!--//Шапка. Сетка в две колонки 1-->
+		<div class="layout-twocols1">
+			<h1>For business</h1>
+
 			<!--Основной контент-->
 			<section class="content">
-				<div class="clearfix">
-					<div class="fl" style="width: 450px">
-						<h1>Page not found!</h1>
-						<h6>We're sorry, but the page you requested could not be found.</h6>
-						<p>We recently updated our web site. If you got here by typing a URL,
-						please make sure the spelling, capitalization, and punctuation are correct,
-						then try reloading  the page. <a href="" class="-green">Go to places search</a>.</p>
-					</div>
-					<div class="fr">
-						<img src="i/404.png" />
-					</div>
-				</div>
+				<form class="form -wide form-forbusiness">
+					<dl><dt>Business name<dd><input type="text" /></dl>
+					<dl><dt>Address<dd><input type="text" /></dl>
+
+					<h6><div>Contact Person</div></h6>
+
+					<dl><dt>Position*<dd><input type="text" /></dl>
+					<dl><dt>First name*<dd><input type="text" /></dl>
+					<dl><dt>Last name*<dd><input type="text" /></dl>
+					<dl><dt>Phone number*<dd><input type="text" class="field-phone" value="+1___-___-____"></dl>
+					<dl><dt>E-mail*<dd><input type="text" /></dl>
+					<dl>
+						<dt>Comments
+						<dd><textarea></textarea>
+					</dl>
+
+					<dl>
+						<dt>
+						<dd><input type="button" class="btn -red" value="Register me" />
+					</dl>
+				</form>
 			</section>
-			<!--//Контент-->
+			<!--//Контент. Боковая колонка-->
+			<aside class="aside">
+				<p>In addition to the company’s website and mobile apps, OpenTable powers
+					online reservations for nearly 600 partners, including many of the
+					Internet’s most popular global and local brands. For restaurants, the
+					OpenTable hospitality solutions enable them to manage their reservation
+					book, streamline their operations and enhance their service levels.</p>
+				<p>Since its inception in 1998, OpenTable has seated more than 450
+					million diners around the world.</p>
+			</aside>
 		</div>
-		<!--//Сетка в одну колонку. Распорка подвала-->
+		<!--//Сетка в две колонки 1. Распорка подвала-->
 		<div class="footer-helper"></div>
 	</div>
-	<!--//Контейнер.  Подвал-->
+	<!--//Контейнер. Подвал-->
 	<footer class="footer">
 		<div class="cols-wrapper">
 			<div class="col">
@@ -100,17 +119,19 @@
 				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515ab7f80f44c716"></script>
 				<!-- AddThis Button END -->
 			</div>
+
+			<div class="move-top">
+				<i class="icon-top"></i>
+			</div>
 		</div>
 	</footer>
 	<!--//Подвал-->
-
-	<div class="move-top"><i class="icon-top"></i></div>
 
 	<!-- Привязанная функция: script.js > auth() -->
 	<div id="authWindow" style="display: none">
 		<h2>Already have an account?</h2>
 
-		<form class="form form-auth">
+		<div class="form form-auth">
 			<dl><dt></dt><dd class="error">Please enter your email correctly</dd></dl>
 			<dl><dt>E-mail<dd><input type="text"></dl>
 			<dl><dt>Password<dd><input type="text"></dl>
@@ -132,42 +153,42 @@
 					</div>
 				</dd>
 			</dl>
-		</form>
+		</div>
 	</div>
 
 	<div id="recoverpassWindow" style="display: none">
 		<h2>Forgot your password?</h2>
 
-		<form class="form form-recoverpass">
+		<div class="form form-recoverpass">
 			<dl><dt></dt><dd class="error">This user is not found!</dd></dl>
 			<dl><dt>E-mail<dd><input type="text"></dl>
 			<dl>
 				<dt></dt><dd class="ar">
-				<a href="" class="btn -yellow -small -wide" data-fancybox="recoverpassWindow_sent">Recover</a>
-			</dd>
+					<a href="" class="btn -yellow -small -wide" data-fancybox="recoverpassWindow_sent">Recover</a>
+				</dd>
 			</dl>
-		</form>
+		</div>
 	</div>
 
 	<div id="recoverpassWindow_sent" style="display: none">
 		<h2>Forgot your password?</h2>
 
-		<form class="form form-recoverpass-sent" style="width: 460px">
+		<div class="form form-recoverpass" style="width: 460px">
 			<p>Hello, we sent you a letter to the email you gave us during your registration here.</p>
 
 			<p>Please check your email inbox or spam folder for our letter that will
-				have a link for you to reset your password, this link is active only for 24
-				hours. If for some reason you can not use this link, don’t worry we will sent
-				you another one.</p>
+			have a link for you to reset your password, this link is active only for 24
+			hours. If for some reason you can not use this link, don’t worry we will sent
+			you another one.</p>
 
 			<p>Thank You and feel free to contact us if you need any help!</p>
-		</form>
+		</div>
 	</div>
 
 	<div id="regWindow" style="display: none">
 		<h2>Create new account</h2>
 
-		<form class="form form-reg">
+		<div class="form form-reg">
 			<dl><dt></dt><dd class="error">The field type is incorrect</dd></dl>
 			<dl><dt>First name*<dd><input type="text"></dl>
 			<dl><dt>Last name*<dd><input type="text"></dl>
@@ -204,7 +225,7 @@
 						<a href="" title="Other"><i class="icon-threedots_small"></i></a>
 					</p>
 			</dl>
-		</form>
+		</div>
 	</div>
 
 	<!-- Привязанная функция: script.js > setLocation() -->
@@ -215,7 +236,7 @@
 			<a class="btn -yellow -small _save" href="">Save</a>
 		</div>
 	</div>
-
+	
 	<script src="js/libs/libs.js"></script>
 	<script src="src/js/script.js"></script>
 </body>
