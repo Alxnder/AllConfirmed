@@ -464,12 +464,21 @@ nav.primary > ul ul a:hover {
 nav.secondary {
 	float: right;
 	font: 16px Font1;
+	margin-right: -3px;
 }
 
-nav.secondary a {
+nav.secondary a, nav.secondary div {
 	color: #e9d4bf;
-	margin-left: 20px;
+	margin-left: 10px;
 	text-decoration: none;
+	padding: 0 6px 1px 6px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+nav.secondary div {
+	color: #fff;
+	background: #840000;
 }
 
 nav.secondary [class^="icon"] {
@@ -478,6 +487,14 @@ nav.secondary [class^="icon"] {
 
 nav.secondary a:hover {
 	color: #ffadab;
+}
+
+nav.secondary div .icon-badge_small {
+	background-position: -40px 0;
+}
+
+nav.secondary div .icon-plus_small {
+	background-position: -30px -21px;
 }
 
 .banners {

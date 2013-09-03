@@ -47,6 +47,8 @@ select {
 textarea {
 	resize: vertical;
 	padding: 7px 0 7px 9px;
+	border: solid 1px;
+	border-color: #a7a7a7 #d8d8d8 #d8d8d8 #a7a7a7;
 }
 
 .form {
@@ -113,22 +115,6 @@ textarea {
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 }
-
-/*::-webkit-input-placeholder {
-	color: #7e7e7e;
-}
-
-:-moz-placeholder {
-	color: #7e7e7e;
-}
-
-:-ms-input-placeholder {
-	color: #7e7e7e;
-}
-
-.placeholdr {
-	color: #7e7e7e;
-}*/
 
 .select {
 	vertical-align: middle;
@@ -349,4 +335,21 @@ p.error {
 
 .form-auth .buttons a:hover {
 	text-decoration: none;
+}
+
+.captcha input[type="text"] {
+	width: 140px;
+	margin-right: 10px;
+}
+
+.form-addnewplace {
+	padding: 35px 32px 25px 25px;
+}
+
+.form-addnewplace dd {
+	width: 360px;
+}
+
+.form-addnewplace textarea {
+	height: 260px;
 }
