@@ -15,17 +15,21 @@
 	padding-bottom: 50px;
 }
 
+.layout-onecol .content {
+	padding-bottom: 50px;
+}
+
 .main-page .aside {
 	margin-top: -7px;
 }
 
-.footer-helper {
+.footer-helper, .footer {
 	clear: both;
+	height: 146px;
+	overflow: hidden;
 }
 
 .footer {
-	height: 146px;
-	clear: both;
 	background: url("../i/sprite6.png") 50% 0;
 }
 
@@ -39,8 +43,10 @@
 
 .container {
 	width: 100%;
+	min-height: 100%;
 	min-width: 980px;
 	overflow: hidden;
+	margin-bottom: -146px;
 }
 
 .header {

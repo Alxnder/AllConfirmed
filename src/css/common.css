@@ -237,13 +237,14 @@ h4 {
 }
 
 h5 {
-	font-size: 0.83em;
-	margin: 1.67em 0;
+	font: normal 16px 'Font1 Bold';
+	margin: 0 0 8px 0;
 }
 
 h6 {
-	font-size: 0.67em;
-	margin: 2.33em 0;
+	font: normal 15px 'Font1 Bold';
+	margin: 0 0 8px 0;
+	color: #860200;
 }
 
 @import 'layouts.css';
