@@ -908,6 +908,10 @@ h1 + .filter {
 	border-bottom: solid 1px #ccc;
 }
 
+.-green {
+	color: #6D8607 !important;
+}
+
 @import 'jquery.fancybox.css';
 
 @import 'responsive.css';
