@@ -351,6 +351,16 @@ function setLocation() {
 		});
 	});
 
+	var old_val;
+	field.focus(function() {
+		field.data(old_val = field.val());
+		field.val('');
+	}).blur(function() {
+		if (field.val() == '') {
+			field.val(old_val);
+		}
+	});
+
 	$(document).click(function() {
 		popup.fadeOut(200, function() {
 			$(this).attr('style', '')
@@ -416,7 +426,7 @@ function scrollTop() {
 	}).scroll(function() {
 		check();
 	}).resize(function() {
-		if (w.width() < 1215) {
+		if (w.width() < 1265) {
 			btn.addClass('-min')
 		} else {
 			btn.removeClass('-min')

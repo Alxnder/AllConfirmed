@@ -855,6 +855,7 @@ h1 + .filter {
 	left: -9999px;
 	top: 0;
 	position: absolute;
+	z-index: 100;
 	background: #ebebeb;
 	border: solid 1px #cacaca;
 	padding: 14px 11px 15px 11px;
