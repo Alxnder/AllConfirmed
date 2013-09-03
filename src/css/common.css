@@ -380,6 +380,7 @@ a.signin {
 
 nav.primary {
 	float: left;
+	margin-left: -18px;
 	font: 16px 'Font1 Bold';
 }
 
@@ -390,14 +391,19 @@ nav.primary > ul {
 
 nav.primary > ul > li {
 	float: left;
-	margin-right: 37px;
+	margin-right: 2px;
 }
 
-nav.primary > ul > li > a {
+nav.primary > ul > li > a,
+nav.primary > ul > li > div {
 	color: #fff;
-	padding: 0 0 3px 0;
+	padding: 0 18px 3px 18px;
 	display: inline-block;
 	text-decoration: none;
+}
+
+nav.primary > ul > li > div {
+	background: #840000;
 }
 
 nav.primary > ul > li > a .icon- {
@@ -928,6 +934,57 @@ h1 + .filter {
 .-green {
 	color: #6D8607 !important;
 }
+
+ul.blogposts {
+	padding: 0;
+	margin: 30px 0 17px 0;
+	list-style: none;
+	border-bottom: solid 6px #a6251f;
+}
+
+.blogposts li {
+	margin: 0;
+	padding: 30px 0;
+	overflow: hidden;
+	border-top: solid 1px #e5e5e5;
+}
+
+.blogposts img {
+	float: left;
+	margin: 7px 21px 0 0;
+}
+
+.blogposts p {
+	margin: 0;
+	overflow: hidden;
+}
+
+.blogposts .date {
+	color: #9f342c;
+	margin: 0 0 2px 0;
+}
+
+.blogposts .title {
+	color: #000;
+	margin: 0 0 5px 0;
+	font: 18px 'Font1 Bold';
+}
+
+.blogposts .title a {
+	color: #000;
+}
+
+.link-viewmore {
+	text-align: center;
+	font: 24px/.75em 'Font1 Bold';
+	color: #9a1e1a;
+}
+
+.link-viewmore a {
+	color: #9a1e1a;
+	text-decoration: none;
+}
+
 
 @import 'jquery.fancybox.css';
 
