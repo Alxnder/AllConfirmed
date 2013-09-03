@@ -44,6 +44,7 @@ hr {
 	border-top: 1px solid #ccc;
 	margin: 1em 0;
 	padding: 0;
+	clear: both;
 }
 
 img {
@@ -402,7 +403,8 @@ nav.primary > ul > li > div {
 	text-decoration: none;
 }
 
-nav.primary > ul > li > div {
+nav.primary > ul > li > div,
+nav.primary > ul > li > .current {
 	background: #840000;
 }
 
@@ -914,6 +916,14 @@ h1 + .filter {
 	margin: 0 0 0 520px;
 }
 
+.content img[align="right"] {
+	margin: 0 0 20px 30px;
+}
+
+.content img[align="left"] {
+	margin: 0 30px 20px 0;
+}
+
 .content table {
 	margin: 2.5em 0;
 	width: 100%;
@@ -959,7 +969,7 @@ ul.blogposts {
 	overflow: hidden;
 }
 
-.blogposts .date {
+.date {
 	color: #9f342c;
 	margin: 0 0 2px 0;
 }
@@ -985,6 +995,45 @@ ul.blogposts {
 	text-decoration: none;
 }
 
+.link-gotoblog {
+	margin: 0;
+	color: #999797;
+	font: 12px 'Font1 Light';
+	text-transform: uppercase;
+}
+
+.link-gotoblog a {
+	color: #999797;
+	text-decoration: none;
+}
+
+.link-gotoblog a:hover {
+	text-decoration: underline;
+}
+
+.link-gotoblog + h1 {
+	margin-top: -3px;
+}
+
+.text-style1 {
+	font: 22px/1.4em 'Font1 Medium';
+}
+
+.block1 {
+	overflow: hidden;
+	margin: 27px 0 20px 0;
+	padding-bottom: 25px;
+	border-bottom: solid 1px #e5e5e5;
+}
+
+.block1 .col {
+	width: 605px;
+	float: left;
+}
+
+.block1 img {
+	float: right;
+}
 
 @import 'jquery.fancybox.css';
 

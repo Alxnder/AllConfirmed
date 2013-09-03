@@ -26,6 +26,15 @@
 }
 
 @font-face {
+	font-family: 'Font1 Medium';
+	src: url('fonts/font1-medium.eot');
+	src: url('fonts/font1-medium.eot?#iefix') format('embedded-opentype'),
+	url('fonts/font1-medium.svg') format('svg'),
+	url('fonts/font1-medium.woff') format('woff'),
+	url('fonts/font1-medium.ttf') format('truetype');
+}
+
+@font-face {
 	font-family: 'Font1 Bold';
 	src: url('fonts/font1-bold.eot');
 	src: url('fonts/font1-bold.eot?#iefix') format('embedded-opentype'),
