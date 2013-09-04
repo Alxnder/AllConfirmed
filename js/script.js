@@ -510,11 +510,15 @@ function faq() {
 		faq_questions = faq_items.find('.q');
 
 	faq_questions.click(function() {
-		faq_items.removeClass('active');
-		faq_items.find('.a').slideUp(100);
+		var $this = $(this),
+			par = $this.closest('li');
 
-		$(this).closest('li').addClass('active');
-		$(this).closest('li').find('.a').slideDown(100);
+		if (!par.find('.a').is(':visible')) {
+			faq_items.removeClass('active');
+			faq_items.find('.a').slideUp(100);
+			par.addClass('active');
+			par.find('.a').slideDown(100);
+		}
 	})
 
 }
