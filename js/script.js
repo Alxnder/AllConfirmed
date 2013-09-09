@@ -11,6 +11,7 @@
 	setInputPlaceholder();
 	faq();
 	slider();
+	gallery();
 });
 
 
@@ -391,7 +392,10 @@ function openWindow() {
 				padding		: 50,
 				openEffect	: 'none',
 				closeEffect	: 'none',
-				scrolling	: 'no'
+				scrolling	: 'no',
+				tpl: {
+					wrap    : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
+				}
 			}
 		);
 
@@ -400,6 +404,18 @@ function openWindow() {
 
 	$('[data-fancybox="close"]').click(function() {
 		$.fancybox.close();
+	});
+}
+
+
+function gallery() {
+	$('.slider a').fancybox({
+		fitToView	: false,
+		autoSize	: true,
+		padding		: 50,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		scrolling	: 'no'
 	});
 }
 

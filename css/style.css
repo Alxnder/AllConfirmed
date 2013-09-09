@@ -2785,6 +2785,9 @@ p.note1 {
 	color: #000;
 	border: solid 1px #bcbcbc;
 	text-shadow: none;
+}
+
+.fancybox-skin1 {
 	padding-top: 30px !important;
 }
 
@@ -2829,10 +2832,6 @@ p.note1 {
 	max-height: 100%;
 }
 
-#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
-	background-image: url('../i/fancybox/fancybox_sprite.png');
-}
-
 #fancybox-loading {
 	position: fixed;
 	top: 50%;
@@ -2848,7 +2847,7 @@ p.note1 {
 #fancybox-loading div {
 	width: 44px;
 	height: 44px;
-	background: url('../i/fancybox/fancybox_loading.gif') center center no-repeat;
+	background: url('../i/fancybox_loading.gif') center center no-repeat;
 }
 
 .fancybox-close {
@@ -2889,22 +2888,22 @@ p.note1 {
 .fancybox-nav span {
 	position: absolute;
 	top: 50%;
-	width: 36px;
-	height: 34px;
-	margin-top: -18px;
+	width: 67px;
+	height: 139px;
+	margin-top: -70px;
 	cursor: pointer;
 	z-index: 8040;
 	visibility: hidden;
 }
 
 .fancybox-prev span {
-	left: 10px;
-	background-position: 0 -36px;
+	left: 0;
+	background: url("../i/sprites.png") 0 -707px no-repeat;
 }
 
 .fancybox-next span {
-	right: 10px;
-	background-position: 0 -72px;
+	right: 0;
+	background: url("../i/sprites.png") -72px -707px no-repeat;
 }
 
 .fancybox-nav:hover span {
