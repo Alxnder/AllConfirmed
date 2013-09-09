@@ -203,3 +203,43 @@ a:hover .icon-plus_small {
 .icon-threedots_small {
 	background-position: -63px -378px;
 }
+
+.icon-dish {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -427px;
+}
+
+.icon-usd {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -448px;
+}
+
+.icon-clock {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -469px;
+}
+
+.icon-wifi {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -489px;
+}
+
+.icon-nursery {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -510px;
+}
+
+.icon-viewmap {
+	width: 89px;
+	height: 24px;
+	background-position: 0 -534px;
+}
+
+.icon-viewmap:hover {
+	background-position: -92px -534px;
+}

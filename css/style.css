@@ -737,7 +737,7 @@ h1 {
 }
 
 .main-page h1 {
-	margin: 0 0 30px 0;
+	margin: 0 0 19px 0;
 }
 
 h2 {
@@ -1530,6 +1530,46 @@ a:hover .icon-plus_small {
 	background-position: -63px -378px;
 }
 
+.icon-dish {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -427px;
+}
+
+.icon-usd {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -448px;
+}
+
+.icon-clock {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -469px;
+}
+
+.icon-wifi {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -489px;
+}
+
+.icon-nursery {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -510px;
+}
+
+.icon-viewmap {
+	width: 89px;
+	height: 24px;
+	background-position: 0 -534px;
+}
+
+.icon-viewmap:hover {
+	background-position: -92px -534px;
+}
+
 .carousel {
 	width: 732px;
 	height: 192px;
@@ -1554,6 +1594,7 @@ a:hover .icon-plus_small {
 	float: left;
 	width: 732px;
 	height: 192px;
+	list-style-image: none !important;
 }
 
 .carousel-nav {
@@ -1951,9 +1992,13 @@ nav.secondary div .icon-plus_small {
 }
 
 .filter {
-	margin-bottom: 17px;
 	overflow: hidden;
 	font: 16px 'Font1 Light';
+}
+
+.main-page .filter {
+	padding-bottom: 18px;
+	margin-bottom: 17px;
 }
 
 .filter * {
@@ -1961,7 +2006,7 @@ nav.secondary div .icon-plus_small {
 	text-align: center;
 	min-width: 132px;
 	padding: 7px 15px 6px 15px;
-	margin: 0 18px 18px 0;
+	margin: 0 18px 0 0;
 	-webkit-transition: all 0.2s ease;
 	   -moz-transition: all 0.2s ease;
 		    transition: all 0.2s ease;
@@ -1976,10 +2021,6 @@ nav.secondary div .icon-plus_small {
 .filter div, .filter a:hover {
 	color: #6a5a51;
 	background: #efdc83;
-}
-
-h1 + .filter {
-	margin-top: -17px;
 }
 
 .object {
@@ -2050,15 +2091,20 @@ h1 + .filter {
 }
 
 .rating {
-	font: 12px arial, helvetica cy, helvetica, sans-serif;
+	position: relative;
+	color: #e5ba38;
+	font: 12px/1.4em arial, helvetica cy, helvetica, sans-serif;
 }
 
 .rating a {
 	color: #e5ba38;
 	margin-left: 6px;
 	text-decoration: none;
+}
+
+.rating [class^="icon"] {
 	position: relative;
-	top: .2em;
+	top: -.15em;
 }
 
 .blogposts-short {
@@ -2393,6 +2439,122 @@ ul.faq li:first-child {
 	top: 3px;
 	position: absolute;
 	background: url("../i/sprites.png") 0 -411px no-repeat;
+}
+
+.object-adv {
+	margin: 0;
+	padding: 35px 0;
+	overflow: hidden;
+	border-top: solid 1px #e2dddd;
+	border-bottom: solid 1px #e2dddd;
+}
+
+.object-adv dt {
+	float: left;
+	width: 251px;
+	margin-right: 18px;
+	border-top: solid 12px #840000;
+}
+
+.object-adv dt img {
+
+}
+
+.object-adv dd {
+	overflow: hidden;
+}
+
+.object-adv p {
+	margin: 0;
+}
+
+.object-adv .type-wrapper {
+	overflow: hidden;
+}
+
+.object-adv .type {
+	float: left;
+	color: #999797;
+	font: 12px Font1;
+	margin-right: .5em;
+	text-transform: uppercase;
+}
+
+.object-adv .rating {
+	float: left;
+}
+
+.object-adv .rating a {
+	color: #b2b2b2;
+	margin-left: 1em;
+}
+
+.object-adv .title {
+	color: #9c0103;
+	margin-bottom: 7px;
+	font: 24px/1.2em Font1;
+}
+
+.object-adv .location a {
+	color: #63605f;
+	padding: 4px 13px 4px 10px;
+	background: #f2f2f2;
+	display: inline-block;
+	text-decoration: none;
+	font: 12px/1.2em 'Font1 Light';
+	-moz-transition: background 0.1s ease;
+	-webkit-transition: background 0.1s ease;
+	transition: background 0.1s ease;
+}
+
+.object-adv .location a:hover {
+	background: #e3e3e3;
+	color: #000;
+}
+
+.object-adv .location [class^="icon"] {
+	margin-left: .5em;
+}
+
+.object-adv .params {
+	margin: 10px 0 0 0;
+	overflow: hidden;
+}
+
+.object-adv .params ul {
+	margin: 0;
+	padding: 0;
+	float: left;
+	max-width: 325px;
+}
+
+.object-adv .params ul:first-child + ul {
+	float: right;
+	width: 130px;
+}
+
+.object-adv .params li {
+	font: 15px 'Font1 Light';
+	color: #000;
+	margin: 0 0 15px 0;
+	list-style-image: none !important;
+}
+
+.object-adv .params [class^="icon"] {
+	margin-right: .3em;
+}
+
+.map-small {
+	width: 232px;
+	height: 200px;
+	position: relative;
+	margin-bottom: 35px;
+}
+
+.map-small .icon-viewmap {
+	position: absolute;
+	bottom: 0;
+	right: 0;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */

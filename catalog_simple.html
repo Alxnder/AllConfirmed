@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
+	<!--[if lt IE 9]><script src="js/libs/libs.ltie9.js"></script><![endif]-->
+	<title></title>
+</head>
+<body>
+	<!--Контейнер-->
+	<div class="container">
+		<!--Шапка-->
+		<header class="header">
+			<div class="top-bar">
+				<div class="wrapper">
+					<nav class="primary">
+						<ul>
+							<li>
+								<a href="">National cuisines</a>
+								<ul>
+									<a href="">Afghan</a><a href="">African</a><a href="">American</a><a href="">Asian</a><a href="">Australian</a><a href="">Bar / Lounge</a><a href="">Barbecue</a><a href="">Belgian</a><a href="">Brazilian</a><a href="">British</a><a href="">Californian</a><a href="">Canadian</a><a href="">Caribbean</a><a href="">Comfort Food</a><a href="">Continental</a><a href="">Creole</a><a href="">Dessert</a><a href="">European</a><a href="">Fondue</a><a href="">French</a><a href="">Fusion</a><a href="">Gastro Pub</a><a href="">German</a><a href="">Greek</a><a href="">Indian</a><a href="">International</a><a href="">Italian</a><a href="">Japanese</a><a href="">Korean</a><a href="">Kosher</a><a href="">Latin / Spanish</a><a href="">Mediterranean</a><a href="">Mexican</a><a href="">Middle Eastern</a><a href="">Nordic</a><a href="">Organic</a><a href="">Pakistani</a><a href="">Portuguese</a><a href="">Russian</a><a href="">Scottish</a><a href="">Seafood</a><a href="">Small Plates</a><a href="">South American</a><a href="">Steak</a><a href="">Sushi</a><a href="">Thai</a><a href="">Vegetarian</a><a href="">Wine Bar</a>
+								</ul>
+							</li>
+							<li><a href="">Places</a></li>
+							<li><a href="">Blog</a></li>
+							<li><a href="">FAQ</a></li>
+							<li><a href="">Contacts</a></li>
+						</ul>
+					</nav>
+
+					<nav class="secondary">
+						<a href=""><i class="icon-badge_small"></i> For business</a>
+						<a href=""><i class="icon-plus_small"></i> Add a new place</a>
+					</nav>
+				</div>
+			</div>
+
+			<div class="logo-bar">
+				<a href="" class="logo"><i class="icon-logo">All confirmed</i></a>
+				<div class="motto">Reservations of restaurants and clubs</div>
+				<div class="col">
+					<p class="set-location" data-pop="popup-location" data-pop-target="loc1">
+						<i class="icon-pointer"></i>
+						<span>I’m in </span><span data-loc1>Southwest Michigan</span>
+					</p>
+					<p><i class="icon-key"></i><a href="" data-fancybox="authWindow" class="signin">Sign in</a></p>
+				</div>
+			</div>
+		</header>
+		<!--//Шапка. Сетка в две колонки-->
+		<div class="layout-twocols">
+			<!--Основной контент-->
+			<section class="content">
+				<!--Поиск-->
+				<div class="search-box">
+					<div class="normal">
+						<input type="text" data-placeholder="Enter restaurant / club name or your location" />
+						<button class="btn -yellow">Search</button>
+					</div>
+
+					<div class="advanced">
+						<div class="col">
+							<div class="field-w-icon">
+								<input type="text" data-placeholder="choose location" />
+								<i class="icon-pointer_small-grey"></i>
+							</div>
+
+							<div class="select">
+								<div>choose type</div>
+								<ul>
+									<a>Bar</a><a>Brew Pub</a><a>Cigar Bar</a><a>Comedy Club</a><a>Cruise</a><a>Dance Club</a><a>Dive</a><a>Fetish</a><a>Gaming</a><a>Gay</a><a>Hipster</a><a>Irish Pub</a><a>Karaoke</a><a>Lesbian</a><a>Rave Music</a><a>Martini Bar</a><a>Neighborhood</a><a>Other</a><a>Outdoors / Patio / Water</a><a>Pool</a><a>Romantic</a><a>Afterhours</a><a>Children / Kid Friendly</a><a>Coffee Shop</a><a>College Bar</a><a>Happy Hour</a><a>Hotel Bar</a><a>Lounge</a><a>Networking</a><a>Older Crowd 40+)</a><a>Pizzeria</a><a>Restaurant / Bar</a><a>Singles</a><a>Sports Bar</a>
+								</ul>
+							</div>
+
+							<div class="select">
+								<div>choose cuisine</div>
+								<ul>
+									<a>Afghan</a><a>African</a><a>American</a><a>Asian</a><a>Australian</a><a>Bar / Lounge</a><a>Barbecue</a><a>Belgian</a><a>Brazilian</a><a>British</a><a>Californian</a><a>Canadian</a><a>Caribbean</a><a>Comfort Food</a><a>Continental</a><a>Creole</a><a>Dessert</a><a>European</a><a>Fondue</a><a>French</a><a>Fusion</a><a>Gastro Pub</a><a>German</a><a>Greek</a><a>Indian</a><a>International</a><a>Italian</a><a>Japanese</a><a>Korean</a><a>Kosher</a><a>Latin / Spanish</a><a>Mediterranean</a><a>Mexican</a><a>Middle Eastern</a><a>Nordic</a><a>Organic</a><a>Pakistani</a><a>Portuguese</a><a>Russian</a><a>Scottish</a><a>Seafood</a><a>Small Plates</a><a>South American</a><a>Steak</a><a>Sushi</a><a>Thai</a><a>Vegetarian</a><a>Wine Bar</a>
+								</ul>
+							</div>
+
+							<div class="select">
+								<div>choose cost</div>
+								<ul>
+									<a>$25 and under</a>
+									<a>$26 to $60</a>
+									<a>$61 and over</a>
+								</ul>
+							</div>
+
+							<div class="select">
+								<div>choose music</div>
+								<ul>
+									<a>80s</a><a>Alternative</a><a>Bachata</a><a>Blues</a><a>Classics</a><a>Country</a><a>Cumbia</a><a>Dance/Electronic</a><a>Foreign language</a><a>FreeStyle</a><a>Hip-Hop</a><a>House</a><a>Industrial</a><a>Jazz</a><a>Karaoke</a><a>Latin</a><a>Mash-up</a><a>Merengue</a><a>Other</a><a>Other Latin</a><a>Pop / Top 40</a><a>R&B</a><a>Reggae</a><a>Reggaeton</a><a>Rock</a><a>Rock en Espanol</a><a>Salsa</a><a>Techno</a><a>Tejano</a><a>Top 40</a><a>World Music</a>
+								</ul>
+							</div>
+
+							<div class="checkboxes table">
+								<div><label><input type="checkbox">Wi-Fi</label></div>
+								<div><label><input type="checkbox">Breakfasts</label></div>
+								<div><label><input type="checkbox">Nursery room</label></div>
+								<div><label><input type="checkbox">Business Lunch</label></div>
+							</div>
+						</div>
+
+						<div class="col">
+							<button class="btn -yellow" href="">Search</button>
+						</div>
+					</div>
+
+					<div class="toggle" data-text="Advanced search" data-alt-text="Simple search">
+						<div>Advanced search</div>
+					</div>
+				</div>
+				<!--Конец поиска-->
+
+				<h1>Places in Soutwest Michigan</h1>
+
+				<div class="filter">
+					<div>We recommend</div>
+					<a href="">Top rating</a>
+					<a href="">Newest joined</a>
+				</div>
+
+				<div class="objects-adv">
+					<dl class="object-adv">
+						<dt><img src="stubs/img9.jpg"></dt>
+						<dd>
+							<div class="type-wrapper">
+								<div class="type">Restaurant, karaoke</div>
+								<div class="rating"><i class="icon-rating-0_5"></i> (0.2) <a href="">2 reviews</a></div>
+							</div>
+							<p class="title">Pine Restaurant - Hanover Inn Dartmouth</p>
+							<p class="location"><a href="">2 East Wheelock Street Hanover, NH 03755 <i class="icon-pointer_small-red"></i></a></p>
+							<div class="params">
+								<ul>
+									<li><i class="icon-dish"></i> South American, International, Middle Eastern</li>
+									<li><i class="icon-usd"></i> $25 and under</li>
+									<li><i class="icon-clock"></i> Business Lunch</li>
+								</ul>
+								<ul>
+									<li><i class="icon-wifi"></i> Wi-Fi</li>
+									<li><i class="icon-nursery"></i> Nursery Room</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="object-adv">
+						<dt><img src="stubs/img9.jpg"></dt>
+						<dd>
+							<div class="type-wrapper">
+								<div class="type">Night club</div>
+								<div class="rating"><i class="icon-rating-5"></i> (5) <a href="">32 reviews</a></div>
+							</div>
+							<p class="title">Pine Club - Hanover Inn Dartmouth</p>
+							<p class="location"><a href="">2 East Wheelock Street Hanover, NH 03755 <i class="icon-pointer_small-red"></i></a></p>
+							<div class="params">
+								<ul>
+									<li><i class="icon-dish"></i> African, R&B, Hard Rock</li>
+									<li><i class="icon-usd"></i> $25 and under</li>
+									<li><i class="icon-clock"></i> Business Lunch</li>
+								</ul>
+								<ul>
+									<li><i class="icon-wifi"></i> Wi-Fi</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="object-adv">
+						<dt><img src="stubs/img9.jpg"></dt>
+						<dd>
+							<div class="type-wrapper">
+								<div class="type">Restaurant, karaoke</div>
+								<div class="rating"><i class="icon-rating-2_5"></i> (2.4) <a href="">2 reviews</a></div>
+							</div>
+							<p class="title">Pine Restaurant - Hanover Inn Dartmouth</p>
+							<p class="location"><a href="">2 East Wheelock Street Hanover, NH 03755 <i class="icon-pointer_small-red"></i></a></p>
+							<div class="params">
+								<ul>
+									<li><i class="icon-dish"></i> South American, International, Middle Eastern</li>
+									<li><i class="icon-usd"></i> $25 and under</li>
+									<li><i class="icon-clock"></i> Business Lunch</li>
+								</ul>
+								<ul>
+									<li><i class="icon-wifi"></i> Wi-Fi</li>
+									<li><i class="icon-nursery"></i> Nursery Room</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+					<dl class="object-adv">
+						<dt><img src="stubs/img9.jpg"></dt>
+						<dd>
+							<div class="type-wrapper">
+								<div class="type">Restaurant, karaoke</div>
+								<div class="rating"><i class="icon-rating-0_5"></i> (3.2) <a href="">2 reviews</a></div>
+							</div>
+							<p class="title">Pine Restaurant - Hanover Inn Dartmouth</p>
+							<p class="location"><a href="">2 East Wheelock Street Hanover, NH 03755 <i class="icon-pointer_small-red"></i></a></p>
+							<div class="params">
+								<ul>
+									<li><i class="icon-dish"></i> South American, International, Middle Eastern</li>
+									<li><i class="icon-usd"></i> $25 and under</li>
+									<li><i class="icon-clock"></i> Business Lunch</li>
+								</ul>
+								<ul>
+									<li><i class="icon-wifi"></i> Wi-Fi</li>
+									<li><i class="icon-nursery"></i> Nursery Room</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+				</div>
+
+				<div class="link-viewmore"><a href="">view more</a></div>
+			</section>
+			<!--//Контент. Боковая колонка-->
+			<aside class="aside">
+				<div class="banners">
+					<a href=""><i class="ibtn-addplace"></i></a>
+				</div>
+
+				<h2>In map</h2>
+
+				<div class="map-small">
+					<iframe width="232" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/?ie=UTF8&amp;ll=40.764041,-73.961289&amp;spn=0.001711,0.004128&amp;t=m&amp;z=19&amp;output=embed"></iframe>
+					<a href="https://maps.google.com/?ie=UTF8&amp;ll=40.764041,-73.961289&amp;spn=0.001711,0.004128&amp;t=m&amp;z=19&amp;source=embed"><i class="icon-viewmap"></i></a>
+				</div>
+
+				<div class="banners">
+					<a href=""><i class="ibtn-forbusiness"></i></a>
+					<a href=""><i class="ibtn-howworks"></i></a>
+				</div>
+
+				<!--Facebook-->
+				<div id="fb-root"></div>
+				<script>(function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id)) return;
+					js = d.createElement(s); js.id = id;
+					js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1";
+					fjs.parentNode.insertBefore(js, fjs);
+				} (document, 'script', 'facebook-jssdk'));</script>
+				<div class="fb-like-box" data-href="https://www.facebook.com/OpenTable" data-width="232" data-height="495" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+				<!--//Facebook-->
+
+			</aside>
+			<!--//Боковая колонка-->
+		</div>
+		<!--//Сетка в две колонки. Распорка подвала-->
+		<div class="footer-helper"></div>
+	</div>
+	<!--//Контейнер. Подвал-->
+	<footer class="footer">
+		<div class="cols-wrapper">
+			<div class="col">
+				<nav class="footer-nav">
+					<a href="">About us</a>
+					<a href="">How does it work</a>
+					<a href="">Rules of reservation</a>
+					<a href="">User Agreement</a>
+				</nav>
+
+				<p class="sitecredits">Web design by <a href="">Greenjet studio</a></p>
+			</div>
+			<div class="col share">
+				<p class="title">Like us</p>
+				<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+					<a class="addthis_button_facebook"></a>
+					<a class="addthis_button_google_plusone_share"></a>
+					<a class="addthis_button_myspace"></a>
+					<a class="addthis_button_twitter"></a>
+					<a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
+				</div>
+				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515ab7f80f44c716"></script>
+				<!-- AddThis Button END -->
+			</div>
+
+			<div class="move-top">
+				<i class="icon-top"></i>
+			</div>
+		</div>
+	</footer>
+	<!--//Подвал-->
+
+	<!-- Привязанная функция: script.js > auth() -->
+	<div id="authWindow" style="display: none">
+		<h2>Already have an account?</h2>
+
+		<form class="form form-auth">
+			<dl><dt></dt><dd class="error">Please enter your email correctly</dd></dl>
+			<dl><dt>E-mail<dd><input type="text"></dl>
+			<dl><dt>Password<dd><input type="text"></dl>
+			<dl>
+				<dt>
+				<dd class="ar">
+					<div class="buttons">
+						<p>
+							<button class="btn -yellow -small">Sign in</button>
+							<span class="regn-types">
+								<a href="" title="Facebook"><i class="icon-fb_small"></i></a>
+								<a href="" title="Google+"><i class="icon-gplus_small"></i></a>
+								<a href="" title="MySpace"><i class="icon-myspace_small"></i></a>
+								<a href="" title="Other"><i class="icon-threedots_small"></i></a>
+							</span>
+						</p>
+
+						<a href="" data-fancybox="regWindow">Register</a> or <a href="" data-fancybox="recoverpassWindow">Forgot your password?</a>
+					</div>
+				</dd>
+			</dl>
+		</form>
+	</div>
+
+	<div id="recoverpassWindow" style="display: none">
+		<h2>Forgot your password?</h2>
+
+		<form class="form form-recoverpass">
+			<dl><dt></dt><dd class="error">This user is not found!</dd></dl>
+			<dl><dt>E-mail<dd><input type="text"></dl>
+			<dl>
+				<dt></dt><dd class="ar">
+					<a href="" class="btn -yellow -small -wide" data-fancybox="recoverpassWindow_sent">Recover</a>
+				</dd>
+			</dl>
+		</form>
+	</div>
+
+	<div id="recoverpassWindow_sent" style="display: none">
+		<h2>Forgot your password?</h2>
+
+		<form class="form form-recoverpass" style="width: 460px">
+			<p>Hello, we sent you a letter to the email you gave us during your registration here.</p>
+
+			<p>Please check your email inbox or spam folder for our letter that will
+			have a link for you to reset your password, this link is active only for 24
+			hours. If for some reason you can not use this link, don’t worry we will sent
+			you another one.</p>
+
+			<p>Thank You and feel free to contact us if you need any help!</p>
+		</form>
+	</div>
+
+	<div id="regWindow" style="display: none">
+		<h2>Create new account</h2>
+
+		<form class="form form-reg">
+			<dl><dt></dt><dd class="error">The field type is incorrect</dd></dl>
+			<dl><dt>First name*<dd><input type="text"></dl>
+			<dl><dt>Last name*<dd><input type="text"></dl>
+			<dl><dt>Phone number*<dd><input type="text" class="field-phone" value="+1___-___-____"></dl>
+			<dl><dt>E-mail*<dd><input type="text" class="error"><i class="icon-error"></i></dl>
+			<dl>
+				<dt>Password*
+				<dd>
+					<input type="password">
+					<span class="note">at least 6 characters</span>
+			</dl>
+			<dl><dt>Re-enter password*<dd><input type="password" class="filled"><i class="icon-check"></i></dl>
+			<dl>
+				<dt>
+				<dd class="checkboxes">
+					<label><input type="checkbox" checked>Send me news from all places in my city</label>
+					<!-- checkAgreement в одноименной функции -->
+					<label><input type="checkbox" checked id="checkAgreement">I agree with the terms and conditions of the <a href="" class="-black">user agreement</a></label>
+			</dl>
+			<dl>
+				<dt>
+				<dd class="clearfix">
+					<button class="btn -red fl" id="btnRegister">Register me</button>
+					<a href="" class="btn -grey fr" data-fancybox="close">Cancel</a>
+			</dl>
+			<dl>
+				<dt>
+				<dd>
+					<p class="regn-types">
+						or register from:
+						<a href="" title="Facebook"><i class="icon-fb_small"></i></a>
+						<a href="" title="Google+"><i class="icon-gplus_small"></i></a>
+						<a href="" title="MySpace"><i class="icon-myspace_small"></i></a>
+						<a href="" title="Other"><i class="icon-threedots_small"></i></a>
+					</p>
+			</dl>
+		</form>
+	</div>
+
+	<!-- Привязанная функция: script.js > setLocation() -->
+	<div class="popup-location">
+		<p class="-red">My city or town</p>
+		<input type="text" value="Southwest Michigan" />
+		<div class="buttons">
+			<a class="btn -yellow -small _save" href="">Save</a>
+		</div>
+	</div>
+	
+	<script src="js/libs/libs.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
