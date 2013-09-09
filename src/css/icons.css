@@ -222,6 +222,12 @@ a:hover .icon-plus_small {
 	background-position: 0 -469px;
 }
 
+.icon-music {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -578px;
+}
+
 .icon-wifi {
 	width: 17px;
 	height: 17px;
@@ -232,6 +238,24 @@ a:hover .icon-plus_small {
 	width: 17px;
 	height: 17px;
 	background-position: 0 -510px;
+}
+
+.icon-transit {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -598px;
+}
+
+.icon-parking {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -618px;
+}
+
+.icon-dress {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -638px;
 }
 
 .icon-viewmap {

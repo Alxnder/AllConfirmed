@@ -1,0 +1,100 @@
+ul.slider {
+	height: 173px;
+	padding: 0;
+	list-style: none;
+	overflow-x: auto;
+	overflow-y: hidden;
+	position: relative;
+	margin: 0 0 24px 0;
+	white-space: nowrap;
+}
+
+.slider li {
+	margin: 0 0 0 12px;
+	padding: 0;
+	background: none;
+	position: relative;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.slider li:first-child {
+	margin-left: 0;
+}
+
+.slider .jspContainer {
+	overflow: hidden;
+	position: relative;
+}
+
+.slider .jspPane {
+	position: absolute;
+}
+
+.slider .jspHorizontalBar {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 13px;
+	position: absolute;
+}
+
+.slider .jspHorizontalBar * {
+	margin: 0;
+	padding: 0;
+}
+
+.slider .jspCap {
+	float: left;
+}
+
+.slider .jspTrack {
+	position: relative;
+	background: #ddd;
+}
+
+.slider .jspDrag {
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	position: relative;
+	background: #d44e43;
+}
+
+.slider .jspTrack, .slider .jspDrag {
+	float: left;
+	height: 100%;
+}
+
+.slider .jspArrow {
+	display: block;
+	cursor: pointer;
+	background: #ddd;
+	text-indent: -20000px;
+}
+
+.slider .jspArrow.jspDisabled {
+	cursor: default;
+	background: #ddd;
+}
+
+.slider .jspArrow {
+	width: 13px;
+	float: left;
+	height: 100%;
+	background: url("../i/sprites.png") 0 -561px no-repeat;
+}
+
+.slider .jspArrowRight {
+	background-position: -16px -561px;
+}
+
+.slider .jspDisabled {
+	background: #ddd;
+}
+
+.slider .jspCorner {
+	float: left;
+	height: 100%;
+	background: #eeeef4;
+}

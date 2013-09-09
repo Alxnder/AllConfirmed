@@ -10,6 +10,7 @@
 	checkAgreement();
 	setInputPlaceholder();
 	faq();
+	slider();
 });
 
 
@@ -521,4 +522,20 @@ function faq() {
 		}
 	})
 
+}
+
+
+function slider() {
+	var pane = $('.slider').jScrollPane({
+			showArrows: true
+		}),
+		api = pane.data('jsp');
+
+	$(window)
+		.resize(function() {
+			api.reinitialise();
+		})
+		.load(function() {
+			api.reinitialise();
+		})
 }
