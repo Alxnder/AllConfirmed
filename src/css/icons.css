@@ -252,10 +252,28 @@ a:hover .icon-plus_small {
 	background-position: 0 -618px;
 }
 
+.icon-breakfast {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -850px;
+}
+
 .icon-dress {
 	width: 17px;
 	height: 17px;
 	background-position: 0 -638px;
+}
+
+.icon-delivery {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -870px;
+}
+
+.icon-selfpickup {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -891px;
 }
 
 .icon-viewmap {

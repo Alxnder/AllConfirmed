@@ -654,7 +654,7 @@ a:hover {
 	display: inline-block;
 }
 
-.cols-wrapper {
+.cols-wrapper, .tabs .wrapper {
 	position: relative;
 	line-height: 0;
 	text-align: justify;
@@ -663,7 +663,7 @@ a:hover {
 	*zoom: 1;
 }
 
-.cols-wrapper:after {
+.cols-wrapper:after, .tabs .wrapper:after {
 	height: 0;
 	width: 100%;
 	content: '\00a0';
@@ -671,7 +671,7 @@ a:hover {
 	display: inline-block;
 }
 
-.cols-wrapper > * {
+.cols-wrapper > *, .tabs .wrapper > * {
 	text-align: left;
 	position: relative;
 	line-height: normal;
@@ -1579,10 +1579,28 @@ a:hover .icon-plus_small {
 	background-position: 0 -618px;
 }
 
+.icon-breakfast {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -850px;
+}
+
 .icon-dress {
 	width: 17px;
 	height: 17px;
 	background-position: 0 -638px;
+}
+
+.icon-delivery {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -870px;
+}
+
+.icon-selfpickup {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -891px;
 }
 
 .icon-viewmap {
@@ -2566,12 +2584,15 @@ ul.faq li:first-child {
 .object-adv .params li {
 	font: 15px 'Font1 Light';
 	color: #000;
-	margin: 0 0 15px 0;
+	margin: 0 0 16px 0;
+	padding-left: 25px;
+	position: relative;
 	list-style-image: none !important;
 }
 
 .object-adv .params [class^="icon"] {
-	margin-right: .3em;
+	position: absolute;
+	margin: .2em 0 0 -25px;
 }
 
 .map-small {
@@ -2594,28 +2615,32 @@ ul.faq li:first-child {
 	border-bottom: solid 1px #b2b2b2;
 }
 
-.tabs a, .tabs div {
+.tabs a, .tabs .wrapper div {
 	color: #999;
-	padding: 5px 34px 7px 34px;
-	display: block;
-	float: left;
+	padding: 5px 28px 7px 28px;
 	text-decoration: none;
 	position: relative;
 	z-index: 10;
+	display: inline-block;
+	vertical-align: top;
 }
 
-.tabs a:hover, .tabs div {
+.tabs a:hover, .tabs .wrapper div {
 	color: #8a0000;
 }
 
-.tabs div {
+.tabs .wrapper div {
 	background: #fff;
 	border: solid #b2b2b2;
 	margin: 0 -1px -1px -1px;
 	border-width: 1px 1px 0 1px;
 }
 
-._resvn {
+.tabs ._deals {
+	color: #000;
+}
+
+.tabs ._resvn {
 	background: #fcf4d2 url("../i/bg1.png") 0 100% repeat-x;
 }
 
@@ -2684,7 +2709,7 @@ ul.faq li:first-child {
 
 .params-full .col {
 	float: left;
-	width: 125px;
+	width: 135px;
 }
 
 .params-full .col:first-child {
@@ -2693,8 +2718,8 @@ ul.faq li:first-child {
 }
 
 .params-full .col:first-child + .col {
-	width: 310px;
-	margin-right: 25px;
+	width: 290px;
+	margin-right: 32px;
 }
 
 .params-full ul {
@@ -2704,12 +2729,15 @@ ul.faq li:first-child {
 
 .params-full li {
 	color: #000;
+	position: relative;
+	padding: 0 0 0 25px;
 	margin-bottom: .8em !important;
 	list-style-image: none !important;
 }
 
 .params-full [class^="icon"] {
-	margin-right: 5px;
+	margin: .2em 0 0 -25px;
+	position: absolute;
 }
 
 .params-full p {
@@ -2720,7 +2748,6 @@ p.note1 {
 	color: #867979;
 	font-size: 14px;
 	line-height: 1.3em;
-	margin: 0 0 0 26px;
 }
 
 .contacts-short {
