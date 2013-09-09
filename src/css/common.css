@@ -1255,18 +1255,23 @@ ul.faq li:first-child {
 .tabs {
 	margin: 27px 0 0 0;
 	text-transform: uppercase;
-	font: 18px 'Font1 Light';
 	border-bottom: solid 1px #b2b2b2;
 }
 
-.tabs a, .tabs .wrapper div {
+.tabs .wrapper {
+	height: 35px;
+}
+
+.tabs .wrapper a, .tabs .wrapper div {
 	color: #999;
-	padding: 5px 28px 7px 28px;
+	height: 35px;
+	padding: 0 28px;
 	text-decoration: none;
 	position: relative;
 	z-index: 10;
 	display: inline-block;
 	vertical-align: top;
+	font: 18px/35px 'Font1 Light';
 }
 
 .tabs a:hover, .tabs .wrapper div {
