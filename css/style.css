@@ -1613,6 +1613,12 @@ a:hover .icon-plus_small {
 	background-position: -92px -534px;
 }
 
+.icon-error {
+	width: 28px;
+	height: 33px;
+	background-position: 0 -913px;
+}
+
 .carousel {
 	width: 732px;
 	height: 192px;
@@ -1874,6 +1880,13 @@ nav.secondary div .icon-plus_small {
 .banners a {
 	display: block;
 	margin-bottom: 19px;
+}
+
+.search-noresults {
+	color: #de5144;
+	text-align: center;
+	margin: 28px 0 33px 0;
+	font: 24px 'Font1 Light';
 }
 
 .search-box {
@@ -2499,10 +2512,6 @@ ul.faq li:first-child {
 	border-top: solid 12px #840000;
 }
 
-.object-adv dt img {
-
-}
-
 .object-adv dd {
 	overflow: hidden;
 }
@@ -2541,6 +2550,15 @@ ul.faq li:first-child {
 	color: #9c0103;
 	margin-bottom: 7px;
 	font: 24px/1.2em Font1;
+}
+
+.object-adv .title a {
+	color: #9c0103;
+	text-decoration: none;
+}
+
+.object-adv .title a:hover {
+	text-decoration: underline;
 }
 
 .object-adv .location a {
