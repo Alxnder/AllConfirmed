@@ -1306,7 +1306,7 @@ ul.faq li:first-child {
 }
 
 .tab-content {
-	padding: 17px 0 0 0;
+	padding: 25px 0 0 0;
 }
 
 .location_1 {
@@ -1506,6 +1506,95 @@ p.note1 {
 
 .menu + .title-style1 {
 	margin-top: 0;
+}
+
+.resvn {
+	margin: 0 0 37px 0;
+	padding: 0 0 15px 0;
+	overflow: hidden;
+	border-bottom: solid 1px #e5e5e5;
+}
+
+.resvn dt {
+	float: left;
+	width: 235px;
+	margin-right: 13px;
+}
+
+.resvn dd {
+	margin: 0;
+	overflow: hidden;
+	font: 15px Font1;
+}
+
+.resvn p {
+	margin-bottom: 10px;
+}
+
+.resvn .title {
+	margin: 0;
+	color: #be0002;
+	font: 24px/1em 'Font1 Light';
+}
+
+.resvn .date {
+	margin: 0 0 12px 0;
+	color: #060606;
+}
+
+.resvn .col1 {
+	float: left;
+	width: 350px;
+}
+
+.resvn .col1 [class^="icon"] {
+	vertical-align: top;
+}
+
+.resvn .col2 {
+	float: right;
+	max-width: 120px;
+	color: #ba342d;
+	font-size: 14px;
+	padding-right: 6px;
+	text-align: center;
+}
+
+.resvn .text p {
+	font: 15px/1.7em Font1;
+	margin-bottom: 22px;
+}
+
+.-grey1, .resvn .-grey1 a {
+	color: #909090;
+}
+
+ul.prices-list {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	display: table;
+	width: 100%;
+}
+
+.prices-list li {
+	display: table-cell;
+	color: #840000;
+	margin: 0;
+	padding: 0 0 0 15px;
+	list-style-image: none !important;
+}
+
+.prices-list li:first-child {
+	padding-left: 0;
+}
+
+.prices-list ._oneperson {
+	color: #000;
+}
+
+.prices-list li [class^="icon"] {
+	top: -2px;
 }
 
 @import 'jquery.fancybox.css';

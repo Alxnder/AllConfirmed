@@ -216,6 +216,12 @@ a:hover .icon-plus_small {
 	background-position: 0 -448px;
 }
 
+.icon-usd_red {
+	width: 17px;
+	height: 17px;
+	background-position: -20px -448px;
+}
+
 .icon-clock {
 	width: 17px;
 	height: 17px;
@@ -296,4 +302,10 @@ a:hover .icon-plus_small {
 	width: 15px;
 	height: 12px;
 	background-position: 0 -950px;
+}
+
+.icon-free {
+	width: 55px;
+	height: 19px;
+	background-position: 0 -966px;
 }
