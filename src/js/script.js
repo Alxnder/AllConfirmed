@@ -547,11 +547,13 @@ function slider() {
 		}),
 		api = pane.data('jsp');
 
-	$(window)
-		.resize(function() {
-			api.reinitialise();
-		})
-		.load(function() {
-			api.reinitialise();
-		})
+	if (pane.length) {
+		$(window)
+			.resize(function() {
+				api.reinitialise();
+			})
+			.load(function() {
+				api.reinitialise();
+			})
+	}
 }

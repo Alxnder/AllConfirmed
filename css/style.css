@@ -1619,6 +1619,12 @@ a:hover .icon-plus_small {
 	background-position: 0 -913px;
 }
 
+.icon-photo {
+	width: 15px;
+	height: 12px;
+	background-position: 0 -950px;
+}
+
 .carousel {
 	width: 732px;
 	height: 192px;
@@ -2050,6 +2056,7 @@ nav.secondary div .icon-plus_small {
 .filter {
 	overflow: hidden;
 	font: 16px 'Font1 Light';
+	border-bottom: solid 1px #e2dddd;
 }
 
 .main-page .filter {
@@ -2501,7 +2508,6 @@ ul.faq li:first-child {
 	margin: 0;
 	padding: 35px 0;
 	overflow: hidden;
-	border-top: solid 1px #e2dddd;
 	border-bottom: solid 1px #e2dddd;
 }
 
@@ -2801,6 +2807,73 @@ p.note1 {
 
 .contacts-short .addthis_toolbox {
 	min-width: 150px;
+}
+
+.title-style1 {
+	color: #be0002;
+	font: 20px 'Font1 Light';
+	text-transform: uppercase;
+	border-top: solid 1px #be0002;
+	text-align: center;
+	margin: 40px 0 0 0;
+}
+
+.title-style1 div {
+	padding: 0 15px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	top: -.8em;
+	background: #fff;
+}
+
+.menu-item {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 15px;
+	color: #757575;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-item .name {
+	color: #373737;
+	font: 17px/1.1em Font1;
+}
+
+.menu-item a {
+	color: #373737;
+}
+
+.menu-item dt {
+	display: table-cell;
+	width: 280px;
+	padding-right: 15px;
+}
+
+.menu-item dt span {
+	display: block;
+	line-height: 1.2em;
+}
+
+.menu-item dd {
+	display: table-cell;
+	width: 70px;
+	color: #333232;
+	margin: 0;
+}
+
+.menu .menu-item {
+	width: 48%;
+	height: 100px;
+}
+
+.menu .menu-item:nth-child(2n) {
+	margin-left: 23px;
+}
+
+.menu + .title-style1 {
+	margin-top: 0;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
