@@ -1047,7 +1047,6 @@ textarea {
 	padding: 2px 6px;
 	margin-bottom: 9px;
 	position: relative;
-	border-radius: .3em;
 	border: solid 1px #96ae29;
 }
 
@@ -1060,7 +1059,7 @@ textarea {
 }
 
 .select ul a.selected {
-	background: #a8bf42;
+	background: #a0b63d;
 	border-color: #d3dcaa;
 }
 
@@ -1626,7 +1625,7 @@ a:hover .icon-plus_small {
 	background-position: -92px -534px;
 }
 
-.icon-error {
+.icon-error1 {
 	width: 28px;
 	height: 33px;
 	background-position: 0 -913px;

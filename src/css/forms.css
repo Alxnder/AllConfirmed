@@ -195,7 +195,6 @@ textarea {
 	padding: 2px 6px;
 	margin-bottom: 9px;
 	position: relative;
-	border-radius: .3em;
 	border: solid 1px #96ae29;
 }
 
@@ -208,7 +207,7 @@ textarea {
 }
 
 .select ul a.selected {
-	background: #a8bf42;
+	background: #a0b63d;
 	border-color: #d3dcaa;
 }
 
