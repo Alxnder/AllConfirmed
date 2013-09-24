@@ -1596,14 +1596,26 @@ ul.prices-list {
 	top: -2px;
 }
 
-#reservePaidWindow {
+.resvn-window {
 	width: 595px;
 	padding: 0 20px;
 	color: #676462;
 }
 
-#reservePaidWindow p {
+.resvn-window h2 {
+	margin-left: -20px;
+}
+
+.resvn-window p {
 	line-height: 1.2em;
+}
+
+.resvn-window .buttons {
+	margin: 0 -16px 18px -10px;
+}
+
+.resvn-window .buttons .btn {
+	padding: 0 14px;
 }
 
 .resvn-filter {
@@ -1620,6 +1632,15 @@ ul.prices-list {
 	font: 22px 'Font1 Light';
 	border: solid 0 #a7a8a4;
 	border-width: 1px 0 0 1px;
+}
+
+.resvn-filter .input-disabled {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 26px 0 14px;
+	color: #fff;
+	font: 22px 'Font1 Medium';
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
 }
 
 .resvn-filter select, .resvn-filter .ui-selectmenu {
@@ -1691,20 +1712,12 @@ ul.prices-list {
 	background: url("../i/bg2.png") 100% 0 no-repeat;
 }
 
-#reservePaidWindow .buttons {
-	margin: 0 -16px 18px -10px;
-}
-
 .payment-systems {
 	float: left;
 }
 
 .payment-systems img {
 	margin-right: 15px;
-}
-
-#reservePaidWindow .buttons .btn {
-	padding: 0 14px;
 }
 
 @import 'jquery.fancybox.css';
