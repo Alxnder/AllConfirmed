@@ -1644,6 +1644,24 @@ a:hover .icon-plus_small {
 	background-position: 0 -966px;
 }
 
+.icon-cal {
+	width: 33px;
+	height: 30px;
+	background-position: 0 -989px;
+}
+
+.icon-clock1 {
+	width: 31px;
+	height: 30px;
+	background-position: 0 -1023px;
+}
+
+.icon-user {
+	width: 26px;
+	height: 30px;
+	background-position: 0 -1058px;
+}
+
 .carousel {
 	width: 732px;
 	height: 192px;
@@ -2961,14 +2979,13 @@ ul.prices-list {
 	padding: 0;
 	overflow: hidden;
 	display: table;
-	width: 100%;
 }
 
 .prices-list li {
 	display: table-cell;
 	color: #840000;
 	margin: 0;
-	padding: 0 0 0 15px;
+	padding: 0 0 0 18px;
 	list-style-image: none !important;
 }
 
@@ -2982,6 +2999,117 @@ ul.prices-list {
 
 .prices-list li [class^="icon"] {
 	top: -2px;
+}
+
+#reservePaidWindow {
+	width: 595px;
+	padding: 0 20px;
+	color: #676462;
+}
+
+#reservePaidWindow p {
+	line-height: 1.2em;
+}
+
+.resvn-filter {
+	background: url("../i/sprite3.png") 0 0 repeat-x;
+	padding: 13px 0 11px 15px;
+	margin: 14px -20px 0 -20px;
+}
+
+.resvn-filter input[type="text"] {
+	color: #7f7f7f;
+	height: 29px;
+	width: 186px;
+	margin: 0 18px 0 6px;
+	font: 22px 'Font1 Light';
+	border: solid 0 #a7a8a4;
+	border-width: 1px 0 0 1px;
+}
+
+.resvn-filter select, .resvn-filter .ui-selectmenu {
+	margin: 0 18px 0 6px;
+}
+
+.resvn-summary {
+	background: #f2f2f2;
+	margin: 0 -20px 15px -20px;
+	padding: 23px 20px 10px;
+	position: relative;
+	color: #000;
+	border-bottom: solid 1px #e2dddd;
+}
+
+.resvn-summary h3 {
+	font: 24px Font1;
+	margin: 0 0 10px;
+	color: #9c0103;
+}
+
+.resvn-summary .location {
+	margin: 0 0 20px -6px;
+}
+
+.resvn-summary .location a {
+	color: #63605f;
+	text-decoration: none;
+	padding: 0 6px 1px 6px;
+}
+
+.resvn-summary .location a:hover {
+	background: #dfdfdf;
+}
+
+.resvn-summary hr {
+	margin: 15px -20px 30px -20px;
+}
+
+.resvn-info {
+	width: 310px;
+	float: left;
+	margin: 0 0 10px 0;
+}
+
+.resvn-info dl {
+	margin: 0;
+	padding: 0;
+}
+
+.resvn-info dl > * {
+	display: inline-block;
+	margin: 0 5px 15px 0;
+	font: 16px 'Font1 Light';
+}
+
+.resvn-info dd {
+	font: 16px 'Font1 Bold';
+}
+
+.resvn-summary .price {
+	height: 90px;
+	color: #fff;
+	padding: 0 28px 0 25px;
+	text-align: center;
+	float: right;
+	margin: 20px -32px 0 0;
+	font: 32px/72px 'Font1 Bold';
+	background: url("../i/bg2.png") 100% 0 no-repeat;
+}
+
+#reservePaidWindow .buttons {
+	margin: 0 -16px 18px -10px;
+}
+
+.payment-systems {
+	float: left;
+}
+
+.payment-systems img {
+	margin-right: 15px;
+}
+
+#reservePaidWindow .buttons .btn {
+	padding: 0 14px;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -3024,6 +3152,10 @@ ul.prices-list {
 
 .fancybox-opened {
 	z-index: 8030;
+}
+
+.fancybox-skin1 .fancybox-inner {
+	overflow: visible !important;
 }
 
 .fancybox-opened .fancybox-skin {
@@ -3345,6 +3477,100 @@ ul.slider {
 	float: left;
 	height: 100%;
 	background: #eeeef4;
+}
+
+.ui-selectmenu {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-decoration: none;
+	overflow: hidden;
+	text-align: left;
+	cursor: default;
+	outline: 0 !important;
+	height: 28px;
+	background: #fff;
+	border: solid 0 #a7a8a4;
+	border-width: 1px 0 0 1px;
+}
+
+.ui-selectmenu:hover {
+
+}
+
+.ui-selectmenu .ui-icon {
+	width: 13px;
+	height: 9px;
+	display: block;
+	position: absolute;
+	right: 7px;
+	top: 11px;
+	background: url("../i/sprites.png") 0 -1092px;
+}
+
+.ui-selectmenu-menu {
+	margin: 0;
+	position: absolute;
+	top: 0;
+	visibility: hidden;
+	z-index: 1005;
+	background: #fff;
+	text-align: left;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.ui-selectmenu-menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow-y: auto;
+	overflow-x: hidden;
+	*list-style-image: none;
+}
+
+.ui-selectmenu-open {
+	visibility: visible;
+}
+
+.ui-state-active {
+
+}
+
+.ui-selectmenu-status {
+	display: block;
+	outline: none;
+	padding: 0 0 0 8px;
+	margin: 0 30px 0 0;
+	overflow: hidden;
+	white-space: nowrap;
+	color: #7f7f7f;
+	font: 22px 'Font1 Light';
+}
+
+.ui-selectmenu-status span {
+	display: block;
+}
+
+.ui-selectmenu-menu li {
+	background: none;
+	padding: 0;
+	margin: 0;
+	white-space: nowrap;
+}
+
+.ui-selectmenu-menu li a {
+	display: block;
+	outline: none;
+	text-decoration: none;
+	color: #7f7f7f;
+	font: 22px 'Font1 Light';
+	cursor: default;
+	padding: 5px 25px 5px 14px;
+}
+
+.ui-selectmenu-item-focus a, .ui-selectmenu-item-selected a {
+	background: #999;
+	color: #fff !important;
 }
 
 /* Большие мониторы */

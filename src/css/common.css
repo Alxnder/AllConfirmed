@@ -1574,14 +1574,13 @@ ul.prices-list {
 	padding: 0;
 	overflow: hidden;
 	display: table;
-	width: 100%;
 }
 
 .prices-list li {
 	display: table-cell;
 	color: #840000;
 	margin: 0;
-	padding: 0 0 0 15px;
+	padding: 0 0 0 18px;
 	list-style-image: none !important;
 }
 
@@ -1597,9 +1596,122 @@ ul.prices-list {
 	top: -2px;
 }
 
+#reservePaidWindow {
+	width: 595px;
+	padding: 0 20px;
+	color: #676462;
+}
+
+#reservePaidWindow p {
+	line-height: 1.2em;
+}
+
+.resvn-filter {
+	background: url("../i/sprite3.png") 0 0 repeat-x;
+	padding: 13px 0 11px 15px;
+	margin: 14px -20px 0 -20px;
+}
+
+.resvn-filter input[type="text"] {
+	color: #7f7f7f;
+	height: 29px;
+	width: 186px;
+	margin: 0 18px 0 6px;
+	font: 22px 'Font1 Light';
+	border: solid 0 #a7a8a4;
+	border-width: 1px 0 0 1px;
+}
+
+.resvn-filter select, .resvn-filter .ui-selectmenu {
+	margin: 0 18px 0 6px;
+}
+
+.resvn-summary {
+	background: #f2f2f2;
+	margin: 0 -20px 15px -20px;
+	padding: 23px 20px 10px;
+	position: relative;
+	color: #000;
+	border-bottom: solid 1px #e2dddd;
+}
+
+.resvn-summary h3 {
+	font: 24px Font1;
+	margin: 0 0 10px;
+	color: #9c0103;
+}
+
+.resvn-summary .location {
+	margin: 0 0 20px -6px;
+}
+
+.resvn-summary .location a {
+	color: #63605f;
+	text-decoration: none;
+	padding: 0 6px 1px 6px;
+}
+
+.resvn-summary .location a:hover {
+	background: #dfdfdf;
+}
+
+.resvn-summary hr {
+	margin: 15px -20px 30px -20px;
+}
+
+.resvn-info {
+	width: 310px;
+	float: left;
+	margin: 0 0 10px 0;
+}
+
+.resvn-info dl {
+	margin: 0;
+	padding: 0;
+}
+
+.resvn-info dl > * {
+	display: inline-block;
+	margin: 0 5px 15px 0;
+	font: 16px 'Font1 Light';
+}
+
+.resvn-info dd {
+	font: 16px 'Font1 Bold';
+}
+
+.resvn-summary .price {
+	height: 90px;
+	color: #fff;
+	padding: 0 28px 0 25px;
+	text-align: center;
+	float: right;
+	margin: 20px -32px 0 0;
+	font: 32px/72px 'Font1 Bold';
+	background: url("../i/bg2.png") 100% 0 no-repeat;
+}
+
+#reservePaidWindow .buttons {
+	margin: 0 -16px 18px -10px;
+}
+
+.payment-systems {
+	float: left;
+}
+
+.payment-systems img {
+	margin-right: 15px;
+}
+
+#reservePaidWindow .buttons .btn {
+	padding: 0 14px;
+}
+
 @import 'jquery.fancybox.css';
 
 @import 'jquery.jscrollpane.css';
+
+@import 'jquery-ui.selectmenu.css';
 
 @import 'responsive.css';
 

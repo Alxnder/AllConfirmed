@@ -1,0 +1,93 @@
+.ui-selectmenu {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-decoration: none;
+	overflow: hidden;
+	text-align: left;
+	cursor: default;
+	outline: 0 !important;
+	height: 28px;
+	background: #fff;
+	border: solid 0 #a7a8a4;
+	border-width: 1px 0 0 1px;
+}
+
+.ui-selectmenu:hover {
+
+}
+
+.ui-selectmenu .ui-icon {
+	width: 13px;
+	height: 9px;
+	display: block;
+	position: absolute;
+	right: 7px;
+	top: 11px;
+	background: url("../i/sprites.png") 0 -1092px;
+}
+
+.ui-selectmenu-menu {
+	margin: 0;
+	position: absolute;
+	top: 0;
+	visibility: hidden;
+	z-index: 1005;
+	background: #fff;
+	text-align: left;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.ui-selectmenu-menu ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow-y: auto;
+	overflow-x: hidden;
+	*list-style-image: none;
+}
+
+.ui-selectmenu-open {
+	visibility: visible;
+}
+
+.ui-state-active {
+
+}
+
+.ui-selectmenu-status {
+	display: block;
+	outline: none;
+	padding: 0 0 0 8px;
+	margin: 0 30px 0 0;
+	overflow: hidden;
+	white-space: nowrap;
+	color: #7f7f7f;
+	font: 22px 'Font1 Light';
+}
+
+.ui-selectmenu-status span {
+	display: block;
+}
+
+.ui-selectmenu-menu li {
+	background: none;
+	padding: 0;
+	margin: 0;
+	white-space: nowrap;
+}
+
+.ui-selectmenu-menu li a {
+	display: block;
+	outline: none;
+	text-decoration: none;
+	color: #7f7f7f;
+	font: 22px 'Font1 Light';
+	cursor: default;
+	padding: 5px 25px 5px 14px;
+}
+
+.ui-selectmenu-item-focus a, .ui-selectmenu-item-selected a {
+	background: #999;
+	color: #fff !important;
+}

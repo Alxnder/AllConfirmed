@@ -3,6 +3,7 @@
 	carousel();
 	searchBox();
 	select();
+	customSelects();
 	stylizeCheckbox();
 	setLocation();
 	openWindow();
@@ -556,4 +557,12 @@ function slider() {
 				api.reinitialise();
 			})
 	}
+}
+
+
+function customSelects() {
+	$("select").selectmenu({
+		width: 'auto',
+		menuWidth: 'auto'
+	})
 }

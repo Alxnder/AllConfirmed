@@ -40,6 +40,10 @@
 	z-index: 8030;
 }
 
+.fancybox-skin1 .fancybox-inner {
+	overflow: visible !important;
+}
+
 .fancybox-opened .fancybox-skin {
 	-webkit-box-shadow: 0 0 8px rgba(0,0,0,0.21);
 	   -moz-box-shadow: 0 0 8px rgba(0,0,0,0.21);

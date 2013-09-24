@@ -309,3 +309,21 @@ a:hover .icon-plus_small {
 	height: 19px;
 	background-position: 0 -966px;
 }
+
+.icon-cal {
+	width: 33px;
+	height: 30px;
+	background-position: 0 -989px;
+}
+
+.icon-clock1 {
+	width: 31px;
+	height: 30px;
+	background-position: 0 -1023px;
+}
+
+.icon-user {
+	width: 26px;
+	height: 30px;
+	background-position: 0 -1058px;
+}
