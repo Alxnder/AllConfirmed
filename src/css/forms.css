@@ -295,7 +295,7 @@ p.error {
 	font-size: 11px;
 	color: #a8a8a8;
 	display: block;
-	margin: 0 0 0 43px;
+	text-align: center;
 }
 
 .form-reg [class^="btn"] {
@@ -383,4 +383,26 @@ p.error {
 
 .field-phone {
 	width: 140px !important;
+}
+
+.form-profile .col {
+	width: 420px;
+}
+
+.form-profile .col:first-child {
+	width: 420px;
+	margin-right: 50px;
+}
+
+.form-profile dt {
+	width: 120px;
+}
+
+.form-profile dd {
+	width: 276px;
+}
+
+.note1 {
+	font: 15px 'Font1 Medium';
+	color: #000;
 }

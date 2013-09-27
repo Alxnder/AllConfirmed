@@ -467,7 +467,7 @@ nav.primary > ul ul a:hover {
 	color: #ffadab;
 }
 
-.nav-visible {
+.nav-visible, .dropdown-visible {
 	visibility: visible !important;
 }
 
@@ -1833,6 +1833,65 @@ ul.prices-list {
 	color: #6f6f6f;
 	background: #f2f2f2;
 	padding: 10px 17px;
+}
+
+.dropdown {
+	color: #79901b;
+	cursor: pointer;
+	font: 16px Font1;
+	text-align: left;
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: middle;
+	background: url("../i/border2.png") 0 100% repeat-x;
+}
+
+.dropdown > div {
+	position: relative;
+	padding-right: 15px;
+}
+
+.dropdown > div:after {
+	width: 8px;
+	height: 6px;
+	right: 0;
+	top: 0.52em;
+	position: absolute;
+	content: '';
+	background: url("../i/sprites.png") 0 -1127px no-repeat;
+}
+
+.dropdown ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	color: #fff;
+	position: absolute;
+	z-index: 100;
+	font: 15px 'Font1';
+	background: #a3c43e;
+	display: none;
+}
+
+.dropdown li {
+	white-space: nowrap;
+	border-bottom: solid 1px #b5d065;
+}
+
+.dropdown li > * {
+	display: block;
+	padding: 5px 16px;
+	border-bottom: solid 1px #b5d065;
+}
+
+.dropdown a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.dropdown a:hover {
+	background: #b5d065;
 }
 
 @import 'jquery.fancybox.css';

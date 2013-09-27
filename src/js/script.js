@@ -3,6 +3,7 @@
 	carousel();
 	searchBox();
 	select();
+	dropdown();
 	customSelects('select');
 	stylizeCheckbox();
 	setLocation();
@@ -275,6 +276,32 @@ function select() {
 		list.parent().removeClass('-active');
 		list.fadeOut(100);
 	}
+}
+
+
+function dropdown() {
+	var dropdowns = $('.dropdown');
+
+	dropdowns.each(function() {
+		var $this = $(this),
+			list = $this.find('ul');
+
+		$this.click(function(e) {
+			if (!list.is(':visible')) {
+				list.fadeIn(50);
+			} else {
+				list.fadeOut(100)
+			}
+
+			list.css('minWidth', $this.outerWidth());
+
+			e.stopPropagation();
+		});
+
+		$(document).click(function() {
+			dropdowns.find('ul').fadeOut(100);
+		});
+	});
 }
 
 
