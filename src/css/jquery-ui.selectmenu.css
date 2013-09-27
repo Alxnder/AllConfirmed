@@ -13,18 +13,14 @@
 	border-width: 1px 0 0 1px;
 }
 
-.ui-selectmenu:hover {
-
-}
-
 .ui-selectmenu .ui-icon {
-	width: 13px;
-	height: 9px;
 	display: block;
 	position: absolute;
+	width: 8px;
+	height: 6px;
 	right: 7px;
 	top: 11px;
-	background: url("../i/sprites.png") 0 -1092px;
+	background: url("../i/sprites.png") 0 -1144px;
 }
 
 .ui-selectmenu-menu {
@@ -51,10 +47,6 @@
 	visibility: visible;
 }
 
-.ui-state-active {
-
-}
-
 .ui-selectmenu-status {
 	display: block;
 	outline: none;
@@ -63,7 +55,7 @@
 	overflow: hidden;
 	white-space: nowrap;
 	color: #7f7f7f;
-	font: 22px 'Font1 Light';
+	font: 14px/28px arial, helvetica, sans-serif;
 }
 
 .ui-selectmenu-status span {
@@ -82,7 +74,7 @@
 	outline: none;
 	text-decoration: none;
 	color: #7f7f7f;
-	font: 22px 'Font1 Light';
+	font: 14px arial, helvetica, sans-serif;
 	cursor: default;
 	padding: 5px 25px 5px 14px;
 }
@@ -90,4 +82,21 @@
 .ui-selectmenu-item-focus a, .ui-selectmenu-item-selected a {
 	background: #999;
 	color: #fff !important;
+}
+
+.select-big .ui-selectmenu .ui-icon {
+	width: 13px;
+	height: 9px;
+	right: 7px;
+	top: 11px;
+	background: url("../i/sprites.png") 0 -1092px;
+}
+
+.select-big .ui-selectmenu-status {
+	font: 22px 'Font1 Light';
+}
+
+.select-big.ui-selectmenu-menu li a {
+	font: 22px 'Font1 Light';
+	padding: 5px 25px 5px 14px;
 }

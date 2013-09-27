@@ -4,7 +4,7 @@
 	searchBox();
 	select();
 	dropdown();
-	customSelects('select');
+	customSelects();
 	stylizeCheckbox();
 	setLocation();
 	openWindow();
@@ -456,7 +456,7 @@ function openAjaxWindow() {
 		},
 		afterLoad: function() {
 			$('.fancybox-inner').on('elemLoaded', 'select', function() {
-				customSelects('select')
+				customSelects()
 			});
 		}
 	});
@@ -614,9 +614,14 @@ function slider() {
 }
 
 
-function customSelects(select) {
-	$(select).selectmenu({
+function customSelects() {
+	$('select').selectmenu({
 		width: 'auto',
 		menuWidth: 'auto'
+	});
+
+	$('.resvn-filter select').each(function() {
+		$(this).selectmenu('widget').addClass('select-big')
 	})
+
 }

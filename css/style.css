@@ -1719,6 +1719,8 @@ a:hover .icon-plus_small {
 	background-position: 0 -1105px;
 }
 
+
+
 .carousel {
 	width: 732px;
 	height: 192px;
@@ -3225,72 +3227,76 @@ ul.prices-list {
 	font: 18px/1.1em Font1;
 }
 
-.comments {
-
-}
-
-.comment {
+.comment, .review {
 	margin: 0 0 25px 0;
 	padding: 25px 0 0 0;
 	overflow: hidden;
 	border-top: solid 1px #e2dddd;
 }
 
-.comment > dt {
-	width: 500px;
-	float: left;
+.reviews .review:first-child {
+	border: 0;
 }
 
-.comment > dd {
+.comment > dt, .review > dt {
+	display: table-cell;
+	padding-right: 30px;
+}
+
+.review .author {
+	margin-top: 6px;
+}
+
+.comment > dd, .review > dd {
 	margin: 0;
 	width: 190px;
 	border-left: solid 3px #d0443b;
-	float: right;
+	display: table-cell;
 	padding-left: 18px;
 }
 
-.comment .author {
+.comment .author, .review .author {
 	color: #7f7f7f;
 	margin-bottom: 8px;
 	font: italic 12px 'Font1 Light';
 }
 
-.comment .author > * {
+.comment .author > *, .review .author > * {
 	display: inline-block !important;
 }
 
-.comment .name {
+.comment .name, .review .name {
 	color: #7f7f7f;
 	margin-right: 16px;
 	font: italic 12px 'Font1 Light';
 }
 
-.comment .name [class^="icon"] {
+.comment .name [class^="icon"], .review .name [class^="icon"] {
 	margin-right: 2px;
 }
 
-.comment .date {
+.comment .date, .review .date {
 	color: #7f7f7f;
 	margin-right: 18px;
 	font: italic 12px 'Font1 Light';
 }
 
-.comments .text {
+.comment .text, .review .text {
 	line-height: 1.6em;
 }
 
-.comment-reply {
+.reply {
 	margin: 0 0 25px 0;
 	padding: 0;
 }
 
-.comment-reply dt {
+.reply dt {
 	color: #787878;
 	margin-left: 12px;
 	font: italic 12px 'Font1 Light';
 }
 
-.comment-reply dd {
+.reply dd {
 	margin: 0 0 0 12px;
 	color: #6f6f6f;
 	background: #f2f2f2;
@@ -3334,17 +3340,21 @@ ul.prices-list {
 	font: 15px 'Font1';
 	background: #a3c43e;
 	display: none;
+	box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
 }
 
 .dropdown li {
 	white-space: nowrap;
-	border-bottom: solid 1px #b5d065;
+	border-top: solid 1px #b5d065;
 }
 
 .dropdown li > * {
 	display: block;
 	padding: 5px 16px;
-	border-bottom: solid 1px #b5d065;
+}
+
+.dropdown li:first-child {
+	border: 0;
 }
 
 .dropdown a {
@@ -3354,6 +3364,67 @@ ul.prices-list {
 
 .dropdown a:hover {
 	background: #b5d065;
+}
+
+.filter1 {
+	margin-bottom: 30px;
+}
+
+.filter1 .wrapper {
+	color: #000;
+	padding: 12px 31px 0 11px;
+	background: #f7e8a4;
+	font: 18px 'Font1 Light';
+	display: inline-block;
+}
+
+.filter1 * {
+	vertical-align: baseline;
+}
+
+.filter1 .col {
+	margin-right: 5px;
+}
+
+ul.sort {
+	padding: 0;
+	list-style: none;
+	margin: 0 43px 0 0;
+}
+
+.sort li {
+	margin: 0;
+	position: relative;
+	display: inline-block;
+	padding: 6px 5px 6px 13px;
+}
+
+.sort li:after {
+	top: 0.7em;
+	width: 8px;
+	height: 6px;
+	right: 10px;
+	content: '';
+	position: absolute;
+	background: url("../i/sprites.png") 0 -1136px no-repeat;
+}
+
+.filter1 .sort a {
+	color: #7e7e7e;
+	display: block;
+	text-decoration: none;
+	padding: 0 20px 2px 0;
+	font: 14px arial, helvetica, sans-serif;
+	background: url("../i/border5.png") 0 100% repeat-x;
+
+}
+
+.sort .active {
+	background: #f8f0ef;
+}
+
+.sort .active:after {
+	background-position: 0 -1144px;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -3738,18 +3809,14 @@ ul.slider {
 	border-width: 1px 0 0 1px;
 }
 
-.ui-selectmenu:hover {
-
-}
-
 .ui-selectmenu .ui-icon {
-	width: 13px;
-	height: 9px;
 	display: block;
 	position: absolute;
+	width: 8px;
+	height: 6px;
 	right: 7px;
 	top: 11px;
-	background: url("../i/sprites.png") 0 -1092px;
+	background: url("../i/sprites.png") 0 -1144px;
 }
 
 .ui-selectmenu-menu {
@@ -3776,10 +3843,6 @@ ul.slider {
 	visibility: visible;
 }
 
-.ui-state-active {
-
-}
-
 .ui-selectmenu-status {
 	display: block;
 	outline: none;
@@ -3788,7 +3851,7 @@ ul.slider {
 	overflow: hidden;
 	white-space: nowrap;
 	color: #7f7f7f;
-	font: 22px 'Font1 Light';
+	font: 14px/28px arial, helvetica, sans-serif;
 }
 
 .ui-selectmenu-status span {
@@ -3807,7 +3870,7 @@ ul.slider {
 	outline: none;
 	text-decoration: none;
 	color: #7f7f7f;
-	font: 22px 'Font1 Light';
+	font: 14px arial, helvetica, sans-serif;
 	cursor: default;
 	padding: 5px 25px 5px 14px;
 }
@@ -3816,6 +3879,24 @@ ul.slider {
 	background: #999;
 	color: #fff !important;
 }
+
+.select-big .ui-selectmenu .ui-icon {
+	width: 13px;
+	height: 9px;
+	right: 7px;
+	top: 11px;
+	background: url("../i/sprites.png") 0 -1092px;
+}
+
+.select-big .ui-selectmenu-status {
+	font: 22px 'Font1 Light';
+}
+
+.select-big.ui-selectmenu-menu li a {
+	font: 22px 'Font1 Light';
+	padding: 5px 25px 5px 14px;
+}
+
 
 /* Большие мониторы */
 @media (min-width: 1200px) {
