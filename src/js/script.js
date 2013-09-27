@@ -3,11 +3,11 @@
 	carousel();
 	searchBox();
 	select();
-	customSelects();
+	customSelects('select');
 	stylizeCheckbox();
 	setLocation();
 	openWindow();
-	openWindow1();
+	openAjaxWindow();
 	scrollTop();
 	checkAgreement();
 	setInputPlaceholder();
@@ -415,7 +415,7 @@ function openWindow() {
 }
 
 
-function openWindow1() {
+function openAjaxWindow() {
 	$('[data-fancybox="ajax"]').fancybox({
 		type       : 'ajax',
 		fitToView  : false,
@@ -426,6 +426,11 @@ function openWindow1() {
 		scrolling  : 'no',
 		tpl        : {
 			wrap: '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
+		},
+		afterLoad: function() {
+			$('.fancybox-inner').on('elemLoaded', 'select', function() {
+				customSelects('select')
+			});
 		}
 	});
 }
@@ -582,8 +587,8 @@ function slider() {
 }
 
 
-function customSelects() {
-	$("select").selectmenu({
+function customSelects(select) {
+	$(select).selectmenu({
 		width: 'auto',
 		menuWidth: 'auto'
 	})

@@ -115,7 +115,12 @@ a:hover .icon-plus_small {
 	background-position: 0 -166px;
 }
 
-.icon-rating-0_5 {
+[class^="icon-rating_wide"] {
+	width: 77px !important;
+}
+
+.icon-rating-0_5,
+.icon-rating_wide-0_5 {
 	width: 13px;
 	background-position: -80px -166px;
 }
@@ -124,7 +129,12 @@ a:hover .icon-plus_small {
 	width: 13px;
 }
 
-.icon-rating-1_5 {
+.icon-rating_wide-1 {
+	background-position: -208px -166px;
+}
+
+.icon-rating-1_5,
+.icon-rating_wide-1_5 {
 	width: 29px;
 	background-position: -64px -166px;
 }
@@ -133,7 +143,12 @@ a:hover .icon-plus_small {
 	width: 29px;
 }
 
-.icon-rating-2_5 {
+.icon-rating_wide-2 {
+	background-position: -192px -166px;
+}
+
+.icon-rating-2_5,
+.icon-rating_wide-2_5 {
 	width: 45px;
 	background-position: -48px -166px;
 }
@@ -142,7 +157,12 @@ a:hover .icon-plus_small {
 	width: 45px;
 }
 
-.icon-rating-3_5 {
+.icon-rating_wide-3 {
+	background-position: -176px -166px;
+}
+
+.icon-rating-3_5,
+.icon-rating_wide-3_5{
 	width: 61px;
 	background-position: -32px -166px;
 }
@@ -151,7 +171,12 @@ a:hover .icon-plus_small {
 	width: 61px;
 }
 
-.icon-rating-4_5 {
+.icon-rating_wide-4 {
+	background-position: -160px -166px;
+}
+
+.icon-rating-4_5,
+.icon-rating_wide-4_5 {
 	width: 77px;
 	background-position: -16px -166px;
 }
@@ -326,4 +351,10 @@ a:hover .icon-plus_small {
 	width: 26px;
 	height: 30px;
 	background-position: 0 -1058px;
+}
+
+.icon-user_small {
+	width: 19px;
+	height: 19px;
+	background-position: 0 -1105px;
 }

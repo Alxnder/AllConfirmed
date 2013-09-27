@@ -1720,6 +1720,121 @@ ul.prices-list {
 	margin-right: 15px;
 }
 
+.review-summary {
+	margin-bottom: 28px;
+}
+
+.ratings {
+	display: table;
+	margin: 0;
+	padding: 0;
+}
+
+.ratings dl {
+	display: table-row;
+	font: 15px Font1;
+}
+
+.ratings dt {
+	display: table-cell;
+	padding: 0 24px 11px 0;
+	color: #000;
+}
+
+.ratings dd {
+	display: table-cell;
+	padding: 0 0 11px 0;
+	margin: 0;
+	color: #7b7b7b;
+}
+
+.rating-summary {
+	font: 16px/1em Font1;
+	background: #f2f2f2;
+	padding: 5px 30px 10px 40px;
+}
+
+.rating-summary .big {
+	margin-left: -1px;
+	font: 53px/1.1em 'Font1 ExtraLight';
+}
+
+.review-summary .col3 p  {
+	font: 18px/1.1em Font1;
+}
+
+.comments {
+
+}
+
+.comment {
+	margin: 0 0 25px 0;
+	padding: 25px 0 0 0;
+	overflow: hidden;
+	border-top: solid 1px #e2dddd;
+}
+
+.comment > dt {
+	width: 500px;
+	float: left;
+}
+
+.comment > dd {
+	margin: 0;
+	width: 190px;
+	border-left: solid 3px #d0443b;
+	float: right;
+	padding-left: 18px;
+}
+
+.comment .author {
+	color: #7f7f7f;
+	margin-bottom: 8px;
+	font: italic 12px 'Font1 Light';
+}
+
+.comment .author > * {
+	display: inline-block !important;
+}
+
+.comment .name {
+	color: #7f7f7f;
+	margin-right: 16px;
+	font: italic 12px 'Font1 Light';
+}
+
+.comment .name [class^="icon"] {
+	margin-right: 2px;
+}
+
+.comment .date {
+	color: #7f7f7f;
+	margin-right: 18px;
+	font: italic 12px 'Font1 Light';
+}
+
+.comments .text {
+	line-height: 1.6em;
+}
+
+.comment-reply {
+	margin: 0 0 25px 0;
+	padding: 0;
+}
+
+.comment-reply dt {
+	color: #787878;
+	margin-left: 12px;
+	font: italic 12px 'Font1 Light';
+}
+
+.comment-reply dd {
+	margin: 0 0 0 12px;
+	color: #6f6f6f;
+	background: #f2f2f2;
+	padding: 10px 17px;
+}
+
 @import 'jquery.fancybox.css';
 
 @import 'jquery.jscrollpane.css';
