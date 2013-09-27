@@ -47,7 +47,7 @@
 						<i class="icon-pointer"></i>
 						<span>I’m in </span><span data-loc1>Southwest Michigan</span>
 					</p>
-					<p><i class="icon-key"></i><a href="" data-fancybox="authWindow" class="signin">Sign in</a></p>
+					<p><i class="icon-key"></i><a href="ajax/authentication.html" data-fancybox="ajax" class="signin">Sign in</a></p>
 				</div>
 			</div>
 		</header>
@@ -292,106 +292,6 @@
 	</footer>
 	<!--//Подвал-->
 
-	<!-- Привязанная функция: script.js > auth() -->
-	<div id="authWindow" style="display: none">
-		<h2>Already have an account?</h2>
-
-		<form class="form form-auth">
-			<dl><dt></dt><dd class="error">Please enter your email correctly</dd></dl>
-			<dl><dt>E-mail<dd><input type="text"></dl>
-			<dl><dt>Password<dd><input type="text"></dl>
-			<dl>
-				<dt>
-				<dd class="ar">
-					<div class="buttons">
-						<p>
-							<button class="btn -yellow -small">Sign in</button>
-							<span class="regn-types">
-								<a href="" title="Facebook"><i class="icon-fb_small"></i></a>
-								<a href="" title="Google+"><i class="icon-gplus_small"></i></a>
-								<a href="" title="MySpace"><i class="icon-myspace_small"></i></a>
-								<a href="" title="Other"><i class="icon-threedots_small"></i></a>
-							</span>
-						</p>
-
-						<a href="" data-fancybox="regWindow">Register</a> or <a href="" data-fancybox="recoverpassWindow">Forgot your password?</a>
-					</div>
-				</dd>
-			</dl>
-		</form>
-	</div>
-
-	<div id="recoverpassWindow" style="display: none">
-		<h2>Forgot your password?</h2>
-
-		<form class="form form-recoverpass">
-			<dl><dt></dt><dd class="error">This user is not found!</dd></dl>
-			<dl><dt>E-mail<dd><input type="text"></dl>
-			<dl>
-				<dt></dt><dd class="ar">
-					<a href="" class="btn -yellow -small -wide" data-fancybox="recoverpassWindow_sent">Recover</a>
-				</dd>
-			</dl>
-		</form>
-	</div>
-
-	<div id="recoverpassWindow_sent" style="display: none">
-		<h2>Forgot your password?</h2>
-
-		<form class="form form-recoverpass" style="width: 460px">
-			<p>Hello, we sent you a letter to the email you gave us during your registration here.</p>
-
-			<p>Please check your email inbox or spam folder for our letter that will
-			have a link for you to reset your password, this link is active only for 24
-			hours. If for some reason you can not use this link, don’t worry we will sent
-			you another one.</p>
-
-			<p>Thank You and feel free to contact us if you need any help!</p>
-		</form>
-	</div>
-
-	<div id="regWindow" style="display: none">
-		<h2>Create new account</h2>
-
-		<form class="form form-reg">
-			<dl><dt></dt><dd class="error">The field type is incorrect</dd></dl>
-			<dl><dt>First name*<dd><input type="text"></dl>
-			<dl><dt>Last name*<dd><input type="text"></dl>
-			<dl><dt>Phone number*<dd><input type="text" class="field-phone" value="+1___-___-____"></dl>
-			<dl><dt>E-mail*<dd><input type="text" class="error"><i class="icon-error"></i></dl>
-			<dl>
-				<dt>Password*
-				<dd>
-					<input type="password">
-					<span class="note">at least 6 characters</span>
-			</dl>
-			<dl><dt>Re-enter password*<dd><input type="password" class="filled"><i class="icon-check"></i></dl>
-			<dl>
-				<dt>
-				<dd class="checkboxes">
-					<label><input type="checkbox" checked>Send me news from all places in my city</label>
-					<!-- checkAgreement в одноименной функции -->
-					<label><input type="checkbox" checked id="checkAgreement">I agree with the terms and conditions of the <a href="" class="-black">user agreement</a></label>
-			</dl>
-			<dl>
-				<dt>
-				<dd class="clearfix">
-					<button class="btn -red fl" id="btnRegister">Register me</button>
-					<a href="" class="btn -grey fr" data-fancybox="close">Cancel</a>
-			</dl>
-			<dl>
-				<dt>
-				<dd>
-					<p class="regn-types">
-						or register from:
-						<a href="" title="Facebook"><i class="icon-fb_small"></i></a>
-						<a href="" title="Google+"><i class="icon-gplus_small"></i></a>
-						<a href="" title="MySpace"><i class="icon-myspace_small"></i></a>
-						<a href="" title="Other"><i class="icon-threedots_small"></i></a>
-					</p>
-			</dl>
-		</form>
-	</div>
 
 	<!-- Привязанная функция: script.js > setLocation() -->
 	<div class="popup-location">

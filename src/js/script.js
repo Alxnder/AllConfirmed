@@ -7,6 +7,7 @@
 	stylizeCheckbox();
 	setLocation();
 	openWindow();
+	openWindow1();
 	scrollTop();
 	checkAgreement();
 	setInputPlaceholder();
@@ -384,27 +385,48 @@ function setLocation() {
  * where "block_with_content" is hidden block.
  */
 function openWindow() {
-	$('[data-fancybox]').not('[data-fancybox="close"]').click(function() {
-		$.fancybox.open(
-			$('#' + $(this).data('fancybox')),
-			{
-				fitToView	: false,
-				autoSize	: true,
-				padding		: 50,
-				openEffect	: 'none',
-				closeEffect	: 'none',
-				scrolling	: 'no',
-				tpl: {
-					wrap    : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
+	$('[data-fancybox]')
+		.not('[data-fancybox="close"]')
+		.not('[data-fancybox="ajax"]')
+		.click(function() {
+			$.fancybox.open(
+				$('#' + $(this).data('fancybox')),
+				{
+					fitToView	: false,
+					autoSize	: true,
+					padding		: 50,
+					openEffect	: 'none',
+					closeEffect	: 'none',
+					scrolling	: 'no',
+					tpl: {
+						wrap    : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
+					}
 				}
-			}
-		);
+			);
 
 		return false;
 	});
 
-	$('[data-fancybox="close"]').click(function() {
+	//Cancel, close, exit etc buttons in fancyBox.
+	$(document).on('click', '[data-fancybox="close"]', function() {
 		$.fancybox.close();
+		return false;
+	});
+}
+
+
+function openWindow1() {
+	$('[data-fancybox="ajax"]').fancybox({
+		type       : 'ajax',
+		fitToView  : false,
+		autoSize   : true,
+		padding    : 50,
+		openEffect : 'none',
+		closeEffect: 'none',
+		scrolling  : 'no',
+		tpl        : {
+			wrap: '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
+		}
 	});
 }
 
