@@ -2552,6 +2552,10 @@ ul.blogposts {
 	font: 22px/1.4em 'Font1 Medium';
 }
 
+.text-style2 {
+	font: 24px/.9em 'Font1 Light';
+}
+
 .block1 {
 	overflow: hidden;
 	margin: 27px 0 20px 0;
@@ -3459,6 +3463,24 @@ ul.sort {
 	background-position: 0 -1144px;
 }
 
+._ticket {
+	margin-right: 12px;
+}
+
+.grey-block {
+	display: inline-block;
+	vertical-align: top;
+	background: #f2f2f2;
+	padding: 25px 50px 25px 25px;
+	font: 15px Font1;
+	width: 570px;
+	margin: 10px 0 0 0;
+}
+
+.grey-block hr {
+	margin: 20px -50px 20px -25px;;
+}
+
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
 .fancybox-skin,
@@ -3907,8 +3929,13 @@ ul.slider {
 	padding: 5px 25px 5px 14px;
 }
 
-.ui-selectmenu-item-focus a, .ui-selectmenu-item-selected a {
-	background: #7fa214;
+.ui-selectmenu-item-selected a {
+	background: #7fa214 !important;
+	color: #fff !important;
+}
+
+.ui-selectmenu-item-focus a {
+	background: #bcd07e;
 	color: #fff !important;
 }
 
@@ -3925,7 +3952,7 @@ ul.slider {
 }
 
 .select-big.ui-selectmenu-menu li a {
-	font: 22px 'Font1 Light';
+	font: 19px 'Font1 Light';
 	padding: 5px 25px 5px 14px;
 }
 

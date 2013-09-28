@@ -79,8 +79,13 @@
 	padding: 5px 25px 5px 14px;
 }
 
-.ui-selectmenu-item-focus a, .ui-selectmenu-item-selected a {
-	background: #7fa214;
+.ui-selectmenu-item-selected a {
+	background: #7fa214 !important;
+	color: #fff !important;
+}
+
+.ui-selectmenu-item-focus a {
+	background: #bcd07e;
 	color: #fff !important;
 }
 
@@ -97,6 +102,6 @@
 }
 
 .select-big.ui-selectmenu-menu li a {
-	font: 22px 'Font1 Light';
+	font: 19px 'Font1 Light';
 	padding: 5px 25px 5px 14px;
 }

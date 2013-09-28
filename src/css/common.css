@@ -1056,6 +1056,10 @@ ul.blogposts {
 	font: 22px/1.4em 'Font1 Medium';
 }
 
+.text-style2 {
+	font: 24px/.9em 'Font1 Light';
+}
+
 .block1 {
 	overflow: hidden;
 	margin: 27px 0 20px 0;
@@ -1961,6 +1965,24 @@ ul.sort {
 
 .sort .active:after {
 	background-position: 0 -1144px;
+}
+
+._ticket {
+	margin-right: 12px;
+}
+
+.grey-block {
+	display: inline-block;
+	vertical-align: top;
+	background: #f2f2f2;
+	padding: 25px 50px 25px 25px;
+	font: 15px Font1;
+	width: 570px;
+	margin: 10px 0 0 0;
+}
+
+.grey-block hr {
+	margin: 20px -50px 20px -25px;;
 }
 
 @import 'jquery.fancybox.css';

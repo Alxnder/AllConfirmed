@@ -422,7 +422,6 @@ function openWindow() {
 				{
 					fitToView	: false,
 					autoSize	: true,
-					padding		: 50,
 					openEffect	: 'none',
 					closeEffect	: 'none',
 					scrolling	: 'no',
@@ -447,14 +446,16 @@ function openWindow() {
  * Problem: AJAX loaded directly in fancyBox is inaccessible for DOM manipulation,
  * e.g. selects and checkboxes styling.
  *
- * Solution: preload AJAX in hidden div, execute necessary actions, then show in fancyBox
+ * Solution: preload AJAX in hidden #fancyboxAjaxContent, execute necessary actions, then show in fancyBox
  */
 function openAjaxWindow() {
 	var content = $('<div id="fancyboxAjaxContent" style="display: none"></div>');
 
 	$('body').append(content);
-	$('[data-fancybox="ajax"]').click(function() {
-		$('#fancyboxAjaxContent').load($(this).attr('href'), function() {
+	$(document).on('click', '[data-fancybox="ajax"]', function() {
+		var href = $(this).attr('href') || $(this).data('href');
+
+		$('#fancyboxAjaxContent').load(href, function() {
 			$.fancybox.open(
 				{'href'	       : '#fancyboxAjaxContent'},
 				{
@@ -494,14 +495,13 @@ function gallery() {
 
 
 function checkAgreement() {
-	var check = $('#checkAgreement'),
-		btn = $('#btnRegister');
+	var check = $('#checkAgreement');
 
-	check.click(function() {
+	$(document).on('click', check, function() {
 		if (!check.prop('checked')) {
-			btn.attr('disabled', 'disabled')
+			$('#btnRegister').attr('disabled', 'disabled')
 		} else {
-			btn.removeAttr('disabled')
+			$('#btnRegister').removeAttr('disabled')
 		}
 	});
 }

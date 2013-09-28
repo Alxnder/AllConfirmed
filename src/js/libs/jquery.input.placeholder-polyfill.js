@@ -1,4 +1,4 @@
-function setInputPlaceholder() {
+$(function() {
 	var inputs = $('[data-placeholder]');
 
 	inputs.each(function() {
@@ -52,4 +52,4 @@ function setInputPlaceholder() {
 			}
 		)
 	})
-}
+});
