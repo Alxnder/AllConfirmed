@@ -11,10 +11,11 @@
 	openAjaxWindow();
 	scrollTop();
 	checkAgreement();
-	setInputPlaceholder();
 	faq();
 	slider();
 	gallery();
+	setRating();
+	datepicker();
 });
 
 
@@ -442,23 +443,40 @@ function openWindow() {
 }
 
 
+/*
+ * Problem: AJAX loaded directly in fancyBox is inaccessible for DOM manipulation,
+ * e.g. selects and checkboxes styling.
+ *
+ * Solution: preload AJAX in hidden div, execute necessary actions, then show in fancyBox
+ */
 function openAjaxWindow() {
-	$('[data-fancybox="ajax"]').fancybox({
-		type       : 'ajax',
-		fitToView  : false,
-		autoSize   : true,
-		padding    : 50,
-		openEffect : 'none',
-		closeEffect: 'none',
-		scrolling  : 'no',
-		tpl        : {
-			wrap: '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
-		},
-		afterLoad: function() {
-			$('.fancybox-inner').on('elemLoaded', 'select', function() {
-				customSelects()
-			});
-		}
+	var content = $('<div id="fancyboxAjaxContent" style="display: none"></div>');
+
+	$('body').append(content);
+	$('[data-fancybox="ajax"]').click(function() {
+		$('#fancyboxAjaxContent').load($(this).attr('href'), function() {
+			$.fancybox.open(
+				{'href'	       : '#fancyboxAjaxContent'},
+				{
+					fitToView  : false,
+					autoSize   : true,
+					padding    : 50,
+					openEffect : 'none',
+					closeEffect: 'none',
+					scrolling  : 'no',
+					tpl        : {
+						wrap   : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
+					},
+					afterLoad: function() {
+						stylizeCheckbox();
+						customSelects();
+						datepicker();
+					}
+				}
+			);
+		});
+
+		return false;
 	});
 }
 
@@ -520,63 +538,6 @@ function scrollTop() {
 }
 
 
-function setInputPlaceholder() {
-	var inputs = $('[data-placeholder]');
-
-	inputs.each(function() {
-		var $this = $(this),
-			wrapper = $this.wrap('<div class="input-wrapper">').closest('.input-wrapper'),
-			placeholder = ($this.is('input[type="text"]') || $this.is('input[type="password"]')) ? $('<input type="text">') : $('<textarea>');
-
-		placeholder
-			.val($this.attr('data-placeholder'))
-			.addClass('placeholder')
-			.removeAttr('data-placeholder')
-			.appendTo(wrapper)
-			.css({
-				width: $this.outerWidth(),
-				height: $this.outerHeight()
-			});
-
-		wrapper.css({
-			float: $this.css('float'),
-			width: $this.outerWidth(),
-			marginTop: $this.css('marginTop'),
-			marginRight: $this.css('marginRight'),
-			marginBottom: $this.css('marginBottom'),
-			marginLeft: $this.css('marginLeft')
-		});
-
-		if ($this.val() != '') {
-			placeholder.fadeOut(200, function() {
-				placeholder.addClass('hidden')
-			});
-		}
-
-		placeholder.focus(function() {
-			$this.focus();
-			placeholder.fadeOut(100, function() {
-				placeholder.addClass('hidden')
-			});
-		});
-
-		$this
-			.focus(function() {
-				placeholder.fadeOut(100, function() {
-					placeholder.addClass('hidden')
-				});
-			})
-			.blur(function() {
-				if ($this.val() == '') {
-					placeholder.removeClass('hidden');
-					placeholder.fadeIn(100);
-				}
-			}
-		)
-	})
-}
-
-
 function faq() {
 	var faq_items = $('.faq > li'),
 		faq_questions = faq_items.find('.q');
@@ -613,7 +574,7 @@ function slider() {
 	}
 }
 
-
+//Customize default selects
 function customSelects() {
 	$('select').selectmenu({
 		width: 'auto',
@@ -624,4 +585,23 @@ function customSelects() {
 		$(this).selectmenu('widget').addClass('select-big')
 	})
 
+}
+
+
+function setRating() {
+	var rating = $('.rating.-editable');
+
+	rating.hover(
+		function() {
+
+		},
+		function() {
+
+		}
+	)
+}
+
+
+function datepicker() {
+	$('[data-datepicker]').datepicker();
 }

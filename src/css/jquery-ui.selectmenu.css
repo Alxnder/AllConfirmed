@@ -9,8 +9,8 @@
 	outline: 0 !important;
 	height: 28px;
 	background: #fff;
-	border: solid 0 #a7a8a4;
-	border-width: 1px 0 0 1px;
+	border: solid 1px;
+	border-color: #a7a8a4 #fff #fff #a7a8a4;
 }
 
 .ui-selectmenu .ui-icon {
@@ -80,7 +80,7 @@
 }
 
 .ui-selectmenu-item-focus a, .ui-selectmenu-item-selected a {
-	background: #999;
+	background: #7fa214;
 	color: #fff !important;
 }
 

@@ -7,6 +7,7 @@ fieldset {
 .cb,
 select,
 .select,
+.ui-selectmenu,
 textarea,
 input[type="text"],
 input[type="password"] {
@@ -32,11 +33,12 @@ input[type="text"], input[type="password"], .select {
 
 select:focus,
 .select.-active,
+.ui-selectmenu.ui-state-active,
 textarea:focus,
 input[type="text"]:focus,
 input[type="password"]:focus {
 	outline: none;
-	border-color: #7fa214;
+	border-color: #7fa214 !important;
 	box-shadow: 0 0 8px rgba(127,162,20,0.6)
 }
 
@@ -405,4 +407,28 @@ p.error {
 .note1 {
 	font: 15px 'Font1 Medium';
 	color: #000;
+}
+
+.form-leavereview .ratings dt {
+	padding-right: 18px;
+}
+
+.form-leavereview textarea {
+	height: 258px;
+}
+
+.field-datepicker {
+	width: 130px;
+	position: relative;
+}
+
+.field-datepicker input {
+	padding-right: 20px;
+	color: #919191;
+}
+
+.field-datepicker [class^="icon"] {
+	position: absolute;
+	right: 10px;
+	top: 0.5em;
 }
