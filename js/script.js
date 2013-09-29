@@ -10,7 +10,6 @@
 	openWindow();
 	openAjaxWindow();
 	scrollTop();
-	checkAgreement();
 	faq();
 	slider();
 	scrollpane();
@@ -516,14 +515,18 @@ function gallery() {
 
 
 function checkAgreement() {
-	var check = $('#checkAgreement');
+	$(document).on('click', $('#checkAgreement'), function() {
+		var check = $('#checkAgreement'),
+			btn = $('#btnRegister');
 
-	$(document).on('click', check, function() {
-		if (!check.prop('checked')) {
-			$('#btnRegister').attr('disabled', 'disabled')
-		} else {
-			$('#btnRegister').removeAttr('disabled')
+		if (check.length && btn.length) {
+			if (!check.prop('checked')) {
+				btn.attr('disabled', 'disabled')
+			} else {
+				btn.removeAttr('disabled')
+			}
 		}
+
 	});
 }
 

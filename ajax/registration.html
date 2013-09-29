@@ -18,7 +18,6 @@
 		<dt>
 		<dd class="checkboxes">
 			<label><input type="checkbox" checked>Send me news from all places in my city</label>
-			<!-- checkAgreement в одноименной функции -->
 			<label><input type="checkbox" checked id="checkAgreement">I agree with the terms and conditions of the <a href="" class="-black">user agreement</a></label>
 	</dl>
 	<dl>
@@ -39,3 +38,18 @@
 			</p>
 	</dl>
 </form>
+
+<script>
+	$(document).on('click', $('#checkAgreement'), function() {
+		var check = $('#checkAgreement'),
+			btn = $('#btnRegister');
+
+		if (check.length && btn.length) {
+			if (!check.prop('checked')) {
+				btn.attr('disabled', 'disabled')
+			} else {
+				btn.removeAttr('disabled')
+			}
+		}
+	});
+</script>
