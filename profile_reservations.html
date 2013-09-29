@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
+	<!--[if lt IE 9]><script src="js/libs/libs.ltie9.js"></script><![endif]-->
+	<!--[if IE 9]><script src="js/libs/PIE_IE9.js"></script><![endif]-->
+	<title></title>
+</head>
+<body>
+	<!--Контейнер-->
+	<div class="container">
+		<!--Шапка-->
+		<header class="header">
+			<div class="top-bar">
+				<div class="wrapper">
+					<nav class="primary">
+						<ul>
+							<li>
+								<a href="">National cuisines</a>
+								<ul>
+									<a href="">Afghan</a><a href="">African</a><a href="">American</a><a href="">Asian</a><a href="">Australian</a><a href="">Bar / Lounge</a><a href="">Barbecue</a><a href="">Belgian</a><a href="">Brazilian</a><a href="">British</a><a href="">Californian</a><a href="">Canadian</a><a href="">Caribbean</a><a href="">Comfort Food</a><a href="">Continental</a><a href="">Creole</a><a href="">Dessert</a><a href="">European</a><a href="">Fondue</a><a href="">French</a><a href="">Fusion</a><a href="">Gastro Pub</a><a href="">German</a><a href="">Greek</a><a href="">Indian</a><a href="">International</a><a href="">Italian</a><a href="">Japanese</a><a href="">Korean</a><a href="">Kosher</a><a href="">Latin / Spanish</a><a href="">Mediterranean</a><a href="">Mexican</a><a href="">Middle Eastern</a><a href="">Nordic</a><a href="">Organic</a><a href="">Pakistani</a><a href="">Portuguese</a><a href="">Russian</a><a href="">Scottish</a><a href="">Seafood</a><a href="">Small Plates</a><a href="">South American</a><a href="">Steak</a><a href="">Sushi</a><a href="">Thai</a><a href="">Vegetarian</a><a href="">Wine Bar</a>
+								</ul>
+							</li>
+							<li><a href="">Places</a></li>
+							<li><a href="">Blog</a></li>
+							<li><a href="">FAQ</a></li>
+							<li><a href="">Contacts</a></li>
+						</ul>
+					</nav>
+
+					<nav class="secondary">
+						<a href=""><i class="icon-badge_small"></i> For business</a>
+						<a href=""><i class="icon-plus_small"></i> Add a new place</a>
+					</nav>
+				</div>
+			</div>
+
+			<div class="logo-bar">
+				<a href="" class="logo"><i class="icon-logo">All confirmed</i></a>
+				<div class="motto">Reservations of restaurants and clubs</div>
+				<div class="col">
+					<p class="set-location" data-pop="popup-location" data-pop-target="loc1">
+						<i class="icon-pointer"></i>
+						<span>I’m in </span><span data-loc1>Southwest Michigan</span>
+					</p>
+					<div>
+						<i class="icon-key"></i>
+						<div class="dropdown">
+							<div>Hello, Mr.Username</div>
+							<ul>
+								<li><a href="">My profile data</a></li>
+								<li><div>My reservations</div></li>
+								<li><a href="">My reviews</a></li>
+								<li><a href="" class="-yellow">Sign out</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--//Шапка. Сетка в одну колонку-->
+		<div class="layout-onecol">
+			<!--Основной контент-->
+			<section class="content">
+				<h1>My reservations</h1>
+
+				<table class="table-style1 table-resvns">
+					<thead>
+						<tr>
+							<td class="sortable -active -desc"><div>Date<br>of visit</div></td>
+							<td><div>Ticket/<br>Res. code</div></td>
+							<td class="sortable -asc"><div>Business name</div></td>
+							<td><div>Reservation event</div></td>
+							<td class="_people">Number<br>of people</td>
+							<td class="sortable -desc"><div>Cost, $</div></td>
+							<td><div>Status</div></td>
+							<td class="_features"><div>Features</div></td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="_date">2013-07-31 8:30 PM</td>
+							<td class="_ticket">02545478<div class="_rescode">sf547fs454</div></td>
+							<td><a href="">Pine Restaurant - Hanover in Dartmouth</a></td>
+							<td><a href="">Great suggestion for dinner</a></td>
+							<td class="_people">25</td>
+							<td class="_cost"><div class="-red">1420</div></td>
+							<td class="_status">
+								<p>Accepted 2013-07-30</p>
+								<p>Confirmed 2013-07-30</p>
+								<p><span class="tip" title='There is no need to be "A Morning <br>Person" to enjoy what many call
+'>Canceled 2013-07-31</span></p>
+								<p>Executed 2013-07-31</p>
+								<p>Repayment 2013-08-02</p>
+							</td>
+							<td class="_features">
+								<p><i class="icon-print"></i><a href="">Print a ticket</a></p>
+								<p><i class="icon-del"></i><a href="">Cancel a reservation</a></p>
+								<p><i class="icon-rating-1"></i><a href="">Write a review</a></p>
+							</td>
+						</tr>
+						<tr>
+							<td class="_date">2013-07-31 8:30 PM</td>
+							<td class="_ticket">02545478<div class="_rescode">sf547fs454</div></td>
+							<td><a href="">Pine Restaurant - Hanover in Dartmouth</a></td>
+							<td>Free reservation</td>
+							<td class="_people">25</td>
+							<td class="_cost"><div class="-green1">Free</div></td>
+							<td class="_status">
+								<p>Accepted 2013-07-30</p>
+								<p>Confirmed 2013-07-30</p>
+								<p>Executed 2013-07-31</p>
+							</td>
+							<td class="_features">
+								<p><i class="icon-print"></i><a href="">Print a ticket</a></p>
+								<p><i class="icon-del"></i><a href="">Cancel a reservation</a></p>
+								<p><i class="icon-rating-1"></i><a href="">Write a review</a></p>
+							</td>
+						</tr>
+						<tr>
+							<td class="_date">2013-07-31 8:30 PM</td>
+							<td class="_ticket">02545478<div class="_rescode">sf547fs454</div></td>
+							<td><a href="">Pine Restaurant - Hanover in Dartmouth</a></td>
+							<td>
+								<a href="">Great suggestion for dinner</a>
+								<div class="tip" title="<p><strong>Terms of cancellation:</strong></p>
+<p>If you cancel the reservation before visit date, you will be refunded the full cost less commission per transaction.</p>
+<p>If you cancel the reservation in day of visit, or you don't use the reservation, previously it without having cancelled, from the paid sum 20% and also the commission size for transaction will be withheld.</p>">Terms of cancellation</div>
+							</td>
+							<td class="_people">25</td>
+							<td class="_cost"><div class="-red">57420</div></td>
+							<td class="_status">
+								<p>Accepted 2013-07-30</p>
+								<p>Confirmed 2013-07-30</p>
+								<p><span class="tip" title='There is no need to be "A Morning <br>Person" to enjoy what many call
+'>Canceled 2013-07-31</span></p>
+								<p>Executed 2013-07-31</p>
+								<p>Repayment 2013-08-02</p>
+							</td>
+							<td class="_features">
+								<p><i class="icon-print"></i><a href="">Print a ticket</a></p>
+								<p><i class="icon-del"></i><a href="">Cancel a reservation</a></p>
+								<p><i class="icon-rating-1"></i><a href="">Write a review</a></p>
+							</td>
+						</tr>
+						<tr>
+							<td class="_date">2013-07-31 8:30 PM</td>
+							<td class="_ticket">02545478<div class="_rescode">sf547fs454</div></td>
+							<td><a href="">Pine Restaurant - Hanover in Dartmouth</a></td>
+							<td>Free reservation</td>
+							<td class="_people">25</td>
+							<td class="_cost"><div class="-red">230</div></td>
+							<td class="_status">
+								<p>Accepted 2013-07-30</p>
+								<p>Confirmed 2013-07-30</p>
+								<p>Executed 2013-07-31</p>
+							</td>
+							<td class="_features">
+								<p><i class="icon-print"></i><a href="">Print a ticket</a></p>
+								<p><i class="icon-del"></i><a href="">Cancel a reservation</a></p>
+								<p><i class="icon-rating-1"></i><a href="">Write a review</a></p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<!--//Контент-->
+		</div>
+		<!--//Сетка в одну колонку. Распорка подвала-->
+		<div class="footer-helper"></div>
+	</div>
+	<!--//Контейнер.  Подвал-->
+	<footer class="footer">
+		<div class="cols-wrapper">
+			<div class="col">
+				<nav class="footer-nav">
+					<a href="">About us</a>
+					<a href="">How does it work</a>
+					<a href="">Rules of reservation</a>
+					<a href="">User Agreement</a>
+				</nav>
+
+				<p class="sitecredits">Web design by <a href="">Greenjet studio</a></p>
+			</div>
+			<div class="col share">
+				<p class="title">Like us</p>
+				<!-- AddThis Button BEGIN -->
+				<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+					<a class="addthis_button_facebook"></a>
+					<a class="addthis_button_google_plusone_share"></a>
+					<a class="addthis_button_myspace"></a>
+					<a class="addthis_button_twitter"></a>
+					<a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
+				</div>
+				<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5247e95b0ab50cb7"></script>
+				<!-- AddThis Button END -->
+			</div>
+		</div>
+	</footer>
+	<!--//Подвал-->
+
+	<div class="move-top"><i class="icon-top"></i></div>
+
+	<!-- Привязанная функция: script.js > setLocation() -->
+	<div class="popup-location">
+		<p class="-red">My city or town</p>
+		<input type="text" value="Southwest Michigan" />
+		<div class="buttons">
+			<a class="btn -yellow -small _save" href="">Save</a>
+		</div>
+	</div>
+
+	<script src="js/libs/libs.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

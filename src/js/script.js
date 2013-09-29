@@ -16,6 +16,13 @@
 	gallery();
 	setRating();
 	datepicker();
+	//jQuery UI Tooltip
+	$(document).tooltip({
+		track: true,
+		content: function () {
+			return $(this).prop('title');
+		}
+	});
 });
 
 
@@ -646,7 +653,9 @@ function setRating() {
 
 
 function datepicker() {
-	//Fix that after fancyBox closing datepicker still visible
+	/* jQuery UI Datepicker
+	 * Fix Datepicker still visible after fancyBox closing
+	 */
 	$('#ui-datepicker-div').remove();
 
 	$('[data-datepicker]').datepicker({

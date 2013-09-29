@@ -383,3 +383,15 @@ a:hover .icon-plus_small {
 	background-position: 0 -1105px;
 }
 
+.icon-print {
+	width: 14px;
+	height: 14px;
+	background-position: 0 -1265px;
+}
+
+.icon-del {
+	width: 14px;
+	height: 10px;
+	background-position: 0 -1282px;
+}
+
