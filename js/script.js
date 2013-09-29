@@ -414,8 +414,8 @@ function setLocation() {
 
 
 /*!
- * Popup windows with authentication, registration etc.
- * Opening by data-fancybox attribute.
+ * Common popup windows for authentication, registration, info blocks etc.
+ * Open by data-fancybox attribute.
  * E.g.: <a data-fancybox="block_with_content">Register</a>,
  * where "block_with_content" is hidden block.
  */
@@ -433,13 +433,8 @@ function openWindow() {
 					closeEffect	: 'none',
 					scrolling	: 'no',
 					tpl        : {
-						wrap   : '<div class="fancybox-wrap" tabIndex="-1">' +
-									'<div class="fancybox-skin fancybox-skin1">' +
-										'<div class="fancybox-outer">' +
-											'<div class="fancybox-inner"></div>' +
-										'</div>' +
-									'</div>' +
-								'</div>'
+						wrap   : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
+						closeBtn : '<a class="fancybox-item fancybox-close" href="javascript:;"></a>'
 					}
 				}
 			);
@@ -457,7 +452,7 @@ function openWindow() {
 
 /*
  * Problem: AJAX loaded directly in fancyBox is inaccessible for DOM manipulation,
- * e.g. selects and checkboxes styling.
+ * e.g. styling selects and checkboxes or binding datepicker.
  *
  * Solution: preload AJAX in hidden #fancyboxAjaxContent, execute necessary actions, then show in fancyBox
  */
@@ -479,13 +474,8 @@ function openAjaxWindow() {
 					closeEffect: 'none',
 					scrolling  : 'no',
 					tpl        : {
-						wrap   : '<div class="fancybox-wrap" tabIndex="-1">' +
-									'<div class="fancybox-skin fancybox-skin1">' +
-										'<div class="fancybox-outer">' +
-											'<div class="fancybox-inner"></div>' +
-										'</div>' +
-									'</div>' +
-								'</div>'
+									wrap   : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
+									closeBtn : '<a class="fancybox-item fancybox-close" href="javascript:;"></a>'
 					},
 					beforeLoad: function() {
 						$('#fancyboxAjaxContent').removeClass('visuallyhidden');
@@ -517,23 +507,6 @@ function gallery() {
 		openEffect	: 'none',
 		closeEffect	: 'none',
 		scrolling	: 'no'
-	});
-}
-
-
-function checkAgreement() {
-	$(document).on('click', $('#checkAgreement'), function() {
-		var check = $('#checkAgreement'),
-			btn = $('#btnRegister');
-
-		if (check.length && btn.length) {
-			if (!check.prop('checked')) {
-				btn.attr('disabled', 'disabled')
-			} else {
-				btn.removeAttr('disabled')
-			}
-		}
-
 	});
 }
 
