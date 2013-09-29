@@ -1279,11 +1279,48 @@ p.error {
 	color: #919191;
 }
 
-.field-datepicker [class^="icon"] {
+.field-datepicker:after {
 	position: absolute;
 	right: 10px;
 	top: 0.5em;
+	width: 13px;
+	height: 11px;
+	content: '';
+	background: url("../i/sprites.png") 0 -1153px;
 }
+
+.field-datepicker1 {
+	padding: 0 25px 0 0;
+	position: relative;
+	display: inline-block;
+	border-bottom: dashed 1px #909090;
+}
+
+.field-datepicker1 label {
+	color: #909090;
+	font: 24px/1em 'Font1 Light';
+	cursor: default;
+	position: relative;
+	z-index: 101;
+}
+
+.field-datepicker1 input {
+	position: absolute;
+	opacity: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.field-datepicker1:after {
+	position: absolute;
+	right: 0;
+	top: 0.2em;
+	width: 19px;
+	height: 17px;
+	content: '';
+	background: url("../i/sprites.png") 0 -1217px;
+}
+
 
 .btn {
 	height: 38px;
@@ -1352,7 +1389,8 @@ p.error {
 }
 
 .btn.-small {
-	height: 26px;
+	height: 27px;
+	font-size: 20px;
 	line-height: 25px;
 	padding: 0 5px;
 }
@@ -1633,6 +1671,18 @@ a:hover .icon-plus_small {
 	background-position: -20px -448px;
 }
 
+.icon-usd_big {
+	width: 25px;
+	height: 25px;
+	background-position: 0 -1237px;
+}
+
+.icon-usd_big_red {
+	width: 25px;
+	height: 25px;
+	background-position: -29px -1237px;
+}
+
 .icon-clock {
 	width: 17px;
 	height: 17px;
@@ -1731,6 +1781,12 @@ a:hover .icon-plus_small {
 	width: 13px;
 	height: 11px;
 	background-position: 0 -1153px;
+}
+
+.icon-cal_med {
+	width: 19px;
+	height: 17px;
+	background-position: 0 -1217px;
 }
 
 .icon-clock1 {
@@ -3037,6 +3093,15 @@ p.note1 {
 	font: 24px/1em 'Font1 Light';
 }
 
+.resvn .title a {
+	color: #be0002;
+	text-decoration: none;
+}
+
+.resvn .title a:hover {
+	text-decoration: underline;
+}
+
 .resvn .date {
 	margin: 0 0 12px 0;
 	color: #060606;
@@ -3096,6 +3161,33 @@ ul.prices-list {
 	top: -2px;
 }
 
+ul.prices-list1 {
+	margin: 0 0 25px 0;
+	padding: 0;
+	overflow: hidden;
+	display: table;
+	background: #f7e8a4;
+	clear: both;
+	width: 100%;
+}
+
+.prices-list1 li {
+	display: table-cell;
+	color: #840000;
+	margin: 0;
+	padding: 25px 13px 25px 13px;
+	font: 22px 'Font1 Light';
+	list-style-image: none !important;
+}
+
+.prices-list1 ._oneperson {
+	color: #000;
+}
+
+.prices-list1 li [class^="icon"] {
+	top: -2px;
+}
+
 .resvn-window {
 	width: 595px;
 	padding: 0 20px;
@@ -3127,7 +3219,7 @@ ul.prices-list {
 .resvn-filter input[type="text"] {
 	color: #7f7f7f;
 	height: 29px;
-	width: 186px;
+	width: 198px;
 	margin: 0 18px 0 6px;
 	font: 22px 'Font1 Light';
 	border: solid 0 #a7a8a4;
@@ -3471,14 +3563,35 @@ ul.sort {
 	display: inline-block;
 	vertical-align: top;
 	background: #f2f2f2;
-	padding: 25px 50px 25px 25px;
+	padding: 25px;
 	font: 15px Font1;
 	width: 570px;
-	margin: 10px 0 0 0;
+	margin: 0;
 }
 
 .grey-block hr {
 	margin: 20px -50px 20px -25px;;
+}
+
+.resvn-details .scrollpane {
+	max-height: 676px;
+	width: 800px;
+}
+
+.resvn-details .head {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.resvn-details .grey-block {
+	width: 725px;
+	padding: 25px;
+}
+
+.resvn-details h3 {
+	display: inline-block;
+	margin-right: 12px;
+	font: 24px/1.2em 'Font1 Light';
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -3747,6 +3860,120 @@ ul.sort {
 	background: rgba(0, 0, 0, .8);
 }
 
+#fancyboxAjaxContent {
+	display: block !important;
+}
+
+.scrollpane {
+	display: inline-block;
+	vertical-align: top;
+	overflow: auto;
+}
+
+.jspContainer {
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane {
+	position: absolute;
+}
+
+.jspVerticalBar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 11px;
+	height: 100%;
+}
+
+.jspHorizontalBar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 11px;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar * {
+	margin: 0;
+	padding: 0;
+}
+
+.jspCap {
+	display: none;
+}
+
+.jspHorizontalBar .jspCap {
+	float: left;
+}
+
+.jspTrack {
+	background: #ddd;
+	position: relative;
+}
+
+.jspDrag {
+	background: #d44e43;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag {
+	float: left;
+	height: 100%;
+}
+
+.jspArrow {
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled {
+	cursor: default;
+}
+
+.jspVerticalBar .jspArrow {
+	height: 11px;
+}
+
+.jspHorizontalBar .jspArrow {
+	width: 11px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus {
+	outline: none;
+}
+
+.jspArrowUp {
+	background: url("../i/sprites.png") -25px -201px;
+}
+
+.jspArrowDown {
+	background: url("../i/sprites.png") -39px -201px;
+}
+
+.jspArrowLeft {
+	background: url("../i/sprites.png") -53px -201px;
+}
+
+.jspArrowRight {
+	background: url("../i/sprites.png") -67px -201px;
+}
+
+.jspCorner {
+	background: #ddd;
+	float: left;
+	height: 100%;
+}
+
 ul.slider {
 	height: 173px;
 	padding: 0;
@@ -3771,81 +3998,17 @@ ul.slider {
 	margin-left: 0;
 }
 
-.slider .jspContainer {
-	overflow: hidden;
-	position: relative;
-}
-
-.slider .jspPane {
-	position: absolute;
+.slider .jspCap {
+	float: left;
+	display: block;
 }
 
 .slider .jspHorizontalBar {
-	left: 0;
-	bottom: 0;
-	width: 100%;
 	height: 13px;
-	position: absolute;
 }
 
-.slider .jspHorizontalBar * {
-	margin: 0;
-	padding: 0;
-}
-
-.slider .jspCap {
-	float: left;
-}
-
-.slider .jspTrack {
-	position: relative;
-	background: #ddd;
-}
-
-.slider .jspDrag {
-	top: 0;
-	left: 0;
-	cursor: pointer;
-	position: relative;
-	background: #d44e43;
-}
-
-.slider .jspTrack, .slider .jspDrag {
-	float: left;
-	height: 100%;
-}
-
-.slider .jspArrow {
-	display: block;
-	cursor: pointer;
-	background: #ddd;
-	text-indent: -20000px;
-}
-
-.slider .jspArrow.jspDisabled {
-	cursor: default;
-	background: #ddd;
-}
-
-.slider .jspArrow {
+.slider .jspVerticalBar {
 	width: 13px;
-	float: left;
-	height: 100%;
-	background: url("../i/sprites.png") 0 -561px no-repeat;
-}
-
-.slider .jspArrowRight {
-	background-position: -16px -561px;
-}
-
-.slider .jspDisabled {
-	background: #ddd;
-}
-
-.slider .jspCorner {
-	float: left;
-	height: 100%;
-	background: #eeeef4;
 }
 
 .ui-selectmenu {
@@ -3958,9 +4121,11 @@ ul.slider {
 
 
 .ui-datepicker {
+	width: 240px;
 	background: #fff;
 	padding: 15px 20px 10px 20px;
 	border: solid 1px #cacaca;
+	z-index: 9000 !important;
 	box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
 }
 
@@ -4000,12 +4165,14 @@ ul.slider {
 	font: 18px/.9em 'Font1 Light';
 }
 
-.ui-datepicker-calendar {
-	width: 240px;
+table.ui-datepicker-calendar {
+	width: 100%;
+	border: 0;
+	margin: 0;
 	border-collapse: collapse;
 }
 
-.ui-datepicker-calendar thead th {
+table.ui-datepicker-calendar thead th {
 	color: #fff;
 	background: #cdcdb2;
 	text-align: center;
@@ -4014,14 +4181,15 @@ ul.slider {
 	font: normal 16px/1em Font1;
 }
 
-.ui-datepicker-calendar tbody td {
+table.ui-datepicker-calendar tbody td {
 	color: #3e3e3e;
 	padding: 4px 0;
+	border: 0;
 	font: 13px arial, helvetica, sans-serif;
 }
 
 /*Table cell*/
-.ui-datepicker-current-day * {
+td.ui-datepicker-current-day * {
 	background: #CDCDB2;
 	color: #fff;
 }

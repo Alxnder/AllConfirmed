@@ -427,8 +427,44 @@ p.error {
 	color: #919191;
 }
 
-.field-datepicker [class^="icon"] {
+.field-datepicker:after {
 	position: absolute;
 	right: 10px;
 	top: 0.5em;
+	width: 13px;
+	height: 11px;
+	content: '';
+	background: url("../i/sprites.png") 0 -1153px;
+}
+
+.field-datepicker1 {
+	padding: 0 25px 0 0;
+	position: relative;
+	display: inline-block;
+	border-bottom: dashed 1px #909090;
+}
+
+.field-datepicker1 label {
+	color: #909090;
+	font: 24px/1em 'Font1 Light';
+	cursor: default;
+	position: relative;
+	z-index: 101;
+}
+
+.field-datepicker1 input {
+	position: absolute;
+	opacity: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.field-datepicker1:after {
+	position: absolute;
+	right: 0;
+	top: 0.2em;
+	width: 19px;
+	height: 17px;
+	content: '';
+	background: url("../i/sprites.png") 0 -1217px;
 }

@@ -1541,6 +1541,15 @@ p.note1 {
 	font: 24px/1em 'Font1 Light';
 }
 
+.resvn .title a {
+	color: #be0002;
+	text-decoration: none;
+}
+
+.resvn .title a:hover {
+	text-decoration: underline;
+}
+
 .resvn .date {
 	margin: 0 0 12px 0;
 	color: #060606;
@@ -1600,6 +1609,33 @@ ul.prices-list {
 	top: -2px;
 }
 
+ul.prices-list1 {
+	margin: 0 0 25px 0;
+	padding: 0;
+	overflow: hidden;
+	display: table;
+	background: #f7e8a4;
+	clear: both;
+	width: 100%;
+}
+
+.prices-list1 li {
+	display: table-cell;
+	color: #840000;
+	margin: 0;
+	padding: 25px 13px 25px 13px;
+	font: 22px 'Font1 Light';
+	list-style-image: none !important;
+}
+
+.prices-list1 ._oneperson {
+	color: #000;
+}
+
+.prices-list1 li [class^="icon"] {
+	top: -2px;
+}
+
 .resvn-window {
 	width: 595px;
 	padding: 0 20px;
@@ -1631,7 +1667,7 @@ ul.prices-list {
 .resvn-filter input[type="text"] {
 	color: #7f7f7f;
 	height: 29px;
-	width: 186px;
+	width: 198px;
 	margin: 0 18px 0 6px;
 	font: 22px 'Font1 Light';
 	border: solid 0 #a7a8a4;
@@ -1975,14 +2011,35 @@ ul.sort {
 	display: inline-block;
 	vertical-align: top;
 	background: #f2f2f2;
-	padding: 25px 50px 25px 25px;
+	padding: 25px;
 	font: 15px Font1;
 	width: 570px;
-	margin: 10px 0 0 0;
+	margin: 0;
 }
 
 .grey-block hr {
 	margin: 20px -50px 20px -25px;;
+}
+
+.resvn-details .scrollpane {
+	max-height: 676px;
+	width: 800px;
+}
+
+.resvn-details .head {
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+.resvn-details .grey-block {
+	width: 725px;
+	padding: 25px;
+}
+
+.resvn-details h3 {
+	display: inline-block;
+	margin-right: 12px;
+	font: 24px/1.2em 'Font1 Light';
 }
 
 @import 'jquery.fancybox.css';

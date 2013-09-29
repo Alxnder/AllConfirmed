@@ -13,6 +13,7 @@
 	checkAgreement();
 	faq();
 	slider();
+	scrollpane();
 	gallery();
 	setRating();
 	datepicker();
@@ -425,8 +426,14 @@ function openWindow() {
 					openEffect	: 'none',
 					closeEffect	: 'none',
 					scrolling	: 'no',
-					tpl: {
-						wrap    : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
+					tpl        : {
+						wrap   : '<div class="fancybox-wrap" tabIndex="-1">' +
+									'<div class="fancybox-skin fancybox-skin1">' +
+										'<div class="fancybox-outer">' +
+											'<div class="fancybox-inner"></div>' +
+										'</div>' +
+									'</div>' +
+								'</div>'
 					}
 				}
 			);
@@ -449,7 +456,7 @@ function openWindow() {
  * Solution: preload AJAX in hidden #fancyboxAjaxContent, execute necessary actions, then show in fancyBox
  */
 function openAjaxWindow() {
-	var content = $('<div id="fancyboxAjaxContent" style="display: none"></div>');
+	var content = $('<div id="fancyboxAjaxContent" class="visuallyhidden"></div>');
 
 	$('body').append(content);
 	$(document).on('click', '[data-fancybox="ajax"]', function() {
@@ -466,12 +473,26 @@ function openAjaxWindow() {
 					closeEffect: 'none',
 					scrolling  : 'no',
 					tpl        : {
-						wrap   : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>'
+						wrap   : '<div class="fancybox-wrap" tabIndex="-1">' +
+									'<div class="fancybox-skin fancybox-skin1">' +
+										'<div class="fancybox-outer">' +
+											'<div class="fancybox-inner"></div>' +
+										'</div>' +
+									'</div>' +
+								'</div>'
+					},
+					beforeLoad: function() {
+						$('#fancyboxAjaxContent').removeClass('visuallyhidden');
 					},
 					afterLoad: function() {
 						stylizeCheckbox();
 						customSelects();
 						datepicker();
+						scrollpane();
+					},
+					afterClose: function() {
+						$('#fancyboxAjaxContent').addClass('visuallyhidden');
+						$('#ui-datepicker-div').remove();
 					}
 				}
 			);
@@ -557,8 +578,8 @@ function faq() {
 }
 
 
-function slider() {
-	var pane = $('.slider').jScrollPane({
+function scrollpane() {
+	var pane = $('.scrollpane').jScrollPane({
 			showArrows: true
 		}),
 		api = pane.data('jsp');
@@ -573,6 +594,25 @@ function slider() {
 			})
 	}
 }
+
+
+function slider() {
+	var pane = $('.slider').jScrollPane({
+			showArrows: false
+		}),
+		api = pane.data('jsp');
+
+	if (pane.length) {
+		$(window)
+			.resize(function() {
+				api.reinitialise();
+			})
+			.load(function() {
+				api.reinitialise();
+			})
+	}
+}
+
 
 //Customize default selects
 function customSelects() {
@@ -603,5 +643,28 @@ function setRating() {
 
 
 function datepicker() {
-	$('[data-datepicker]').datepicker();
+	//Fix that after fancyBox closing datepicker still visible
+	$('#ui-datepicker-div').remove();
+
+	$('[data-datepicker]').datepicker({
+		dateFormat: 'MM dd, yy'
+	});
+
+	var dp1 = $('.field-datepicker1');
+	dp1.each(function() {
+		var input = $(this).find('input'),
+			label = $(this).find('label');
+
+		input.datepicker({
+			dateFormat: 'MM dd, yy'
+		});
+
+		label.click(function() {
+			input.focus();
+		});
+
+		input.change(function() {
+			label.html(input.val());
+		});
+	});
 }
