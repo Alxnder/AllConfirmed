@@ -1,6 +1,6 @@
 .btn {
 	height: 38px;
-	padding: 0 33px;
+	padding: 0 13px;
 	font: 22px/36px Lobster;
 	position: relative;
 	text-align: center;
@@ -21,7 +21,7 @@
 	outline: 0;
 }
 
-.btn.-yellow, .btn.-red, .btn.-grey {
+.btn.-yellow, .btn.-red, .btn.-grey, .btn.-green {
 	color: #fff !important;
 	text-shadow: 0 1px 0 #777;
 	box-shadow: 4px 4px 0 rgba(0,0,0,.13);
@@ -36,7 +36,8 @@
 
 .btn.-yellow:active,
 .btn.-red:active,
-.btn.-grey:active {
+.btn.-grey:active,
+.btn.-green:active {
 	top: 1px;
 	box-shadow: 0 0 0 rgba(0,0,0,0);
 }
@@ -64,6 +65,17 @@
 	background-color: #d09e20;
 }
 
+.btn.-green {
+	color: #fff !important;
+	background-position: 0 -600px;
+	background-color: #9ab34b;
+}
+
+.btn.-green:hover, .btn.-green:active {
+	background-position: 0 -700px;
+	background-color: #537e00;
+}
+
 .btn.-small {
 	height: 27px;
 	font-size: 20px;
@@ -79,13 +91,8 @@
 }
 
 .btn.-wide {
-	padding-left: 20px;
-	padding-right: 20px;
-}
-
-.btn.-narrow {
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
 }
 
 .btn[disabled] {

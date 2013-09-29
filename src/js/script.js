@@ -17,7 +17,7 @@
 	setRating();
 	datepicker();
 	//jQuery UI Tooltip
-	$(document).tooltip({
+	$('*').tooltip({
 		track: true,
 		content: function () {
 			return $(this).prop('title');

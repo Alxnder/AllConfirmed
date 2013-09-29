@@ -562,6 +562,7 @@ nav.secondary div .icon-plus_small {
 
 .search-box [class^="btn"] {
 	font-size: 24px;
+	padding: 0 33px;
 }
 
 .table {
@@ -884,6 +885,10 @@ nav.secondary div .icon-plus_small {
 	text-align: right;
 }
 
+.ac {
+	text-align: center;
+}
+
 .popup-location {
 	left: -9999px;
 	top: 0;
@@ -1046,6 +1051,10 @@ ul.blogposts {
 
 .text-style2 {
 	font: 24px/.9em 'Font1 Light';
+}
+
+.text-style3 {
+	font: 18px/.9em 'Font1 Light';
 }
 
 .block1 {
@@ -2009,6 +2018,10 @@ ul.sort {
 	margin: 20px -50px 20px -25px;;
 }
 
+h2 + .grey-block {
+	margin-top: 10px;
+}
+
 .resvn-details .scrollpane {
 	max-height: 676px;
 	width: 800px;
@@ -2186,11 +2199,11 @@ ul.sort {
 	right: 0;
 	top: 50%;
 	margin-top: -3px;
-	background: url("../i/sprites.png") -14px -1296px;
+	background: url("../i/sprites.png") -14px -1304px;
 }
 
 .sortable.-desc > div:after {
-	background-position: -14px -1304px;
+	background-position: -14px -1296px;
 }
 
 .sortable.-active.-asc > div:after {
@@ -2202,11 +2215,20 @@ ul.sort {
 }
 
 .sortable.-asc:hover > div:after {
-	background-position: 0 -1296px;
+	background-position: 0 -1304px;
 }
 
 .sortable.-desc:hover > div:after {
-	background-position: 0 -1305px;
+	background-position: 0 -1296px;
+}
+
+.buttons1 {
+	text-align: center;
+	margin: 40px 0 20px 0;
+}
+
+.buttons1 > * {
+	margin: 0 10px;
 }
 
 @import 'jquery.fancybox.css';
