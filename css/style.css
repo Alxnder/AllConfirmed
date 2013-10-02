@@ -1379,7 +1379,7 @@ p.error {
 }
 
 .top-bar .wrapper {
-	padding: 16px 0 20px 0;
+	padding: 14px 0 20px 0;
 }
 
 .logo-bar {
@@ -1465,7 +1465,7 @@ nav.primary > ul > li {
 nav.primary > ul > li > a,
 nav.primary > ul > li > div {
 	color: #fff;
-	padding: 0 18px 3px 18px;
+	padding: 2px 18px 3px 18px;
 	display: inline-block;
 	text-decoration: none;
 }
