@@ -1061,12 +1061,12 @@ ul.blogposts {
 }
 
 .block1 .col {
-	width: 605px;
-	float: left;
+	display: table-cell;
 }
 
-.block1 img {
-	float: right;
+.block1 .col:first-child {
+	min-width: 605px;
+	padding-right: 30px;
 }
 
 ul.faq {
