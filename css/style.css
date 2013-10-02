@@ -2536,11 +2536,24 @@ p.note1 {
 
 .menu-item .name {
 	color: #373737;
+	position: relative;
+	display: inline-block;
 	font: 17px/1.1em Font1;
+	text-decoration: underline;
+	cursor: pointer;
 }
 
 .menu-item a {
 	color: #373737;
+}
+
+.menu-item .name [class^="icon"] {
+	position: absolute;
+}
+
+.menu-item .name .icon-photo {
+	top: .25em;
+	margin: 0 0 0 5px;
 }
 
 .menu-item dt {
@@ -3226,12 +3239,19 @@ h2 + .grey-block {
 	background: #f7e8a4;
 	color: #373737;
 	font: 12px 'Font1 Light';
-	box-shadow: 0 0 5px #aaa;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .ui-tooltip p {
 	margin-bottom: 7px;
 	line-height: 1.3em;
+}
+
+.tooltip1 {
+	padding: 0;
+	margin: 0;
+	max-width: none;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.7);
 }
 
 .tip {

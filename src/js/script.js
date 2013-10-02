@@ -16,13 +16,8 @@
 	gallery();
 	setRating();
 	datepicker();
-	//jQuery UI Tooltip
-	$('*').tooltip({
-		track: true,
-		content: function () {
-			return $(this).prop('title');
-		}
-	});
+	tooltips();
+	popupPhoto();
 });
 
 
@@ -626,15 +621,16 @@ function setRating() {
 
 
 function datepicker() {
-	/* jQuery UI Datepicker
-	 * Fix Datepicker still visible after fancyBox closing
-	 */
+	/* jQuery UI Datepicker*/
+
+	//Fixes: Datepicker still visible after fancyBox closing
 	$('#ui-datepicker-div').remove();
 
 	$('[data-datepicker]').datepicker({
 		dateFormat: 'MM dd, yy'
 	});
 
+	//Custom Datepicker field, not <input>
 	var dp1 = $('.field-datepicker1');
 	dp1.each(function() {
 		var input = $(this).find('input'),
@@ -652,4 +648,27 @@ function datepicker() {
 			label.html(input.val());
 		});
 	});
+}
+
+
+function tooltips() {
+	//jQuery UI Tooltip
+	$('*').tooltip({
+		track: true,
+		content: function () {
+			return $(this).prop('title');
+		}
+	});
+}
+
+
+function popupPhoto() {
+	$('[data-photo]').tooltip({
+		track: false,
+		items: '[data-photo]',
+		content: function () {
+			return "<img src=" + $(this).data("photo") + " />";
+		},
+		tooltipClass:'tooltip1'
+	})
 }
