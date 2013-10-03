@@ -430,6 +430,11 @@ function openWindow() {
 					tpl        : {
 						wrap   : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
 						closeBtn : '<a class="fancybox-item fancybox-close" href="javascript:;"></a>'
+					},
+					helpers: {
+						overlay: {
+							locked: false
+						}
 					}
 				}
 			);
@@ -472,12 +477,19 @@ function openAjaxWindow() {
 									wrap   : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
 									closeBtn : '<a class="fancybox-item fancybox-close" href="javascript:;"></a>'
 					},
+					helpers: {
+						overlay: {
+							locked: false
+						}
+					},
 					beforeLoad: function() {
 						$('#fancyboxAjaxContent').removeClass('visuallyhidden');
 					},
 					afterLoad: function() {
 						stylizeCheckbox();
 						customSelects();
+						//Fixes: selectmenu relative to page instead fancyBox when scrolling page
+						content.find('select').selectmenu('widget').addClass('select-fixed');
 						datepicker();
 						scrollpane();
 					},

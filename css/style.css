@@ -4343,6 +4343,9 @@ ul.slider {
 	padding: 5px 25px 5px 14px;
 }
 
+.select-fixed {
+	position: fixed;
+}
 
 .ui-datepicker {
 	width: 240px;
