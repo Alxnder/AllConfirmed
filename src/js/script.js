@@ -489,7 +489,9 @@ function openAjaxWindow() {
 						stylizeCheckbox();
 						customSelects();
 						//Fixes: selectmenu relative to page instead fancyBox when scrolling page
-						content.find('select').selectmenu('widget').addClass('select-fixed');
+						content.find('select').each(function() {
+							$(this).selectmenu('widget').addClass('select-fixed');
+						});
 						datepicker();
 						scrollpane();
 					},
