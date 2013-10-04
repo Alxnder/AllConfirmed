@@ -204,9 +204,9 @@ textarea {
 .select ul a {
 	color: #fff;
 	display: block;
-	cursor: pointer;
 	padding: 6px;
-	margin-bottom: 5px;
+	cursor: default;
+	margin-bottom: 3px;
 	position: relative;
 	border: solid 1px #96ae29;
 }

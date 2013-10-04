@@ -206,6 +206,7 @@ function selects() {
 		});
 
 		var close = list.find('.icon-close'),
+			clear_all = list.find('.icon-clear'),
 			tip = $this.find('.tip');
 
 		//Divide list by columns
@@ -236,17 +237,35 @@ function selects() {
 			e.stopPropagation();
 		});
 
+		clear_all.click(function(e) {
+			items.removeClass('selected');
+			text.text(text.data('default')).removeClass('selected');
+			tip.text('');
+
+			e.stopPropagation();
+		});
+
 		//Elements in pop-up, selecting of active
 		items.click(function(e) {
 			var $this = $(this);
-
-			//items.removeClass('selected');
 			$this.toggleClass('selected');
 
-			//text.text($this.text()).addClass('selected');
+			var selected = items.filter('.selected');
 
-			//tip.text($this.text());
-			//listClose(list);
+			//Default value in select
+			if (!selected.length) {
+				text.text(text.data('default')).removeClass('selected');
+				tip.text('');
+			//One value
+			} else if (selected.length == 1) {
+				text.text(selected.eq(0).text()).addClass('selected');
+				tip.text(selected.eq(0).text());
+				//Multiple values
+			} else if (selected.length > 1) {
+				text.text(selected.eq(0).text() + ', ' + selected.eq(1).text() + ' and more').addClass('selected');
+				tip.text(selected.eq(0).text() + ', ' + selected.eq(1).text() + ' and more');
+			}
+
 			e.stopPropagation();
 		});
 
