@@ -216,13 +216,12 @@ textarea {
 }
 
 .select ul a:hover {
-	/*color: #d3dcaa;*/
 	background: #aabf48;
+	border-color: #d3dcaa;
 }
 
 .select ul a.selected {
 	background: #aabf48;
-	/*border-color: #d3dcaa;*/
 }
 
 .select ul a.selected:hover {

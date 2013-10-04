@@ -558,13 +558,13 @@ body {
 ::-moz-selection {
 	color: #fff;
 	text-shadow: none;
-	background: #86b9ed;
+	background: #819818;
 }
 
 ::selection {
 	color: #fff;
 	text-shadow: none;
-	background: #86b9ed;
+	background: #819818;
 }
 
 hr {
@@ -1068,13 +1068,12 @@ textarea {
 }
 
 .select ul a:hover {
-	/*color: #d3dcaa;*/
 	background: #aabf48;
+	border-color: #d3dcaa;
 }
 
 .select ul a.selected {
 	background: #aabf48;
-	/*border-color: #d3dcaa;*/
 }
 
 .select ul a.selected:hover {
@@ -2040,6 +2039,7 @@ ul.blogposts {
 	margin: 0;
 	padding: 30px 0;
 	overflow: hidden;
+	list-style-image: none !important;
 	border-top: solid 1px #e5e5e5;
 }
 
@@ -2893,28 +2893,29 @@ ul.prices-list1 {
 	border-top: solid 1px #e2dddd;
 }
 
-.reviews .review:first-child {
-	border: 0;
+.review .ratings, .comment .ratings {
+	margin: .3em 0 0 30px;
+	width: 190px;
+	border-left: solid 3px #d0443b;
+	float: right;
+	padding-left: 18px;
 }
 
-.comment > dt, .review > dt {
-	display: table-cell;
-	padding-right: 30px;
+.comment .author {
+	color: #7f7f7f;
+	margin-bottom: 8px;
+	font: italic 12px 'Font1 Light';
+}
+
+.reviews .review:first-child {
+	border: 0;
 }
 
 .review .author {
 	margin-top: 6px;
 }
 
-.comment > dd, .review > dd {
-	margin: 0;
-	width: 190px;
-	border-left: solid 3px #d0443b;
-	display: table-cell;
-	padding-left: 18px;
-}
-
-.comment .author, .review .author {
+.review .author {
 	color: #7f7f7f;
 	margin-bottom: 8px;
 	font: italic 12px 'Font1 Light';
@@ -2941,6 +2942,7 @@ ul.prices-list1 {
 }
 
 .comment .text, .review .text {
+	overflow: hidden;
 	line-height: 1.6em;
 }
 
@@ -3023,6 +3025,7 @@ ul.prices-list1 {
 
 .dropdown li div {
 	background: #8cad27;
+	cursor: default;
 }
 
 .dropdown a:hover {
@@ -3105,7 +3108,7 @@ ul.sort {
 }
 
 .grey-block hr {
-	margin: 20px -50px 20px -25px;;
+	margin: 20px -25px;;
 }
 
 h2 + .grey-block {
@@ -3199,6 +3202,13 @@ h2 + .grey-block {
 	margin-top: 3px;
 }
 
+.table-resvns thead ._place,
+.table-resvns thead ._resvn,
+.table-resvns thead ._status,
+.table-resvns thead ._features {
+	text-align: left !important;
+}
+
 .table-resvns a {
 	color: #6d8607;
 }
@@ -3215,24 +3225,26 @@ h2 + .grey-block {
 
 .table-resvns ._cost {
 	width: 50px;
-	text-align: center;
 	font: 15px 'Font1 Medium';
 }
 
-.table-resvns ._status {
+.table-resvns tbody ._status {
 	width: 130px;
 	font-size: 13px;
 	padding-right: 0;
 }
 
-.table-resvns ._features {
+.table-resvns tbody ._features {
 	width: 140px;
-	padding-right: 0;
 }
 
 .table-resvns ._features a {
 	color: #8d8d8d;
 	margin-left: 5px;
+}
+
+.table-resvns a:hover {
+	text-decoration: none;
 }
 
 .table-resvns ._features p {
@@ -3285,6 +3297,7 @@ h2 + .grey-block {
 .sortable > div {
 	padding-right: 15px;
 	position: relative;
+	display: inline-block;
 }
 
 .sortable.-asc > div:after,
@@ -3294,7 +3307,7 @@ h2 + .grey-block {
 	height: 5px;
 	content: '';
 	right: 0;
-	top: 50%;
+	top: 55%;
 	margin-top: -3px;
 	background: url("../i/sprites.png") -14px -1304px;
 }
@@ -3326,6 +3339,10 @@ h2 + .grey-block {
 
 .buttons1 > * {
 	margin: 0 10px;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: inherit !important;
 }
 
 .btn {
@@ -3423,6 +3440,10 @@ h2 + .grey-block {
 .btn.-wide {
 	padding-left: 25px;
 	padding-right: 25px;
+}
+
+.btn.-reload {
+	cursor: pointer;
 }
 
 .btn[disabled] {

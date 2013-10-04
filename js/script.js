@@ -14,7 +14,6 @@
 	slider();
 	scrollpane();
 	gallery();
-	setRating();
 	datepicker();
 	tooltips();
 	popupPhoto();
@@ -185,7 +184,7 @@ function searchBox() {
 	});
 }
 
-//Pop-up menu with columns and close button
+//Pop-up multiple menu with columns and close button
 function selects() {
 	var selects = $('.select'),
 		lists = selects.find('ul'),
@@ -200,7 +199,7 @@ function selects() {
 
 		text.after('<div class="tip" />');
 		list.prepend('<i class="icon-close" title="Close"></i>');
-		list.prepend('<i class="icon-clear" title="Clear all selection"></i>');
+		list.prepend('<i class="icon-clear hidden" title="Clear all selection"></i>');
 		list.css({
 			minWidth: $this.outerWidth()
 		});
@@ -221,9 +220,9 @@ function selects() {
 			if (!list.is(':visible')) {
 				clearTimeout(tip_timer);
 				list.fadeIn(50);
-				$this.addClass('-active')
+				$this.addClass('-active');
 			} else {
-				$this.removeClass('-active')
+				$this.removeClass('-active');
 			}
 			e.stopPropagation();
 		});
@@ -241,29 +240,42 @@ function selects() {
 			items.removeClass('selected');
 			text.text(text.data('default')).removeClass('selected');
 			tip.text('');
+			clear_all.addClass('hidden');
 
 			e.stopPropagation();
 		});
 
-		//Elements in pop-up, selecting of active
+		//Items in pop-up, selecting of active
 		items.click(function(e) {
-			var $this = $(this);
-			$this.toggleClass('selected');
+			var item = $(this);
 
-			var selected = items.filter('.selected');
+			if (!$this.hasClass('-multiselect')) {
+				items.removeClass('selected');
+				item.addClass('selected');
+				text.text(item.text()).addClass('selected');
+				tip.text(item.text());
+				listClose(list);
+			} else {
+				item.toggleClass('selected');
 
-			//Default value in select
-			if (!selected.length) {
-				text.text(text.data('default')).removeClass('selected');
-				tip.text('');
-			//One value
-			} else if (selected.length == 1) {
-				text.text(selected.eq(0).text()).addClass('selected');
-				tip.text(selected.eq(0).text());
-				//Multiple values
-			} else if (selected.length > 1) {
-				text.text(selected.eq(0).text() + ', ' + selected.eq(1).text() + ' and more').addClass('selected');
-				tip.text(selected.eq(0).text() + ', ' + selected.eq(1).text() + ' and more');
+				var selected = items.filter('.selected');
+
+				//Default value in select
+				if (!selected.length) {
+					text.text(text.data('default')).removeClass('selected');
+					tip.text('');
+					clear_all.addClass('hidden');
+				//One value
+				} else if (selected.length == 1) {
+					text.text(selected.eq(0).text()).addClass('selected');
+					tip.text(selected.eq(0).text());
+					clear_all.removeClass('hidden');
+					//Multiple values
+				} else if (selected.length > 1) {
+					text.text(selected.eq(0).text() + ', ' + selected.eq(1).text() + ' and more').addClass('selected');
+					tip.text(selected.eq(0).text() + ', ' + selected.eq(1).text() + ' and more');
+					clear_all.removeClass('hidden');
+				}
 			}
 
 			e.stopPropagation();
@@ -641,20 +653,6 @@ function customSelects() {
 		$(this).selectmenu('widget').addClass('select-big')
 	})
 
-}
-
-
-function setRating() {
-	var rating = $('.rating.-editable');
-
-	rating.hover(
-		function() {
-
-		},
-		function() {
-
-		}
-	)
 }
 
 

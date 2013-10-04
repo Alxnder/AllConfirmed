@@ -95,6 +95,10 @@
 	padding-right: 25px;
 }
 
+.btn.-reload {
+	cursor: pointer;
+}
+
 .btn[disabled] {
 	top: 0 !important;
 	color: #ccc !important;
