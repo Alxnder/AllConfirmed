@@ -199,7 +199,8 @@ function selects() {
 			items = list.find('a');
 
 		text.after('<div class="tip" />');
-		list.prepend('<i class="icon-close"></i>');
+		list.prepend('<i class="icon-close" title="Close"></i>');
+		list.prepend('<i class="icon-clear" title="Clear all selection"></i>');
 		list.css({
 			minWidth: $this.outerWidth()
 		});
@@ -239,13 +240,13 @@ function selects() {
 		items.click(function(e) {
 			var $this = $(this);
 
-			items.removeClass('selected');
-			setTimeout(function() {
-				$this.addClass('selected')
-			}, 100);
-			text.text($this.text()).addClass('selected');
-			tip.text($this.text());
-			listClose(list);
+			//items.removeClass('selected');
+			$this.toggleClass('selected');
+
+			//text.text($this.text()).addClass('selected');
+
+			//tip.text($this.text());
+			//listClose(list);
 			e.stopPropagation();
 		});
 
@@ -672,10 +673,20 @@ function datepicker() {
 function tooltips() {
 	//jQuery UI Tooltip
 	$('*').tooltip({
+		show: {
+			delay: 350
+		},
 		track: true,
 		content: function () {
 			return $(this).prop('title');
 		}
+	});
+
+	$('.select ul .icon-clear, .select .icon-close').tooltip({
+		show: {
+			delay: 350
+		},
+		track: false
 	});
 }
 
