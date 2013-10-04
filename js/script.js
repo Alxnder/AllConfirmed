@@ -249,7 +249,7 @@ function selects() {
 		items.click(function(e) {
 			var item = $(this);
 
-			if (!$this.hasClass('-multiselect')) {
+			if ($this.attr('data-multiselect') === undefined) {
 				items.removeClass('selected');
 				item.addClass('selected');
 				text.text(item.text()).addClass('selected');
