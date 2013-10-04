@@ -199,12 +199,14 @@ function selects() {
 			items = list.find('a');
 
 		text.after('<div class="tip" />');
-		list.prepend('<i class="icon-close"></i>');
+		list.prepend('<i class="icon-close" title="Close"></i>');
+		list.prepend('<i class="icon-clear" title="Clear all selection"></i>');
 		list.css({
 			minWidth: $this.outerWidth()
 		});
 
 		var close = list.find('.icon-close'),
+			clear_all = list.find('.icon-clear'),
 			tip = $this.find('.tip');
 
 		//Divide list by columns
@@ -235,17 +237,35 @@ function selects() {
 			e.stopPropagation();
 		});
 
+		clear_all.click(function(e) {
+			items.removeClass('selected');
+			text.text(text.data('default')).removeClass('selected');
+			tip.text('');
+
+			e.stopPropagation();
+		});
+
 		//Elements in pop-up, selecting of active
 		items.click(function(e) {
 			var $this = $(this);
+			$this.toggleClass('selected');
 
-			items.removeClass('selected');
-			setTimeout(function() {
-				$this.addClass('selected')
-			}, 100);
-			text.text($this.text()).addClass('selected');
-			tip.text($this.text());
-			listClose(list);
+			var selected = items.filter('.selected');
+
+			//Default value in select
+			if (!selected.length) {
+				text.text(text.data('default')).removeClass('selected');
+				tip.text('');
+			//One value
+			} else if (selected.length == 1) {
+				text.text(selected.eq(0).text()).addClass('selected');
+				tip.text(selected.eq(0).text());
+				//Multiple values
+			} else if (selected.length > 1) {
+				text.text(selected.eq(0).text() + ', ' + selected.eq(1).text() + ' and more').addClass('selected');
+				tip.text(selected.eq(0).text() + ', ' + selected.eq(1).text() + ' and more');
+			}
+
 			e.stopPropagation();
 		});
 
@@ -672,10 +692,20 @@ function datepicker() {
 function tooltips() {
 	//jQuery UI Tooltip
 	$('*').tooltip({
+		show: {
+			delay: 350
+		},
 		track: true,
 		content: function () {
 			return $(this).prop('title');
 		}
+	});
+
+	$('.select ul .icon-clear, .select .icon-close').tooltip({
+		show: {
+			delay: 350
+		},
+		track: false
 	});
 }
 

@@ -1034,6 +1034,16 @@ textarea {
 	background-position: 0 -261px;
 }
 
+.select ul .icon-clear {
+	top: 45px;
+	right: 9px;
+	position: absolute;
+}
+
+.select ul .icon-clear:hover {
+	background-position: -96px -261px;
+}
+
 .select ul li {
 	padding: 0 0 0 4px;
 	margin: 0 21px 0 0;
@@ -1046,9 +1056,9 @@ textarea {
 .select ul a {
 	color: #fff;
 	display: block;
-	cursor: pointer;
-	padding: 2px 6px;
-	margin-bottom: 9px;
+	padding: 6px;
+	cursor: default;
+	margin-bottom: 3px;
 	position: relative;
 	border: solid 1px #96ae29;
 }
@@ -1058,12 +1068,13 @@ textarea {
 }
 
 .select ul a:hover {
-	color: #d3dcaa;
+	/*color: #d3dcaa;*/
+	background: #aabf48;
 }
 
 .select ul a.selected {
-	background: #a0b63d;
-	border-color: #d3dcaa;
+	background: #aabf48;
+	/*border-color: #d3dcaa;*/
 }
 
 .select ul a.selected:hover {
@@ -3819,6 +3830,12 @@ a:hover .icon-plus_small {
 	width: 14px;
 	height: 10px;
 	background-position: 0 -1282px;
+}
+
+.icon-clear {
+	width: 25px;
+	height: 18px;
+	background-position: -68px -261px;
 }
 
 
