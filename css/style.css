@@ -984,6 +984,7 @@ textarea {
 	line-height: 28px;
 	white-space: nowrap;
 	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .select > div.selected {

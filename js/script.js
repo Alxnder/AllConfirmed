@@ -2,8 +2,8 @@
 	primaryNav();
 	carousel();
 	searchBox();
-	select();
-	dropdown();
+	selects();
+	dropdowns();
 	customSelects();
 	stylizeCheckbox();
 	setLocation();
@@ -186,7 +186,7 @@ function searchBox() {
 }
 
 //Pop-up menu with columns and close button
-function select() {
+function selects() {
 	var selects = $('.select'),
 		lists = selects.find('ul'),
 		elements_per_wrap = 13, //Elements quantity in every column
@@ -253,7 +253,7 @@ function select() {
 			e.stopPropagation();
 		});
 
-		//Showing tooltip if text don't fit
+		//Show tooltip if text don't fit
 		$this.hover(
 			function() {
 				if (tip.width() > text.width()) {
@@ -262,11 +262,15 @@ function select() {
 							tip.stop().fadeIn(50)
 						}, 200)
 					}
+
+					tip.css({'min-width': text.width() + 15});
 				}
 			},
 			function() {
 				clearTimeout(tip_timer);
-				tip.stop().fadeOut(100);
+				tip.stop().fadeOut(100, function() {
+					tip.css({'min-width': ''})
+				});
 			}
 		);
 
@@ -282,7 +286,7 @@ function select() {
 }
 
 
-function dropdown() {
+function dropdowns() {
 	var dropdowns = $('.dropdown');
 
 	dropdowns.each(function() {
