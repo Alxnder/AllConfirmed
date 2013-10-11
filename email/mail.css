@@ -1,0 +1,145 @@
+html, body {
+	padding: 0;
+	margin: 0;
+	color: #373737;
+	background-color: #e8e6da;
+	background-image: url('body.jpg');
+	font: 15px arial, helvetica, sans-serif;
+}
+
+body {
+	padding: 35px 0;
+}
+
+.header {
+	border-collapse: collapse;
+	height: 108px;
+	width: 705px;
+	margin: 0 auto;
+	border-bottom: solid 1px #ccc;
+	background-color: #fff;
+	background-image: url('header.jpg');
+}
+
+.logo {
+	text-align: center;
+	vertical-align: middle;
+	width: 227px;
+	padding-top: 35px;
+}
+
+.motto {
+	font-size: 17px;
+	color: #898078;
+}
+
+.content {
+	background: #fff;
+	width: 655px;
+	margin: 0 auto;
+	padding: 25px  25px 40px 25px;
+}
+
+.footer {
+	background: #fff;
+	width: 520px;
+	margin: 0 auto;
+	border-top: solid 1px #ccc;
+	padding: 20px 10px 35px 175px;
+}
+
+p {
+	margin: 0 0 10px 0;
+}
+
+h1 {
+	font: normal 26px arial, helvetica, sans-serif;
+	color: #000;
+	margin: 0 0 10px 0;
+}
+
+h2 {
+	font: normal 23px arial, helvetica, sans-serif;
+	color: #fff;
+	background: #840000;
+	padding: 5px 10px;
+	margin: 20px 0 0 0;
+}
+
+h3 {
+	font: normal 22px arial, helvetica, sans-serif;
+	color: #be0002;
+	margin: 0 0 10px 0;
+}
+
+.deals {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.deals td {
+	vertical-align: top;
+}
+
+.col1 {
+	width: 172px;
+	padding: 35px 0 20px 0;
+	border-top: solid 1px #e5e5e5;
+}
+
+.col2 {
+	padding: 35px 0 20px 0;
+	border-top: solid 1px #e5e5e5;
+}
+
+.title {
+	width: 100%;
+	margin: 0 0 10px 0;
+	border-collapse: collapse;
+}
+
+.title td {
+
+}
+
+.ar {
+	text-align: right;
+}
+
+.grey {
+	color: #909090;
+}
+
+.red {
+	color: #840000;
+}
+
+.persons {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.persons td {
+	font-size: 13px;
+	padding: 0 10px 0 0;
+}
+
+.persons img {
+	vertical-align: middle;
+}
+
+.grey-small {
+	color: #878787;
+	font-size: 12px;
+}
+
+.links {
+	font-size: 12px;
+	color: #000;
+	margin: 20px 0 0 0;
+}
+
+.link {
+	margin-right: 20px;
+	color: #000;
+}
