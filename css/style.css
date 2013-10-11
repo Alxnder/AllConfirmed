@@ -2551,8 +2551,11 @@ p.note1 {
 	position: relative;
 	display: inline-block;
 	font: 17px/1.1em Font1;
+}
+
+.menu-item [data-photo] {
 	text-decoration: underline;
-	cursor: pointer;
+	cursor: default;
 }
 
 .menu-item a {
@@ -4380,10 +4383,6 @@ ul.slider {
 .select-big.ui-selectmenu-menu li a {
 	font: 19px 'Font1 Light';
 	padding: 5px 25px 5px 14px;
-}
-
-.ui-selectmenu-menu.select-fixed {
-	position: fixed;
 }
 
 .ui-datepicker {

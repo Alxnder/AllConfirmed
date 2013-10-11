@@ -1471,8 +1471,11 @@ p.note1 {
 	position: relative;
 	display: inline-block;
 	font: 17px/1.1em Font1;
+}
+
+.menu-item [data-photo] {
 	text-decoration: underline;
-	cursor: pointer;
+	cursor: default;
 }
 
 .menu-item a {

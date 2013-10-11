@@ -444,6 +444,23 @@ function setLocation() {
 }
 
 
+var fancyboxDefaults = {
+	fitToView	: false,
+	autoSize	: true,
+	openEffect	: 'none',
+	closeEffect	: 'none',
+	scrolling	: 'no',
+	tpl        : {
+		wrap   : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
+		closeBtn : '<a class="fancybox-item fancybox-close" href="javascript:;"></a>'
+	},
+	helpers: {
+		overlay: {
+			locked: false
+		}
+	}
+};
+
 /*!
  * Common popup windows for authentication, registration, info blocks etc.
  * Open by data-fancybox attribute.
@@ -455,28 +472,10 @@ function openWindow() {
 		.not('[data-fancybox="close"]')
 		.not('[data-fancybox="ajax"]')
 		.click(function() {
-			$.fancybox.open(
-				$('#' + $(this).data('fancybox')),
-				{
-					fitToView	: false,
-					autoSize	: true,
-					openEffect	: 'none',
-					closeEffect	: 'none',
-					scrolling	: 'no',
-					tpl        : {
-						wrap   : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin fancybox-skin1"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
-						closeBtn : '<a class="fancybox-item fancybox-close" href="javascript:;"></a>'
-					},
-					helpers: {
-						overlay: {
-							locked: false
-						}
-					}
-				}
-			);
-
-		return false;
-	});
+			$.fancybox.open($('#' + $(this).data('fancybox')), fancyboxDefaults);
+			return false;
+		}
+	);
 
 	//Cancel, close, exit etc buttons in fancyBox.
 	$(document).on('click', '[data-fancybox="close"]', function() {
@@ -524,10 +523,6 @@ function openAjaxWindow() {
 					afterLoad: function() {
 						stylizeCheckbox();
 						customSelects();
-						//Fixes: selectmenu relative to page instead fancyBox when scrolling page
-						content.find('select').each(function() {
-							$(this).selectmenu('widget').addClass('select-fixed');
-						});
 						datepicker();
 						scrollpane();
 					},
@@ -709,12 +704,23 @@ function tooltips() {
 
 
 function popupPhoto() {
-	$('[data-photo]').tooltip({
+	var objects = $('[data-photo]');
+
+	objects.tooltip({
 		track: false,
 		items: '[data-photo]',
 		content: function () {
 			return "<img src=" + $(this).data("photo") + " />";
 		},
+		show: {
+			delay: 150
+		},
 		tooltipClass:'tooltip1'
-	})
+	});
+
+	if (isMobile) {
+		objects.click(function() {
+			$(this).tooltip('open');
+		});
+	}
 }
