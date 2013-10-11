@@ -37,7 +37,7 @@ body {
 	background: #fff;
 	width: 655px;
 	margin: 0 auto;
-	padding: 25px  25px 40px 25px;
+	padding: 25px  25px 20px 25px;
 }
 
 .footer {
@@ -81,13 +81,13 @@ h3 {
 	vertical-align: top;
 }
 
-.col1 {
+.deals .col1 {
 	width: 172px;
 	padding: 35px 0 20px 0;
 	border-top: solid 1px #e5e5e5;
 }
 
-.col2 {
+.deals .col2 {
 	padding: 35px 0 20px 0;
 	border-top: solid 1px #e5e5e5;
 }
@@ -124,22 +124,68 @@ h3 {
 	padding: 0 10px 0 0;
 }
 
-.persons img {
+img {
 	vertical-align: middle;
 }
 
 .grey-small {
 	color: #878787;
 	font-size: 12px;
+	line-height: 1.7em;
+}
+
+.grey-small1 {
+	color: #878787;
+	font-size: 11px;
+	margin-bottom: 2px;
 }
 
 .links {
 	font-size: 12px;
 	color: #000;
-	margin: 20px 0 0 0;
+	margin: 25px 0 0 0;
 }
 
 .link {
 	margin-right: 20px;
 	color: #000;
+}
+
+.city {
+	font-size: 11px;
+	padding: 4px 15px 4px 10px;
+	color: #262220;
+	background: #f2f2f2;
+	text-decoration: none;
+}
+
+.loc {
+	margin: 0 0 0 5px;
+	vertical-align: middle;
+}
+
+.params {
+	width: 100%;
+	margin: 15px 0 0 0;
+	border-collapse: collapse;
+}
+
+.deals1 {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.deals1 td {
+	vertical-align: top;
+}
+
+.deals1 .col1 {
+	width: 211px;
+	padding: 35px 0 20px 0;
+	border-top: solid 1px #e5e5e5;
+}
+
+.deals1 .col2 {
+	padding: 35px 0 20px 0;
+	border-top: solid 1px #e5e5e5;
 }
