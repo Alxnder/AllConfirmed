@@ -2280,6 +2280,8 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 @import 'jquery-ui.datepicker.css';
 
+@import 'ticket.css';
+
 @import 'responsive.css';
 
 /*

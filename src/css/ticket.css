@@ -1,0 +1,121 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.ticket {
+	width: 906px;
+	height: 395px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+	background: url("../i/ticket.png");
+}
+
+.ticket-number {
+	font: 44px 'Font1 Bold';
+	height: 75px;
+	left: -110px;
+	position: absolute;
+	top: 160px;
+	width: 395px;
+	text-align: center;
+	-moz-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	-o-transform: rotate(270deg);
+	-ms-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+
+.ticket-number span {
+	font-family: 'Font1 Light';
+}
+
+.ticket-content {
+	padding: 15px 25px 0 0;
+	margin-left: 185px;
+}
+
+.ticket-content h1 {
+	color: #9c0103;
+	margin: 20px 0 0 0;
+	font: normal 24px 'Font1 Bold';
+}
+
+.ticket-content_left {
+	float: left;
+	width: 390px;
+	height: 308px;
+	margin-top: 14px;
+}
+
+.ticket-content_right {
+	float: right;
+	width: 228px;
+	height: 312px;
+	font-size: 16px;
+	text-align: center;
+	margin-right: 60px;
+}
+
+.ticket-content_right img {
+ 	width: 218px;
+	margin-bottom: 10px;
+	border: solid 5px #bc4439;
+}
+
+.ticket-code {
+	color: #fff;
+	padding: 3px 0;
+	font: 31px 'Font1 Bold';
+	background: #9f342c;
+	margin: -3px 0 17px 0;
+}
+
+.ticket-location {
+	font-size: 15px;
+	margin-bottom: 1.2em;
+}
+
+.ticket-info {
+	font-size: 18px;
+}
+
+p {
+	margin: 0;
+}
+
+.ticket-info p {
+	margin-bottom: 0;
+}
+
+.ticket-note {
+	font-size: 12px;
+	line-height: 1.2em;
+}
+
+.ticket-price {
+	color: #000;
+	font: 32px/1.1em 'Font1 Bold';
+}
+
+.ticket-paid {
+	font-size: 14px;
+}
+
+.ticket-free .ticket-content_right {
+	margin-top: 80px;
+	height: auto;
+}
+
+.ticket-free h1 {
+	margin-top: 37px;
+}
+
+.ticket-free .ticket-price {
+	margin-top: 115px;
+}
+
+.ticket-free .ticket-location {
+	margin-bottom: 25px;
+}
