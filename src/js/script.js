@@ -526,6 +526,14 @@ function openAjaxWindow() {
 						datepicker();
 						scrollpane();
 					},
+					afterShow: function() {
+						if ($.fancybox.wrap.css('position') == 'fixed') {
+							//Fixes: selectmenu relative to page instead fancyBox when scrolling page
+							content.find('select').each(function() {
+								$(this).selectmenu('widget').addClass('select-fixed');
+							});
+						}
+					},
 					afterClose: function() {
 						$('#fancyboxAjaxContent').addClass('visuallyhidden');
 						$('#ui-datepicker-div').remove();

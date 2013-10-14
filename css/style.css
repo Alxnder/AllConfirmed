@@ -1332,6 +1332,9 @@ p.error {
 	background: url("../i/sprites.png") 0 -1217px;
 }
 
+.ui-selectmenu-menu.select-fixed {
+	position: fixed !important;
+}
 
 .carousel {
 	width: 732px;
