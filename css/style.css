@@ -1188,6 +1188,11 @@ p.error {
 	text-align: left;
 }
 
+.form-auth .buttons a[data-fancybox="ajax"] {
+	text-decoration: none;
+	background: url("../i/border2.png") 0 100% repeat-x;
+}
+
 .form-auth .buttons p {
 	margin-bottom: 20px;
 }
@@ -1428,7 +1433,7 @@ p.error {
 	cursor: pointer;
 	font: 16px Font1;
 	text-decoration: none;
-	margin-left: 5px;
+	margin: 0 0 10px 5px;
 	position: relative;
 	background: url("../i/border1.png") 0 100% repeat-x;
 }
@@ -1553,14 +1558,13 @@ nav.primary > ul ul a:hover {
 nav.secondary {
 	float: right;
 	font: 16px Font1;
-	margin-right: -3px;
+	margin: 0 -3px 0 0;
 }
 
 nav.secondary a, nav.secondary div {
 	color: #e9d4bf;
-	margin-left: 10px;
 	text-decoration: none;
-	padding: 0 6px 1px 6px;
+	padding: 2px 14px 3px 14px;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -1867,6 +1871,10 @@ nav.secondary div .icon-plus_small {
 	color: #e5ba38;
 	margin-left: 6px;
 	text-decoration: none;
+}
+
+.rating a:hover {
+	text-decoration: underline;
 }
 
 .rating [class^="icon"] {
@@ -2792,17 +2800,8 @@ ul.prices-list1 {
 }
 
 .resvn-summary .location {
-	margin: 0 0 20px -6px;
-}
-
-.resvn-summary .location a {
+	margin: 0 0 20px 0;
 	color: #63605f;
-	text-decoration: none;
-	padding: 0 6px 1px 6px;
-}
-
-.resvn-summary .location a:hover {
-	background: #dfdfdf;
 }
 
 .resvn-summary hr {
@@ -4509,6 +4508,10 @@ html, body {
 	background: url("../i/ticket.png");
 }
 
+.ticket p {
+	margin: 0;
+}
+
 .ticket-number {
 	font: 44px 'Font1 Bold';
 	height: 75px;
@@ -4539,6 +4542,15 @@ html, body {
 	font: normal 24px 'Font1 Bold';
 }
 
+.ticket-content h1 a {
+	color: #9c0103;
+	text-decoration: none;
+}
+
+.ticket-content h1 a:hover {
+	text-decoration: underline;
+}
+
 .ticket-content_left {
 	float: left;
 	width: 390px;
@@ -4561,7 +4573,7 @@ html, body {
 	border: solid 5px #bc4439;
 }
 
-.ticket-code {
+p.ticket-code {
 	color: #fff;
 	padding: 3px 0;
 	font: 31px 'Font1 Bold';
@@ -4569,17 +4581,13 @@ html, body {
 	margin: -3px 0 17px 0;
 }
 
-.ticket-location {
+p.ticket-location {
 	font-size: 15px;
 	margin-bottom: 1.2em;
 }
 
 .ticket-info {
 	font-size: 18px;
-}
-
-p {
-	margin: 0;
 }
 
 .ticket-info p {
@@ -4609,11 +4617,11 @@ p {
 	margin-top: 37px;
 }
 
-.ticket-free .ticket-price {
+.ticket-free p.ticket-price {
 	margin-top: 115px;
 }
 
-.ticket-free .ticket-location {
+.ticket-free p.ticket-location {
 	margin-bottom: 25px;
 }
 

@@ -336,6 +336,11 @@ p.error {
 	text-align: left;
 }
 
+.form-auth .buttons a[data-fancybox="ajax"] {
+	text-decoration: none;
+	background: url("../i/border2.png") 0 100% repeat-x;
+}
+
 .form-auth .buttons p {
 	margin-bottom: 20px;
 }

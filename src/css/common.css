@@ -345,7 +345,7 @@ h6 {
 	cursor: pointer;
 	font: 16px Font1;
 	text-decoration: none;
-	margin-left: 5px;
+	margin: 0 0 10px 5px;
 	position: relative;
 	background: url("../i/border1.png") 0 100% repeat-x;
 }
@@ -470,14 +470,13 @@ nav.primary > ul ul a:hover {
 nav.secondary {
 	float: right;
 	font: 16px Font1;
-	margin-right: -3px;
+	margin: 0 -3px 0 0;
 }
 
 nav.secondary a, nav.secondary div {
 	color: #e9d4bf;
-	margin-left: 10px;
 	text-decoration: none;
-	padding: 0 6px 1px 6px;
+	padding: 2px 14px 3px 14px;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -784,6 +783,10 @@ nav.secondary div .icon-plus_small {
 	color: #e5ba38;
 	margin-left: 6px;
 	text-decoration: none;
+}
+
+.rating a:hover {
+	text-decoration: underline;
 }
 
 .rating [class^="icon"] {
@@ -1709,17 +1712,8 @@ ul.prices-list1 {
 }
 
 .resvn-summary .location {
-	margin: 0 0 20px -6px;
-}
-
-.resvn-summary .location a {
+	margin: 0 0 20px 0;
 	color: #63605f;
-	text-decoration: none;
-	padding: 0 6px 1px 6px;
-}
-
-.resvn-summary .location a:hover {
-	background: #dfdfdf;
 }
 
 .resvn-summary hr {

@@ -378,9 +378,7 @@ function setLocation() {
 		popup = $('.popup-location'),
 		layout = $('[class^="layout"]'),
 		field = popup.find('input'),
-		save = popup.find('._save'),
-		layout_width = layout.outerWidth(),
-		layout_offset = layout.offset().left;
+		save = popup.find('._save');
 
 	source.each(function() {
 		var $this = $(this);
@@ -396,9 +394,9 @@ function setLocation() {
 				.css('left', pop_target.offset().left)
 				.css({
 					left: function() {
-						if ((popup.offset().left + popup.width()) > (layout_width + layout_offset)) {
-							var w = (popup.offset().left + popup.outerWidth()) - (layout_width + layout_offset);
-							popup.css({'marginLeft': -w})
+						if ((popup.offset().left + popup.width()) > (layout.outerWidth() + layout.offset().left)) {
+							var w = (popup.offset().left + popup.outerWidth()) - (layout.outerWidth() + layout.offset().left);
+							popup.css({'marginLeft': -w});
 						}
 					},
 					top: $(this).offset().top + $(this).height()
@@ -433,9 +431,11 @@ function setLocation() {
 	});
 
 	$(document).click(function() {
-		popup.fadeOut(200, function() {
-			$(this).attr('style', '')
-		});
+		if (popup.is(':visible')) {
+			popup.fadeOut(200, function() {
+				$(this).attr('style', '')
+			});
+		}
 	});
 
 	popup.click(function(e) {

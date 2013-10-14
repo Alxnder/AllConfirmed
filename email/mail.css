@@ -72,6 +72,15 @@ h3 {
 	margin: 0 0 10px 0;
 }
 
+.h3-link {
+	color: #be0002;
+	text-decoration: none;
+}
+
+.h3-link:hover {
+	text-decoration: underline;
+}
+
 .deals {
 	width: 100%;
 	border-collapse: collapse;
