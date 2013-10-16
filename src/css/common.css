@@ -1263,6 +1263,7 @@ ul.faq li:first-child {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	cursor: pointer;
 }
 
 .tabs {
@@ -2262,6 +2263,100 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	color: inherit !important;
 }
 
+.bigmap {
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.bigmap-head {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	color: #fff;
+	height: 56px;
+	background: url("../i/sprite1.png") 50% 0 repeat-y;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.bigmap-head .wrapper {
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.bigmap-logo {
+	position: absolute;
+	top: 7px;
+	left: 0;
+}
+
+.bigmap-motto {
+	color: #fff;
+	width: 500px;
+	position: absolute;
+	left: 235px;
+	top: 0;
+	padding-top: 13px;
+	height: 43px;
+	font: 24px 'Font1 ExtraLight';
+}
+
+.bigmap-motto:after {
+	width: 147px;
+	height: 40px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	content: '';
+	background: url("../i/sprites.png") 0 -1423px no-repeat;
+}
+
+.bigmap-close {
+	position: absolute;
+	right: 0;
+	top: 10px;
+	cursor: pointer;
+}
+
+.bigmap-close:before {
+	position: absolute;
+	content: '';
+	left: -26px;
+	top: 11px;
+	width: 14px;
+	height: 12px;
+	background: url("../i/sprites.png") 0 -1470px no-repeat;
+}
+
+.bigmap-close span {
+	font: 23px Lobster;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+	border-bottom: dashed 1px;
+}
+
+.bigmap-content {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 56px;
+	bottom: 0;
+	background: #b0b0b0 url("../i/maptile.png");
+}
+
+.body-fixed {
+	overflow: hidden;
+}
+
+.body-fixed .bigmap {
+	overflow-y: scroll;
+}
+
 @import "buttons.css";
 
 @import "icons.css";
@@ -2275,8 +2370,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 @import 'jquery-ui.datepicker.css';
 
 @import 'ticket.css';
-
-@import 'responsive.css';
 
 /*
  * IE 6/7/8

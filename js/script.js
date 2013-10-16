@@ -17,6 +17,7 @@
 	datepicker();
 	tooltips();
 	popupPhoto();
+	showBigMap();
 });
 
 
@@ -732,3 +733,130 @@ function popupPhoto() {
 		});
 	}
 }
+
+/*
+* Fullscreen Google Maps block with current page's place (restaurant etc):
+* 1) Create container on the fly for big map, add necessary binds
+* 2) Load Google Maps API and Infobox plugin
+*
+*/
+function showBigMap() {
+	var body = $('body'),
+		button = $('.map-small .icon-viewmap'),
+		markup = $("<div class='bigmap'>" +
+				"<div class='bigmap-head'><div class='wrapper'>" +
+					"<div class='bigmap-logo'><i class='icon-logo_white'></i></div>" +
+					"<div class='bigmap-motto'>Reservations of restaurants and clubs</div>" +
+					"<div class='bigmap-close'><i class='icon-close1'></i><span>close map</span></div>" +
+				"</div></div>" +
+				"<div id='map_canvas' class='bigmap-content'></div>" +
+			"</div>"),
+		map_loaded = false,
+		bigmap, close_btn;
+
+	//Show big map container
+	button.click(function() {
+		body.addClass('body-fixed');
+
+		//1)
+		markup.appendTo(body);
+
+		bigmap = $('.bigmap');
+		close_btn = $('.bigmap-close');
+
+		close_btn.click(function() {
+			bigmap.remove();
+			body.removeClass('body-fixed');
+		});
+
+		bigmap.click(function(e) {
+			e.stopPropagation()
+		});
+
+		//2) Avoid redundant API loading
+		if (!map_loaded) {
+			map_loaded = true;
+			loadGmapApi();
+		}
+
+		return false;
+	});
+}
+
+
+//Infobox plugin for GMaps
+function loadInfobox() {
+	var infobox = document.createElement('script');
+	infobox.type = 'text/javascript';
+	infobox.src = 'js/libs/infobox_packed.js';
+	document.body.appendChild(infobox);
+}
+
+
+function loadGmapApi() {
+	var gmaps = document.createElement('script');
+	gmaps.type = 'text/javascript';
+	gmaps.src = 'https://maps.googleapis.com/maps/api/js?v=3&sensor=false&callback=gmapInit';
+	document.body.appendChild(gmaps);
+}
+
+
+//Run from loadGmapApi() callback
+function gmapInit() {
+	loadInfobox();
+
+	var mapOptions = {
+			zoom: 15,
+			center: new google.maps.LatLng(42.28493,-85.590487),
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		},
+		map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+}
+
+
+function initBigMap(ll) {
+	var object_location = new google.maps.LatLng(ll),
+		map_options = {
+			zoom: 15,
+			center: object_location,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		},
+		theMap = new google.maps.Map(document.getElementById('map_canvas'), map_options),
+		marker = new google.maps.Marker({
+			map: theMap,
+			draggable: true,
+			position: new google.maps.LatLng(42.28493,-85.590487),
+			visible: true
+		}),
+		boxText = document.createElement('div');
+
+	boxText.style.cssText = 'border: 1px solid black; margin-top: 8px; background: yellow; padding: 5px';
+	boxText.innerHTML = 'City Hall, Sechelt<br>British Columbia<br>Canada';
+
+	var myOptions = {
+		content: boxText,
+		disableAutoPan: false,
+		maxWidth: 0,
+		pixelOffset: new google.maps.Size(-140, 0),
+		zIndex: null,
+		boxStyle: {
+			background: 'url("tipbox.gif") no-repeat',
+			opacity: 0.75,
+			width: '280px'
+		},
+		closeBoxMargin: '10px 2px 2px 2px',
+		closeBoxURL: 'http://www.google.com/intl/en_us/mapfiles/close.gif',
+		infoBoxClearance: new google.maps.Size(1, 1),
+		isHidden: false,
+		pane: 'floatPane',
+		enableEventPropagation: false
+		},
+		ib = new InfoBox(myOptions);
+
+	google.maps.event.addListener(marker, 'click', function (e) {
+		ib.open(theMap, this);
+	});
+	ib.open(theMap, marker);
+}
+
+
