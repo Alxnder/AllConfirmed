@@ -743,15 +743,15 @@ function popupPhoto() {
 function showBigMap() {
 	var body = $('body'),
 		button = $('.map-small .icon-viewmap'),
-		markup = $("<div class='bigmap'>" +
-				"<div class='bigmap-head'><div class='wrapper'>" +
-					"<div class='bigmap-logo'><i class='icon-logo_white'></i></div>" +
-					"<div class='bigmap-motto'>Reservations of restaurants and clubs</div>" +
-					"<div class='bigmap-close'><i class='icon-close1'></i><span>close map</span></div>" +
-				"</div></div>" +
-				"<div id='map_canvas' class='bigmap-content'></div>" +
-			"</div>"),
-		map_loaded = false,
+		markup = $("<div class='bigmap'> \
+				<div class='bigmap-head'><div class='wrapper'> \
+					<div class='bigmap-logo'><i class='icon-logo_white'></i></div> \
+					<div class='bigmap-motto'>Reservations of restaurants and clubs</div> \
+					<div class='bigmap-close'><span>close map</span></div> \
+				</div></div> \
+				<div id='map_canvas' class='bigmap-content'></div> \
+			</div>"),
+		api_loaded = false,
 		bigmap, close_btn;
 
 	//Show big map container
@@ -760,7 +760,6 @@ function showBigMap() {
 
 		//1)
 		markup.appendTo(body);
-
 		bigmap = $('.bigmap');
 		close_btn = $('.bigmap-close');
 
@@ -773,90 +772,90 @@ function showBigMap() {
 			e.stopPropagation()
 		});
 
-		//2) Avoid redundant API loading
-		if (!map_loaded) {
-			map_loaded = true;
-			loadGmapApi();
+		//Avoid redundant API loading
+		if (!api_loaded) {
+			api_loaded = true;
+			$.getScript('https://maps.googleapis.com/maps/api/js?v=3&sensor=false&callback=gmapsInit')
 		}
+
+		if (typeof google != 'undefined' && typeof google.maps != 'undefined') {
+			mapInit();
+		}
+
 
 		return false;
 	});
 }
 
-
-//Infobox plugin for GMaps
-function loadInfobox() {
-	var infobox = document.createElement('script');
-	infobox.type = 'text/javascript';
-	infobox.src = 'js/libs/infobox_packed.js';
-	document.body.appendChild(infobox);
+//2)
+function gmapsInit() {
+	$.getScript('js/libs/infobox_packed.js', function() {
+		mapInit();
+	});
 }
 
 
-function loadGmapApi() {
-	var gmaps = document.createElement('script');
-	gmaps.type = 'text/javascript';
-	gmaps.src = 'https://maps.googleapis.com/maps/api/js?v=3&sensor=false&callback=gmapInit';
-	document.body.appendChild(gmaps);
-}
-
-
-//Run from loadGmapApi() callback
-function gmapInit() {
-	loadInfobox();
-
+function mapInit() {
 	var mapOptions = {
 			zoom: 15,
 			center: new google.maps.LatLng(42.28493,-85.590487),
 			mapTypeId: google.maps.MapTypeId.ROADMAP
-		},
-		map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+		};
+
+	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+	map.panTo(mapOptions.center);
+
+	insertTestMarker(map);
 }
 
 
-function initBigMap(ll) {
-	var object_location = new google.maps.LatLng(ll),
-		map_options = {
-			zoom: 15,
-			center: object_location,
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		},
-		theMap = new google.maps.Map(document.getElementById('map_canvas'), map_options),
-		marker = new google.maps.Marker({
-			map: theMap,
-			draggable: true,
+function insertTestMarker(map) {
+	var marker = new google.maps.Marker({
+			map: map,
 			position: new google.maps.LatLng(42.28493,-85.590487),
 			visible: true
 		}),
-		boxText = document.createElement('div');
+		info_markup = '\
+			<div class="gmap-info"> \
+				<p class="location">2 East Wheelock Street Hanover, NH 03755 <i class="icon-pointer_small-red"></i></p>\
+				<dl> \
+					<dt> \
+						<img src="stubs/img13.jpg" /> <!--Example--> \
+						<div class="rating"><i class="icon-rating_wide-3_5"></i> (3.4)</div> \
+						<a href="">32 reviews</a> \
+					</dt> \
+					<dd> \
+						<p class="type">Restaurant, karaoke</p> \
+						<h3><a href="">Pine Restaurant - Hanover Inn Dartmouth</a></h3> \
+						<p><i class="icon-dish"></i> South American, International, Middle Eastern</p> \
+						<div class="params"> \
+							<ul> \
+								<li><i class="icon-usd"></i> $25 and under</li> \
+								<li><i class="icon-clock"></i> Business Lunch</li> \
+							</ul> \
+							<ul> \
+								<li><i class="icon-wifi"></i> Wi-Fi</li> \
+								<li><i class="icon-nursery"></i> Nursery Room</li> \
+							</ul> \
+						</div> \
+					</dd> \
+				</dl> \
+			</div><div class="shadow"></div>';
 
-	boxText.style.cssText = 'border: 1px solid black; margin-top: 8px; background: yellow; padding: 5px';
-	boxText.innerHTML = 'City Hall, Sechelt<br>British Columbia<br>Canada';
-
+	//InfoBox reference: http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/docs/reference.html
 	var myOptions = {
-		content: boxText,
-		disableAutoPan: false,
-		maxWidth: 0,
-		pixelOffset: new google.maps.Size(-140, 0),
-		zIndex: null,
-		boxStyle: {
-			background: 'url("tipbox.gif") no-repeat',
-			opacity: 0.75,
-			width: '280px'
-		},
-		closeBoxMargin: '10px 2px 2px 2px',
-		closeBoxURL: 'http://www.google.com/intl/en_us/mapfiles/close.gif',
-		infoBoxClearance: new google.maps.Size(1, 1),
-		isHidden: false,
-		pane: 'floatPane',
-		enableEventPropagation: false
-		},
-		ib = new InfoBox(myOptions);
+		content: info_markup,
+		alignBottom: true,
+		pixelOffset: new google.maps.Size(-75, -32),
+		infoBoxClearance: new google.maps.Size(5, 5)
+	},
+	ib = new InfoBox(myOptions);
 
-	google.maps.event.addListener(marker, 'click', function (e) {
-		ib.open(theMap, this);
+	ib.open(map, marker);
+	google.maps.event.addListener(marker, 'click', function() {
+		ib.open(map, marker);
 	});
-	ib.open(theMap, marker);
+	google.maps.event.addListener(map, 'click', function() {
+		ib.close();
+	});
 }
-
-

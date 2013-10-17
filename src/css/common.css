@@ -2357,6 +2357,129 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	overflow-y: scroll;
 }
 
+.gmap-info {
+	color: #000;
+	width: 378px;
+	background: url("../i/gmap-info.png") 0 100% no-repeat;
+	border-top: solid 1px #c3c3c3;
+	font: 12px 'Font1 Light';
+	padding: 17px 1px 82px 1px;
+	z-index: 2;
+	position: relative;
+}
+
+.gmap-info + .shadow {
+	position: absolute;
+	left: 12px;
+	bottom: 0;
+	content: '';
+	width: 429px;
+	height: 105px;
+	z-index: 1;
+	background: url("../i/gmap-info.png") 100% 100% no-repeat;
+}
+
+.gmap-info .location {
+	background: #f2f2f2;
+	color: #63605f;
+	padding: 2px 13px;
+	margin-bottom: 14px;
+}
+
+.gmap-info dl {
+	margin: 0;
+	padding: 0 13px 5px 13px;
+	border-bottom: solid 1px #e2dddd;
+}
+
+.gmap-info dt {
+	width: 80px;
+	float: left;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.gmap-info dt a {
+	color: #b2b2b2;
+	text-decoration: none;
+}
+
+.gmap-info dt a:hover {
+	text-decoration: underline;
+}
+
+.gmap-info dt img {
+	margin-bottom: 6px;
+	border-top: solid 5px #840000;
+}
+
+.gmap-info dd {
+	overflow: hidden;
+	margin: 0;
+}
+
+.gmap-info .type {
+	color: #999797;
+	font-size: 10px;
+	margin: 0;
+	float: none;
+	text-transform: uppercase;
+}
+
+.gmap-info h3 {
+	margin: 2px 0 18px 0;
+	font: normal 14px/1.2em 'Font1 Bold';
+}
+
+.gmap-info h3 a {
+	color: #840000;
+	text-decoration: none;
+}
+
+.gmap-info h3 a:hover {
+	text-decoration: underline;
+}
+
+.gmap-info .params {
+	margin: 10px 0 0 0;
+	overflow: hidden;
+}
+
+.gmap-info .params ul {
+	margin: 0;
+	padding: 0;
+	float: left;
+	max-width: 125px;
+	list-style: none;
+}
+
+.gmap-info .params ul:first-child + ul {
+	float: right;
+	width: 125px;
+}
+
+.gmap-info .params li {
+	margin: 0 0 8px 0;
+	padding-left: 20px;
+	position: relative;
+	list-style-image: none !important;
+}
+
+.gmap-info .params [class^="icon"] {
+	position: absolute;
+	margin: 0 0 0 -20px;
+}
+
+.gmap-info p {
+	margin-bottom: 8px;
+}
+
+.gmap-info .icon-close1 {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
 @import "buttons.css";
 
 @import "icons.css";

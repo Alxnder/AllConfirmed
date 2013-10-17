@@ -413,3 +413,12 @@ a:hover .icon-plus_small {
 	background-position: 0 -1376px;
 }
 
+.icon-close1 {
+	width: 18px;
+	height: 18px;
+	background-position: -50px -239px;
+}
+
+.icon-close1:hover {
+	background-position: -71px -239px ;
+}
