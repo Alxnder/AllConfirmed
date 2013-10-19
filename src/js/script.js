@@ -813,7 +813,8 @@ function insertTestMarker(map) {
 	var marker = new google.maps.Marker({
 			map: map,
 			position: new google.maps.LatLng(42.28493,-85.590487),
-			visible: true
+			visible: true,
+			icon: 'i/marker.png'
 		}),
 		info_markup = '\
 			<div class="gmap-info"> \
@@ -846,7 +847,7 @@ function insertTestMarker(map) {
 	var myOptions = {
 		content: info_markup,
 		alignBottom: true,
-		pixelOffset: new google.maps.Size(-75, -32),
+		pixelOffset: new google.maps.Size(-73, -42),
 		infoBoxClearance: new google.maps.Size(5, 5)
 	},
 	ib = new InfoBox(myOptions);
