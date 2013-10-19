@@ -17,6 +17,7 @@
 	datepicker();
 	tooltips();
 	popupPhoto();
+	showBigMap();
 });
 
 
@@ -731,4 +732,131 @@ function popupPhoto() {
 			$(this).tooltip('open');
 		});
 	}
+}
+
+/*
+* Fullscreen Google Maps block with current page's place (restaurant etc):
+* 1) Create container on the fly for big map, add necessary binds
+* 2) Load Google Maps API and Infobox plugin
+*
+*/
+function showBigMap() {
+	var body = $('body'),
+		button = $('.map-small .icon-viewmap'),
+		markup = $("<div class='bigmap'> \
+				<div class='bigmap-head'><div class='wrapper'> \
+					<div class='bigmap-logo'><i class='icon-logo_white'></i></div> \
+					<div class='bigmap-motto'>Reservations of restaurants and clubs</div> \
+					<div class='bigmap-close'><span>close map</span></div> \
+				</div></div> \
+				<div id='map_canvas' class='bigmap-content'></div> \
+			</div>"),
+		api_loaded = false,
+		bigmap, close_btn;
+
+	//Show big map container
+	button.click(function() {
+		body.addClass('body-fixed');
+
+		//1)
+		markup.appendTo(body);
+		bigmap = $('.bigmap');
+		close_btn = $('.bigmap-close');
+
+		close_btn.click(function() {
+			bigmap.remove();
+			body.removeClass('body-fixed');
+		});
+
+		bigmap.click(function(e) {
+			e.stopPropagation()
+		});
+
+		//Avoid redundant API loading
+		if (!api_loaded) {
+			api_loaded = true;
+			$.getScript('https://maps.googleapis.com/maps/api/js?v=3&sensor=false&callback=gmapsInit')
+		}
+
+		if (typeof google != 'undefined' && typeof google.maps != 'undefined') {
+			mapInit();
+		}
+
+
+		return false;
+	});
+}
+
+//2)
+function gmapsInit() {
+	$.getScript('js/libs/infobox_packed.js', function() {
+		mapInit();
+	});
+}
+
+
+function mapInit() {
+	var mapOptions = {
+			zoom: 15,
+			center: new google.maps.LatLng(42.28493,-85.590487),
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+
+	map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+	map.panTo(mapOptions.center);
+
+	insertTestMarker(map);
+}
+
+
+function insertTestMarker(map) {
+	var marker = new google.maps.Marker({
+			map: map,
+			position: new google.maps.LatLng(42.28493,-85.590487),
+			visible: true,
+			icon: 'i/marker.png'
+		}),
+		info_markup = '\
+			<div class="gmap-info"> \
+				<p class="location">2 East Wheelock Street Hanover, NH 03755 <i class="icon-pointer_small-red"></i></p>\
+				<dl> \
+					<dt> \
+						<img src="stubs/img13.jpg" /> <!--Example--> \
+						<div class="rating"><i class="icon-rating_wide-3_5"></i> (3.4)</div> \
+						<a href="">32 reviews</a> \
+					</dt> \
+					<dd> \
+						<p class="type">Restaurant, karaoke</p> \
+						<h3><a href="">Pine Restaurant - Hanover Inn Dartmouth</a></h3> \
+						<p><i class="icon-dish"></i> South American, International, Middle Eastern</p> \
+						<div class="params"> \
+							<ul> \
+								<li><i class="icon-usd"></i> $25 and under</li> \
+								<li><i class="icon-clock"></i> Business Lunch</li> \
+							</ul> \
+							<ul> \
+								<li><i class="icon-wifi"></i> Wi-Fi</li> \
+								<li><i class="icon-nursery"></i> Nursery Room</li> \
+							</ul> \
+						</div> \
+					</dd> \
+				</dl> \
+			</div><div class="shadow"></div>';
+
+	//InfoBox reference: http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/docs/reference.html
+	var myOptions = {
+		content: info_markup,
+		alignBottom: true,
+		pixelOffset: new google.maps.Size(-73, -42),
+		infoBoxClearance: new google.maps.Size(5, 5)
+	},
+	ib = new InfoBox(myOptions);
+
+	ib.open(map, marker);
+	google.maps.event.addListener(marker, 'click', function() {
+		ib.open(map, marker);
+	});
+	google.maps.event.addListener(map, 'click', function() {
+		ib.close();
+	});
 }

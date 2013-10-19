@@ -2351,6 +2351,7 @@ ul.faq li:first-child {
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	cursor: pointer;
 }
 
 .tabs {
@@ -3350,6 +3351,223 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	color: inherit !important;
 }
 
+.bigmap {
+	position: fixed;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.bigmap-head {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	color: #fff;
+	height: 56px;
+	background: url("../i/sprite1.png") 50% 0 repeat-y;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.bigmap-head .wrapper {
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.bigmap-logo {
+	position: absolute;
+	top: 7px;
+	left: 0;
+}
+
+.bigmap-motto {
+	color: #fff;
+	width: 500px;
+	position: absolute;
+	left: 235px;
+	top: 0;
+	padding-top: 13px;
+	height: 43px;
+	font: 24px 'Font1 ExtraLight';
+}
+
+.bigmap-motto:after {
+	width: 147px;
+	height: 40px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	content: '';
+	background: url("../i/sprites.png") 0 -1423px no-repeat;
+}
+
+.bigmap-close {
+	position: absolute;
+	right: 0;
+	top: 10px;
+	cursor: pointer;
+}
+
+.bigmap-close:before {
+	position: absolute;
+	content: '';
+	left: -26px;
+	top: 11px;
+	width: 14px;
+	height: 12px;
+	background: url("../i/sprites.png") 0 -1470px no-repeat;
+}
+
+.bigmap-close span {
+	font: 23px Lobster;
+	text-shadow: 1px 1px 0 rgba(0,0,0,0.4);
+	border-bottom: dashed 1px;
+}
+
+.bigmap-content {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 56px;
+	bottom: 0;
+	background: #b0b0b0 url("../i/maptile.png");
+}
+
+.body-fixed {
+	overflow: hidden;
+}
+
+.body-fixed .bigmap {
+	overflow-y: scroll;
+}
+
+.gmap-info {
+	color: #000;
+	width: 378px;
+	background: url("../i/gmap-info.png") 0 100% no-repeat;
+	border-top: solid 1px #c3c3c3;
+	font: 12px 'Font1 Light';
+	padding: 17px 1px 82px 1px;
+	z-index: 2;
+	position: relative;
+}
+
+.gmap-info + .shadow {
+	position: absolute;
+	left: 12px;
+	bottom: 0;
+	content: '';
+	width: 429px;
+	height: 105px;
+	z-index: 1;
+	background: url("../i/gmap-info.png") 100% 100% no-repeat;
+}
+
+.gmap-info .location {
+	background: #f2f2f2;
+	color: #63605f;
+	padding: 2px 13px;
+	margin-bottom: 14px;
+}
+
+.gmap-info dl {
+	margin: 0;
+	padding: 0 13px 5px 13px;
+	border-bottom: solid 1px #e2dddd;
+}
+
+.gmap-info dt {
+	width: 80px;
+	float: left;
+	margin-right: 10px;
+	text-align: center;
+}
+
+.gmap-info dt a {
+	color: #b2b2b2;
+	text-decoration: none;
+}
+
+.gmap-info dt a:hover {
+	text-decoration: underline;
+}
+
+.gmap-info dt img {
+	margin-bottom: 6px;
+	border-top: solid 5px #840000;
+}
+
+.gmap-info dd {
+	overflow: hidden;
+	margin: 0;
+}
+
+.gmap-info .type {
+	color: #999797;
+	font-size: 10px;
+	margin: 0;
+	float: none;
+	text-transform: uppercase;
+}
+
+.gmap-info h3 {
+	margin: 2px 0 18px 0;
+	font: normal 14px/1.2em 'Font1 Bold';
+}
+
+.gmap-info h3 a {
+	color: #840000;
+	text-decoration: none;
+}
+
+.gmap-info h3 a:hover {
+	text-decoration: underline;
+}
+
+.gmap-info .params {
+	margin: 10px 0 0 0;
+	overflow: hidden;
+}
+
+.gmap-info .params ul {
+	margin: 0;
+	padding: 0;
+	float: left;
+	max-width: 125px;
+	list-style: none;
+}
+
+.gmap-info .params ul:first-child + ul {
+	float: right;
+	width: 125px;
+}
+
+.gmap-info .params li {
+	margin: 0 0 8px 0;
+	padding-left: 20px;
+	position: relative;
+	list-style-image: none !important;
+}
+
+.gmap-info .params [class^="icon"] {
+	position: absolute;
+	margin: 0 0 0 -20px;
+}
+
+.gmap-info p {
+	margin-bottom: 8px;
+}
+
+.gmap-info .icon-close1 {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
 .btn {
 	height: 38px;
 	padding: 0 13px;
@@ -3870,6 +4088,21 @@ a:hover .icon-plus_small {
 	background-position: 0 -1316px;
 }
 
+.icon-logo_white {
+	width: 139px;
+	height: 45px;
+	background-position: 0 -1376px;
+}
+
+.icon-close1 {
+	width: 18px;
+	height: 18px;
+	background-position: -50px -239px;
+}
+
+.icon-close1:hover {
+	background-position: -71px -239px ;
+}
 
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -4623,30 +4856,6 @@ p.ticket-location {
 
 .ticket-free p.ticket-location {
 	margin-bottom: 25px;
-}
-
-/* Большие мониторы */
-@media (min-width: 1200px) {
-
-}
-
-/* Планшеты и десктопы */
-@media (min-width: 768px) and (max-width: 979px) {
-
-}
-
-/* От панорамного телефона до портретного планшета */
-@media (max-width: 767px) {
-
-}
-
-/* Панорамный телефон и меньше */
-@media (max-width: 480px) {
-
-}
-
-@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-	/* Устройства с высоким разрешением */
 }
 
 /*
