@@ -1,0 +1,144 @@
+.body-admin .header {
+	margin-bottom: 0;
+}
+
+.body-admin .top-bar {
+	border-bottom: solid 7px #fff;
+	background: url("../i/sprite7.png");
+}
+
+.body-admin .top-bar .wrapper {
+	padding: 7px 0 4px 0;
+	position: relative;
+}
+
+.body-admin .top-bar .wrapper:after {
+	background: url("../i/sprites.png") no-repeat scroll 0 -1423px rgba(0, 0, 0, 0);
+	bottom: 0;
+	content: "";
+	height: 40px;
+	position: absolute;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	width: 147px;
+}
+
+.body-admin_green .container {
+	background: url("../i/sprite7.png");
+}
+
+.administration {
+	margin: 50px 0 47px 0;
+	font-size: 0;
+}
+
+.admin-block {
+	width: 183px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.administration .admin-block {
+	margin-left: 14px;
+}
+
+.administration .admin-block:first-child {
+	margin-left: 0;
+}
+
+.admin-block h4 {
+	color: #fff;
+	margin: -30px 0 0 0;
+	width: 183px;
+	position: absolute;
+	text-align: center;
+	font: normal 36px/36px 'Font1 Bold';
+	text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.admin-block > div {
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	background: #fff;
+	height: 385px;
+	box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.admin-block ul {
+	margin: 0 0 160px 0;
+	text-align: left;
+	padding: 34px 0 0 0;
+	list-style: none;
+	font: 16px 'Font1 Light';
+}
+
+.admin-block ul li {
+	margin: 0;
+	padding: 0;
+	list-style-image: none !important;
+}
+
+.admin-block li:first-child {
+	border-top: solid 1px #e5e5e5;
+}
+
+.admin-block ul a {
+	display: block;
+	border-bottom: solid 1px #e5e5e5;
+	padding: 7px 5px 7px 22px;
+	text-decoration: none;
+	color: #000;
+}
+
+.admin-block [class^="icon"] {
+	position: absolute;
+	bottom: 28px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+.body-admin_green .admin-block ul a:hover {
+	color: #fff;
+	background: #7f9d14 url("../i/sprites-x.png") 0 -800px repeat-x;
+}
+
+.user-bar {
+	float: right;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.user-bar > * {
+	padding: 0 6px;
+	margin-left: 16px;
+	display: inline-block;
+	text-decoration: none;
+	position: relative;
+}
+
+.user-bar > *:after {
+	content: '|';
+	color: #fff;
+	position: absolute;
+	left: -11px;
+}
+
+.user-bar > *:first-child:after {
+	display: none;
+}
+
+.body-admin_green .name, .body-admin_green .user-bar a:hover {
+	background: #8ca72c;
+}
+
+.user-bar a span {
+	color: #fff;
+	border-bottom: dashed 1px;
+}
+
+.user-bar a:hover span {
+	border: 0;
+}

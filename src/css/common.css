@@ -1057,6 +1057,10 @@ ul.blogposts {
 	font: 18px/.9em 'Font1 Light';
 }
 
+.text-style4 {
+	font: 14px/1.6em 'Font1 Light';
+}
+
 .block1 {
 	overflow: hidden;
 	margin: 27px 0 20px 0;
@@ -2077,6 +2081,10 @@ h2 + .grey-block {
 
 .-black, .-black:visited {
 	color: #000 !important;
+}
+
+.-white {
+	color: #fff;
 }
 
 .table-style1 {

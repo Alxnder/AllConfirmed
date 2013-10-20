@@ -90,6 +90,21 @@
 	padding: 0 18px;
 }
 
+.btn.-huge {
+	height: 82px;
+	font-size: 36px;
+	line-height: 82px;
+	padding: 0 45px;
+}
+
+.btn.-yellow.-huge {
+	background-position: 0 -900px;
+}
+
+.btn.-yellow.-huge:hover {
+	background-position: 0 -1000px;
+}
+
 .btn.-wide {
 	padding-left: 25px;
 	padding-right: 25px;

@@ -29,6 +29,12 @@
 	background-position: 0 -56px;
 }
 
+.icon-key_white {
+	width: 17px;
+	height: 17px;
+	background-position: -22px -56px;
+}
+
 .icon-pointer_small-red {
 	width: 10px;
 	height: 15px;
@@ -421,4 +427,34 @@ a:hover .icon-plus_small {
 
 .icon-close1:hover {
 	background-position: -71px -239px ;
+}
+
+.icon-pencil {
+	width: 93px;
+	height: 94px;
+	background: url("../i/sprites1.png");
+}
+
+.icon-dish1 {
+	width: 130px;
+	height: 89px;
+	background: url("../i/sprites1.png") 0 -94px;
+}
+
+.icon-badge {
+	width: 103px;
+	height: 93px;
+	background: url("../i/sprites1.png") 0 -188px;
+}
+
+.icon-case {
+	width: 99px;
+	height: 86px;
+	background: url("../i/sprites1.png") 0 -284px;
+}
+
+.icon-lightbulb {
+	width: 70px;
+	height: 106px;
+	background: url("../i/sprites1.png") 0 -373px;
 }

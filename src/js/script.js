@@ -18,6 +18,7 @@
 	tooltips();
 	popupPhoto();
 	showBigMap();
+	inheritHeight();
 });
 
 

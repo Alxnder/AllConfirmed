@@ -2145,6 +2145,10 @@ ul.blogposts {
 	font: 18px/.9em 'Font1 Light';
 }
 
+.text-style4 {
+	font: 14px/1.6em 'Font1 Light';
+}
+
 .block1 {
 	overflow: hidden;
 	margin: 27px 0 20px 0;
@@ -3167,6 +3171,10 @@ h2 + .grey-block {
 	color: #000 !important;
 }
 
+.-white {
+	color: #fff;
+}
+
 .table-style1 {
 	margin: 2.5em 0;
 	width: 100%;
@@ -3660,6 +3668,21 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	padding: 0 18px;
 }
 
+.btn.-huge {
+	height: 82px;
+	font-size: 36px;
+	line-height: 82px;
+	padding: 0 45px;
+}
+
+.btn.-yellow.-huge {
+	background-position: 0 -900px;
+}
+
+.btn.-yellow.-huge:hover {
+	background-position: 0 -1000px;
+}
+
 .btn.-wide {
 	padding-left: 25px;
 	padding-right: 25px;
@@ -3708,6 +3731,12 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	width: 17px;
 	height: 17px;
 	background-position: 0 -56px;
+}
+
+.icon-key_white {
+	width: 17px;
+	height: 17px;
+	background-position: -22px -56px;
 }
 
 .icon-pointer_small-red {
@@ -4104,6 +4133,35 @@ a:hover .icon-plus_small {
 	background-position: -71px -239px ;
 }
 
+.icon-pencil {
+	width: 93px;
+	height: 94px;
+	background: url("../i/sprites1.png");
+}
+
+.icon-dish1 {
+	width: 130px;
+	height: 89px;
+	background: url("../i/sprites1.png") 0 -94px;
+}
+
+.icon-badge {
+	width: 103px;
+	height: 93px;
+	background: url("../i/sprites1.png") 0 -188px;
+}
+
+.icon-case {
+	width: 99px;
+	height: 86px;
+	background: url("../i/sprites1.png") 0 -284px;
+}
+
+.icon-lightbulb {
+	width: 70px;
+	height: 106px;
+	background: url("../i/sprites1.png") 0 -373px;
+}
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
