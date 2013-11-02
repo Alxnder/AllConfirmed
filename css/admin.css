@@ -1,8 +1,11 @@
 .body-admin .header {
-	margin-bottom: 0;
+	margin-bottom: 20px;
+	padding-bottom: 12px;
+	border-bottom: solid 1px #ccc;
 }
 
 .body-admin .top-bar {
+	margin-bottom: 4px;
 	border-bottom: solid 7px #fff;
 	background: url("../i/sprite7.png");
 }
@@ -24,12 +27,12 @@
 	width: 147px;
 }
 
-.body-admin_green .container {
+.body-admin_mainpage.body-admin_green .container {
 	background: url("../i/sprite7.png");
 }
 
 .administration {
-	margin: 50px 0 47px 0;
+	margin: 83px 0 47px 0;
 	font-size: 0;
 }
 
@@ -141,4 +144,72 @@
 
 .user-bar a:hover span {
 	border: 0;
+}
+
+.body-admin .nav-bar {
+	background: #e5e5e5;
+	height: 40px;
+}
+
+.body-admin .nav-bar .wrapper {
+	height: inherit;
+}
+
+.body-admin .nav-bar .wrapper > * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.body-admin nav.primary {
+	width: 700px;
+	margin: 0;
+	background: #7f7f7f;
+	vertical-align: top;
+	height: inherit;
+	padding-top: 7px;
+	border-right: solid 1px #fff;
+}
+
+.body-admin nav.primary > ul > li > a,
+.body-admin nav.primary > ul > li > div {
+	padding: 2px 18px 9px 18px;
+}
+
+.body-admin nav.primary > ul ul {
+	background: #7f7f7f;
+}
+
+.body-admin_green nav.primary > ul > li > a:hover,
+.body-admin_green nav.primary > ul > li > .active  {
+	color: #dcf15a;
+}
+
+.body-admin_green nav.primary > ul > li > a:hover .icon-,
+.body-admin_green nav.primary > ul > li > .active .icon- {
+	background-position: -36px -220px;
+}
+
+nav.primary > ul ul a:hover {
+	color: #dcf15a;
+}
+
+.account_clients-data {
+	width: 272px;
+	padding: 8px 0 0 26px;
+	vertical-align: top;
+	height: inherit;
+	float: right;
+}
+
+.account_clients-data > * {
+	display: inline-block;
+}
+
+.account_clients-data > *:first-child {
+	margin-right: 38px;
+}
+
+.account_clients-data a {
+	color: #000;
 }

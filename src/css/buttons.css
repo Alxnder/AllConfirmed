@@ -9,6 +9,7 @@
 	vertical-align: middle;
 	cursor: default;
 	border: 0;
+	overflow: hidden;
 	background: url("../i/sprites-x.png") 0 0 repeat-x;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;

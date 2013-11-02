@@ -454,9 +454,7 @@ nav.primary > ul ul a {
 	color: #fff;
 	display: block;
 	text-decoration: none;
-	border: solid 1px #791817;
-	border-radius: .3em;
-	padding: 2px 6px;
+	padding: 3px 7px;
 }
 
 nav.primary > ul ul a:hover {
@@ -581,16 +579,11 @@ nav.secondary div .icon-plus_small {
 }
 
 .search-box .cb {
-	color: #6d6d6d;
 	padding: 5px 8px 7px 30px;
 	background: url("../i/white_alpha40.png");
 	display: block;
 	min-width: 70px;
 	font: 14px arial, helvetica cy, helvetica, sans-serif;
-}
-
-.search-box .cb.-active {
-	color: #000;
 }
 
 .search-box input[type="text"] {
@@ -1059,6 +1052,13 @@ ul.blogposts {
 
 .text-style4 {
 	font: 14px/1.6em 'Font1 Light';
+}
+
+.text-style5 {
+	color: #000 !important;
+	text-decoration: none;
+	border-bottom: dashed 1px;
+	font: 18px/1.6em 'Font1 Medium';
 }
 
 .block1 {

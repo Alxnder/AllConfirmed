@@ -1,4 +1,4 @@
-.top-bar .wrapper, .logo-bar, [class^="layout"], .footer .cols-wrapper {
+.top-bar .wrapper, .nav-bar .wrapper, .logo-bar, [class^="layout"], .footer .cols-wrapper {
 	width: 980px;
 	margin: 0 auto;
 }

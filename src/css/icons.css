@@ -102,7 +102,7 @@ a:hover .icon-plus_small {
 .icon-cb {
 	 width: 15px;
 	 height: 14px;
-	 background-position: -1000px -283px;
+	 background-position: -2000px -283px;
 	 background-color: #fff;
 	 box-shadow: 1px 1px 0 rgba(0,0,0,.2);
  }
@@ -112,6 +112,24 @@ a:hover .icon-plus_small {
 }
 
 .cb:active .icon-cb {
+	background-color: #ccc;
+}
+
+.icon-rd {
+	width: 14px;
+	height: 14px;
+	background-position: -2000px -283px;
+	background-color: #fff;
+	border: solid 1px #aaa;
+	box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+	border-radius: 50%;
+}
+
+.rd.-active .icon-rd {
+	background-position: -18px -283px;
+}
+
+.rd:active .icon-rd {
 	background-color: #ccc;
 }
 

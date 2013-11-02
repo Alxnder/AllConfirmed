@@ -101,3 +101,28 @@
 	font: 19px 'Font1 Light';
 	padding: 5px 25px 5px 14px;
 }
+
+.select1 .ui-selectmenu {
+	border: 0;
+	height: auto;
+	background: url("../i/border4.png") 0 100% repeat-x;
+}
+
+.select1 .ui-selectmenu.ui-state-active {
+	box-shadow: none;
+}
+
+.select1 .ui-selectmenu .ui-icon {
+	width: 8px;
+	height: 6px;
+	right: 7px;
+	top: 8px;
+	background: url("../i/sprites.png") -12px -209px;
+}
+
+.select1 .ui-selectmenu-status {
+	color: #373737;
+	padding: 0;
+	margin-right: 20px;
+	font: 15px/1.4em 'Font1 Medium';
+}

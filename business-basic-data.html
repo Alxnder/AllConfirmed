@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/admin.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
+	<!--[if lt IE 9]><script src="js/libs/libs.ltie9.js"></script><![endif]-->
+	<title></title>
+</head>
+<body class="body-admin body-admin_green">
+	<!--Контейнер-->
+	<div class="container">
+		<!--Шапка-->
+		<header class="header">
+			<div class="top-bar">
+				<div class="wrapper">
+					<a href=""><i class="icon-logo_white"></i></a>
+
+					<div class="user-bar">
+						<div class="name"><i class="icon-key_white"></i> Pine Restaurant Aplle New York</div>
+						<a href=""><span>Exit</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav-bar">
+				<div class="wrapper">
+					<nav class="primary">
+						<ul>
+							<li>
+								<a href="">Businesses</a>
+								<ul>
+									<a href="">Item 1</a>
+									<a href="">Item 2</a>
+									<a href="">Item 3</a>
+									<a href="">Item 4</a>
+									<a href="">Item 5</a>
+								</ul>
+							</li>
+							<li>
+								<a href="">Account</a>
+								<ul>
+									<a href="">Item 1</a>
+									<a href="">Item 2</a>
+									<a href="">Item 3</a>
+									<a href="">Item 4</a>
+									<a href="">Item 5</a>
+								</ul>
+							</li>
+							<li>
+								<a href="">Legal</a>
+								<ul>
+									<a href="">Item 1</a>
+									<a href="">Item 2</a>
+									<a href="">Item 3</a>
+									<a href="">Item 4</a>
+									<a href="">Item 5</a>
+								</ul>
+							</li>
+							<li><a href="">How it works</a></li>
+						</ul>
+					</nav>
+
+					<div class="account_clients-data">
+						<div><a href="">Reviews (0)</a></div>
+						<div>Orders: (20) <a href="" class="-green">12 new</a></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--//Шапка. Сетка в одну колонку-->
+		<div class="layout-onecol">
+			<!--Основной контент-->
+			<section class="content">
+				<h1>Basic data</h1>
+
+				<form class="form form-basicdata -fullwidth">
+					<h6><div>Business</div></h6>
+
+					<dl><dt>Business name</dt><dd><input type="text"></dd></dl>
+
+					<h6><div>Address</div></h6>
+
+					<div class="clearfix">
+						<div class="fl form-basicdata_address">
+							<dl><dt>Address</dt><dd><input type="text"></dd></dl>
+							<dl><dt>City</dt><dd><input type="text" style="width:200px"></dd></dl>
+							<dl><dt>State</dt><dd><input type="text" style="width:200px"></dd></dl>
+							<dl><dt>Zip</dt><dd><input type="text" style="width:115px"></dd></dl>
+						</div>
+						<div class="fr" style="width:400px;border:solid 1px #b9b9b9">
+							<iframe width="400" scrolling="no" height="190" frameborder="0" src="https://maps.google.com/?ie=UTF8&amp;ll=40.764041,-73.961289&amp;spn=0.001711,0.004128&amp;t=m&amp;z=19&amp;output=embed" marginwidth="0" marginheight="0"></iframe>
+						</div>
+					</div>
+
+					<h6><div>Contacts</div></h6>
+
+					<div class="col">
+						<dl><dt>Phone number</dt><dd><input type="text" value="+1___-___-____" class="field-phone"></dd></dl></div>
+
+					<div class="col">
+						<dl><dt>Website</dt><dd><input type="text" data-placeholder="http://" style="width:350px"></dd></dl>
+					</div>
+
+					<h6><div>Operation days and time</div></h6>
+
+					<dl>
+						<dt></dt>
+						<dd>
+							<div class="checkboxes-style1">
+								<label><input type="checkbox" checked>Monday</label>
+								<label><input type="checkbox" checked>Tuesday</label>
+								<label><input type="checkbox" checked>Wednesday</label>
+								<label><input type="checkbox" checked>Thursday</label>
+								<label><input type="checkbox" checked>Friday</label>
+								<label class="-red"><input type="checkbox" checked>Saturday</label>
+								<label class="-red"><input type="checkbox" checked>Sunday</label>
+							</div>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>From</dt>
+						<dd>
+							<select><option>00:00 AM</option></select>
+
+							<span style="margin: 0 10px 0 40px">Till</span>
+							<select><option>00:00 AM</option></select>
+						</dd>
+					</dl>
+
+					<h6><div>Features</div></h6>
+
+					<dl class="form-basicdata_features">
+						<dt>Type of business</dt>
+						<dd>
+							<div class="ib">
+								<select class="select1"><option>Night Club</option><option>Restaurant</option></select>
+							</div>
+
+							<div class="ib ar" style="width:100px">Type of cuisine</div>
+							<div class="ib">
+								<div class="multiselect" data-rel="mcl1">
+									<div>Choose</div>
+									<ul>
+										<li><label id="mcl1_1"><input type="checkbox" checked>African</label></li>
+										<li><label id="mcl1_2"><input type="checkbox">Continental</label></li>
+										<li><label id="mcl1_3"><input type="checkbox">Russian</label></li>
+										<li><label id="mcl1_4"><input type="checkbox" checked>Laplandian</label></li>
+										<li><label id="mcl1_5"><input type="checkbox" checked>Mediterranean</label></li>
+										<li><label id="mcl1_6"><input type="checkbox" checked>etc</label></li>
+									</ul>
+								</div>
+							</div>
+							<div class="multiselect-checked-list" id="mcl1" style="width:400px;"></div>
+					</dl>
+
+					<dl class="form-basicdata_features">
+						<dt>Average check</dt>
+						<dd>
+							<div class="ib">
+								<select class="select1">
+									<option>$25 and under</option>
+									<option>$26 to $60</option>
+									<option>$61 and over</option>
+								</select>
+							</div>
+
+							<div class="ib ar" style="width:100px">Music style</div>
+							<div class="ib">
+								<div class="multiselect" data-rel="mcl2">
+									<div>Choose</div>
+									<ul>
+										<li><label id="mcl2_1"><input type="checkbox" checked>Reggae</label></li>
+										<li><label id="mcl2_2"><input type="checkbox">Rock</label></li>
+										<li><label id="mcl2_3"><input type="checkbox">R & B</label></li>
+										<li><label id="mcl2_4"><input type="checkbox" checked>Jazz</label></li>
+										<li><label id="mcl2_5"><input type="checkbox">Disco</label></li>
+										<li><label id="mcl2_6"><input type="checkbox" checked>etc</label></li>
+									</ul>
+								</div>
+							</div>
+							<div class="multiselect-checked-list" id="mcl2" style="width:400px;"></div>
+						</dd>
+					</dl>
+
+					<br>
+
+					<dl>
+						<dt><label><input type="checkbox" />Public transit details</label></dt>
+						<dd><textarea></textarea></dd>
+					</dl>
+
+					<dl>
+						<dt>Parking info</dt>
+						<dd>
+							<div class="radios-style1">
+								<label><input type="radio" name="rad1" />Just street parking</label>
+								<label><input type="radio" name="rad1" checked />Parking details</label>
+							</div>
+							<textarea></textarea>
+						</dd>
+					</dl>
+
+					<br><br>
+
+					<dl>
+						<dt><label><input type="checkbox" />Dress code details</label></dt>
+						<dd><textarea></textarea></dd>
+					</dl>
+
+					<dl>
+						<dt></dt>
+						<dd>
+							<div class="checkboxes-style2">
+								<label><input type="checkbox" checked />Breakfast</label>
+								<label><input type="checkbox" />Business Lunch</label>
+								<label><input type="checkbox" />To Go/Self Pickup</label>
+								<label><input type="checkbox" />Food delivery</label>
+								<br>
+								<label><input type="checkbox" />WiFi Free</label>
+								<label><input type="checkbox" />Nursery room</label>
+							</div>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>Сards accepted</dt>
+						<dd class="checkboxes-style3">
+							<label><input type="checkbox" checked /><img src="i/visa-medium.png" alt="VISA" /></label>
+							<label><input type="checkbox" checked /><img src="i/mastercard-medium.png" alt="MasterCard" /></label>
+							<label><input type="checkbox" checked /><img src="i/amex-medium.png" alt="American Express" /></label>
+							<label><input type="checkbox" checked /><img src="i/discover-medium.png" alt="Discover" /></label>
+						</dd>
+					</dl>
+
+					<h6><div>Description and Photo</div></h6>
+
+					<dl class="form-basicdata_description">
+						<dt>About<br>business</dt>
+						<dd>
+							<textarea></textarea>
+							<div class="col ar" style="width:105px">Upload a picture<br>for a ticket<br>(optional)</div>
+							<div class="col form-basicdata_photo">
+								<div class="photo-placeholder"></div>
+								<p class="note">(217x145px) Larger image will be cropped</p>
+
+								<p><input type="file" data-text="Upload photo" data-css="btn -yellow -small" /></p>
+							</div>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt></dt>
+						<dd>
+							<p><a href="" class="text-style5">SEO data</a></p>
+							<p>If you are not sure what to put in meta description or meta keywords, then please leave it empty.</p>
+						</dd>
+					</dl>
+
+					<dl>
+						<dt>
+							Meta description
+							<p class="note ar">255 symbols max</p>
+						</dt>
+						<dd><textarea></textarea></dd>
+					</dl>
+
+					<dl>
+						<dt>
+							Meta keywords
+							<p class="note ar">255 symbols max</p>
+						</dt>
+						<dd><textarea></textarea></dd>
+					</dl>
+
+					<dl>
+						<dt></dt>
+						<dd>
+							<div class="buttons ar">
+								<input type="button" value="Save changes" class="btn -red">
+								<input type="button" value="Cancel" class="btn -grey">
+							</div>
+						</dd>
+					</dl>
+				</form>
+			</section>
+			<!--//Контент-->
+		</div>
+		<!--//Сетка в одну колонку-->
+	</div>
+	<!--//Контейнер-->
+
+	<script src="js/libs/libs.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

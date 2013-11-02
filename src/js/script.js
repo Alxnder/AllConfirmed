@@ -5,7 +5,7 @@
 	selects();
 	dropdowns();
 	customSelects();
-	stylizeCheckbox();
+	stylizeForms();
 	setLocation();
 	openWindow();
 	openAjaxWindow();
@@ -18,7 +18,7 @@
 	tooltips();
 	popupPhoto();
 	showBigMap();
-	inheritHeight();
+	multiselect();
 });
 
 
@@ -346,12 +346,14 @@ function dropdowns() {
 }
 
 
-function stylizeCheckbox() {
-	var cb = $('label input[type="checkbox"]');
+function stylizeForms() {
+	var cb = $('label :checkbox'),
+		rd = $('label :radio'),
+		input_file = $(':file');
 
+	//Checkboxes
 	cb.parent().addClass('cb');
-
-	cb.addClass('cb').each(function() {
+	cb.each(function() {
 		var $this = $(this);
 
 		$this.before('<i class="icon-cb"></i>');
@@ -369,6 +371,62 @@ function stylizeCheckbox() {
 			$this.parent().addClass('-active');
 		} else {
 			$this.parent().removeClass('-active');
+		}
+	})
+	.change(function() {
+		var $this = $(this);
+
+		if ($this.prop('checked')) {
+			$this.parent().addClass('-active');
+		} else {
+			$this.parent().removeClass('-active');
+		}
+	});
+
+	//Radios
+	var radios;
+	rd.parent().addClass('rd');
+	rd.each(function() {
+		var $this = $(this);
+
+		$this.before('<i class="icon-rd"></i>');
+		if ($this.prop('checked')) {
+			$this.parent().addClass('-active');
+		} else {
+			$this.parent().removeClass('-active');
+		}
+	})
+	.click(function() {
+		var $this = $(this);
+
+		radios = $('body').find($('[name=' + $this.attr('name') + ']'));
+		if ($this.prop('checked')) {
+			radios.not($this).each(function() {
+				$(this).parent().removeClass('-active');
+			});
+			$this.parent().addClass('-active');
+		}
+		radios = '';
+	});
+
+	input_file.each(function() {
+		var this_ = $(this);
+
+		if (this_.length) {
+			var wrapper = this_.wrap('<div class="fileinput" tabindex="0"></div>').closest('.fileinput'),
+				button = wrapper.prepend('<div data-btn />').find('[data-btn]');
+
+			button
+				.text(this_.data('text'))
+				.addClass(this_.data('css'));
+
+			this_
+				.appendTo(button)
+				.prop({
+					'tabindex': '-1',
+					'id': this_.prop('id'),
+					'name': this_.prop('name')
+				})
 		}
 	})
 }
@@ -523,7 +581,7 @@ function openAjaxWindow() {
 						$('#fancyboxAjaxContent').removeClass('visuallyhidden');
 					},
 					afterLoad: function() {
-						stylizeCheckbox();
+						stylizeForms();
 						customSelects();
 						datepicker();
 						scrollpane();
@@ -656,8 +714,11 @@ function customSelects() {
 
 	$('.resvn-filter select').each(function() {
 		$(this).selectmenu('widget').addClass('select-big')
-	})
+	});
 
+	$('.select1').each(function() {
+		$(this).selectmenu('widget').addClass('select1')
+	});
 }
 
 
@@ -860,4 +921,66 @@ function insertTestMarker(map) {
 	google.maps.event.addListener(map, 'click', function() {
 		ib.close();
 	});
+}
+
+
+function multiselect() {
+	var select = $('.multiselect');
+
+	select.each(function() {
+		var $this = $(this),
+			list = $this.find('ul'),
+			checked_list =  $('#' + $this.data('rel'));
+
+		//Toggle dropdown list with checkboxes
+		$this.click(function(e) {
+			if (!list.is(':visible')) {
+				list.fadeIn(50);
+			} else {
+				list.fadeOut(100)
+			}
+			list.css('minWidth', $this.outerWidth());
+			e.stopPropagation();
+		});
+
+		//Stop accidentally hide
+		checked_list.click(function(e) {
+			e.stopPropagation();
+		});
+		$(document).not().click(function() {
+			select.find('ul').fadeOut(100);
+		});
+
+		//On load fill related container with checked items
+		$this.find('input:checked').each(function() {
+			checked_list.append('<div data-rel="' + $(this).parent().prop('id') + '">' + $(this).parent().text() + '</div');
+		});
+
+		//Click event
+		$this.find('label').click(function(e) {
+			var label = $(this);
+
+			if (label.find('input').is(':checked')) {
+				checked_list.append('<div data-rel="' + label.prop('id') + '">' + label.text() + '</div');
+			} else if (label.find('input').not(':checked')) {
+				checked_list.find('[data-rel="' + label.prop('id') + '"]').remove();
+			}
+
+			e.stopPropagation();
+		});
+
+		//Remove from list and uncheck related checkbox
+		checked_list.each(function() {
+			$(this).on('click', 'div', function() {
+				var $this = $(this);
+
+				$('#' + $this.data("rel"))
+					.removeClass('-active')
+					.change()
+					.find('input').removeAttr("checked");
+
+				$this.remove();
+			})
+		});
+	})
 }
