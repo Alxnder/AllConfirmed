@@ -19,6 +19,7 @@
 	popupPhoto();
 	showBigMap();
 	multiselect();
+	toggleBlock();
 });
 
 
@@ -665,7 +666,6 @@ function faq() {
 			par.find('.a').slideDown(100);
 		}
 	})
-
 }
 
 
@@ -982,5 +982,17 @@ function multiselect() {
 				$this.remove();
 			})
 		});
+	})
+}
+
+
+function toggleBlock() {
+	$('[data-toggle]').click(function() {
+		var $this = $(this),
+			target = $('#' + $this.data('toggle'));
+
+		target.slideToggle(100);
+
+		return false;
 	})
 }

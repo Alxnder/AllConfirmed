@@ -87,15 +87,31 @@
 
 					<div class="clearfix">
 						<div class="fl form-basicdata_address">
-							<dl><dt>Address</dt><dd><input type="text"></dd></dl>
-							<dl><dt>City</dt><dd><input type="text" style="width:200px"></dd></dl>
-							<dl><dt>State</dt><dd><input type="text" style="width:200px"></dd></dl>
+							<dl><dt>State</dt><dd><input type="text" id="state" style="width:200px"></dd></dl>
+							<dl><dt>City</dt><dd><input type="text" id="city" style="width:200px"></dd></dl>
+							<dl><dt>Address</dt><dd><input type="text" id="address"></dd></dl>
 							<dl><dt>Zip</dt><dd><input type="text" style="width:115px"></dd></dl>
 						</div>
 						<div class="fr" style="width:400px;border:solid 1px #b9b9b9">
 							<iframe width="400" scrolling="no" height="190" frameborder="0" src="https://maps.google.com/?ie=UTF8&amp;ll=40.764041,-73.961289&amp;spn=0.001711,0.004128&amp;t=m&amp;z=19&amp;output=embed" marginwidth="0" marginheight="0"></iframe>
 						</div>
 					</div>
+
+					<!--Предполагается использование jQuery UI Autocomplete. Здесь просто пример зависимости списков-->
+					<script>
+						$(function() {
+							var states = [ 'Idaho', 'Iowa', 'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'Wyoming', 'Washington', 'Washington DC', 'Wermont', 'Virginia', 'Wisconsin', 'Hawaii', 'Delaware', 'Georgia', 'West Wirginia', 'Illinois', 'Indiana', 'California', 'Kansas', 'Kentucky', 'Colorado', 'Connecticut', 'Louisiana', 'Louisiana', 'Minnesota', 'Mississippi', 'Missouri', 'Michigan', 'Montana', 'Maine', 'Maryland', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New York', 'New Mexico', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'North Dakota', 'North Carolina', 'Tennessee', 'Texas', 'South Dakota', 'South Carolina', 'Utah' ],
+								ajax_loaded_cities = [ 'New York', 'Newark', 'Elizabeth', 'Paterson', 'New Brunswick', 'Flaners', 'Easton', 'Bethlehem', 'Stroudsburg', 'Parsippany', 'Yonkers', 'MIddletown' ];
+
+							$( "#state" ).autocomplete({
+								source: states
+							}).blur(function() {
+								$( "#city" ).autocomplete({
+									source: ajax_loaded_cities
+								});
+							});
+						})
+					</script>
 
 					<h6><div>Contacts</div></h6>
 
@@ -147,12 +163,22 @@
 								<div class="multiselect" data-rel="mcl1">
 									<div>Choose</div>
 									<ul>
-										<li><label id="mcl1_1"><input type="checkbox" checked>African</label></li>
-										<li><label id="mcl1_2"><input type="checkbox">Continental</label></li>
-										<li><label id="mcl1_3"><input type="checkbox">Russian</label></li>
-										<li><label id="mcl1_4"><input type="checkbox" checked>Laplandian</label></li>
-										<li><label id="mcl1_5"><input type="checkbox" checked>Mediterranean</label></li>
-										<li><label id="mcl1_6"><input type="checkbox" checked>etc</label></li>
+										<li><label id="mcl1_1"><input type="checkbox">Afghan</label></li>
+										<li><label id="mcl1_2"><input type="checkbox" checked>African</label></li>
+										<li><label id="mcl1_3"><input type="checkbox">American</label></li>
+										<li><label id="mcl1_4"><input type="checkbox">Asian</label></li>
+										<li><label id="mcl1_5"><input type="checkbox">Australian</label></li>
+										<li><label id="mcl1_6"><input type="checkbox">Bar/Lounge</label></li>
+										<li><label id="mcl1_7"><input type="checkbox">Barbeque</label></li>
+										<li><label id="mcl1_8"><input type="checkbox">Belgian</label></li>
+										<li><label id="mcl1_9"><input type="checkbox">Brasilian</label></li>
+										<li><label id="mcl1_10"><input type="checkbox">British</label></li>
+										<li><label id="mcl1_11"><input type="checkbox">Californian</label></li>
+										<li><label id="mcl1_12"><input type="checkbox">Continental</label></li>
+										<li><label id="mcl1_13"><input type="checkbox">Russian</label></li>
+										<li><label id="mcl1_14"><input type="checkbox" checked>Laplandian</label></li>
+										<li><label id="mcl1_15"><input type="checkbox" checked>Mediterranean</label></li>
+										<li><label id="mcl1_16"><input type="checkbox" checked>etc</label></li>
 									</ul>
 								</div>
 							</div>
@@ -257,26 +283,34 @@
 					<dl>
 						<dt></dt>
 						<dd>
-							<p><a href="" class="text-style5">SEO data</a></p>
-							<p>If you are not sure what to put in meta description or meta keywords, then please leave it empty.</p>
+							<a href="" class="text-style5" data-toggle="toggle1">SEO data</a>
 						</dd>
 					</dl>
 
-					<dl>
-						<dt>
-							Meta description
-							<p class="note ar">255 symbols max</p>
-						</dt>
-						<dd><textarea></textarea></dd>
-					</dl>
+					<div id="toggle1">
+						<dl>
+							<dt></dt>
+							<dd>
+								If you are not sure what to put in meta description or meta keywords, then please leave it empty.
+							</dd>
+						</dl>
 
-					<dl>
-						<dt>
-							Meta keywords
-							<p class="note ar">255 symbols max</p>
-						</dt>
-						<dd><textarea></textarea></dd>
-					</dl>
+						<dl>
+							<dt>
+								Meta description
+								<p class="note ar">255 symbols max</p>
+							</dt>
+							<dd><textarea></textarea></dd>
+						</dl>
+
+						<dl>
+							<dt>
+								Meta keywords
+								<p class="note ar">255 symbols max</p>
+							</dt>
+							<dd><textarea></textarea></dd>
+						</dl>
+					</div>
 
 					<dl>
 						<dt></dt>

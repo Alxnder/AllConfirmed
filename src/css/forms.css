@@ -666,6 +666,7 @@ p.error {
 	background: #fff;
 	display: none;
 	overflow-y: auto;
+	overflow-x: hidden;
 	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
@@ -678,7 +679,7 @@ p.error {
 .multiselect ul label {
 	display: block;
 	white-space: nowrap;
-	padding: 3px 10px 3px 32px;
+	padding: 3px 25px 3px 32px;
 	-webkit-transition: none;
 	-moz-transition: none;
 	transition: none;
