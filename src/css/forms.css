@@ -607,7 +607,7 @@ p.error {
 	width: 215px;
 	height: 145px;
 	overflow: hidden;
-	background: url("../i/photo-stub.png");
+	background: #fff url("../i/photo-stub.png") 50% 50% no-repeat;
 }
 
 .fileinput {
@@ -720,4 +720,54 @@ p.error {
 .multiselect-checked-list div:hover {
 	background: #d0d0d0;
 	color: #000;
+}
+
+.form-addnewdish {
+	padding: 30px 40px 30px 10px;
+}
+
+.form-addnewdish .col:first-child {
+	margin-right: 16px;
+}
+
+.form-addnewdish .col:first-child dt {
+	padding-right: 10px;
+}
+
+.form-addnewdish .col:first-child dd {
+	width: 460px;
+}
+
+.form-addnewdish strong {
+	font-weight: normal;
+	font-family: 'Font1 Bold';
+}
+
+.form-addnewdish ._price {
+	line-height: 2em;
+}
+
+.form-addnewdish ._price input {
+	width: 57px;
+	margin: 0 30px 0 4px;
+}
+
+.form-addcategory {
+	padding: 18px 14px;
+}
+
+.form-addcategory h5 {
+	color: #9c0103;
+	margin-bottom: .9em;
+	font: normal 30px 'Font1';
+}
+
+.form-addcategory input[type="text"] {
+	width: 590px;
+	height: 34px;
+	font: 18px/33px Font1;
+}
+
+.form-addcategory .btn {
+	margin: 0 0 0 15px;
 }

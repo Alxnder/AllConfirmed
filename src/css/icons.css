@@ -419,6 +419,12 @@ a:hover .icon-plus_small {
 	background-position: 0 -1282px;
 }
 
+.icon-del1 {
+	width: 12px;
+	height: 12px;
+	background-position: -29px -1280px;
+}
+
 .icon-clear {
 	width: 25px;
 	height: 18px;
@@ -475,4 +481,40 @@ a:hover .icon-plus_small {
 	width: 70px;
 	height: 106px;
 	background: url("../i/sprites1.png") 0 -373px;
+}
+
+.icon-edit {
+	width: 17px;
+	height: 17px;
+	background-position: 0 -1485px;
+}
+
+.icon-eye {
+	width: 21px;
+	height: 11px;
+	background-position: 0 -1506px;
+}
+
+.icon-eye1 {
+	width: 21px;
+	height: 11px;
+	background-position: -25px -1506px;
+}
+
+.icon-up {
+	width: 11px;
+	height: 14px;
+	background-position: 0 -1521px;
+}
+
+.icon-down {
+	width: 11px;
+	height: 14px;
+	background-position: 0 -1539px;
+}
+
+.icon-check {
+	width: 24px;
+	height: 29px;
+	background-position: 0 -1577px;
 }

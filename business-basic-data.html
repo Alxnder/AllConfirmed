@@ -101,13 +101,14 @@
 					<script>
 						$(function() {
 							var states = [ 'Idaho', 'Iowa', 'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'Wyoming', 'Washington', 'Washington DC', 'Wermont', 'Virginia', 'Wisconsin', 'Hawaii', 'Delaware', 'Georgia', 'West Wirginia', 'Illinois', 'Indiana', 'California', 'Kansas', 'Kentucky', 'Colorado', 'Connecticut', 'Louisiana', 'Louisiana', 'Minnesota', 'Mississippi', 'Missouri', 'Michigan', 'Montana', 'Maine', 'Maryland', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New York', 'New Mexico', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'North Dakota', 'North Carolina', 'Tennessee', 'Texas', 'South Dakota', 'South Carolina', 'Utah' ],
-								ajax_loaded_cities = [ 'New York', 'Newark', 'Elizabeth', 'Paterson', 'New Brunswick', 'Flaners', 'Easton', 'Bethlehem', 'Stroudsburg', 'Parsippany', 'Yonkers', 'MIddletown' ];
+								ajax_loaded_cities_by_state_name = [ 'New York', 'Newark', 'Elizabeth', 'Paterson', 'New Brunswick', 'Flaners', 'Easton', 'Bethlehem', 'Stroudsburg', 'Parsippany', 'Yonkers', 'MIddletown' ];
 
 							$( "#state" ).autocomplete({
 								source: states
-							}).blur(function() {
-								$( "#city" ).autocomplete({
-									source: ajax_loaded_cities
+							});
+							$( "#city").blur(function() {
+								$(this).autocomplete({
+									source: ajax_loaded_cities_by_state_name
 								});
 							});
 						})
@@ -287,7 +288,7 @@
 						</dd>
 					</dl>
 
-					<div id="toggle1">
+					<div id="toggle1" style="display:none">
 						<dl>
 							<dt></dt>
 							<dd>

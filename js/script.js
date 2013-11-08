@@ -20,6 +20,7 @@
 	showBigMap();
 	multiselect();
 	toggleBlock();
+	categories();
 });
 
 
@@ -991,8 +992,62 @@ function toggleBlock() {
 		var $this = $(this),
 			target = $('#' + $this.data('toggle'));
 
-		target.slideToggle(100);
+		if (target.length) {
+			target.slideToggle(100)
+		} else {
+			$this.next().slideToggle(100)
+		}
 
 		return false;
 	})
+}
+
+
+function categories() {
+	var cat = $('.category');
+
+	cat.each(function() {
+		var $this = $(this),
+			title = $this.find('.title h2'),
+			edit_btn = title.next('a'),
+			dishlist = $this.find('.dishes-list');
+
+		title.click(function() {
+			cat.not($this).removeClass('-visible').find('.dishes-list').slideUp(100);
+
+			if (!$this.hasClass('-visible')) {
+				dishlist.slideDown(100);
+				$this.addClass('-visible')
+			} else {
+				dishlist.slideUp(100);
+				$this.removeClass('-visible')
+			}
+		});
+
+		edit_btn.click(function() {
+			var $this = $(this);
+
+			title.hide();
+			$this.hide();
+
+			var input = title.after('<input type="text" value="' + title.find('span').text() + '" />').next(),
+				ok_btn = $this.after('<i class="icon-check"></i>').next();
+
+			ok_btn.click(function() {
+				title.find('span').text(input.val());
+				title.show();
+				$this.show();
+				input.hide();
+				ok_btn.hide();
+			});
+
+			input.keyup(function(event){
+				if(event.keyCode == 13){
+					ok_btn.click();
+				}
+			});
+
+			return false;
+		});
+	});
 }
