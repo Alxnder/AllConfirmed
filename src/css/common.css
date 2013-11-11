@@ -886,6 +886,10 @@ nav.secondary div .icon-plus_small {
 	vertical-align: middle;
 }
 
+.ab {
+	vertical-align: bottom;
+}
+
 .popup-location {
 	left: -9999px;
 	top: 0;
@@ -1967,6 +1971,7 @@ ul.prices-list1 {
 	background: #a3c43e;
 	display: none;
 	box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+
 }
 
 .dropdown li {
@@ -2324,6 +2329,10 @@ h2 + .grey-block {
 
 .buttons1 > * {
 	margin: 0 10px;
+}
+
+.buttons2 {
+	text-align: right;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {

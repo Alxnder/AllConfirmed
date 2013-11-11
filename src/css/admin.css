@@ -649,6 +649,76 @@ table.table-resvns1 {
 	margin-right: 3px;
 }
 
-.reply-admin {
-	margin-top: -20px;
+
+.buttons2 > * {
+	margin: 0 0 0 38px;
+}
+
+.buttons2 > *:first-child {
+	margin: 0;
+}
+
+.buttons2 [class^="icon"] {
+	margin-right: 5px;
+}
+
+.text1 {
+	margin: 0 0 10px 0;
+}
+
+.text1 ._col1 {
+	width: 630px;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.text1 ._col1 p {
+	line-height: 1.2em;
+}
+
+.text1 .buttons2 {
+	width: 320px;
+	display: inline-block;
+	vertical-align: bottom;
+	margin-bottom: 20px;
+}
+
+.admin-photogallery {
+	background: #f2f2f2;
+	padding: 30px;
+	margin: 0;
+	list-style: none;
+}
+
+.admin-photogallery label {
+	width: 276px;
+	height: 181px;
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	padding: 17px 0 0 19px;
+	margin: 0 40px 34px 0;
+	border: solid 1px #d8d8d8;
+}
+
+.admin-photogallery label:nth-child(3n) {
+	margin-right: 0;
+}
+
+.admin-photogallery label:hover {
+	box-shadow: 3px 3px 0 rgba(0,0,0,.13);
+}
+
+.admin-photogallery img {
+	width: 217px;
+}
+
+.admin-photogallery .-active {
+	background: #fff;
+}
+
+.admin-photogallery .icon-cb {
+	position: absolute;
+	right: 6px;
+	top: 17px;
 }

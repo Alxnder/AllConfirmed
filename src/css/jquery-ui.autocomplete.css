@@ -6,7 +6,7 @@
 	background: #fff;
 	list-style: none;
 	z-index: 1005;
-	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+	box-shadow: 3px 3px 4px rgba(0,0,0,.3)
 }
 
 .ui-autocomplete li {

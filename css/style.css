@@ -1535,7 +1535,7 @@ p.error {
 	display: none;
 	overflow-y: auto;
 	overflow-x: hidden;
-	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+	box-shadow: 3px 3px 4px rgba(0,0,0,.3);
 }
 
 .multiselect li {
@@ -2437,6 +2437,10 @@ nav.secondary div .icon-plus_small {
 
 .am {
 	vertical-align: middle;
+}
+
+.ab {
+	vertical-align: bottom;
 }
 
 .popup-location {
@@ -3520,6 +3524,7 @@ ul.prices-list1 {
 	background: #a3c43e;
 	display: none;
 	box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.4);
+
 }
 
 .dropdown li {
@@ -3877,6 +3882,10 @@ h2 + .grey-block {
 
 .buttons1 > * {
 	margin: 0 10px;
+}
+
+.buttons2 {
+	text-align: right;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -4777,6 +4786,12 @@ a:hover .icon-plus_small {
 	background-position: -96px -166px;
 }
 
+.icon-upload {
+	width: 11px;
+	height: 12px;
+	background-position: 0 -1629px;
+}
+
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
 .fancybox-skin,
@@ -5227,7 +5242,7 @@ ul.slider {
 	z-index: 1005;
 	background: #fff;
 	text-align: left;
-	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+	box-shadow: 3px 3px 4px rgba(0,0,0,.3)
 }
 
 .ui-selectmenu-menu ul {
@@ -5467,7 +5482,7 @@ td.ui-datepicker-week-end .ui-state-default {
 	background: #fff;
 	list-style: none;
 	z-index: 1005;
-	box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+	box-shadow: 3px 3px 4px rgba(0,0,0,.3)
 }
 
 .ui-autocomplete li {
