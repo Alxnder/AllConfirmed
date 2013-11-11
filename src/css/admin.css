@@ -138,7 +138,8 @@
 	display: none;
 }
 
-.body-admin_green .name, .body-admin_green .user-bar a:hover {
+.body-admin_green .user-bar .name,
+.body-admin_green .user-bar a:hover {
 	background: #8ca72c;
 }
 
@@ -179,6 +180,12 @@
 .body-admin nav.primary > ul > li > a,
 .body-admin nav.primary > ul > li > div {
 	padding: 2px 18px 9px 18px;
+}
+
+.body-admin nav.primary > ul > li > div,
+.body-admin nav.primary > ul > li > .current {
+	background: #7f7f7f;
+	color: #dcf15a;
 }
 
 .body-admin nav.primary > ul ul {
@@ -611,4 +618,37 @@ table.table-resvns1 {
 .resvn-summary1 .sum {
 	color: #86a328;
 	font-size: 22px;
+}
+
+.reply .buttons {
+	margin: 10px 0 0 0;
+	text-align: right;
+}
+
+.reply .buttons > * {
+	margin-left: 14px;
+}
+
+.reply .buttons [class^="icon"] {
+	margin-right: 5px;
+}
+
+.reply textarea {
+	height: 100px;
+	width: 100%;
+	margin: 8px 0 0 0;
+}
+
+.comment .answer-btn {
+	margin-left: 13px;
+	font-size: 14px;
+	font-style: normal !important;
+}
+
+.comment .answer-btn [class^="icon"] {
+	margin-right: 3px;
+}
+
+.reply-admin {
+	margin-top: -20px;
 }

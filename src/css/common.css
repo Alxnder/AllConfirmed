@@ -1814,6 +1814,10 @@ ul.prices-list1 {
 	padding: 0;
 }
 
+.review-summary .rating-summary {
+	margin: 0 40px;
+}
+
 .ratings dl {
 	display: table-row;
 	font: 15px Font1;

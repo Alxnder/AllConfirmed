@@ -21,6 +21,7 @@
 	multiselect();
 	toggleBlock();
 	categories();
+	commentControls();
 });
 
 
@@ -1041,8 +1042,8 @@ function categories() {
 				ok_btn.hide();
 			});
 
-			input.keyup(function(event){
-				if(event.keyCode == 13){
+			input.keyup(function(event) {
+				if (event.keyCode == 13) {//Enter
 					ok_btn.click();
 				}
 			});
