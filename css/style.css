@@ -1794,6 +1794,18 @@ ul.multiselect .cb {
 	margin-right: 22px;
 }
 
+.form-changepass {
+	width: auto;
+}
+
+.form-changepass dt {
+	width: 120px;
+}
+
+.form-changepass dd {
+	width: 300px;
+}
+
 .carousel {
 	width: 732px;
 	height: 192px;

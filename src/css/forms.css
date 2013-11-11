@@ -940,3 +940,15 @@ ul.multiselect .cb {
 .inline-form_about > .col:first-child {
 	margin-right: 22px;
 }
+
+.form-changepass {
+	width: auto;
+}
+
+.form-changepass dt {
+	width: 120px;
+}
+
+.form-changepass dd {
+	width: 300px;
+}
