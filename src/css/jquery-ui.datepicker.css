@@ -7,6 +7,10 @@
 	box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
 }
 
+body > .ui-datepicker {
+	display: none;
+}
+
 .ui-datepicker-header {
 	position: relative;
 	text-align: center;

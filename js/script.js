@@ -726,11 +726,8 @@ function customSelects() {
 function datepicker() {
 	/* jQuery UI Datepicker*/
 
-	//Show on load
-	$('.inline-datepicker').datepicker();
-
 	//Fixes: Datepicker still visible after fancyBox closing
-	$('#ui-datepicker-div').remove();
+	//$('#ui-datepicker-div').remove();
 
 	$('[data-datepicker]').datepicker({
 		dateFormat: 'MM dd, yy'

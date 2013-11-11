@@ -231,6 +231,12 @@ a:hover .icon-plus_small {
 	background-position: 0 -363px;
 }
 
+.icon-check1 {
+	width: 12px;
+	height: 10px;
+	background-position: 0 -1599px;
+}
+
 .icon-fb_small,
 .icon-gplus_small,
 .icon-myspace_small,
@@ -517,4 +523,16 @@ a:hover .icon-plus_small {
 	width: 24px;
 	height: 29px;
 	background-position: 0 -1577px;
+}
+
+.icon-star {
+	width: 13px;
+	height: 13px;
+	background-position: 0 -1612px;
+}
+
+.icon-star1 {
+	width: 13px;
+	height: 13px;
+	background-position: -96px -166px;
 }

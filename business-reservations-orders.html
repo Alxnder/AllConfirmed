@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/admin.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
+	<!--[if lt IE 9]><script src="js/libs/libs.ltie9.js"></script><![endif]-->
+	<title></title>
+</head>
+<body class="body-admin body-admin_green">
+	<!--Контейнер-->
+	<div class="container">
+		<!--Шапка-->
+		<header class="header">
+			<div class="top-bar">
+				<div class="wrapper">
+					<a href=""><i class="icon-logo_white"></i></a>
+
+					<div class="user-bar">
+						<div class="name"><i class="icon-key_white"></i> Pine Restaurant Aplle New York</div>
+						<a href=""><span>Exit</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav-bar">
+				<div class="wrapper">
+					<nav class="primary">
+						<ul>
+							<li>
+								<a href="">Businesses</a>
+								<ul>
+									<a href="">Item 1</a>
+									<a href="">Item 2</a>
+									<a href="">Item 3</a>
+									<a href="">Item 4</a>
+									<a href="">Item 5</a>
+								</ul>
+							</li>
+							<li>
+								<a href="">Account</a>
+								<ul>
+									<a href="">Item 1</a>
+									<a href="">Item 2</a>
+									<a href="">Item 3</a>
+									<a href="">Item 4</a>
+									<a href="">Item 5</a>
+								</ul>
+							</li>
+							<li>
+								<a href="">Legal</a>
+								<ul>
+									<a href="">Item 1</a>
+									<a href="">Item 2</a>
+									<a href="">Item 3</a>
+									<a href="">Item 4</a>
+									<a href="">Item 5</a>
+								</ul>
+							</li>
+							<li><a href="">How it works</a></li>
+						</ul>
+					</nav>
+
+					<div class="account_clients-data">
+						<div><a href="">Reviews (0)</a></div>
+						<div>Orders: (20) <a href="" class="-green">12 new</a></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--//Шапка. Сетка в одну колонку-->
+		<div class="layout-onecol">
+			<!--Основной контент-->
+			<section class="content">
+				<h1>Reservations</h1>
+
+				<div class="filter2">
+					<div class="-active">New reservations, expecting confirmations</div>
+					<a href="">Last reservation, expecting marks</a>
+				</div>
+
+				<div class="filter3">
+					<div class="col col1">
+						<p><a href="">last week</a></p>
+						<p><a href="">last month</a></p>
+						<p><a href="">last 12 month</a></p>
+					</div>
+					<div class="col col2">
+						<a href="" class="prev">2013-08-02 yesterday</a>
+						<a href="" class="-active">2013-08-04 Today</a>
+						<a href="" class="next">2013-08-02 tomorrow</a>
+					</div>
+					<div class="col col3">
+						<p><a href="">next week</a></p>
+						<p><a href="">next month</a></p>
+						<p><a href="">next 12 month</a></p>
+					</div>
+				</div>
+
+				<div class="filter4">
+					<div class="col">
+						<div class="row row-dates">
+							<strong>Select a period of visits:</strong> &nbsp;
+							From <div class="field-datepicker"><input type="text" data-datepicker /></div>
+							Till <div class="field-datepicker"><input type="text" data-datepicker /></div>
+						</div>
+						<div class="row">
+							<div class="col _col1">
+								<p><strong>Select status of reservations</strong></p>
+								<p><label><input type="radio" name="rad1" />Paid</label></p>
+							</div>
+							<div class="col _col2">
+								<p><label><input type="radio" name="rad1" checked />Confirmed</label></p>
+								<p><label><input type="radio" name="rad1" />Not used</label></p>
+							</div>
+							<div class="col _col3">
+								<div>
+									<label><input type="radio" name="rad1" />Canceled</label>
+									<label><input type="checkbox" />by visitor</label>
+									<label><input type="checkbox" />by us</label>
+									<label><input type="checkbox" />by site admin</label>
+								</div>
+								<br>
+								<div>
+									<label><input type="radio" name="rad1" />Executed</label>
+									<label><input type="checkbox" />confirmed</label>
+									<label><input type="checkbox" />not confirmed</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<a class="btn -red -wide" href="">Show</a>
+					</div>
+				</div>
+
+				<div class="resvn-summary1">
+					<span>Found reservations: <span class="sum">28</span></span>
+					<span>Total cost, $: <span class="sum">1980</span></span>
+				</div>
+
+				<table class="table-style1 table-resvns table-resvns1">
+					<thead>
+					<tr>
+						<td class="sortable -active -desc"><div>Date<br>of visit</div></td>
+						<td><div>Ticket/<br>Res. code</div></td>
+						<td class="_place sortable -asc"><div>Visitor</div></td>
+						<td class="_resvn"><div>Reservation event</div></td>
+						<td class="_people">Number<br>of people</td>
+						<td class="sortable -desc"><div>Cost, $</div></td>
+						<td class="_status"><div>Status</div></td>
+						<td class="_features"><div>Action</div></td>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="_date">2013-07-31 8:30 PM</td>
+							<td class="_ticket">02545478<div class="_rescode">sf547fs454</div></td>
+							<td>
+								John Doe McDouglas
+								<p class="_visit">visit number <a href="">12</a></p>
+								<p><a href="" class="-red">Note</a> / <a href="" class="-orange">Reviews</a></p>
+							</td>
+							<td>Great suggestion for dinner</td>
+							<td class="_people">25</td>
+							<td class="_cost"><div class="-red">1420</div></td>
+							<td class="_status">
+								<p>Accepted 2013-07-30</p>
+								<p>Confirmed 2013-07-30</p>
+								<p><span class="tip" title='There is no need to be "A Morning <br>Person" to enjoy what many call'>Canceled 2013-07-31</span></p>
+								<p>Executed 2013-07-31</p>
+								<p class="-green3">Paid 2013-08-04 (1280)</p>
+							</td>
+							<td class="_features">
+								<p><i class="icon-check1"></i><a href="ajax/resvn_confirm.html" data-fancybox="ajax">Confirm</a></p>
+								<p><i class="icon-del"></i><a href="ajax/resvn_cancel1.html" data-fancybox="ajax">Cancel a reservation</a></p>
+								<p><i class="icon-star"></i><a href="">Executive mark</a></p>
+								<p><i class="icon-star1"></i><a href="ajax/resvn_notused.html" data-fancybox="ajax">Not used mark</a></p>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="_date">2013-07-31 8:30 PM</td>
+							<td class="_ticket">02545478<div class="_rescode">sf547fs454</div></td>
+							<td>
+								John Doe McDouglas
+								<p class="_visit">visit number <a href="">12</a></p>
+								<p><a href="" class="-red">Note</a> / <a href="" class="-orange">Reviews</a></p>
+							</td>
+							<td>Free reservation</td>
+							<td class="_people">25</td>
+							<td class="_cost"><div class="-green1">Free</div></td>
+							<td class="_status">
+								<p>Accepted 2013-07-30</p>
+								<p>Confirmed 2013-07-30</p>
+								<p><span>Canceled 2013-07-31</span></p>
+								<p>Executed 2013-07-31</p>
+								<p class="-green3">Paid 2013-08-04 (1280)</p>
+							</td>
+							<td class="_features">
+								<p><i class="icon-check1"></i><a href="ajax/resvn_confirm.html" data-fancybox="ajax">Confirm</a></p>
+								<p><i class="icon-del"></i><a href="ajax/resvn_cancel1.html" data-fancybox="ajax">Cancel a reservation</a></p>
+								<p><i class="icon-star"></i><a href="">Executive mark</a></p>
+								<p><i class="icon-star1"></i><a href="ajax/resvn_notused.html" data-fancybox="ajax">Not used mark</a></p>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="_date">2013-07-31 8:30 PM</td>
+							<td class="_ticket">02545478<div class="_rescode">sf547fs454</div></td>
+							<td>
+								John Doe McDouglas
+								<p class="_visit">visit number <a href="">12</a></p>
+								<p><a href="" class="-red">Note</a> / <a href="" class="-orange">Reviews</a></p>
+							</td>
+							<td>Great suggestion for dinner</td>
+							<td class="_people">25</td>
+							<td class="_cost"><div class="-red">1420</div></td>
+							<td class="_status">
+								<p>Accepted 2013-07-30</p>
+								<p>Confirmed 2013-07-30</p>
+								<p><span class="tip" title='There is no need to be "A Morning <br>Person" to enjoy what many call'>Canceled 2013-07-31</span></p>
+								<p>Executed 2013-07-31</p>
+								<p class="-green3">Paid 2013-08-04 (1280)</p>
+							</td>
+							<td class="_features">
+								<p><i class="icon-check1"></i><a href="ajax/resvn_confirm.html" data-fancybox="ajax">Confirm</a></p>
+								<p><i class="icon-del"></i><a href="ajax/resvn_cancel1.html" data-fancybox="ajax">Cancel a reservation</a></p>
+								<p><i class="icon-star"></i><a href="">Executive mark</a></p>
+								<p><i class="icon-star1"></i><a href="ajax/resvn_notused.html" data-fancybox="ajax">Not used mark</a></p>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="_date">2013-07-31 8:30 PM</td>
+							<td class="_ticket">02545478<div class="_rescode">sf547fs454</div></td>
+							<td>
+								John Doe McDouglas
+								<p class="_visit">visit number <a href="">12</a></p>
+								<p><a href="" class="-red">Note</a> / <a href="" class="-orange">Reviews</a></p>
+							</td>
+							<td>Great suggestion for dinner</td>
+							<td class="_people">25</td>
+							<td class="_cost"><div class="-red">1420</div></td>
+							<td class="_status">
+								<p>Accepted 2013-07-30</p>
+								<p>Confirmed 2013-07-30</p>
+								<p><span class="tip" title='There is no need to be "A Morning <br>Person" to enjoy what many call'>Canceled 2013-07-31</span></p>
+								<p>Executed 2013-07-31</p>
+								<p class="-green3">Paid 2013-08-04 (1280)</p>
+							</td>
+							<td class="_features">
+								<p><i class="icon-check1"></i><a href="ajax/resvn_confirm.html" data-fancybox="ajax">Confirm</a></p>
+								<p><i class="icon-del"></i><a href="ajax/resvn_cancel1.html" data-fancybox="ajax">Cancel a reservation</a></p>
+								<p><i class="icon-star"></i><a href="">Executive mark</a></p>
+								<p><i class="icon-star1"></i><a href="ajax/resvn_notused.html" data-fancybox="ajax">Not used mark</a></p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="link-viewmore"><a href="">view more</a></div>
+			</section>
+			<!--//Контент-->
+		</div>
+		<!--//Сетка в одну колонку-->
+	</div>
+	<!--//Контейнер-->
+
+	<script src="js/libs/libs.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

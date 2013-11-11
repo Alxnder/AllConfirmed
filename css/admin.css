@@ -417,3 +417,198 @@ nav.primary > ul ul a:hover {
 .resvn-list .resvn ._controls a {
 	margin-bottom: 15px;
 }
+
+.filter2 {
+	margin: 27px 0 10px 0;
+	padding-bottom: 15px;
+	border-bottom: solid 1px #ccc;
+}
+
+.filter2 > * {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	color: #000 !important;
+	margin: 3px 18px 16px 16px;
+	background: url("../i/border4.png") 0 100% repeat-x;
+}
+
+.filter2 .-active {
+	background: #d7e585;
+	padding: 3px 16px 6px 16px;
+	margin: 0 15px 10px 0;
+	font-family: 'Font1 Medium';
+}
+
+.filter3 {
+	display: table;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.filter3 a {
+	color: #878787;
+	text-decoration: none;
+	border-bottom: dashed 1px;
+}
+
+.filter3 a:hover {
+	color: #000;
+}
+
+.filter3 .col {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.filter3 .col1 {
+	width: 140px;
+	text-align: right;
+}
+
+.filter3 .col2 {
+	padding: 0 50px;
+	text-align: center;
+}
+
+.filter3 .col2 .prev:before {
+	content: '\2190';
+	font-size: 20px;
+	color: #ccc;
+}
+
+.filter3 .col2 .next:after {
+	content: '\2192';
+	font-size: 20px;
+	color: #ccc;
+}
+
+.filter3 .col2 a {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1em;
+}
+
+.filter3 .col3 {
+	width: 140px;
+}
+
+.filter3 p {
+	margin-bottom: 5px;
+}
+
+.filter3 .-active {
+	background: #d7e585;
+	padding: 5px 8px 8px 8px;
+	color: #373737;
+	border: 0;
+	margin: 0 40px;
+	font-family: 'Font1 Medium';
+}
+
+.filter4 {
+	background: #e5e5e5 url("../i/sprite4.png") 0 0;
+	padding: 13px 15px;
+	display: table;
+	width: 100%;
+	margin-bottom: 42px;
+}
+
+.filter4 > .col {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.filter4 > .col + .col {
+	padding-left: 26px;
+	border-left: solid 4px #a71613;
+}
+
+.filter4 > .col + .col .btn {
+	width: 160px;
+}
+
+.filter4 .row {
+	margin-top: 17px;
+}
+
+.filter4 .row:first-child {
+	margin-top: 0;
+}
+
+.filter4 .row-dates .field-datepicker {
+	margin: 0 10px 0 2px;
+}
+
+.filter4 ._col1 {
+	text-align: right;
+	margin: 0 10px 0 0;
+}
+
+.filter4 ._col2 {
+	width: 110px;
+	margin-right: 10px;
+}
+
+.filter4 ._col3 > div {
+	background: #cfcfcf;
+	margin-bottom: 7px;
+	padding: 1px 5px;
+}
+
+.filter4 ._col3 > div {
+	background: #cfcfcf;
+	margin-bottom: 7px;
+	padding: 0 5px 3px 5px;
+	display: inline-block;
+}
+
+.filter4 p {
+	margin-bottom: 7px;
+}
+
+.filter4 .cb {
+	font-size: 15px;
+	margin-left: 20px;
+}
+
+.filter4 ._col3 > div .rd + .cb {
+	width: 100px;
+	margin-left: 0;
+}
+
+.filter4 ._col3 > div .rd + .cb + .cb{
+	margin-left: 0;
+}
+
+.filter4 .rd {
+	width: 110px;
+}
+
+table.table-resvns1 {
+	margin: 0;
+}
+
+.table-resvns1 ._place {
+	width: 140px
+}
+
+.table-resvns1 ._visit,
+.table-resvns1 ._visit a {
+	font-size: 14px;
+	color: #8b8b8b;
+	margin-top: 4px;
+}
+
+.resvn-summary1 {
+	margin: 0 0 10px 14px;
+}
+
+.resvn-summary1 > span {
+	margin-right: 23px;
+}
+
+.resvn-summary1 .sum {
+	color: #86a328;
+	font-size: 22px;
+}

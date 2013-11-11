@@ -1127,7 +1127,7 @@ textarea {
 
 .rd {
 	background: none;
-	font-size: 15px;
+	font: 15px Font1;
 	padding-left: 22px;
 	display: inline-block;
 	vertical-align: middle;
@@ -1144,11 +1144,11 @@ textarea {
 }
 
 .cb .icon-cb {
-	margin: 0 7px 0 -22px;
+	margin: -.2em 7px 0 -22px;
 }
 
 .rd .icon-rd {
-	margin: 0 7px 0 -22px;
+	margin: -.3em 7px 0 -22px;
 }
 
 input.error, textarea.error {
@@ -1331,13 +1331,16 @@ p.error {
 }
 
 .field-datepicker {
-	width: 130px;
+	width: 172px;
+	display: inline-block;
+	vertical-align: middle;
 	position: relative;
 }
 
 .field-datepicker input {
 	padding-right: 20px;
 	color: #919191;
+	width: 100%;
 }
 
 .field-datepicker:after {
@@ -2418,6 +2421,10 @@ nav.secondary div .icon-plus_small {
 
 .ac {
 	text-align: center;
+}
+
+.am {
+	vertical-align: middle;
 }
 
 .popup-location {
@@ -3652,6 +3659,10 @@ h2 + .grey-block {
 	color: #93b330 !important;
 }
 
+.-green3 {
+	color: #0a4d08 !important;
+}
+
 .-yellow {
 	color: #feffa2 !important;
 }
@@ -4444,6 +4455,12 @@ a:hover .icon-plus_small {
 	background-position: 0 -363px;
 }
 
+.icon-check1 {
+	width: 12px;
+	height: 10px;
+	background-position: 0 -1599px;
+}
+
 .icon-fb_small,
 .icon-gplus_small,
 .icon-myspace_small,
@@ -4730,6 +4747,18 @@ a:hover .icon-plus_small {
 	width: 24px;
 	height: 29px;
 	background-position: 0 -1577px;
+}
+
+.icon-star {
+	width: 13px;
+	height: 13px;
+	background-position: 0 -1612px;
+}
+
+.icon-star1 {
+	width: 13px;
+	height: 13px;
+	background-position: -96px -166px;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -5285,6 +5314,10 @@ ul.slider {
 	border: solid 1px #cacaca;
 	z-index: 9000 !important;
 	box-shadow: 3px 3px 4px rgba(0,0,0,0.3);
+}
+
+body > .ui-datepicker {
+	display: none;
 }
 
 .ui-datepicker-header {

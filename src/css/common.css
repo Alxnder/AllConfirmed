@@ -882,6 +882,10 @@ nav.secondary div .icon-plus_small {
 	text-align: center;
 }
 
+.am {
+	vertical-align: middle;
+}
+
 .popup-location {
 	left: -9999px;
 	top: 0;
@@ -2112,6 +2116,10 @@ h2 + .grey-block {
 
 .-green2 {
 	color: #93b330 !important;
+}
+
+.-green3 {
+	color: #0a4d08 !important;
 }
 
 .-yellow {

@@ -274,7 +274,7 @@ textarea {
 
 .rd {
 	background: none;
-	font-size: 15px;
+	font: 15px Font1;
 	padding-left: 22px;
 	display: inline-block;
 	vertical-align: middle;
@@ -291,11 +291,11 @@ textarea {
 }
 
 .cb .icon-cb {
-	margin: 0 7px 0 -22px;
+	margin: -.2em 7px 0 -22px;
 }
 
 .rd .icon-rd {
-	margin: 0 7px 0 -22px;
+	margin: -.3em 7px 0 -22px;
 }
 
 input.error, textarea.error {
@@ -478,13 +478,16 @@ p.error {
 }
 
 .field-datepicker {
-	width: 130px;
+	width: 172px;
+	display: inline-block;
+	vertical-align: middle;
 	position: relative;
 }
 
 .field-datepicker input {
 	padding-right: 20px;
 	color: #919191;
+	width: 100%;
 }
 
 .field-datepicker:after {
