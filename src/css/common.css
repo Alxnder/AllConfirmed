@@ -1039,6 +1039,13 @@ ul.blogposts {
 	margin-top: -3px;
 }
 
+.head-style1 {
+	color: #bebbb2;
+	text-align: right;
+	font: normal 30px 'Font1';
+	margin: 10px 0 10px 0;
+}
+
 .text-style1 {
 	font: 22px/1.4em 'Font1 Medium';
 }
@@ -1060,6 +1067,23 @@ ul.blogposts {
 	text-decoration: none;
 	border-bottom: dashed 1px;
 	font: 18px/1.6em 'Font1 Medium';
+}
+
+.text-style6 {
+	position: absolute;
+	right: 0;
+	top: .2em;
+	color: #9c0103 !important;
+	margin-bottom: .9em;
+	font: normal 30px 'Font1';
+	text-decoration: none;
+	background: url("../i/border1.png") 0 100% repeat-x;
+}
+
+.text-style7 {
+	color: #000 !important;
+	font: normal 30px 'Font1 Extralight';
+	margin: 5px 0 19px 0;
 }
 
 .block1 {
@@ -1418,6 +1442,13 @@ p.note1 {
 	line-height: 1.3em;
 }
 
+p.note2 {
+	color: #867979;
+	font-size: 12px;
+	line-height: 1.3em;
+	margin-top: 5px;
+}
+
 .contacts-short {
 	margin-bottom: 18px;
 	border: solid #e2dddd;
@@ -1534,20 +1565,23 @@ p.note1 {
 .resvn {
 	margin: 0 0 37px 0;
 	padding: 0 0 15px 0;
-	overflow: hidden;
+	display: table;
+	width: 100%;
 	border-bottom: solid 1px #e5e5e5;
 }
 
 .resvn dt {
-	float: left;
+	display: table-cell;
 	width: 235px;
-	margin-right: 13px;
+	padding-right: 13px;
+	vertical-align: top;
 }
 
 .resvn dd {
 	margin: 0;
-	overflow: hidden;
+	display: table-cell;
 	font: 15px Font1;
+	vertical-align: top;
 }
 
 .resvn p {
@@ -1621,7 +1655,7 @@ ul.prices-list {
 }
 
 .prices-list li [class^="icon"] {
-	top: -2px;
+	vertical-align: text-bottom;
 }
 
 ul.prices-list1 {
@@ -2082,6 +2116,10 @@ h2 + .grey-block {
 
 .-yellow {
 	color: #feffa2 !important;
+}
+
+.-orange {
+	color: #d49101 !important;
 }
 
 .-red, .-red:visited {

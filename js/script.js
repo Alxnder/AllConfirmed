@@ -726,6 +726,9 @@ function customSelects() {
 function datepicker() {
 	/* jQuery UI Datepicker*/
 
+	//Show on load
+	$('.inline-datepicker').datepicker();
+
 	//Fixes: Datepicker still visible after fancyBox closing
 	$('#ui-datepicker-div').remove();
 
@@ -957,7 +960,7 @@ function multiselect() {
 			checked_list.append('<div data-rel="' + $(this).parent().prop('id') + '">' + $(this).parent().text() + '</div');
 		});
 
-		//Click event
+		//Click on checkbox
 		$this.find('label').click(function(e) {
 			var label = $(this);
 

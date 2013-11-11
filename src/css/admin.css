@@ -232,7 +232,7 @@ nav.primary > ul ul a:hover {
 	padding: 2px 10px 3px 32px;
 }
 
-.category .col:first-child {
+.category .title .col:first-child {
 	max-width: 458px;
 }
 
@@ -355,23 +355,27 @@ nav.primary > ul ul a:hover {
 	background: #f0f0f0 url("../i/photo-stub.png") 50% 50% no-repeat;
 }
 
-.dish ._controls {
+.dish ._controls,
+.resvn ._controls {
 	width:107px;
 	padding: 4px 0 3px 11px;
 	border-left: solid 4px #aec545;
 }
 
-.dish ._controls a {
+.dish ._controls a,
+.resvn ._controls a {
 	display: block;
 	white-space: nowrap;
 	margin-bottom: 8px;
 }
 
-.dish ._controls .icon-edit {
+.dish ._controls .icon-edit,
+.resvn ._controls .icon-edit {
 	margin-right: 7px;
 }
 
-.dish ._controls .icon-eye {
+.dish ._controls .icon-eye,
+.resvn ._controls .icon-eye {
 	margin-right: 4px;
 }
 
@@ -380,7 +384,8 @@ nav.primary > ul ul a:hover {
 	margin: 0 9px 0 5px;
 }
 
-.dish ._controls .icon-del1 {
+.dish ._controls .icon-del1,
+.resvn ._controls .icon-del1 {
 	margin: 0 8px 0 4px;
 }
 
@@ -395,3 +400,20 @@ nav.primary > ul ul a:hover {
 	cursor: pointer;
 }
 
+.resvn-list {
+	margin: 34px 0 24px 0;
+	border-top: solid 1px #e5e5e5;
+}
+
+.resvn-list .resvn {
+	padding: 34px 0;
+	margin-bottom: 0;
+}
+
+.resvn-list .resvn ._controls {
+	vertical-align: middle;
+}
+
+.resvn-list .resvn ._controls a {
+	margin-bottom: 15px;
+}

@@ -5,6 +5,7 @@
 
 [class^="layout"] {
 	padding-bottom: 50px;
+	position: relative;
 }
 
 /*Две колонки*/

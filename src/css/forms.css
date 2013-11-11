@@ -263,10 +263,18 @@ textarea {
 	display: none;
 }
 
-.cb, .rd {
+.cb {
 	color: #6d6d6d;
 	font: 12px Font1;
 	background: none;
+	padding-left: 22px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.rd {
+	background: none;
+	font-size: 15px;
 	padding-left: 22px;
 	display: inline-block;
 	vertical-align: middle;
@@ -556,7 +564,6 @@ p.error {
 }
 
 .radios-style1 label {
-	font-size: 15px;
 	margin: 0 20px 5px 0;
 }
 
@@ -597,6 +604,10 @@ p.error {
 	margin: 0 0 0 10px;
 }
 
+.form-basicdata_photo p {
+	margin-top: 10px;
+}
+
 .form-basicdata_photo .note {
 	color: #828282;
 	font-size: 12px;
@@ -607,6 +618,7 @@ p.error {
 	width: 215px;
 	height: 145px;
 	overflow: hidden;
+	margin-bottom: 3px;
 	background: #fff url("../i/photo-stub.png") 50% 50% no-repeat;
 }
 
@@ -676,7 +688,8 @@ p.error {
 	list-style-image: none !important;
 }
 
-.multiselect ul label {
+.multiselect label {
+	color: #373737;
 	display: block;
 	white-space: nowrap;
 	padding: 3px 25px 3px 32px;
@@ -685,10 +698,10 @@ p.error {
 	transition: none;
 }
 
-.multiselect ul label:hover,
-.multiselect ul .-active {
-	background: #7fa214;
-	color: #fff;
+.multiselect label:hover,
+.multiselect .-active {
+	color: #373737;
+	background: #dcd6d6;
 }
 
 .multiselect-checked-list {
@@ -715,6 +728,40 @@ p.error {
 	top: 0.4em;
 	position: absolute;
 	background: url("../i/sprites.png") -16px -1284px no-repeat;
+}
+
+.multiselect-checked-list.-big {
+	margin-top: .3em;
+}
+
+.multiselect-checked-list.-big div {
+	margin: 0 10px 10px 0;
+	padding: 0 5px 0 26px;
+	font-size: 15px;
+}
+
+.multiselect-checked-list.-big div:before {
+	width: 12px;
+	height: 12px;
+	top: 0.2em;
+	background: url("../i/sprites.png") -29px -1280px no-repeat;
+}
+
+ul.multiselect {
+	margin: 0;
+	height: 150px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	display: inline-block;
+	vertical-align: top;
+	background: #fff;
+	border: solid 1px;
+	border-color: #a7a7a7 #d8d8d8 #d8d8d8 #a7a7a7;
+}
+
+ul.multiselect .cb {
+	font-size: 15px;
+	margin: 0 !important;
 }
 
 .multiselect-checked-list div:hover {
@@ -770,4 +817,123 @@ p.error {
 
 .form-addcategory .btn {
 	margin: 0 0 0 15px;
+}
+
+.inline-form_name dt {
+	width: 134px;
+}
+
+.inline-form_name .col:first-child {
+	float: left;
+	width: 465px;
+}
+
+.inline-form_name .col:first-child + .col {
+	float: right;
+	max-width: 265px;
+}
+
+.inline-form_name .col:first-child + .col input {
+	width: 120px;
+	margin-left: 10px;
+}
+
+.radios-style2 .rd {
+	margin: 0 23px 13px 0;
+}
+
+.inline-datepicker {
+	position: relative;
+}
+
+.inline-datepicker.-disabled {
+	opacity: 0.5;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 50);
+}
+
+.inline-datepicker.-disabled:after {
+	position: absolute;
+	content: '';
+	z-index: 2;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: url("../i/blank.png");
+}
+
+.inline-form_avtime .multiselect {
+	width: 132px;
+	margin: 0 20px 0 18px;
+}
+
+.inline-form_avtime .multiselect-checked-list {
+	width: 618px;
+	margin-top: 12px;
+}
+
+.inline-form_avtime .multiselect-checked-list div {
+	width: 62px;
+}
+
+.inline-form_cost .col_1 {
+	width: 220px;
+	text-align: right;
+}
+
+.inline-form_cost input {
+	width: 52px !important;
+	margin: 0 2px;
+}
+
+.inline-form_cost .big {
+	font-size: 24px;
+}
+
+.inline-form_cost * {
+	vertical-align: baseline;
+}
+
+.inline-form_cost .col {
+	margin-right: 10px;
+}
+
+.inline-form_cost .image {
+	width: 114px;
+	height: 54px;
+	background: url("../i/sprite8.png");
+}
+
+.inline-form_comp .ib:first-child {
+	width: 275px;
+	line-height: 1.5em;
+}
+
+.inline-form_comp .ib {
+	margin-right: 40px;
+}
+
+.inline-form_comp input {
+	width: 58px !important;
+	margin-right: 4px;
+}
+
+.inline-form_comp * {
+	vertical-align: middle;
+}
+
+.inline-form_about dd {
+	width: 525px;
+}
+
+.inline-form_about textarea {
+	height: 146px;
+}
+
+.inline-form_about input {
+	width: 455px !important;
+}
+
+.inline-form_about > .col:first-child {
+	margin-right: 22px;
 }

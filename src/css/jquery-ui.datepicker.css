@@ -98,3 +98,34 @@ td.ui-datepicker-week-end .ui-state-default {
 	color: #fff;
 	background: #96ae29;
 }
+
+.ui-datepicker-inline {
+	width: 198px;
+	padding: 7px 7px;
+	box-shadow: none;
+}
+
+.ui-datepicker-inline .ui-state-default {
+	width: 17px;
+	padding: 3px 0 3px 5px;
+}
+
+.ui-datepicker-inline table.ui-datepicker-calendar tbody td {
+	font-size: 11px;
+}
+
+.ui-datepicker-inline .ui-datepicker-title {
+	font-size: 16px;
+}
+
+.ui-datepicker-inline table.ui-datepicker-calendar thead th {
+	font-size: 14px;
+}
+
+.ui-datepicker-inline .ui-datepicker-header {
+	margin-bottom: 7px;
+}
+
+.ui-datepicker-inline table.ui-datepicker-calendar tbody td {
+	padding: 2px 0;
+}
