@@ -21,7 +21,6 @@
 	multiselect();
 	toggleBlock();
 	categories();
-	commentControls();
 });
 
 
@@ -732,6 +731,10 @@ function datepicker() {
 
 	$('[data-datepicker]').datepicker({
 		dateFormat: 'MM dd, yy'
+	});
+
+	$('.field-datepicker').click(function() {
+		$(this).find('[data-datepicker]').focus();
 	});
 
 	//Custom Datepicker field, not <input>

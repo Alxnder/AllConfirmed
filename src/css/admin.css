@@ -515,7 +515,7 @@ nav.primary > ul ul a:hover {
 
 .filter4 {
 	background: #e5e5e5 url("../i/sprite4.png") 0 0;
-	padding: 13px 15px;
+	padding: 13px 0;
 	display: table;
 	width: 100%;
 	margin-bottom: 42px;
@@ -524,10 +524,11 @@ nav.primary > ul ul a:hover {
 .filter4 > .col {
 	display: table-cell;
 	vertical-align: middle;
+	padding-left: 15px;
 }
 
 .filter4 > .col + .col {
-	padding-left: 26px;
+	padding: 0 15px 0 26px;
 	border-left: solid 4px #a71613;
 }
 

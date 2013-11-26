@@ -2225,7 +2225,9 @@ h2 + .grey-block {
 }
 
 .table-resvns tbody ._features {
-	width: 140px;
+	width: 145px;
+	white-space: nowrap;
+	padding-right: 7px;
 }
 
 .table-resvns ._features a {
