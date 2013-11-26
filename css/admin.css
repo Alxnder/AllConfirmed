@@ -12,7 +12,14 @@
 .body-admin .top-bar {
 	margin-bottom: 4px;
 	border-bottom: solid 7px #fff;
+}
+
+.body-admin_green .top-bar {
 	background: url("../i/sprite7.png");
+}
+
+.body-admin_yellow .top-bar {
+	background: url("../i/sprite9.png");
 }
 
 .body-admin .top-bar .wrapper {
@@ -34,6 +41,10 @@
 
 .body-admin_mainpage.body-admin_green .container {
 	background: url("../i/sprite7.png");
+}
+
+.body-admin_mainpage.body-admin_yellow .container {
+	background: url("../i/sprite9.png");
 }
 
 .administration {
@@ -113,6 +124,11 @@
 	background: #7f9d14 url("../i/sprites-x.png") 0 -800px repeat-x;
 }
 
+.body-admin_yellow .admin-block ul a:hover {
+	color: #fff;
+	background: #d0aa22 url("../i/sprites-x.png") 0 0 repeat-x;
+}
+
 .user-bar {
 	float: right;
 	font-size: 16px;
@@ -120,7 +136,7 @@
 }
 
 .user-bar > * {
-	padding: 0 6px;
+	padding: 0 6px 2px 6px;
 	margin-left: 16px;
 	display: inline-block;
 	text-decoration: none;
@@ -141,6 +157,11 @@
 .body-admin_green .user-bar .name,
 .body-admin_green .user-bar a:hover {
 	background: #8ca72c;
+}
+
+.body-admin_yellow .user-bar .name,
+.body-admin_yellow .user-bar a:hover {
+	background: #e89b1b;
 }
 
 .user-bar a span {
@@ -722,4 +743,14 @@ table.table-resvns1 {
 	position: absolute;
 	right: 6px;
 	top: 17px;
+}
+
+.info {
+	height: 95px;
+	color: #797979;
+	background: #f2f2f2;
+	padding: 10px;
+	font: 14px/1.6em Font1;
+	text-align: left;
+	margin: -144px 14px 160px 14px;
 }
