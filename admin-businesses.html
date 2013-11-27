@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/admin.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
+	<!--[if lt IE 9]><script src="js/libs/libs.ltie9.js"></script><![endif]-->
+	<title></title>
+</head>
+<body class="body-admin body-admin_yellow">
+	<!--Контейнер-->
+	<div class="container">
+		<!--Шапка-->
+		<header class="header">
+			<div class="top-bar">
+				<div class="wrapper">
+					<a href=""><i class="icon-logo_white"></i></a>
+
+					<div class="user-bar">
+						<div class="name"><i class="icon-key_white"></i> Admin name</div>
+						<a href=""><span>Exit</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav-bar">
+				<div class="wrapper">
+					<nav class="primary">
+						<ul>
+							<li><div>Businesses</div></li>
+							<li><a href="">Reservations</a></li>
+							<li><a href="">Users</a></li>
+							<li><a href="">Legal</a></li>
+							<li><a href="">How it works</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!--//Шапка. Сетка в одну колонку-->
+		<div class="layout-onecol">
+			<!--Основной контент-->
+			<section class="content">
+				<h1>Businesses</h1>
+
+				<div class="filter2">
+					<div class="-active">New accounts, expecting activation</div>
+					<a href="">New businesses, expecting confirmation</a>
+					<a href="">Businesses, expecting changes</a>
+					<a href="">All businesses, to whom the debt is</a>
+					<a href="">All businesses with an individual margin</a>
+					<a href="">All businesses with a mark “we recommend”</a>
+				</div>
+
+				<div class="filter5">
+					<div class="col">
+						<div class="col _col1">
+							<div class="row">
+								<label><input type="radio" name="rad1" />by business name, ID or address</label>
+								&nbsp; &nbsp;
+								<label><input type="radio" name="rad1" checked />by location</label>
+							</div>
+
+							<div class="row">
+								<div class="field-w-icon"><input type="text" /><i class="icon-pointer_small-grey"></i></div>
+							</div>
+
+							<div class="row">
+								<div class="fl">
+									<strong>Addition period:</strong>
+									&nbsp; From &nbsp;<div class="field-datepicker"><input type="text" data-datepicker-short /></div>
+
+									&nbsp; Till&nbsp; <div class="field-datepicker"><input type="text" data-datepicker-short /></div>
+								</div>
+								<div class="fr">
+									<strong>Rating:</strong>
+									&nbsp; From &nbsp;<input type="text" class="_shortfield" />
+								</div>
+							</div>
+						</div>
+						<div class="col _col2">
+							<div class="row _checkboxes">
+								<label><input type="checkbox" checked />Individual margin</label>
+								<label><input type="checkbox" />We recommend</label>
+								<label><input type="checkbox" />Debt</label>
+							</div>
+
+							<div class="row _select1">
+								<select><option>by status</option></select>
+								<select><option>by type</option></select>
+							</div>
+
+							<div class="row">
+								<div class="ib" style="margin-left:-24px;width:20px">Till</div> <input type="text" class="_shortfield" />
+
+								<div class="_radios">
+									<label><input type="radio" name="rad2" checked />all</label>
+									<label><input type="radio" name="rad2" />turned off</label>
+									<label><input type="radio" name="rad2" />turned on</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<a class="btn -red -wide" href="">Show</a>
+					</div>
+				</div>
+
+				<div class="resvn-summary1">
+					<span>Showed businesses: <span class="sum">41</span></span>
+					<span> In total in system of <span class="sum">5203</span></span>
+				</div>
+
+				<table class="table-style1 table-businesses">
+					<thead>
+					<tr>
+						<td class="sortable -desc"><div>ID</div></td>
+						<td class="sortable -active -desc"><div>Addition<br>date</div></td>
+						<td class="sortable -asc _status"><div>Status</div></td>
+						<td class="sortable -asc _location"><div>Location</div></td>
+						<td class="sortable -desc _name"><div>Name</div></td>
+						<td class="sortable -desc"><div>Rating</div></td>
+						<td class="sortable -desc"><div>Type</div></td>
+						<td class="sortable -desc"><div>Couisine</div></td>
+						<td class="sortable -desc"><div>Margin</div></td>
+						<td class="sortable -desc"><div>Reserv.</div></td>
+						<td class="sortable -desc"><div>Cost, $</div></td>
+						<td class="sortable -desc"><div>Debt, $</div></td>
+						<td><div>Actions</div></td>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1234567</td>
+							<td>2013-07-31</td>
+							<td class="_status"><div class="-blue">Waits for changing</div></td>
+							<td>307 N 3rd St Bismarck, ND 58501</td>
+							<td>
+								<p><a href="">Lucky Duck's Deli & Catering</a></p>
+								<p class="_reviews">12 reviews</p>
+							</td>
+							<td class="_rating">4.3</td>
+							<td><p>Night club</p></td>
+							<td>
+								<p>Arabian</p>
+								<p>Indian</p>
+								<p>American</p>
+							</td>
+							<td><p>10,5%</p><p class="note2">(default)</p></td>
+							<td>1285</td>
+							<td class="_cost">6250</td>
+							<td class="_debt">458</td>
+							<td class="_actions">
+								<p><i class="icon-eye"></i><a href="">Turn off</a></p>
+								<p><i class="icon-edit"></i><a href="">Change data</a></p>
+								<p><label><input type="checkbox" checked /></label><a href="">We recommend</a></p>
+							</td>
+						</tr>
+						<tr>
+							<td>1234567</td>
+							<td>2013-07-31</td>
+							<td class="_status"><div class="-green3">Active</div></td>
+							<td>307 N 3rd St Bismarck, ND 58501</td>
+							<td>
+								<p><a href="">Lucky Duck's Deli & Catering</a></p>
+								<p class="_reviews">12 reviews</p>
+							</td>
+							<td class="_rating">4.3</td>
+							<td><p>Night club</p></td>
+							<td>
+								<p>Arabian</p>
+								<p>Indian</p>
+								<p>American</p>
+							</td>
+							<td><p>12,5%</p><p class="note2">(individual)</p></td>
+							<td>1285</td>
+							<td class="_cost">6250</td>
+							<td class="_debt">458</td>
+							<td class="_actions">
+								<p><i class="icon-eye1"></i><a href="">Turn on</a></p>
+								<p><i class="icon-edit"></i><a href="">Change data</a></p>
+								<p><label><input type="checkbox" /></label><a href="">We recommend</a></p>
+							</td>
+						</tr>
+						<tr>
+							<td>1234567</td>
+							<td>2013-07-31</td>
+							<td class="_status">Unactive</td>
+							<td>307 N 3rd St Bismarck, ND 58501</td>
+							<td>
+								<p><a href="">Lucky Duck's Deli & Catering</a></p>
+								<p class="_reviews">12 reviews</p>
+							</td>
+							<td class="_rating">4.3</td>
+							<td><p>Night club</p></td>
+							<td>
+								<p>Arabian</p>
+								<p>Indian</p>
+								<p>American</p>
+							</td>
+							<td><p>10,5%</p><p class="note2">(default)</p></td>
+							<td>1285</td>
+							<td class="_cost">6250</td>
+							<td class="_debt">458</td>
+							<td class="_actions">
+								<p><i class="icon-eye1"></i><a href="">Turn on</a></p>
+								<p><i class="icon-edit"></i><a href="">Change data</a></p>
+								<p><label><input type="checkbox" /></label><a href="">We recommend</a></p>
+							</td>
+						</tr>
+						<tr>
+							<td>1234567</td>
+							<td>2013-07-31</td>
+							<td class="_status"><div class="-red">New</div></td>
+							<td>307 N 3rd St Bismarck, ND 58501</td>
+							<td>
+								<p><a href="">Lucky Duck's Deli & Catering</a></p>
+								<p class="_reviews">12 reviews</p>
+							</td>
+							<td class="_rating">4.3</td>
+							<td><p>Night club</p></td>
+							<td>
+								<p>Arabian</p>
+								<p>Indian</p>
+								<p>American</p>
+							</td>
+							<td><p>10,5%</p><p class="note2">(default)</p></td>
+							<td>1285</td>
+							<td class="_cost">6250</td>
+							<td class="_debt">458</td>
+							<td class="_actions">
+								<p><i class="icon-eye1"></i><a href="">Turn on</a></p>
+								<p><i class="icon-edit"></i><a href="">Change data</a></p>
+								<p><label><input type="checkbox" /></label><a href="">We recommend</a></p>
+								<p><i class="icon-check1"></i><a href="">Activate</a></p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="link-viewmore"><a href="">view more</a></div>
+			</section>
+			<!--//Контент-->
+		</div>
+		<!--//Сетка в одну колонку-->
+	</div>
+	<!--//Контейнер-->
+
+	<script src="js/libs/libs.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

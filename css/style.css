@@ -851,6 +851,22 @@ h6 {
 	margin-bottom: 0;
 }
 
+.body-admin_yellow [class^="layout"],
+.body-admin_yellow .top-bar .wrapper,
+.body-admin_yellow .nav-bar .wrapper {
+	width: 1230px;
+}
+
+.body-admin_yellow nav.primary > ul {
+	margin-left: -16px;
+}
+
+.body-admin_mainpage.body-admin_yellow [class^="layout"],
+.body-admin_mainpage.body-admin_yellow .top-bar .wrapper,
+.body-admin_mainpage.body-admin_yellow .nav-bar .wrapper {
+	width: 980px;
+}
+
 fieldset {
 	border: 0;
 	margin: 0;
@@ -1118,7 +1134,7 @@ textarea {
 
 .cb {
 	color: #6d6d6d;
-	font: 12px Font1;
+	font: 15px Font1;
 	background: none;
 	padding-left: 22px;
 	display: inline-block;
@@ -1179,6 +1195,10 @@ p.error {
 .form-reg input[type="password"],
 .form-reg textarea {
 	width: 275px;
+}
+
+.form-reg .cb {
+	font: 12px Font1;
 }
 
 .note {
@@ -1346,7 +1366,7 @@ p.error {
 .field-datepicker:after {
 	position: absolute;
 	right: 10px;
-	top: 0.5em;
+	top: 0.56em;
 	width: 13px;
 	height: 11px;
 	content: '';
@@ -1432,7 +1452,6 @@ p.error {
 }
 
 .checkboxes-style2 label {
-	font-size: 15px;
 	width: 135px;
 	margin: 0 10px 15px 0;
 }
@@ -2205,6 +2224,10 @@ nav.secondary div .icon-plus_small {
 	vertical-align: middle;
 	position: relative;
 	display: inline-block;
+}
+
+.field-w-icon input[type="text"] {
+	width: 100%;
 }
 
 .field-w-icon [class^="icon"] {
@@ -3704,6 +3727,10 @@ h2 + .grey-block {
 	color: #fff;
 }
 
+.-blue {
+	color: #0a2068;
+}
+
 .table-style1 {
 	margin: 2.5em 0;
 	width: 100%;
@@ -4120,6 +4147,69 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 .-disabled [class^="icon"] {
 	opacity: 0.5;
 	filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 50);
+}
+
+.table-businesses {
+	margin: 0 !important;
+}
+
+.table-businesses ._status,
+.table-businesses ._location,
+.table-businesses ._name {
+	text-align: left !important;
+}
+
+.table-businesses thead td,
+.table-businesses tbody td {
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+}
+
+.table-businesses a {
+	color: #889116;
+}
+
+.table-businesses p {
+	line-height: 1.2em;
+}
+
+.table-businesses tbody ._rating,
+.table-businesses tbody ._cost,
+.table-businesses tbody ._debt{
+	padding-left: 15px !important;
+	font-family: 'Font1 Bold';
+}
+
+.table-businesses tbody ._status {
+	width: 70px;
+}
+
+.table-businesses tbody ._actions {
+	width: 145px;
+	white-space: nowrap;
+	padding-right: 7px;
+}
+
+.table-businesses tbody ._actions a {
+	color: #8d8d8d;
+	margin-left: 5px;
+}
+
+.table-businesses tbody ._actions a:hover {
+	text-decoration: none;
+}
+
+.table-businesses tbody ._actions p {
+	margin-bottom: 8px;
+}
+
+.table-businesses tbody ._actions p {
+	margin-bottom: 8px;
+}
+
+.table-businesses tbody ._reviews {
+	color: #8b8b8b;
+	margin: 20px 0 0 0;
 }
 
 .btn {
@@ -4770,9 +4860,9 @@ a:hover .icon-plus_small {
 	background-position: 0 -1539px;
 }
 
-.icon-check {
+.icon-check2 {
 	width: 24px;
-	height: 29px;
+	height: 19px;
 	background-position: 0 -1577px;
 }
 

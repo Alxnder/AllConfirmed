@@ -68,3 +68,19 @@
 .main-page .header {
 	margin-bottom: 0;
 }
+
+.body-admin_yellow [class^="layout"],
+.body-admin_yellow .top-bar .wrapper,
+.body-admin_yellow .nav-bar .wrapper {
+	width: 1230px;
+}
+
+.body-admin_yellow nav.primary > ul {
+	margin-left: -16px;
+}
+
+.body-admin_mainpage.body-admin_yellow [class^="layout"],
+.body-admin_mainpage.body-admin_yellow .top-bar .wrapper,
+.body-admin_mainpage.body-admin_yellow .nav-bar .wrapper {
+	width: 980px;
+}

@@ -174,12 +174,20 @@
 }
 
 .body-admin .nav-bar {
-	background: #e5e5e5;
 	height: 40px;
+}
+
+.body-admin_green .nav-bar {
+	background: #e5e5e5;
+}
+
+.body-admin_yellow .nav-bar {
+	background: #7f7f7f;
 }
 
 .body-admin .nav-bar .wrapper {
 	height: inherit;
+	display: table;
 }
 
 .body-admin .nav-bar .wrapper > * {
@@ -195,7 +203,8 @@
 	vertical-align: top;
 	height: inherit;
 	padding-top: 7px;
-	border-right: solid 1px #fff;
+	float: none;
+	display: table-cell;
 }
 
 .body-admin nav.primary > ul > li > a,
@@ -204,17 +213,16 @@
 }
 
 .body-admin nav.primary > ul > li > div,
-.body-admin nav.primary > ul > li > .current {
-	background: #7f7f7f;
-	color: #dcf15a;
-}
-
+.body-admin nav.primary > ul > li > .current,
 .body-admin nav.primary > ul ul {
 	background: #7f7f7f;
 }
 
 .body-admin_green nav.primary > ul > li > a:hover,
-.body-admin_green nav.primary > ul > li > .active  {
+.body-admin_green nav.primary > ul > li > .active,
+.body-admin_green nav.primary > ul > li > div,
+.body-admin_green nav.primary > ul > li > .current,
+.body-admin_green nav.primary > ul ul a:hover {
 	color: #dcf15a;
 }
 
@@ -223,8 +231,17 @@
 	background-position: -36px -220px;
 }
 
-nav.primary > ul ul a:hover {
-	color: #dcf15a;
+.body-admin_yellow nav.primary > ul > li > a:hover,
+.body-admin_yellow nav.primary > ul > li > .active,
+.body-admin_yellow nav.primary > ul > li > div,
+.body-admin_yellow nav.primary > ul > li > .current,
+.body-admin_yellow nav.primary > ul ul a:hover {
+	color: #ffd23f;
+}
+
+.body-admin_yellow nav.primary > ul > li > a:hover .icon-,
+.body-admin_yellow nav.primary > ul > li > .active .icon- {
+	background-position: -48px -220px;
 }
 
 .account_clients-data {
@@ -232,7 +249,8 @@ nav.primary > ul ul a:hover {
 	padding: 8px 0 0 26px;
 	vertical-align: top;
 	height: inherit;
-	float: right;
+	display: table-cell;
+	border-left: solid 1px #fff;
 }
 
 .account_clients-data > * {
@@ -297,8 +315,8 @@ nav.primary > ul ul a:hover {
 	margin: 0 5px 0 -27px;
 }
 
-.category .title .icon-check {
-	margin: .5em 0 0 6px;
+.category .title .icon-check2 {
+	margin: .1em 0 0 6px;
 	cursor: pointer;
 }
 
@@ -449,7 +467,6 @@ nav.primary > ul ul a:hover {
 .filter2 {
 	margin: 27px 0 10px 0;
 	padding-bottom: 15px;
-	border-bottom: solid 1px #ccc;
 }
 
 .filter2 > * {
@@ -462,16 +479,24 @@ nav.primary > ul ul a:hover {
 }
 
 .filter2 .-active {
-	background: #d7e585;
 	padding: 3px 16px 6px 16px;
 	margin: 0 15px 10px 0;
 	font-family: 'Font1 Medium';
+}
+
+.body-admin_green .filter2 .-active {
+	background: #d7e585;
+}
+
+.body-admin_yellow .filter2 .-active {
+	background: #ffedb2;
 }
 
 .filter3 {
 	display: table;
 	width: 100%;
 	margin-bottom: 30px;
+	border-top: solid 1px #ccc;
 }
 
 .filter3 a {
@@ -534,7 +559,7 @@ nav.primary > ul ul a:hover {
 	font-family: 'Font1 Medium';
 }
 
-.filter4 {
+.filter4, .filter5 {
 	background: #e5e5e5 url("../i/sprite4.png") 0 0;
 	padding: 13px 0;
 	display: table;
@@ -542,18 +567,21 @@ nav.primary > ul ul a:hover {
 	margin-bottom: 42px;
 }
 
-.filter4 > .col {
+.filter4 > .col, .filter5 > .col {
 	display: table-cell;
 	vertical-align: middle;
 	padding-left: 15px;
 }
 
-.filter4 > .col + .col {
+.filter4 > .col + .col,
+.filter5 > .col + .col {
+	width: 169px;
 	padding: 0 15px 0 26px;
 	border-left: solid 4px #a71613;
 }
 
-.filter4 > .col + .col .btn {
+.filter4 > .col + .col .btn,
+.filter5 > .col + .col .btn {
 	width: 160px;
 }
 
@@ -753,4 +781,51 @@ table.table-resvns1 {
 	font: 14px/1.6em Font1;
 	text-align: left;
 	margin: -144px 14px 160px 14px;
+}
+
+.filter5 ._col1 {
+	width: 574px;
+	margin-right: 34px;
+}
+
+.filter5 ._col2 {
+	width: 384px;
+}
+
+.filter5 .row {
+	margin-bottom: 19px;
+}
+
+.filter5 .row:first-child {
+	margin-bottom: 12px;
+}
+
+.filter5 .field-w-icon {
+	width: 574px;
+}
+
+.filter5 .field-datepicker {
+	width: 93px;
+}
+
+.filter5 ._shortfield {
+	width: 93px;
+}
+
+.filter5 ._select1 .ui-selectmenu {
+	width: 170px !important;
+	margin-right: 17px;
+}
+
+.filter5 ._checkboxes .cb {
+	margin-right: 25px;
+}
+
+.filter5 ._radios {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.filter5 ._radios .rd {
+	margin-left: 15px;
 }

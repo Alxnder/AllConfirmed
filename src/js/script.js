@@ -733,6 +733,10 @@ function datepicker() {
 		dateFormat: 'MM dd, yy'
 	});
 
+	$('[data-datepicker-short]').datepicker({
+		dateFormat: 'm/d/y'
+	});
+
 	$('.field-datepicker').click(function() {
 		$(this).find('[data-datepicker]').focus();
 	});
@@ -1035,7 +1039,7 @@ function categories() {
 			$this.hide();
 
 			var input = title.after('<input type="text" value="' + title.find('span').text() + '" />').next(),
-				ok_btn = $this.after('<i class="icon-check"></i>').next();
+				ok_btn = $this.after('<i class="icon-check2"></i>').next();
 
 			ok_btn.click(function() {
 				title.find('span').text(input.val());

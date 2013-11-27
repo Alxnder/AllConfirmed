@@ -265,7 +265,7 @@ textarea {
 
 .cb {
 	color: #6d6d6d;
-	font: 12px Font1;
+	font: 15px Font1;
 	background: none;
 	padding-left: 22px;
 	display: inline-block;
@@ -326,6 +326,10 @@ p.error {
 .form-reg input[type="password"],
 .form-reg textarea {
 	width: 275px;
+}
+
+.form-reg .cb {
+	font: 12px Font1;
 }
 
 .note {
@@ -493,7 +497,7 @@ p.error {
 .field-datepicker:after {
 	position: absolute;
 	right: 10px;
-	top: 0.5em;
+	top: 0.56em;
 	width: 13px;
 	height: 11px;
 	content: '';
@@ -579,7 +583,6 @@ p.error {
 }
 
 .checkboxes-style2 label {
-	font-size: 15px;
 	width: 135px;
 	margin: 0 10px 15px 0;
 }

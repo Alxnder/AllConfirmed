@@ -654,6 +654,10 @@ nav.secondary div .icon-plus_small {
 	display: inline-block;
 }
 
+.field-w-icon input[type="text"] {
+	width: 100%;
+}
+
 .field-w-icon [class^="icon"] {
 	right: 7px;
 	z-index: 100;
@@ -2151,6 +2155,10 @@ h2 + .grey-block {
 	color: #fff;
 }
 
+.-blue {
+	color: #0a2068;
+}
+
 .table-style1 {
 	margin: 2.5em 0;
 	width: 100%;
@@ -2567,6 +2575,69 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 .-disabled [class^="icon"] {
 	opacity: 0.5;
 	filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 50);
+}
+
+.table-businesses {
+	margin: 0 !important;
+}
+
+.table-businesses ._status,
+.table-businesses ._location,
+.table-businesses ._name {
+	text-align: left !important;
+}
+
+.table-businesses thead td,
+.table-businesses tbody td {
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+}
+
+.table-businesses a {
+	color: #889116;
+}
+
+.table-businesses p {
+	line-height: 1.2em;
+}
+
+.table-businesses tbody ._rating,
+.table-businesses tbody ._cost,
+.table-businesses tbody ._debt{
+	padding-left: 15px !important;
+	font-family: 'Font1 Bold';
+}
+
+.table-businesses tbody ._status {
+	width: 70px;
+}
+
+.table-businesses tbody ._actions {
+	width: 145px;
+	white-space: nowrap;
+	padding-right: 7px;
+}
+
+.table-businesses tbody ._actions a {
+	color: #8d8d8d;
+	margin-left: 5px;
+}
+
+.table-businesses tbody ._actions a:hover {
+	text-decoration: none;
+}
+
+.table-businesses tbody ._actions p {
+	margin-bottom: 8px;
+}
+
+.table-businesses tbody ._actions p {
+	margin-bottom: 8px;
+}
+
+.table-businesses tbody ._reviews {
+	color: #8b8b8b;
+	margin: 20px 0 0 0;
 }
 
 @import "buttons.css";
