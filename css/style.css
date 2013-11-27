@@ -2924,7 +2924,7 @@ ul.faq li:first-child {
 	padding: 25px 0 0 0;
 }
 
-.location_1 {
+.location_1, .location_2 {
 	overflow: hidden;
 	padding: 7px 20px 7px 11px;
 	color: #63605f;
@@ -2933,7 +2933,7 @@ ul.faq li:first-child {
 	margin-bottom: 25px;
 }
 
-.location_1 a {
+.location_1 a, .location_2 .fl a {
 	float: left;
 	color: #63605f;
 	text-decoration: none;
@@ -2944,10 +2944,15 @@ ul.faq li:first-child {
 }
 
 /*Operating time*/
-.location_1 .ot {
+.location_1 .ot, .location_2 .ot {
 	color: #797979;
 	float: right;
-	font: italic 12px 'Font1 Light';
+	font: italic 12px/1.6em 'Font1 Light';
+}
+
+.location_2 .ot {
+	margin-left: 30px;
+	float: left !important;
 }
 
 .overview .params {
@@ -3020,6 +3025,20 @@ ul.faq li:first-child {
 	margin-bottom: 0;
 }
 
+.params-full_wide .col:first-child {
+	width: 400px;
+	margin-left: 15px;
+}
+
+.params-full_wide .col:first-child + .col {
+	width: 480px;
+	margin-right: 60px;
+}
+
+.params-full_wide .col:first-child + .col + .col {
+	width: 240px;
+}
+
 p.note1 {
 	color: #867979;
 	font-size: 14px;
@@ -3039,6 +3058,12 @@ p.note2 {
 	color: #000;
 	border-width: 1px 0;
 	padding: 18px 10px 18px 27px;
+}
+
+.contacts-short_1 > div {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 90px;
 }
 
 .citation {
@@ -4212,6 +4237,22 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	margin: 20px 0 0 0;
 }
 
+.map-wide {
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 27px;
+}
+
+.map-wide > div {
+	height: 20px;
+	position: absolute;
+	left: 0;
+	top: -25px;
+	right: 0;
+	z-index: 100;
+	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+
 .btn {
 	height: 38px;
 	padding: 0 13px;
@@ -4882,6 +4923,12 @@ a:hover .icon-plus_small {
 	width: 11px;
 	height: 12px;
 	background-position: 0 -1629px;
+}
+
+.icon-page {
+	width: 13px;
+	height: 16px;
+	background-position: 0 -1644px;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */

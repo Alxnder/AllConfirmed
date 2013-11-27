@@ -829,3 +829,18 @@ table.table-resvns1 {
 .filter5 ._radios .rd {
 	margin-left: 15px;
 }
+
+.admin-actions {
+	overflow: hidden;
+	margin-bottom: 27px;
+}
+
+.admin-actions > div {
+	float: left;
+	margin-right: 30px;
+}
+
+.admin-actions a {
+	color: #8d8d8d;
+	margin-left: 7px;
+}
