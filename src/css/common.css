@@ -2252,7 +2252,7 @@ h2 + .grey-block {
 }
 
 .table-resvns tbody ._status {
-	width: 130px;
+	white-space: nowrap;
 	font-size: 13px;
 	padding-right: 0;
 }
@@ -2274,6 +2274,19 @@ h2 + .grey-block {
 
 .table-resvns ._features p {
 	margin-bottom: 8px;
+}
+
+.table-resvns ._businesses a {
+	color: #373737;
+}
+
+.table-resvns ._businesses p {
+	margin-bottom: 8px;
+	line-height: 1.2em;
+}
+
+.table-resvns ._resvns {
+	margin-top: 15px;
 }
 
 .table-style1 tbody tr:nth-child(2n+1) {

@@ -466,7 +466,12 @@
 
 .filter2 {
 	margin: 27px 0 10px 0;
-	padding-bottom: 15px;
+}
+
+.body-admin_yellow .filter2 {
+	border-bottom: solid 1px #ccc;
+	margin-bottom: -1px;
+	padding-bottom: 10px;
 }
 
 .filter2 > * {
@@ -496,7 +501,12 @@
 	display: table;
 	width: 100%;
 	margin-bottom: 30px;
+	padding-top: 15px;
 	border-top: solid 1px #ccc;
+}
+
+.body-admin_yellow .filter3 {
+	width: 960px;
 }
 
 .filter3 a {
@@ -551,12 +561,19 @@
 }
 
 .filter3 .-active {
-	background: #d7e585;
 	padding: 5px 8px 8px 8px;
 	color: #373737;
 	border: 0;
 	margin: 0 40px;
 	font-family: 'Font1 Medium';
+}
+
+.body-admin_green .filter3 .-active {
+	background: #d7e585;
+}
+
+.body-admin_yellow .filter3 .-active {
+	background: #ffedb2;
 }
 
 .filter4, .filter5 {
@@ -843,4 +860,33 @@ table.table-resvns1 {
 .admin-actions a {
 	color: #8d8d8d;
 	margin-left: 7px;
+}
+
+.filter4_1 > .col > ._col1 {
+	width: 760px;
+	text-align: left;
+	margin-right: 20px;
+}
+
+.filter4_1 ._checkboxes .rd {
+	width: auto;
+	margin-right: 20px;
+}
+
+.filter4_1 input[type="text"] {
+	width: 100%;
+}
+
+.filter4_1 > .col > ._col2 {
+	width: 165px;
+}
+
+.filter4_1 .row-dates .field-datepicker {
+	width: 105px;
+}
+
+.filter4_1 .row-dates .ib {
+	width: 35px;
+	margin-right: 5px;
+	text-align: right;
 }
