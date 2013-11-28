@@ -231,6 +231,10 @@
 	background-position: -36px -220px;
 }
 
+.body-admin_yellow nav.primary > ul > li {
+	margin-right: 35px;
+}
+
 .body-admin_yellow nav.primary > ul > li > a:hover,
 .body-admin_yellow nav.primary > ul > li > .active,
 .body-admin_yellow nav.primary > ul > li > div,
@@ -878,10 +882,11 @@ table.table-resvns1 {
 }
 
 .filter4_1 > .col > ._col2 {
-	width: 165px;
+	width: 170px;
 }
 
-.filter4_1 .row-dates .field-datepicker {
+.filter4_1 .row-dates .field-datepicker,
+.filter4_2 .row-dates .field-datepicker {
 	width: 105px;
 }
 
@@ -889,4 +894,67 @@ table.table-resvns1 {
 	width: 35px;
 	margin-right: 5px;
 	text-align: right;
+}
+
+.filter4_2 {
+	padding-bottom: 20px;
+}
+
+.filter4_2 > .col:first-child {
+	padding-right: 20px;
+}
+
+.filter4_2 > .col > ._col1 {
+	width: 585px;
+	text-align: left;
+	margin-right: 60px;
+}
+
+.filter4_2 .rd {
+	width: auto;
+	margin-left: 20px;
+}
+
+.filter4_2 input[type="text"] {
+	width: 100%;
+}
+
+.filter4_2 > .col > ._col2 {
+	width: auto;
+	margin: 0 -10px 0 0;
+	float: right;
+}
+
+.filter4_2 .row {
+	margin-top: 12px;
+}
+
+.table-users {
+	margin: 0 !important;
+}
+
+.table-users tbody td {
+	text-align: center;
+}
+
+.table-users thead ._userdata,
+.table-users tbody ._userdata {
+	text-align: left !important;
+}
+
+.table-users a {
+	color: #97ae28;
+}
+
+.table-users p {
+	line-height: normal;
+}
+
+.table-users tbody ._totalpaid {
+	font-family: 'Font1 Bold' !important;
+}
+
+.table-users tbody ._actions a {
+	color: #8d8d8d;
+	margin-left: 5px;
 }

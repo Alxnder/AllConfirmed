@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/admin.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>')</script>
+	<!--[if lt IE 9]><script src="js/libs/libs.ltie9.js"></script><![endif]-->
+	<title></title>
+</head>
+<body class="body-admin body-admin_yellow">
+	<!--Контейнер-->
+	<div class="container">
+		<!--Шапка-->
+		<header class="header">
+			<div class="top-bar">
+				<div class="wrapper">
+					<a href=""><i class="icon-logo_white"></i></a>
+
+					<div class="user-bar">
+						<div class="name"><i class="icon-key_white"></i> Pine Restaurant Aplle New York</div>
+						<a href=""><span>Exit</span></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="nav-bar">
+				<div class="wrapper">
+					<nav class="primary">
+						<ul>
+							<li><a href="">Businesses</a></li>
+							<li><a href="">Reservations</a></li>
+							<li><div>Users</div></li>
+							<li><a href="">Legal</a></li>
+							<li><a href="">How it works</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!--//Шапка. Сетка в одну колонку-->
+		<div class="layout-onecol">
+			<!--Основной контент-->
+			<section class="content">
+				<h1>Users</h1>
+
+				<div class="filter2">
+					<div class="-active">Registered last week</div>
+					<a href="">Registered last month</a>
+					<a href="">Turned off users only</a>
+				</div>
+
+				<div class="filter4 filter4_2">
+					<div class="col">
+						<div class="col _col1">
+							<div class="row _checkboxes">
+								<strong>User:</strong>
+							</div>
+
+							<div class="row">
+								<input type="text" data-placeholder="ID, name, phone or e-mail" />
+							</div>
+						</div>
+
+						<div class="col _col2">
+							<strong>Addition period:</strong><br>
+
+							<div class="row row-dates">
+								<div class="ib">From</div>
+								<div class="field-datepicker"><input type="text" data-datepicker-short /></div>
+
+								<div class="ib">Till</div>
+								<div class="field-datepicker"><input type="text" data-datepicker-short="" /></div>
+							</div>
+						</div>
+
+						<div class="row clearfix">
+							<div class="fl">
+								<strong>Users Accounts:</strong>
+								<label><input type="radio" name="rad1" checked />all</label>
+								<label><input type="radio" name="rad1" />turned on</label>
+								<label><input type="radio" name="rad1" />turned off</label>
+							</div>
+							<div class="fr">
+								<strong>Existence of reviews:</strong>
+								<label><input type="radio" name="rad1" checked />all</label>
+								<label><input type="radio" name="rad1" />with reviews</label>
+								<label><input type="radio" name="rad1" />without reviews</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="col">
+						<a class="btn -red -wide" href="">Show</a>
+					</div>
+				</div>
+
+				<div class="resvn-summary1">
+					<span>Showed users: <span class="sum">41</span></span>
+					<span>In total in system of <span class="sum">5203</span></span>
+				</div>
+
+				<table class="table-style1 table-users">
+					<thead>
+					<tr>
+						<td class="sortable -desc"><div>ID</div></td>
+						<td class="sortable -active -desc"><div>Addition<br>date</div></td>
+						<td class="sortable -desc _userdata"><div>User data</div></td>
+						<td class="sortable -asc"><div>Reviews</div></td>
+						<td class="sortable -asc"><div>Total<br>reserv.</div></td>
+						<td class="sortable -asc"><div>Free<br>reserv.</div></td>
+						<td class="sortable -asc"><div>Paid<br>reserv.</div></td>
+						<td class="sortable -asc"><div>Total <br>paid,&nbsp;$</div></td>
+						<td class="sortable -desc"><div>Own<br>cancellation</div></td>
+						<td class="sortable -desc"><div>Not<br>used</div></td>
+						<td class="_actions"><div>Actions</div></td>
+					</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1234567</td>
+							<td>2013-07-31</td>
+							<td class="_userdata">
+								<p>John Doe Mc Douglas</p>
+								<p>+1034-123-4567</p>
+								<p><a href="mailto:mcdouglus@gmail.com">mcdouglus@gmail.com</a></p>
+							</td>
+							<td><a href="">12</a></td>
+							<td><a href="">142</a></td>
+							<td>28</td>
+							<td>114</td>
+							<td class="_totalpaid">142</td>
+							<td>1285</td>
+							<td>6250</td>
+							<td class="_actions">
+								<p><i class="icon-eye"></i><a href="">Turn off</a></p>
+							</td>
+						</tr>
+						<tr>
+							<td>1234567</td>
+							<td>2013-07-31</td>
+							<td class="_userdata">
+								<p>John Doe Mc Douglas</p>
+								<p>+1034-123-4567</p>
+								<p><a href="mailto:mcdouglus@gmail.com">mcdouglus@gmail.com</a></p>
+							</td>
+							<td><a href="">12</a></td>
+							<td><a href="">142</a></td>
+							<td>28</td>
+							<td>114</td>
+							<td class="_totalpaid">142</td>
+							<td>1285</td>
+							<td>6250</td>
+							<td class="_actions">
+								<p><i class="icon-eye1"></i><a href="">Turn on</a></p>
+							</td>
+						</tr>
+						<tr>
+							<td>1234567</td>
+							<td>2013-07-31</td>
+							<td class="_userdata">
+								<p>John Doe Mc Douglas</p>
+								<p>+1034-123-4567</p>
+								<p><a href="mailto:mcdouglus@gmail.com">mcdouglus@gmail.com</a></p>
+							</td>
+							<td><a href="">12</a></td>
+							<td><a href="">142</a></td>
+							<td>28</td>
+							<td>114</td>
+							<td class="_totalpaid">142</td>
+							<td>1285</td>
+							<td>6250</td>
+							<td class="_actions">
+								<p><i class="icon-eye"></i><a href="">Turn off</a></p>
+							</td>
+						</tr>
+						<tr>
+							<td>1234567</td>
+							<td>2013-07-31</td>
+							<td class="_userdata">
+								<p>John Doe Mc Douglas</p>
+								<p>+1034-123-4567</p>
+								<p><a href="mailto:mcdouglus@gmail.com">mcdouglus@gmail.com</a></p>
+							</td>
+							<td><a href="">12</a></td>
+							<td><a href="">142</a></td>
+							<td>28</td>
+							<td>114</td>
+							<td class="_totalpaid">142</td>
+							<td>1285</td>
+							<td>6250</td>
+							<td class="_actions">
+								<p><i class="icon-eye"></i><a href="">Turn off</a></p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="link-viewmore"><a href="">view more</a></div>
+			</section>
+			<!--//Контент-->
+		</div>
+		<!--//Сетка в одну колонку-->
+	</div>
+	<!--//Контейнер-->
+
+	<script src="js/libs/libs.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

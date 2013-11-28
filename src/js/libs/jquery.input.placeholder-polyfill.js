@@ -1,8 +1,9 @@
-$(function() {
+function setInputPlaceholder() {
 	var inputs = $('[data-placeholder]');
 
 	inputs.each(function() {
 		var $this = $(this),
+			$this_width = $this.outerWidth(),
 			wrapper = $this.wrap('<div class="input-wrapper">').closest('.input-wrapper'),
 			placeholder = ($this.is('input[type="text"]') || $this.is('input[type="password"]')) ? $('<input type="text">') : $('<textarea>');
 
@@ -10,15 +11,11 @@ $(function() {
 			.val($this.attr('data-placeholder'))
 			.addClass('placeholder')
 			.removeAttr('data-placeholder')
-			.appendTo(wrapper)
-			.css({
-				width: $this.outerWidth(),
-				height: $this.outerHeight()
-			});
+			.appendTo(wrapper);
 
 		wrapper.css({
 			float: $this.css('float'),
-			width: $this.outerWidth(),
+			width: $this_width,
 			marginTop: $this.css('marginTop'),
 			marginRight: $this.css('marginRight'),
 			marginBottom: $this.css('marginBottom'),
@@ -52,4 +49,4 @@ $(function() {
 			}
 		)
 	})
-});
+}

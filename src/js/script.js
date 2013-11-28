@@ -1,5 +1,6 @@
 ﻿$(function() {
 	primaryNav();
+	setInputPlaceholder();
 	carousel();
 	searchBox();
 	selects();

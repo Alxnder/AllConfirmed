@@ -988,6 +988,10 @@ textarea {
 	vertical-align: middle;
 }
 
+.input-wrapper input {
+	width: 100%;
+}
+
 .placeholder {
 	color: #7e7e7e;
 	position: absolute !important;
@@ -1146,7 +1150,7 @@ textarea {
 	font: 15px Font1;
 	padding-left: 22px;
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: baseline;
 }
 
 .cb input[type="checkbox"],
