@@ -1317,7 +1317,7 @@ ul.faq li:first-child {
 	height: 35px;
 }
 
-.tabs .wrapper a, .tabs .wrapper div {
+.tabs .wrapper a, .tabs a.active, .tabs .wrapper div {
 	color: #999;
 	height: 35px;
 	padding: 0 28px;
@@ -1329,15 +1329,16 @@ ul.faq li:first-child {
 	font: 18px/35px 'Font1 Light';
 }
 
-.tabs a:hover, .tabs .wrapper div {
+.tabs a:hover, .tabs a.active, .tabs .wrapper div {
 	color: #8a0000;
 }
 
-.tabs .wrapper div {
+.tabs .wrapper div, .tabs a.active {
 	background: #fff;
 	border: solid #b2b2b2;
 	margin: 0 -1px -1px -1px;
 	border-width: 1px 1px 0 1px;
+	line-height: 33px;
 }
 
 .tabs ._deals {
@@ -1350,6 +1351,8 @@ ul.faq li:first-child {
 
 .tab-content {
 	padding: 25px 0 0 0;
+	min-height: 100px;
+	position: relative;
 }
 
 .location_1, .location_2 {
@@ -2692,6 +2695,15 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	right: 0;
 	z-index: 100;
 	box-shadow: 0 5px 10px rgba(0,0,0,.3);
+}
+
+.-loading {
+	background: url("../i/loading.gif") 50% 50% no-repeat;
+}
+
+.error {
+	font-size: 16px;
+	text-align: center;
 }
 
 @import "buttons.css";

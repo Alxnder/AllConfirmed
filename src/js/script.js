@@ -22,10 +22,12 @@
 	multiselect();
 	toggleBlock();
 	categories();
+	tabs();
 });
 
 
-var isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent));
+var isMobile = (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)),
+	ajax_error_message = 'Failed to load the content. Please try again.';
 
 function primaryNav() {
 	var nav = $('nav.primary > ul'),
@@ -672,38 +674,62 @@ function faq() {
 
 
 function scrollpane() {
-	var pane = $('.scrollpane').jScrollPane({
-			showArrows: true
-		}),
-		api = pane.data('jsp');
+	function setSlider() {
+		var pane = $('.scrollpane').jScrollPane({
+				showArrows: true
+			}),
+			api = pane.data('jsp'),
+			initialized = false;
 
-	if (pane.length) {
-		$(window)
-			.resize(function() {
-				api.reinitialise();
-			})
-			.load(function() {
-				api.reinitialise();
-			})
+		if (!initialized) {
+			if (pane.length) {
+				$(window)
+					.resize(function() {
+						api.reinitialise();
+					})
+					.load(function() {
+						api.reinitialise();
+					})
+			}
+			initialized = true;
+		}
 	}
+
+	setSlider();
+
+	$(document).ajaxComplete(function() {
+		setSlider()
+	})
 }
 
 
 function slider() {
-	var pane = $('.slider').jScrollPane({
-			showArrows: false
-		}),
-		api = pane.data('jsp');
+	function setSlider() {
+		var pane = $('.slider').jScrollPane({
+				showArrows: false
+			}),
+			api = pane.data('jsp'),
+			initialized = false;
 
-	if (pane.length) {
-		$(window)
-			.resize(function() {
-				api.reinitialise();
-			})
-			.load(function() {
-				api.reinitialise();
-			})
+		if (!initialized) {
+			if (pane.length) {
+				$(window)
+					.resize(function() {
+						api.reinitialise();
+					})
+					.load(function() {
+						api.reinitialise();
+					})
+			}
+			initialized = true;
+		}
 	}
+
+	setSlider();
+
+	$(document).ajaxComplete(function() {
+		setSlider()
+	})
 }
 
 
@@ -785,25 +811,35 @@ function tooltips() {
 
 
 function popupPhoto() {
-	var objects = $('[data-photo]');
+	function setTooltips() {
+		var objects = $('[data-photo]'),
+			initialized = false;
 
-	objects.tooltip({
-		track: false,
-		items: '[data-photo]',
-		content: function () {
-			return "<img src=" + $(this).data("photo") + " />";
-		},
-		show: {
-			delay: 150
-		},
-		tooltipClass:'tooltip1'
-	});
-
-	if (isMobile) {
-		objects.click(function() {
-			$(this).tooltip('open');
-		});
+		if (!initialized) {
+			objects.tooltip({
+				track: false,
+				items: '[data-photo]',
+				content: function () {
+					return "<img src=" + $(this).data("photo") + " />";
+				},
+				show: {
+					delay: 150
+				},
+				tooltipClass:'tooltip1'
+			});
+			if (isMobile) {
+				objects.click(function() {
+					$(this).tooltip('open');
+				});
+			}
+			initialized = true;
+		}
 	}
+
+	setTooltips();
+	$(document).ajaxComplete(function() {
+		setTooltips()
+	});
 }
 
 /*
@@ -1059,4 +1095,79 @@ function categories() {
 			return false;
 		});
 	});
+}
+
+
+//AJAX loading tabs
+function tabs() {
+	$('.tabs').each(function() {
+		var tabs = $(this),
+			items = tabs.find('a'),
+			//First tab as default loaded
+			tabcontent = tabs.next('.tab-content'),
+			tab = items.eq(0),
+			params = {
+				href: tab.attr('href'),
+				tabid: tab.data('tabid'),
+				tabcontent: tabcontent
+			};
+
+		items.click(function() {
+			var $this = $(this);
+
+			params = {
+				href: $this.attr('href'),
+				tabid: $this.data('tabid'),
+				tabcontent: tabcontent
+			};
+
+			if (params.href.length) {
+				items.removeClass('active');
+				$this.addClass('active');
+				loadTab(params);
+			}
+
+			return false;
+		});
+
+
+		//Set tab by address hash if exists
+		//Does "tabid:" in the hash exists?
+		if (location.hash.search(/tabid:/) != -1) {
+			params.tabid = document.location.hash.replace(/#/g,'');
+			items.each(function() {
+				//Does this tab on the page exists?
+				if ($(this).data('tabid') == params.tabid) {
+					tab = items.filter('[data-tabid="' + params.tabid + '"]');
+					params.href = tab.attr('href');
+				}
+			});
+		}
+		if (params.href.length) {
+			items.removeClass('active');
+			tab.addClass('active');
+			loadTab(params);
+		}
+	});
+
+	function loadTab(params) {
+		$.ajax({
+			url: params.href,
+			cache: false,
+			timeout: 10000,
+			dataType: 'html',
+			beforeSend: function() {
+				params.tabcontent.addClass('-loading')
+			},
+			success: function(data) {
+				params.tabcontent.removeClass('-loading');
+				params.tabcontent.html(data);
+				document.location.hash = params.tabid;
+			},
+			error: function() {
+				params.tabcontent.removeClass('-loading');
+				params.tabcontent.html('<div class="error">' + ajax_error_message + '</div>');
+			}
+		});
+	}
 }
