@@ -278,8 +278,18 @@
 }
 
 .category .title {
+	cursor: default;
 	background: #ecebeb;
-	padding: 2px 10px 3px 32px;
+	padding: 2px 5px 3px 32px;
+}
+
+.category .title .icon-drag{
+	visibility: hidden;
+	margin-left: -5px;
+}
+
+.category .title:hover .icon-drag {
+	visibility: visible;
 }
 
 .category .title .col:first-child {
@@ -306,9 +316,7 @@
 }
 
 .category.-visible .title h2:before {
-	height: 3px;
-	margin-top: .47em;
-	background: #373737;
+	background-position: -18px -1558px;
 }
 
 .category .title input {
@@ -340,22 +348,47 @@
 
 .dishes-list {
 	display: none;
-	padding: 0 16px;
 	border: solid 1px #ccc;
 	border-top: 0;
-	box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
 }
 
 .dishes-list .form-addnewdish {
-	margin: 0 -16px;
 	width: 978px;
 	display: none;
+	margin-bottom: 0;
 }
 
 .dish {
 	display: table;
 	width: 100%;
+	background: #fff;
+	position: relative;
+	cursor: default;
 	border-bottom: solid 1px #ccc;
+}
+
+.dish .col:first-child {
+	padding-left: 16px;
+}
+
+.dish .col:last-child {
+	padding-right: 16px;
+}
+
+.dish:hover {
+	background: #f6f6f6;
+}
+
+.dish:hover .col:last-child:before {
+	width: 26px;
+	height: 24px;
+	content: '';
+	position: absolute;
+	right: 7px;
+	top: 5px;
+	z-index: 100;
+	background: url("../i/sprites.png") 0 -1681px no-repeat;
 }
 
 .dish h3 {
@@ -440,7 +473,7 @@
 }
 
 .dishes-list .toggle {
-	margin: 15px 0 30px 0;
+	margin: 15px 16px 30px 16px;
 }
 
 .dishes-list .toggle span {

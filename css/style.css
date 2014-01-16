@@ -3167,7 +3167,7 @@ p.note2 {
 
 .menu .menu-item {
 	width: 48%;
-	height: 100px;
+	margin-bottom: 20px;
 }
 
 .menu .menu-item:nth-child(2n) {
@@ -3175,7 +3175,7 @@ p.note2 {
 }
 
 .menu + .title-style1 {
-	margin-top: 0;
+	margin-top: 20px;
 }
 
 .resvn {
@@ -4282,6 +4282,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	text-align: center;
 }
 
+.tooltips-hidden .ui-tooltip {
+	display: none !important;
+}
+
 .btn {
 	height: 38px;
 	padding: 0 13px;
@@ -4964,6 +4968,12 @@ a:hover .icon-plus_small {
 	width: 13px;
 	height: 16px;
 	background-position: 0 -1644px;
+}
+
+.icon-drag {
+	width: 26px;
+	height: 24px;
+	background-position: 0 -1681px;
 }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
