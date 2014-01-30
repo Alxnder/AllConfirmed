@@ -756,7 +756,7 @@ function datepicker() {
 	//Fixes: Datepicker still visible after fancyBox closing
 	//$('#ui-datepicker-div').remove();
 
-	$('[data-datepicker]').datepicker({
+	$('[data-datepicker]').multiDatesPicker({
 		dateFormat: 'MM dd, yy'
 	});
 

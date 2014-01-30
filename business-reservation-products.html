@@ -166,12 +166,22 @@
 					</dl>
 
 					<h6><div>Schedule</div></h6>
-					<div class="col" style="width:610px;margin-right:40px">
+					<div class="col" style="width: 610px;margin-right: 40px">
 						<p><strong>Please pick the days this can be used or being offered on</strong></p>
 						<div class="checkboxes">
-							<p><label><input type="radio" name="rad2" />Everyday (365 days)</label></p>
-							<p><label><input type="radio" name="rad2" />Monday to Friday</label></p>
-							<p><label><input type="radio" name="rad2" />Every Saturday and Sunday</label></p>
+							<p><label><input type="radio" name="rad2" />Everyday (365 except non-operation days)</label></p>
+							<p>
+								<label><input type="radio" id="weekDays" name="rad2" />Select week days:</label>
+								<span class="checkboxes-style3">
+									<label><input type="checkbox" />Monday</label>
+									<label><input type="checkbox" />Tuesday</label>
+									<label><input type="checkbox" />Wednesday</label>
+									<label><input type="checkbox" />Thursday</label>
+									<label><input type="checkbox" />Friday</label>
+									<label class="-red"><input type="checkbox" />Saturday</label>
+									<label class="-red"><input type="checkbox" />Sunday</label>
+								</span>
+							</p>
 							<p><label><input type="radio" name="rad2" data-rel-datepicker="#datepicker1" />Pick the dates on the calendar <span class="-grey2">(first click on the date - select, the second click - deselect)</span></label></p>
 						</div>
 					</div>
@@ -179,22 +189,30 @@
 						<div class="inline-datepicker" data-datepicker id="datepicker1"></div>
 						<script>
 							(function() {
-								var x = $('[data-rel-datepicker]'),
-									x_target = $(x.data('rel-datepicker'));
+								var dp = $('[data-rel-datepicker]'),
+									dp_target = $(dp.data('rel-datepicker')),
+									week_days = $('#weekDays'),
+									week_days_cb = $('.checkboxes-style3');
 
 								$(window).load(function() {
-									check()
+									check();
 								});
 
 								$(document).click(function() {
-									check()
+									check();
 								});
 
 								function check() {
-									if (!x.prop('checked')) {
-										x_target.addClass('-disabled');
+									if (!dp.prop('checked')) {
+										dp_target.addClass('-disabled');
 									} else {
-										x_target.removeClass('-disabled')
+										dp_target.removeClass('-disabled')
+									}
+
+									if (!week_days.prop('checked')) {
+										week_days_cb.addClass('-disabled');
+									} else {
+										week_days_cb.removeClass('-disabled');
 									}
 								}
 							}());

@@ -652,6 +652,7 @@ p.error {
 	outline: none;
 	position: absolute;
 	right: 0;
+	top: -50px;
 	filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 0);
 }
 
@@ -856,12 +857,12 @@ ul.multiselect .cb {
 	position: relative;
 }
 
-.inline-datepicker.-disabled {
+.-disabled {
 	opacity: 0.5;
 	filter: progid:DXImageTransform.Microsoft.Alpha(opacity = 50);
 }
 
-.inline-datepicker.-disabled:after {
+.-disabled:after {
 	position: absolute;
 	content: '';
 	z-index: 2;
@@ -958,4 +959,22 @@ ul.multiselect .cb {
 
 .form-changepass dd {
 	width: 300px;
+}
+
+.checkboxes-style3 {
+	display: block;
+	position: relative;
+	margin: 10px 0 0 23px;
+}
+
+.checkboxes-style3 .cb {
+	display: inline-block !important;
+	vertical-align: top;
+	margin: 0 0 5px 0;
+	font-size: 16px;
+	width: 113px;
+}
+
+.checkboxes-style3 .cb .icon-cb {
+	margin-top: .2em;
 }
