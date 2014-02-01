@@ -16,9 +16,9 @@ input[type="password"] {
 	position: relative;
 	vertical-align: middle;
 	background: #fff url("../i/sprite5.png");
-	-webkit-transition: all 0.2s ease;
-	   -moz-transition: all 0.2s ease;
-		    transition: all 0.2s ease;
+	-webkit-transition: color, background, box-shadow, 0.2s ease;
+	   -moz-transition: color, background, box-shadow, 0.2s ease;
+		    transition: color, background, box-shadow, 0.2s ease;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 		    box-sizing: border-box;

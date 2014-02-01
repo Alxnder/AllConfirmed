@@ -803,6 +803,7 @@ table.table-resvns1 {
 	padding: 17px 0 0 19px;
 	margin: 0 40px 34px 0;
 	border: solid 1px #d8d8d8;
+	background: #f2f2f2;
 }
 
 .admin-photogallery label:nth-child(3n) {

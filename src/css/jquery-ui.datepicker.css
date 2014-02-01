@@ -87,9 +87,18 @@ td.ui-datepicker-week-end .ui-state-default {
 	color: #96ae29;
 }
 
-.ui-datepicker-calendar .ui-state-highlight .ui-state-default {
+.ui-datepicker-calendar .ui-state-highlight .ui-state-default,
+.ui-datepicker-calendar .ui-state-active {
 	color: #fff;
 	background: #96ae29;
+}
+
+.ui-datepicker-calendar .ui-state-highlight .ui-state-active {
+	background: #697d0d;
+}
+
+.ui-datepicker-calendar .ui-datepicker-week-end .ui-state-active {
+	color: #fff;
 }
 
 .ui-datepicker-calendar .ui-datepicker-today.ui-state-highlight * {
