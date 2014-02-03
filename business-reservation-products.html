@@ -309,13 +309,11 @@
 
 										pmin1.text(parseInt(pmax1.val()) + 1);
 
-										if (parseInt(pmax2.val()) <= parseInt(pmax1.val())) {
+										if (pmax2.val() != '') {
 											pmax2.val(parseInt(pmax1.val()) + 2);
 										}
 
-										if (parseInt(pmin2.text()) <= parseInt(pmax2.val())) {
-											pmin2.text(parseInt(pmax2.val()) + 1);
-										}
+										pmin2.text(parseInt(pmax2.val()) + 1);
 
 										if (parseInt(pmax3.val()) <= parseInt(pmin2.text())) {
 											pmax3.val(parseInt(pmin2.text()) + 1);
