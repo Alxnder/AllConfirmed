@@ -1114,7 +1114,9 @@ function tabs() {
 			timeout: 10000,
 			dataType: 'html',
 			beforeSend: function() {
-				params.tabcontent.addClass('-loading')
+				setTimeout(function() {
+					params.tabcontent.addClass('-loading')
+				}, 500);
 			},
 			success: function(data) {
 				params.tabcontent.removeClass('-loading');

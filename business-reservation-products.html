@@ -307,10 +307,10 @@
 											pmax1.val(3)
 										}
 
-										pmin1.text(pmax1.val());
+										pmin1.text(parseInt(pmax1.val()) + 1);
 
 										if (parseInt(pmax2.val()) <= parseInt(pmax1.val())) {
-											pmax2.val(parseInt(pmax1.val()) + 1);
+											pmax2.val(parseInt(pmax1.val()) + 2);
 										}
 
 										if (parseInt(pmin2.text()) <= parseInt(pmax2.val())) {
@@ -327,21 +327,25 @@
 							pmax2.keyup(function() {
 								setTimeout(function() {
 									if (pmax2.val() == '') {
-										row3.css('opacity', 0)
+										row3.css('opacity', 0);
 									} else {
-										row3.css('opacity', 1)
+										row3.css('opacity', 1);
 										if (parseInt(pmax2.val()) <= parseInt(pmin1.text())) {
-											pmax2.val(parseInt(pmax1.val()) + 1)
-										} else if (parseInt(pmax2.val()) > parseInt(pmin1.text())) {
-											pmin2.text(pmax2.val());
+											pmax2.val(parseInt(pmax1.val()) + 2)
 										}
+
+										if (parseInt(pmax2.val()) > parseInt(pmin1.text())) {
+											pmin2.text(parseInt(pmax2.val()) + 1);
+										}
+
+										pmax3.val(parseInt(pmin2.text()) + 1)
 									}
 								}, 300);
 							});
 
 							pmax3.keyup(function() {
 								if (parseInt(pmax3.val()) <= pmin2.text()) {
-									pmax3.val(parseInt(pmax2.val()) + 1)
+									pmax3.val(parseInt(pmin2.text()) + 1)
 								}
 							});
 						});
